@@ -1,0 +1,4 @@
+baseURL = 'https://XBlankZGap.github.io/cyber-portfolio/'
+languageCode = 'en-us'
+title = "Sophy's Cybersecurity Lab"
+theme = 'PaperMod'
