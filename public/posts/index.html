@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Sophy&#39;s Cybersecurity Lab">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.53ce67a1b75aa4c3e6e3cbb7c8d941bb76a4de063f4e3794577128a9ad237fd2.css" integrity="sha256-U85nobdapMPm48u3yNlBu3ak3gY/TjeUV3Eoqa0jf9I=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.02c50a907c2033e7be9e1872f2672bbce9860376414dff4d416dd9c32127d240.css" integrity="sha256-AsUKkHwgM&#43;e&#43;nhhy8mcrvOmGA3ZBTf9NQW3ZwyEn0kA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -71,8 +71,10 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><style>
- 
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
 #lightbox {
     position: fixed;
     top: 0;
@@ -101,20 +103,20 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.post-content img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    const images = document.querySelectorAll(".post-content img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
     images.forEach(img => {
-        img.addEventListener('click', function() {
+        img.addEventListener("click", function() {
             lightboxImg.src = this.src;
-            lightbox.style.display = 'flex';
+            lightbox.style.display = "flex";
         });
     });
 
-    lightbox.addEventListener('click', function() {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
     });
 });
 </script>
@@ -149,33 +151,25 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a></div>
   <h1>
     Posts
   </h1>
 </header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">First Exploit
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-27 21:54:09 +0100 WAT'>March 27, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to First Exploit" href="http://localhost:1313/cyber-portfolio/posts/first-exploit/"></a>
-</article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
@@ -189,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-26 10:00:00 +0100 WAT'>March 26, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-26 10:00:00 +0100 WAT'>March 26, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 7: Database Breach & Administrative Data Exfiltration" href="http://localhost:1313/cyber-portfolio/posts/project-7-database-breach/"></a>
 </article>
 
@@ -205,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-25 10:00:00 +0100 WAT'>March 25, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-25 10:00:00 +0100 WAT'>March 25, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 6: Web-to-System Pivot via Command Injection" href="http://localhost:1313/cyber-portfolio/posts/project-6-web-to-system-pivot/"></a>
 </article>
 
@@ -221,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-24 10:00:00 +0100 WAT'>March 24, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-24 10:00:00 +0100 WAT'>March 24, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 5: Offline Cryptanalysis & Password Recovery" href="http://localhost:1313/cyber-portfolio/posts/project-5-cryptanalysis/"></a>
 </article>
 
@@ -237,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To leverage administrative access to extract the system’s “Shadow” file, demonstrating the ability to harvest encrypted credentials for offline analysis.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-23 10:00:00 +0100 WAT'>March 23, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-23 10:00:00 +0100 WAT'>March 23, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 4: Post-Exploitation & Sensitive Data Exfiltration" href="http://localhost:1313/cyber-portfolio/posts/project-4-post-exploitation/"></a>
 </article>
 
@@ -253,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To execute a remote command execution (RCE) exploit against a backdoored FTP service to gain unauthorized administrative access to the target host.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-22 10:00:00 +0100 WAT'>March 22, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-22 10:00:00 +0100 WAT'>March 22, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 3: Exploiting Infrastructure Vulnerabilities (Backdoor Access)" href="http://localhost:1313/cyber-portfolio/posts/project-3-exploiting-infrastructure/"></a>
 </article>
 
@@ -269,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-21 10:00:00 +0100 WAT'>March 21, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-21 10:00:00 +0100 WAT'>March 21, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 2: Service Enumeration & Vulnerability Research" href="http://localhost:1313/cyber-portfolio/posts/project-2-service-enumeration/"></a>
 </article>
 
@@ -285,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <p>Objective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-20 10:00:00 +0100 WAT'>March 20, 2026</span></footer>
+  <footer class="entry-footer"><span title='2026-03-20 10:00:00 +0100 WAT'>March 20, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
   <a class="entry-link" aria-label="post link to Project 1: Defensive Lab Environment & Network Configuration" href="http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/"></a>
 </article>
     </main>

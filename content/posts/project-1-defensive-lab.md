@@ -5,6 +5,8 @@ title = 'Project 1: Defensive Lab Environment & Network Configuration'
 
 [cover]
 image = "images/feature-1-vbox-machine.png"
+
+tags = ["VirtualBox", "Networking", "Isolation", "Lab Setup"]
 +++
 
 **Objective:** To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.

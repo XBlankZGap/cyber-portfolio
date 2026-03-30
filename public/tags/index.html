@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/tags/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.53ce67a1b75aa4c3e6e3cbb7c8d941bb76a4de063f4e3794577128a9ad237fd2.css" integrity="sha256-U85nobdapMPm48u3yNlBu3ak3gY/TjeUV3Eoqa0jf9I=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.02c50a907c2033e7be9e1872f2672bbce9860376414dff4d416dd9c32127d240.css" integrity="sha256-AsUKkHwgM&#43;e&#43;nhhy8mcrvOmGA3ZBTf9NQW3ZwyEn0kA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -71,8 +71,10 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><style>
- 
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
 #lightbox {
     position: fixed;
     top: 0;
@@ -101,20 +103,20 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.post-content img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    const images = document.querySelectorAll(".post-content img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
     images.forEach(img => {
-        img.addEventListener('click', function() {
+        img.addEventListener("click", function() {
             lightboxImg.src = this.src;
-            lightbox.style.display = 'flex';
+            lightbox.style.display = "flex";
         });
     });
 
-    lightbox.addEventListener('click', function() {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
     });
 });
 </script>
@@ -149,6 +151,16 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>

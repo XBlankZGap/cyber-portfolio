@@ -6,15 +6,8 @@
     <description>Recent content on Sophy&#39;s Cybersecurity Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2026 21:54:09 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/cyber-portfolio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Exploit</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/first-exploit/</link>
-      <pubDate>Fri, 27 Mar 2026 21:54:09 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/first-exploit/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Project 7: Database Breach &amp; Administrative Data Exfiltration</title>
       <link>http://localhost:1313/cyber-portfolio/posts/project-7-database-breach/</link>
@@ -63,6 +56,25 @@
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact Me</title>
+      <link>http://localhost:1313/cyber-portfolio/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/contact/</guid>
+      <description>&lt;h3 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h3&gt;
+&lt;p&gt;If you have a professional project in mind, a specific technical inquiry, or an employment opportunity, please use the form below to get in touch.&lt;/p&gt;
+&lt;form action=&#34;https://formspree.io/f/mbdpdakd&#34; method=&#34;POST&#34;&gt;
+  &lt;div style=&#34;margin-bottom: 15px;&#34;&gt;
+    &lt;label&gt;Your Email:&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&#34;email&#34; name=&#34;email&#34; required style=&#34;width: 100%; padding: 8px; border: 1px solid #ccc; background: #222; color: #fff;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;margin-bottom: 15px;&#34;&gt;
+    &lt;label&gt;Message:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea name=&#34;message&#34; required style=&#34;width: 100%; height: 120px; padding: 8px; border: 1px solid #ccc; background: #222; color: #fff;&#34;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;button type=&#34;submit&#34; style=&#34;padding: 10px 20px; background: #2ecc71; color: white; border: none; cursor: pointer;&#34;&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</description>
     </item>
   </channel>
 </rss>

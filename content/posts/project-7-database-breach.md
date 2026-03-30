@@ -5,6 +5,8 @@ title = 'Project 7: Database Breach & Administrative Data Exfiltration'
 
 [cover]
 image = "images/project7_data_dump.png"
+
+tags = ["SQL", "Database Security", "Data Breach", "Dump"]
 +++
 
 **Objective:** To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.

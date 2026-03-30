@@ -1,5 +1,7 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-/* Lightbox styles */
 #lightbox {
     position: fixed;
     top: 0;
@@ -28,20 +30,20 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.post-content img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    const images = document.querySelectorAll(".post-content img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
     images.forEach(img => {
-        img.addEventListener('click', function() {
+        img.addEventListener("click", function() {
             lightboxImg.src = this.src;
-            lightbox.style.display = 'flex';
+            lightbox.style.display = "flex";
         });
     });
 
-    lightbox.addEventListener('click', function() {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
     });
 });
 </script>

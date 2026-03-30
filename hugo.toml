@@ -3,3 +3,24 @@ languageCode = 'en-us'
 title = "Sophy's Cybersecurity Lab"
 theme = 'PaperMod'
 defaultTheme = 'dark'
+
+[[menu.main]]
+    name = "Contact"
+    url = "contact/"
+    weight = 60
+
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    ShowReadingTime = true
+    ShowBreadCrumbs = true
+    ShowPostNavLinks = true
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
+[[menu.main]]
+    name = "Search"
+    url = "search/"
+    weight = 50

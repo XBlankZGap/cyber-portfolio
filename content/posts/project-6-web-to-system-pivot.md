@@ -5,6 +5,8 @@ title = 'Project 6: Web-to-System Pivot via Command Injection'
 
 [cover]
 image = "images/project6_reverse_shell.png"
+
+tags = ["Command Injection", "Web Security", "Privilege Escalation"]
 +++
 
 **Objective:** To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.
