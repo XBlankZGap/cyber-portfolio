@@ -45,22 +45,22 @@
 
 /* ─── LIGHT MODE ───────────────────────────────────────── */
 [data-theme="light"] {
-    --background: #eaeaea;         /* darkened so lemon pops          */
-    --primary: #8fcc00;            /* darker lemon – legible on light */
+    --background: #e4e4e4;
+    --theme: #e4e4e4 !important;   /* override PaperMod's white --theme */
+    --entry: #ededed !important;   /* override PaperMod's white --entry  */
+    --primary: #8fcc00;
     --on-primary: #ffffff;
-    --surface: #eaeaea;
-    --surface-low: #f5f5f5;
-    --surface-high: #dcdcdc;
+    --surface: #e4e4e4;
+    --surface-low: #ededed;
+    --surface-high: #d8d8d8;
     --surface-highest: #cccccc;
-    --on-surface: #1e1e1e;         /* dark grey – professional         */
+    --on-surface: #1e1e1e;
     --on-surface-variant: #3a3a3a;
     --secondary: #555555;
     --outline: rgba(0,0,0,0.1);
     --uniform-width: 1200px;
-    --theme: var(--background);
-    --entry: var(--surface-low);
-    --content: var(--on-surface);
-    --border: var(--outline);
+    --content: #1e1e1e;
+    --border: rgba(0,0,0,0.1);
     color-scheme: light;
 }
 
@@ -72,6 +72,17 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
+
+/* Force grey in light mode — override PaperMod's white --theme on :root */
+html[data-theme="light"],
+html[data-theme="light"] body {
+    background-color: #e4e4e4 !important;
+}
+
+html[data-theme="light"] .list {
+    background: #e4e4e4 !important;
+}
+
 
 /* Base heading colors — WHITE in dark, DARK GREY in light */
 h1, h2, h3, h4, .font-headline {
@@ -216,7 +227,8 @@ h1 {
 
 :root:not([data-theme="dark"]) .post-entry {
     box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
-    background: #ffffff !important;
+    background: var(--surface-low) !important;
+
 }
 
 .post-entry:hover {
