@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/posts/</link>
+    <link>http://localhost:33185/cyber-portfolio/posts/</link>
     <description>Recent content in Posts on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Mar 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:33185/cyber-portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project 7: Database Breach &amp; Administrative Data Exfiltration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-7-database-breach/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-7-database-breach/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-7-database-breach/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-7-database-breach/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 6: Web-to-System Pivot via Command Injection</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-6-web-to-system-pivot/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-6-web-to-system-pivot/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-6-web-to-system-pivot/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-6-web-to-system-pivot/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 5: Offline Cryptanalysis &amp; Password Recovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-5-cryptanalysis/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-5-cryptanalysis/</link>
       <pubDate>Tue, 24 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-5-cryptanalysis/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-5-cryptanalysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 4: Post-Exploitation &amp; Sensitive Data Exfiltration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-4-post-exploitation/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-4-post-exploitation/</link>
       <pubDate>Mon, 23 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-4-post-exploitation/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-4-post-exploitation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage administrative access to extract the system&amp;rsquo;s &amp;ldquo;Shadow&amp;rdquo; file, demonstrating the ability to harvest encrypted credentials for offline analysis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 3: Exploiting Infrastructure Vulnerabilities (Backdoor Access)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-3-exploiting-infrastructure/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-3-exploiting-infrastructure/</link>
       <pubDate>Sun, 22 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-3-exploiting-infrastructure/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-3-exploiting-infrastructure/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To execute a remote command execution (RCE) exploit against a backdoored FTP service to gain unauthorized administrative access to the target host.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 2: Service Enumeration &amp; Vulnerability Research</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-2-service-enumeration/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-2-service-enumeration/</link>
       <pubDate>Sat, 21 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-2-service-enumeration/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-2-service-enumeration/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project 1: Defensive Lab Environment &amp; Network Configuration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/</link>
+      <link>http://localhost:33185/cyber-portfolio/posts/project-1-defensive-lab/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/</guid>
+      <guid>http://localhost:33185/cyber-portfolio/posts/project-1-defensive-lab/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
     </item>
   </channel>
