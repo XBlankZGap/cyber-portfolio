@@ -16,6 +16,7 @@
     --error: #ffb4ab;
     --tertiary: #c8c5cc;
     
+    --uniform-width: 1200px;
     --theme: var(--background);
     --entry: var(--surface-low);
     --content: var(--on-surface);
@@ -36,7 +37,8 @@ body {
 h1, h2, h3, .font-headline, .logo a {
     font-family: 'Space Grotesk', sans-serif !important;
     word-break: normal !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
 }
 
 h1 {
@@ -76,7 +78,7 @@ h2 {
 }
 
 .nav {
-    max-width: 1600px !important;
+    max-width: var(--uniform-width) !important;
     padding: 20px 60px !important;
 }
 
@@ -186,6 +188,12 @@ h2 {
     color: var(--on-surface) !important;
     margin-top: 24px !important;
     transition: color 0.3s ease;
+    word-break: normal !important;
+}
+
+.post-entry:hover .entry-header h2,
+.post-entry:hover h2 {
+    color: var(--primary) !important;
 }
 
 .post-entry:hover h2 {
@@ -229,7 +237,7 @@ h2 {
 
 /* EDITORIAL POST LAYOUT */
 .main-editorial-grid {
-    max-width: 1600px;
+    max-width: var(--uniform-width);
     margin: 120px auto 100px auto;
     padding: 0 60px;
 }
@@ -239,10 +247,19 @@ h2 {
 }
 
 .editorial-top-section {
-    display: grid;
-    grid-template-columns: 1fr 350px;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-top: 40px;
+}
+
+.editorial-side-metadata {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 40px;
+    margin-top: 20px;
 }
 
 .post-title-editorial {
@@ -252,6 +269,8 @@ h2 {
     text-transform: uppercase;
     font-weight: 800 !important;
     letter-spacing: -0.05em !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
 }
 
 .editorial-description {
@@ -294,11 +313,10 @@ h2 {
 }
 
 .post-content-container {
-    display: grid;
-    grid-template-columns: 350px 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 80px;
     margin-top: 80px;
-    align-items: start;
 }
 
 .editorial-toc {
@@ -367,7 +385,7 @@ h2 {
 /* HERO SECTION */
 .hero-section {
     margin: 160px auto 100px auto !important;
-    max-width: 1600px;
+    max-width: var(--uniform-width);
     padding: 0 60px !important;
     border-bottom: none !important;
 }
@@ -453,7 +471,7 @@ h2 {
 .view-case-study {
     display: inline-flex;
     align-items: center;
-    color: var(--primary);
+    color: var(--primary) !important;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
     font-weight: 700;
@@ -461,10 +479,13 @@ h2 {
     letter-spacing: 0.2em;
     margin-top: 30px;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
 .view-case-study:hover {
     letter-spacing: 0.3em;
+    opacity: 0.8;
 }
 
 .post-entry:hover h2 {

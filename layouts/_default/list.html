@@ -83,7 +83,9 @@
 
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      {{- .Title }}
+      <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">
+        {{- .Title }}
+      </a>
     </h2>
   </header>
   
