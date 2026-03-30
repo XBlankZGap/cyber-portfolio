@@ -4,7 +4,7 @@ draft = false
 title = 'Project 7: Database Breach & Administrative Data Exfiltration'
 
 [cover]
-image = "/images/project7_data_dump.png"
+image = "images/project7_data_dump.png"
 +++
 
 **Objective:** To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.

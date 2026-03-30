@@ -4,7 +4,7 @@ draft = false
 title = 'Project 1: Defensive Lab Environment & Network Configuration'
 
 [cover]
-image = "/images/feature-1-vbox-machine.png"
+image = "images/feature-1-vbox-machine.png"
 +++
 
 **Objective:** To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.

@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/images/feature-3-shell-privilege-escalation.png" alt="">
+        <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-3-shell-privilege-escalation.png" alt="">
         
 </figure>
   <div class="post-content"><p><strong>Objective:</strong> To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.</p>
@@ -219,9 +219,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <li><code>nmap -p 21 --script ftp-vsftpd-backdoor 192.168.56.101</code>: A targeted script scan to confirm the existence of the specific backdoor before launching an exploit.</li>
 <li><code>searchsploit vsftpd 2.3.4</code>: Querying the local Exploit-DB for known vulnerabilities.</li>
 </ul>
-<p><img alt="Screenshot" loading="lazy" src="/images/project2_nmap_scan.png">
+<p>
+<img src="/cyber-portfolio/images/project2_nmap_scan.png" alt="Screenshot"  />
+
 <em>Caption: Service version detection confirming the presence of the backdoored vsftpd 2.3.4 service.</em></p>
-<p><img alt="Screenshot" loading="lazy" src="/images/project2_searchsploit.png">
+<p>
+<img src="/cyber-portfolio/images/project2_searchsploit.png" alt="Screenshot"  />
+
 <em>Caption: Utilizing SearchSploit to map the identified service version to a known critical vulnerability (CVE-2011-2523).</em></p>
 <h2 id="5-professional-impact">5. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#5-professional-impact">#</a></h2>
 <p>By utilizing Service Fingerprinting, I successfully narrowed down the attack surface from dozens of open ports to a single, high-probability exploit. This phase demonstrates a logical transition from &ldquo;Information Gathering&rdquo; to &ldquo;Vulnerability Assessment,&rdquo; ensuring that the subsequent exploitation phase is precise and effective.</p>

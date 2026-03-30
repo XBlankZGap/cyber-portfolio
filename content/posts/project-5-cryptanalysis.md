@@ -4,7 +4,7 @@ draft = false
 title = 'Project 5: Offline Cryptanalysis & Password Recovery'
 
 [cover]
-image = "/images/project5_jtr_cracking.png"
+image = "images/project5_jtr_cracking.png"
 +++
 
 **Objective:** To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.
