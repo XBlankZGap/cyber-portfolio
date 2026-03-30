@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEC_CORE // Sophy's Cybersecurity Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#83dc5d",
+                        "surface-container": "#1f1f24",
+                        "on-surface-variant": "#bfcab5",
+                        "on-secondary": "#2f3132",
+                        "on-primary-container": "#0c3100",
+                        "secondary": "#c6c6c7",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "outline-variant": "#404a3a",
+                        "surface-dim": "#131318",
+                        "surface-container-highest": "#343439",
+                        "on-tertiary-fixed": "#1b1b20",
+                        "on-primary-fixed-variant": "#195200",
+                        "tertiary-container": "#919096",
+                        "inverse-surface": "#e4e1e8",
+                        "on-primary-fixed": "#062100",
+                        "primary-fixed": "#9ef976",
+                        "on-background": "#e4e1e8",
+                        "surface-container-lowest": "#0d0e12",
+                        "primary": "#83dc5d",
+                        "on-secondary-fixed-variant": "#464748",
+                        "on-surface": "#e4e1e8",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#303035",
+                        "surface-container-low": "#1b1b20",
+                        "tertiary": "#c8c5cc",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-primary": "#236d00",
+                        "on-primary": "#0f3900",
+                        "surface-container-high": "#292a2e",
+                        "surface-tint": "#83dc5d",
+                        "on-tertiary-fixed-variant": "#46464c",
+                        "on-secondary-container": "#b8b8b9",
+                        "outline": "#8a9481",
+                        "on-tertiary-container": "#29292e",
+                        "error": "#ffb4ab",
+                        "background": "#131318",
+                        "surface-variant": "#343439",
+                        "secondary-container": "#48494a",
+                        "primary-container": "#4fa32b",
+                        "surface": "#131318",
+                        "on-tertiary": "#303035",
+                        "error-container": "#93000a",
+                        "surface-bright": "#39393e",
+                        "tertiary-fixed-dim": "#c8c5cc",
+                        "tertiary-fixed": "#e4e1e8",
+                        "secondary-fixed": "#e3e2e3"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #131318; color: #e4e1e8; font-family: 'Inter', sans-serif; }
+        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(31, 31, 36, 0.4); backdrop-filter: blur(12px); }
+        .terminal-glow { box-shadow: 0 0 20px rgba(131, 220, 93, 0.05); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131318]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#83dc5d]" data-icon="terminal">terminal</span>
+<span class="text-[#83dc5d] font-bold tracking-tighter text-lg font-space-grotesk">SEC_CORE</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-space-grotesk tracking-widest uppercase text-sm">
+<a class="text-[#83dc5d] transition-colors duration-300" href="#">Home</a>
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">Labs</a>
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">Archive</a>
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">Intelligence</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-[#83dc5d] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-[#83dc5d] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-6xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-4">
+                        SYSTEM<br/><span class="text-primary">ARCHITECT</span>
+</h1>
+<p class="font-body text-slate-400 max-w-md text-lg leading-relaxed">
+                        Documenting advanced penetration testing, vulnerability research, and security engineering methodologies.
+                    </p>
+</div>
+<div class="flex flex-col items-end text-right">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-1">STATUS: OPERATIONAL</span>
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-slate-500">LAST UPDATED: 24.05.2024</span>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<div class="mb-12 flex flex-col md:flex-row gap-4 items-center justify-between p-1 bg-surface-container-low rounded-lg">
+<div class="relative w-full md:w-96 group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded text-sm py-3 pl-12 pr-4 focus:ring-1 focus:ring-primary/20 placeholder:text-slate-600 transition-all" placeholder="Search vulnerabilities, CVEs, or tools..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-bold uppercase tracking-widest rounded-lg">All Posts</button>
+<button class="px-4 py-2 bg-surface-container-highest text-slate-400 text-xs font-bold uppercase tracking-widest rounded-lg hover:text-primary transition-colors">Exploitation</button>
+<button class="px-4 py-2 bg-surface-container-highest text-slate-400 text-xs font-bold uppercase tracking-widest rounded-lg hover:text-primary transition-colors">Red Teaming</button>
+</div>
+</div>
+<!-- Project List -->
+<div class="space-y-24">
+<!-- Project 1 -->
+<article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start group">
+<div class="lg:col-span-7 relative">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest terminal-glow relative group-hover:scale-[1.01] transition-transform duration-500">
+<div class="absolute top-0 left-0 w-full h-8 bg-surface-container-high flex items-center px-4 gap-1.5 z-10">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<span class="ml-4 font-label text-[10px] uppercase tracking-widest text-slate-500">root@sec-core: ~/labs/exfiltration</span>
+</div>
+<img class="w-full h-full object-cover opacity-80 mix-blend-screen grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="High contrast terminal interface with green matrix style code and data tables representing a database breach simulation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClE4mqHD-eY0FH-XVqhcfgPMoGbDL2-Z977NPF9i3nz0CVmBjsrIFsbM-s6Bitv2hC55Y1GQ3tb83kNFny_pYw8HTYld2RhXVVxUSkLBfPlIoW_ITWWTVepBAry2zfTzaZQ4bGfipAX-K7VLGDyz0pvGYfoBm_ngBWLYxCDf3A7TcrY60FMqnAKxKNQLM0BqtQkg3vjRsH_sWIRZjm0DHf6Mtw-IOuRDDluNhQrrf3MMvq-mUR4bzSUuChth26b_JqA38ivpLLlg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center h-full pt-4 lg:pt-0">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-primary uppercase bg-primary/10 px-2 py-1 rounded">Exploitation</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">May 12, 2024</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">• 12 Min Read</span>
+</div>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">
+                        Database Breach &amp; Data Exfiltration
+                    </h2>
+<p class="text-slate-400 font-body leading-relaxed mb-8">
+                        A deep dive into SQL injection techniques used to bypass multi-factor authentication and silently exfiltrate sensitive user data through OOB channels.
+                    </p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs font-bold uppercase tracking-[0.2em] hover:gap-4 transition-all group/link" href="#">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start group">
+<div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center h-full pt-4 lg:pt-0 text-left lg:text-right items-start lg:items-end">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">April 28, 2024</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">• 18 Min Read</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-primary uppercase bg-primary/10 px-2 py-1 rounded">Post-Exploitation</span>
+</div>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">
+                        Web-to-System Pivot via Command Injection
+                    </h2>
+<p class="text-slate-400 font-body leading-relaxed mb-8">
+                        Analyzing a zero-day vulnerability in a popular web framework that allowed for remote code execution and subsequent lateral movement within the enterprise network.
+                    </p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs font-bold uppercase tracking-[0.2em] hover:gap-4 transition-all group/link" href="#">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 relative">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest terminal-glow relative group-hover:scale-[1.01] transition-transform duration-500">
+<div class="absolute top-0 left-0 w-full h-8 bg-surface-container-high flex items-center px-4 gap-1.5 z-10">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<span class="ml-4 font-label text-[10px] uppercase tracking-widest text-slate-500">kali@attacker: ~/pivoting/recon</span>
+</div>
+<img class="w-full h-full object-cover opacity-80 mix-blend-lighten grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Technical visualization of network nodes connecting with glowing lines on a dark background representing lateral movement and pivoting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz5sZ0BEGZ5KUoZ8Wx3MgfQeyNKtR6X9RuF2i0-rr2JUOCcIwGc6aVOA9NSEiCHhlEWjqGgXBhkM1oE0xbUZBy8d4nWWaZJ-fWjMmCKGC3HhL_VAE34ICU2a9W4jflC34LnQG84NDmiGoArTULBnikFcBwUVKsqdyBolBoe0beba9I57r9NOrhvrOH2n0YKBCVwSfc9nDbKc3t0hz5SpNKih088-dyYQrg5h9QoInBVEV2OZo2zRY_VkZc4-8DVLFbYi6T-pEDsQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start group">
+<div class="lg:col-span-7 relative">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest terminal-glow relative group-hover:scale-[1.01] transition-transform duration-500">
+<div class="absolute top-0 left-0 w-full h-8 bg-surface-container-high flex items-center px-4 gap-1.5 z-10">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<span class="ml-4 font-label text-[10px] uppercase tracking-widest text-slate-500">researcher@lab: ~/malware/analysis</span>
+</div>
+<img class="w-full h-full object-cover opacity-80 mix-blend-color-dodge grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close up of a computer screen showing binary code and hexadecimal strings with a glowing green highlight on specific malware signatures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0NTxBwDVcyyS5kWJWa_j1n7LOFLsJu_viDa3pv0aVnR5O8tSXoyM7QbrHP9mzXaDzkrRe3Z_YdLStvOdkP-IsCJ-P2gr8j1r-h06-juyY6D2zX_Jz50is8uKp1rYqcJ5J-E-xePkcgu-CqA0CLffq5SGPzplPnrL_xTa5F1eZrlyGxK1_RtfgEil0-tctS1oaDIlJSqCWY-by86G-uf_6mzZqWynP-_wo-8un6N0sqUFZ9cMYgcicWi78C1CbKyXFbyDCDbU9pQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center h-full pt-4 lg:pt-0">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-primary uppercase bg-primary/10 px-2 py-1 rounded">Malware</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">March 15, 2024</span>
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-slate-500 uppercase">• 25 Min Read</span>
+</div>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">
+                        Advanced Obfuscation &amp; Evasion
+                    </h2>
+<p class="text-slate-400 font-body leading-relaxed mb-8">
+                        Reverse engineering custom packers and polymorphic engines designed to bypass modern EDR solutions through memory-only execution and syscall hooking.
+                    </p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs font-bold uppercase tracking-[0.2em] hover:gap-4 transition-all group/link" href="#">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex justify-center items-center gap-8">
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors uppercase font-label text-[10px] tracking-widest disabled:opacity-20" disabled="">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span> Previous
+            </button>
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-xs">01</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-full text-slate-500 hover:text-primary cursor-pointer text-xs transition-colors">02</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-full text-slate-500 hover:text-primary cursor-pointer text-xs transition-colors">03</span>
+</div>
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors uppercase font-label text-[10px] tracking-widest">
+                Next <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full px-6 py-3 w-max bg-[#131318]/90 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex gap-8 items-center z-50">
+<a class="text-[#83dc5d] scale-110 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="text-slate-500 hover:text-slate-200 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</a>
+<a class="text-slate-500 hover:text-slate-200 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</a>
+<a class="text-slate-500 hover:text-slate-200 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-[#131318] flex flex-col items-center gap-4 w-full">
+<div class="flex gap-8 mb-4">
+<a class="font-inter text-[10px] tracking-widest opacity-50 hover:opacity-100 hover:text-[#83dc5d] transition-opacity duration-300" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest opacity-50 hover:opacity-100 hover:text-[#83dc5d] transition-opacity duration-300" href="#">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest opacity-50 hover:opacity-100 hover:text-[#83dc5d] transition-opacity duration-300" href="#">X</a>
+</div>
+<p class="font-inter text-[10px] tracking-widest opacity-50 uppercase">© 2024 SYSTEM_ARCHITECT. ALL RIGHTS RESERVED.</p>
+<div class="mt-4 flex items-center gap-2 opacity-20 group hover:opacity-100 transition-opacity">
+<div class="w-1 h-1 bg-primary rounded-full animate-pulse"></div>
+<span class="text-[8px] font-label uppercase tracking-widest">SEC_CORE//NODE_01_READY</span>
+</div>
+</footer>
+</body></html>

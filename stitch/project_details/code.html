@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Detail - Database Breach &amp; Administrative Data Exfiltration</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#83dc5d",
+              "surface-container": "#1f1f24",
+              "on-surface-variant": "#bfcab5",
+              "on-secondary": "#2f3132",
+              "on-primary-container": "#0c3100",
+              "secondary": "#c6c6c7",
+              "on-secondary-fixed": "#1a1c1d",
+              "outline-variant": "#404a3a",
+              "surface-dim": "#131318",
+              "surface-container-highest": "#343439",
+              "on-tertiary-fixed": "#1b1b20",
+              "on-primary-fixed-variant": "#195200",
+              "tertiary-container": "#919096",
+              "inverse-surface": "#e4e1e8",
+              "on-primary-fixed": "#062100",
+              "primary-fixed": "#9ef976",
+              "on-background": "#e4e1e8",
+              "surface-container-lowest": "#0d0e12",
+              "primary": "#83dc5d",
+              "on-secondary-fixed-variant": "#464748",
+              "on-surface": "#e4e1e8",
+              "on-error": "#690005",
+              "inverse-on-surface": "#303035",
+              "surface-container-low": "#1b1b20",
+              "tertiary": "#c8c5cc",
+              "secondary-fixed-dim": "#c6c6c7",
+              "inverse-primary": "#236d00",
+              "on-primary": "#0f3900",
+              "surface-container-high": "#292a2e",
+              "surface-tint": "#83dc5d",
+              "on-tertiary-fixed-variant": "#46464c",
+              "on-secondary-container": "#b8b8b9",
+              "outline": "#8a9481",
+              "on-tertiary-container": "#29292e",
+              "error": "#ffb4ab",
+              "background": "#131318",
+              "surface-variant": "#343439",
+              "secondary-container": "#48494a",
+              "primary-container": "#4fa32b",
+              "surface": "#131318",
+              "on-tertiary": "#303035",
+              "error-container": "#93000a",
+              "surface-bright": "#39393e",
+              "tertiary-fixed-dim": "#c8c5cc",
+              "tertiary-fixed": "#e4e1e8",
+              "secondary-fixed": "#e3e2e3"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "mono": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-text { font-family: 'JetBrains Mono', monospace; }
+        .glass-effect { backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131318]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#83dc5d]" data-icon="terminal">terminal</span>
+<span class="text-[#83dc5d] font-bold tracking-tighter text-lg font-headline">SEC_CORE</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 font-space-grotesk tracking-widest uppercase text-sm">
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">HOME</a>
+<a class="text-[#83dc5d]" href="#">PROJECTS</a>
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">SHIELD</a>
+<a class="text-slate-400 hover:text-[#83dc5d] transition-colors duration-300" href="#">VAULT</a>
+</nav>
+<button class="material-symbols-outlined text-slate-400 active:scale-95 duration-200" data-icon="menu">menu</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Breadcrumb / Back Navigation -->
+<div class="mb-12">
+<a class="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors font-headline tracking-widest text-xs uppercase" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+                BACK_TO_ARCHIVE
+            </a>
+</div>
+<!-- Project Hero Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+<div class="lg:col-span-8">
+<div class="inline-block px-3 py-1 mb-6 rounded bg-surface-container-high border-l-2 border-primary">
+<span class="text-primary font-mono text-xs tracking-tighter">CASE_ID: DB-EXFIL-2024-001</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8 leading-none">
+                    Database Breach &amp; Administrative Data Exfiltration
+                </h1>
+<p class="text-slate-400 text-xl font-light leading-relaxed max-w-2xl">
+                    A comprehensive simulation of a SQL injection vulnerability resulting in total compromise of administrative credentials and cross-table exfiltration of sensitive organizational data.
+                </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-low p-6 rounded-lg">
+<h3 class="font-headline text-xs tracking-widest uppercase text-primary mb-4">Core_Tools</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-mono rounded">Metasploit</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-mono rounded">MySQL</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-mono rounded">DVWA</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-mono rounded">BurpSuite</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-xs font-mono rounded">SQLmap</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg">
+<h3 class="font-headline text-xs tracking-widest uppercase text-primary mb-4">Vulnerability_Class</h3>
+<p class="font-mono text-sm text-on-surface">CWE-89: Improper Neutralization of Special Elements used in an SQL Command</p>
+</div>
+</div>
+</div>
+<!-- Terminal View Section -->
+<div class="mb-24">
+<div class="bg-surface-container-highest rounded-t-xl px-4 py-3 flex items-center justify-between border-b border-[#131318]">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+</div>
+<span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">root@internal_node: ~/payload_delivery</span>
+<div class="w-10"></div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-b-xl shadow-2xl relative overflow-hidden aspect-video lg:aspect-auto">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #83dc5d 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="font-mono text-sm md:text-base leading-relaxed text-[#83dc5d]/90 relative z-10">
+<p class="mb-2"><span class="text-slate-500">msf6 &gt;</span> use auxiliary/scanner/http/sql_injection_scanner</p>
+<p class="mb-2"><span class="text-slate-500">msf6 auxiliary(sql_injection_scanner) &gt;</span> set RHOSTS 192.168.1.45</p>
+<p class="mb-2"><span class="text-slate-500">msf6 auxiliary(sql_injection_scanner) &gt;</span> run</p>
+<p class="mb-2 text-primary font-bold">[+] Found possible SQL injection at 'id' parameter.</p>
+<p class="mb-2"><span class="text-slate-500">msf6 &gt;</span> sqlmap -u "http://192.168.1.45/vulnerabilities/sqli/?id=1&amp;Submit=Submit#" --cookie="PHPSESSID=..." --dump-all</p>
+<p class="mb-2 text-slate-300">[*] searching for common databases...</p>
+<p class="mb-2 text-slate-300">[*] fetched 2 tables: 'users', 'metadata'</p>
+<p class="mb-2 text-primary">[SUCCESS] Data exfiltrated to /tmp/loot_admin_dump.csv</p>
+<p class="mb-2 mt-4"><span class="text-slate-500">#</span> cat /tmp/loot_admin_dump.csv</p>
+<div class="grid grid-cols-4 gap-4 text-xs opacity-80 border-t border-primary/20 pt-2">
+<span>USER_ID</span><span>USERNAME</span><span>PASSWORD_HASH</span><span>ROLE</span>
+<span>001</span><span>admin</span><span>$2y$10$7...</span><span>SUPERUSER</span>
+<span>002</span><span>sys_root</span><span>$2y$10$9...</span><span>ADMIN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Walkthrough -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4 sticky top-24 h-fit">
+<h2 class="font-headline text-3xl font-bold mb-6">Objective</h2>
+<div class="bg-surface-container-low p-8 rounded-lg">
+<p class="text-slate-300 leading-relaxed mb-6">
+                        The primary mission was to demonstrate the critical failure points in legacy PHP-based database interaction layers. By identifying unparameterized queries, we aimed to pivot from a simple web-form input to a full database takeover.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm text-slate-400">Identify entry points via fuzzing</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm text-slate-400">Bypass basic input sanitation</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm text-slate-400">Extract entire user schema</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-8">
+<h2 class="font-headline text-3xl font-bold mb-10">Step-by-Step Execution</h2>
+<div class="space-y-12">
+<!-- Step 1 -->
+<div class="flex gap-6">
+<div class="flex-none w-px bg-gradient-to-b from-primary to-transparent relative">
+<div class="absolute -top-1 -left-1 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_#83dc5d]"></div>
+</div>
+<div>
+<span class="font-mono text-primary text-xs block mb-2 tracking-widest">PHASE_01: RECONNAISSANCE</span>
+<h3 class="font-headline text-xl font-bold mb-3 uppercase tracking-tight">Vulnerability Mapping</h3>
+<p class="text-slate-400 mb-4 font-mono text-sm leading-relaxed">
+                                Initial automated scanning using Metasploit's HTTP scanner modules identified a high-confidence SQL injection point in the 'id' parameter of the vulnerable application's lookup feature.
+                            </p>
+<div class="bg-surface-container-lowest p-4 rounded border border-primary/10 font-mono text-xs text-primary/70">
+                                [DEBUG] Payload sent: ' OR '1'='1
+                            </div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-6">
+<div class="flex-none w-px bg-gradient-to-b from-primary to-transparent relative">
+<div class="absolute -top-1 -left-1 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_#83dc5d]"></div>
+</div>
+<div>
+<span class="font-mono text-primary text-xs block mb-2 tracking-widest">PHASE_02: EXPLOITATION</span>
+<h3 class="font-headline text-xl font-bold mb-3 uppercase tracking-tight">Automated Injection</h3>
+<p class="text-slate-400 mb-4 font-mono text-sm leading-relaxed">
+                                Leveraging SQLmap with custom cookie authentication headers to bypass session-gatekeepers. The tool successfully identified the backend database as MySQL 5.7 and verified that UNION-based techniques were viable.
+                            </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-6">
+<div class="flex-none w-px bg-gradient-to-b from-primary to-transparent relative">
+<div class="absolute -top-1 -left-1 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_#83dc5d]"></div>
+</div>
+<div>
+<span class="font-mono text-primary text-xs block mb-2 tracking-widest">PHASE_03: EXFILTRATION</span>
+<h3 class="font-headline text-xl font-bold mb-3 uppercase tracking-tight">Credential Harvesting</h3>
+<p class="text-slate-400 mb-4 font-mono text-sm leading-relaxed">
+                                Targeted extraction of the 'users' table. Harvested bcrypt-hashed passwords for all administrative accounts. Data was piped directly into an encrypted local archive for analysis.
+                            </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-6">
+<div class="flex-none w-px bg-transparent relative">
+<div class="absolute -top-1 -left-1 w-3 h-3 rounded-full border border-primary shadow-[0_0_10px_#83dc5d]"></div>
+</div>
+<div>
+<span class="font-mono text-primary text-xs block mb-2 tracking-widest">PHASE_04: MITIGATION_REPORT</span>
+<h3 class="font-headline text-xl font-bold mb-3 uppercase tracking-tight">Security Hardening</h3>
+<p class="text-slate-400 mb-6 font-mono text-sm leading-relaxed">
+                                Recommended immediate migration to Prepared Statements using PDO or relevant ORM frameworks. Implemented Web Application Firewall (WAF) rules to detect and block common SQL injection patterns.
+                            </p>
+<button class="bg-primary text-on-primary font-headline tracking-widest text-xs px-6 py-3 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+                                VIEW_FULL_REMEDIATION_GUIDE
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Project Gallery Overlay (Asymmetric Grid) -->
+<section class="bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="font-headline text-xs tracking-[0.4em] uppercase text-slate-500 mb-12">Related_Media_Assets</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 bg-surface-container-high overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="close-up of server rack status lights in a dark data center with teal and green glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_QDC9Ryv04g0r-REw9ftAwj6M5KkxgPi-8eV3UhZ3ZyxOImESLquynDm_Qx8kLqPtx9DRuoCmhudDwBLUr2pprHJmcUYZM3qIz5BzioRYIt8Y_nuVs2EVPTOj06kD43Kp3LOdKtWu6Jo24Ew1sVpaFy5fM9nVY4UehaLEaR2YxnGgYjjzQVo2Jh5gCfS3VQK6rOFanUUGJAcM9qcneY_NT36CLAOhkYdAGEcoyKsF37G4ImNUnQWL7SXswzi-rvKyYASG2q98hA"/>
+</div>
+<div class="col-span-2 bg-surface-container-high overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="abstract digital code visualization on a dark background with neon green data streams and glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4kBm1CLcMx_mBQJ_7uwjZo0F8eFRHhYaJEIYF5gPI7RoVzigC6WPaPaFc5h5GD8hD_Lgse3dyY3MLXmqu7FlboYXufkjafc6WUw0F5mU14rqRW7V1EDFtj1ZB0B8MVEKwLJ7NK3OV6u9L0vPkhYXpkVRw6DMay_PlhE1KDbNlgRCrEAuro7raKowKhCagNRWK7qii64LFu2H_xXMaQEwNt8i2h-Pknq00-aaP7ug8aSVRm5YYZbkKYu6xqTyNa8Oz7gedfvwv7A"/>
+</div>
+<div class="bg-surface-container-high overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="close-up view of a high-tech circuit board with microscopic details and soft emerald lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoPpCb9_yJTjaNZ-wD6hMtm2IhPS5CN3uvi3Zm92KsYN8GRd2gwxTHJLgYRbIbFyVhXn1mglVoGdF3afWYIcW5YwkpdRFfrc2AWJ0pS31Pj_8k-GVlKct6xyB1QYBX4qw31LyLVeVBaitDWuPn3lo-zc0d3CeJokkfr0txisz5jdXMLvIgkY354ZQ-zF2DF0LYyT-KsVkXtJY7nsdMqCf4dFSDrqiFvghttN9zshiFJYzjjlEg_SmILC-nU-luCOSk6xDNiDyV6w"/>
+</div>
+<div class="bg-surface-container-high overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" data-alt="blurred terminal screen with cascading green characters representing a data stream in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgFgwgjZCj0q6eBxSW0Sy_NBPU3zwgxYaM6ryyQXVADGh90_Q8YYHlfilVZzehj9HXFrryrcuu5xGjc6c8RT4JRtPDulIc7JguM6YTu5gp9UaF1yEFvDtpm1pyBleG2vShTEi_9W5mEyuVnouWLCr9Ag8-hKO4wBNwunxQAGR43Am9jVIySrfZxyfHrhgfvD20snWSzFPXrmKK0rvc-HlIYxvXOBaOFfRBk_PeCj-PU1PzSWEdBh_qqvtjRcS1QJr-gEXtHyTwuw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- BottomNavBar (Hidden on desktop as per rules, visible on mobile) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#131318]/90 backdrop-blur-md rounded-full px-6 py-3 w-max flex gap-8 items-center z-50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+<a class="text-slate-500 hover:text-slate-200" href="#"><span class="material-symbols-outlined" data-icon="home">home</span></a>
+<a class="text-[#83dc5d] scale-110" href="#"><span class="material-symbols-outlined" data-icon="shield">shield</span></a>
+<a class="text-slate-500 hover:text-slate-200" href="#"><span class="material-symbols-outlined" data-icon="code">code</span></a>
+<a class="text-slate-500 hover:text-slate-200" href="#"><span class="material-symbols-outlined" data-icon="person">person</span></a>
+</nav>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-[#131318] flex flex-col items-center gap-4 w-full">
+<div class="flex gap-8 mb-4">
+<a class="font-inter text-[10px] tracking-widest text-slate-500 hover:opacity-100 hover:text-[#83dc5d] transition-all duration-300" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest text-slate-500 hover:opacity-100 hover:text-[#83dc5d] transition-all duration-300" href="#">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest text-slate-500 hover:opacity-100 hover:text-[#83dc5d] transition-all duration-300" href="#">X</a>
+</div>
+<p class="font-inter text-[10px] tracking-widest opacity-50 text-slate-500 uppercase">© 2024 SYSTEM_ARCHITECT. ALL RIGHTS RESERVED.</p>
+</footer>
+</body></html>
