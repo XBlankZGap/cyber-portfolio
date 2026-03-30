@@ -1,0 +1,130 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }} {{/* if not profileMode */}}
+
+{{- if not .IsHome | and .Title }}
+{{- if .IsHome }}
+<header class="page-header hero-section">
+    <div class="hero-content">
+        <span class="label-metadata" style="color: var(--primary); font-size: 11px; letter-spacing: 0.3em;">CYBERSECURITY</span>
+        <h1 class="font-headline" style="font-size: 84px; line-height: 0.85; margin: 10px 0 30px 0; font-weight: 800; letter-spacing: -0.05em;">PROJECTS</h1>
+        <p class="editorial-description" style="max-width: 500px; opacity: 0.7;">
+            Documenting advanced penetration testing, vulnerability research, and security engineering methodologies.
+        </p>
+    </div>
+
+    <div class="category-tabs-container">
+        <div class="category-tabs">
+            <a href="{{ "" | absLangURL }}" class="tab active">All Projects</a>
+            <a href="/tags/exploitation/" class="tab">Exploitation</a>
+            <a href="/tags/app-security/" class="tab">App Security</a>
+            <a href="/tags/soc-analysis/" class="tab">SOC Analysis</a>
+            <a href="/tags/compliance/" class="tab">Compliance</a>
+            <a href="/tags/pen-testing/" class="tab">Pen Testing</a>
+        </div>
+    </div>
+</header>
+{{- else }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1 style="font-size: 64px; text-transform: uppercase;">{{ .Title }}</h1>
+</header>
+{{- end }}
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- end }}
+
+{{- $paginator := .Paginate $pages }}
+
+{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- $term := .Data.Term }}
+{{- range $index, $page := $paginator.Pages }}
+
+{{- $class := "post-entry" }}
+
+{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
+{{- $class = "first-entry" }}
+{{- else if $term }}
+{{- $class = "post-entry tag-entry" }}
+{{- end }}
+
+<article class="{{ $class }}">
+  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  
+  <div class="post-meta-under-image">
+    {{- if .Params.tags }}
+    <span class="intel-badge-small">{{ index .Params.tags 0 }}</span>
+    {{- end }}
+    <span class="meta-item">{{ .Date.Format "January 2, 2006" }}</span>
+    {{- if not (.Param "hideMeta") }}
+    <span class="meta-item">• {{ .ReadingTime }} MIN READ</span>
+    {{- end }}
+  </div>
+
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      {{- .Title }}
+    </h2>
+  </header>
+  
+  {{- if (ne (.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+
+  <div class="entry-footer-design">
+    <a href="{{ .Permalink }}" class="view-case-study" aria-label="post link to {{ .Title | plainify }}">
+        READ MORE 
+        <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 8px;">arrow_forward</span>
+    </a>
+  </div>
+</article>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
+      {{- end }}
+    </a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+      {{- i18n "next_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+      {{- end }}&nbsp;»
+    </a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}{{/* end profileMode */}}
+
+{{- end }}{{- /* end main */ -}}

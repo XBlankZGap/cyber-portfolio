@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/</loc>
     <lastmod>2026-03-26T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-7-database-breach/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-7-database-breach/</loc>
     <lastmod>2026-03-26T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/</loc>
     <lastmod>2026-03-26T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-6-web-to-system-pivot/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-6-web-to-system-pivot/</loc>
     <lastmod>2026-03-25T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-5-cryptanalysis/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-5-cryptanalysis/</loc>
     <lastmod>2026-03-24T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-4-post-exploitation/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-4-post-exploitation/</loc>
     <lastmod>2026-03-23T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-3-exploiting-infrastructure/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-3-exploiting-infrastructure/</loc>
     <lastmod>2026-03-22T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-2-service-enumeration/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-2-service-enumeration/</loc>
     <lastmod>2026-03-21T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/project-1-defensive-lab/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/about/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/about/</loc>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/</loc>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/contact/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/contact/</loc>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/tags/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/tags/</loc>
   </url>
 </urlset>

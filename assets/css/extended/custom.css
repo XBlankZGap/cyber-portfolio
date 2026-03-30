@@ -3,7 +3,7 @@
 
 :root, [data-theme="dark"] {
     --background: #131318;
-    --primary: #83dc5d;
+    --primary: #dfff00;
     --on-primary: #0f3900;
     --surface: #131318;
     --surface-low: #1b1b20;
@@ -35,14 +35,18 @@ body {
 /* TYPOGRAPHY - EDITORIAL STYLE */
 h1, h2, h3, .font-headline, .logo a {
     font-family: 'Space Grotesk', sans-serif !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
 }
 
 h1 {
-    font-size: 72px !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.04em !important;
+    font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.05em !important;
     line-height: 0.9 !important;
     text-transform: uppercase;
+    margin: 0 !important;
+    color: var(--on-surface);
 }
 
 h2 {
@@ -72,8 +76,8 @@ h2 {
 }
 
 .nav {
-    max-width: 1400px !important;
-    padding: 20px 40px !important;
+    max-width: 1600px !important;
+    padding: 20px 60px !important;
 }
 
 .logo a {
@@ -140,6 +144,7 @@ h2 {
     background: var(--surface-highest);
     border: 1px solid rgba(255,255,255,0.05);
     position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
 .terminal-header {
@@ -177,9 +182,10 @@ h2 {
 
 .entry-header h2 {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 32px !important;
+    font-size: 38px !important;
     color: var(--on-surface) !important;
     margin-top: 24px !important;
+    transition: color 0.3s ease;
 }
 
 .post-entry:hover h2 {
@@ -223,9 +229,9 @@ h2 {
 
 /* EDITORIAL POST LAYOUT */
 .main-editorial-grid {
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 120px auto 100px auto;
-    padding: 0 40px;
+    padding: 0 60px;
 }
 
 .post-header-editorial {
@@ -240,19 +246,21 @@ h2 {
 }
 
 .post-title-editorial {
-    font-size: 72px !important;
-    line-height: 0.95 !important;
-    margin: 20px 0 !important;
+    font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+    line-height: 0.9 !important;
+    margin: 15px 0 !important;
     text-transform: uppercase;
     font-weight: 800 !important;
-    letter-spacing: -0.04em !important;
+    letter-spacing: -0.05em !important;
 }
 
 .editorial-description {
-    font-size: 20px;
-    color: var(--secondary);
-    max-width: 700px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--on-surface-variant);
+    max-width: 800px;
     line-height: 1.6;
+    margin-top: 20px;
+    opacity: 0.8;
 }
 
 .intel-box {
@@ -287,8 +295,8 @@ h2 {
 
 .post-content-container {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 60px;
+    grid-template-columns: 350px 1fr;
+    gap: 80px;
     margin-top: 80px;
     align-items: start;
 }
@@ -320,4 +328,152 @@ h2 {
     color: var(--secondary);
     font-style: italic;
     text-align: center;
+}
+
+/* BREADCRUMBS STYLING */
+.breadcrumbs {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px !important;
+    color: var(--secondary) !important;
+}
+
+.breadcrumbs a {
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+
+.breadcrumbs span {
+    margin: 0 10px;
+    opacity: 0.3;
+}
+
+/* INTEL DECORATION */
+.intel-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(131, 220, 93, 0.1);
+    border-left: 3px solid var(--primary);
+    margin-bottom: 15px;
+}
+
+.intel-box h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    margin: 160px auto 100px auto !important;
+    max-width: 1600px;
+    padding: 0 60px !important;
+    border-bottom: none !important;
+}
+
+.hero-section h1 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    text-shadow: 0 0 40px rgba(131, 220, 93, 0.05);
+}
+
+/* CATEGORY TABS */
+.category-tabs-container {
+    margin-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.category-tabs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.category-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.category-tabs .tab {
+    padding: 10px 24px;
+    background: var(--surface-low);
+    color: var(--secondary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.category-tabs .tab:hover {
+    background: var(--surface-high);
+    color: var(--primary);
+}
+
+.category-tabs .tab.active {
+    background: var(--primary);
+    color: var(--on-primary);
+}
+
+/* PROJECT CARD REVISIONS */
+.post-meta-under-image {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.intel-badge-small {
+    background: rgba(131, 220, 93, 0.1);
+    color: var(--primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.meta-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--on-surface-variant);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.view-case-study {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.view-case-study:hover {
+    letter-spacing: 0.3em;
+}
+
+.post-entry:hover h2 {
+    color: var(--primary) !important;
+}
+
+/* RESPONSIVE HEADLINE FIXES FOR PROJECTS */
+.entry-header h2 {
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
 }
