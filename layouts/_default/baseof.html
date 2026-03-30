@@ -22,17 +22,22 @@
 <body id="top">
 {{- end }}
     {{ partialCached "header.html" . .Page -}}
-    
-    {{- /* Persistent Search Bar Relocated centrally before the body */}}
     {{- if .IsHome }}
-    <div class="homepage-summary-section" style="max-width: var(--uniform-width, 1200px); margin: 60px auto 10px auto; padding: 0 60px;">
-        <h1 style="font-size: 32px; color: var(--primary) !important; margin-bottom: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: -0.02em;">CYBERSECURITY PROJECTS</h1>
-        <p style="font-size: 16px; color: var(--on-surface-variant); max-width: 800px; line-height: 1.6; opacity: 0.8;">
-            Documenting advanced penetration testing, vulnerability research, and security engineering methodologies.
-        </p>
+    <section class="summary-hero-banner">
+        <span class="hero-label">// SOPHY'S CYBERLAB</span>
+        <h1>
+            <span class="accent">CYBERSECURITY</span>
+            PROJECTS
+        </h1>
+        <p>Documenting advanced penetration testing, vulnerability research, and security engineering methodologies.</p>
+    </section>
+    {{- end }}
+    
+    {{- if .IsHome }}
+    <div class="search-container-center">
+        {{ partial "search_bar.html" . }}
     </div>
     {{- end }}
-    {{ partial "search_bar.html" . }}
 
     <main class="main">
         {{- block "main" . }}{{ end }}
