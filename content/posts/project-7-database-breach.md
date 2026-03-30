@@ -1,0 +1,52 @@
++++
+date = '2026-03-26T10:00:00+01:00'
+draft = false
+title = 'Project 7: Database Breach & Administrative Data Exfiltration'
+
+[cover]
+image = "/images/project7_data_dump.png"
++++
+
+**Objective:** To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.
+
+<!--more-->
+
+## 1. The Vulnerability: Insecure Database Configuration
+
+After gaining a shell as the `www-data` user, I conducted a Configuration Review of the web application’s source code. I identified that the database was configured with the root administrative user and, critically, no password. This represents a "Zero-Auth" vulnerability where the most sensitive data on the server is unprotected from local users.
+
+## 2. Technical Execution: Database Interrogation
+
+Using the interactive shell established in Project 6, I bypassed the web interface entirely and communicated directly with the MySQL Management System. By assuming the identity of the database root, I gained full "Create, Read, Update, and Delete" (CRUD) permissions over the entire data store.
+
+| Component | Value | Purpose |
+| :--- | :--- | :--- |
+| **Database System** | MySQL / MariaDB | The backend storage engine. |
+| **Auth Bypass** | `mysql -u root` | Accessing the DB with no password required. |
+| **Target Database** | `dvwa` | The specific application schema. |
+| **Exfiltrated Data** | `users` table | Contains usernames and salted hashes. |
+
+## 3. Execution Workflow
+
+1. **Credential Discovery:** Analyzed the `config.inc.php` file to locate the database connection strings.
+2. **Database Entry:** Initiated a local MySQL session. The lack of a password prompt confirmed the critical misconfiguration.
+3. **Schema Mapping:** Executed `SHOW DATABASES;` and `SHOW TABLES;` to map the structure of the application's "vault."
+4. **The "Data Dump":** Ran a targeted SQL query to extract the user and password columns, effectively stealing the identity of every registered user on the platform.
+
+## 4. Key Commands Used
+
+- `cat /var/www/dvwa/config/config.inc.php`: To find the "secrets" hidden in the code.
+- `mysql -u root`: To enter the database as the highest-privileged user.
+- `SELECT user, password FROM users;`: The SQL query used to dump the credential store.
+
+![Screenshot](/images/project7_config_exposure.png)
+*Caption: Identification of hardcoded, insecure database credentials within the application source code.*
+
+
+![Screenshot](/images/project7_data_dump.png)
+*Caption: Successful administrative access to the MySQL backend and exfiltration of the user credential table.*
+
+
+## 5. Professional Impact
+
+This project demonstrates the Full-Stack Compromise. I proved that a single coding error (Command Injection) combined with a single configuration error (No DB Password) leads to a total loss of Data Confidentiality. This write-up showcases my ability to connect the dots between the Web, the OS, and the Database, providing a comprehensive "Post-Mortem" that a security firm would use to advise a client on remediation.
