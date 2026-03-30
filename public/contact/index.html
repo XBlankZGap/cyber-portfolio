@@ -22,7 +22,7 @@ If you have a professional project in mind, a specific technical inquiry, or an 
 ">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/contact/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.02c50a907c2033e7be9e1872f2672bbce9860376414dff4d416dd9c32127d240.css" integrity="sha256-AsUKkHwgM&#43;e&#43;nhhy8mcrvOmGA3ZBTf9NQW3ZwyEn0kA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.0116fdaa3d7fd1e208649af5143c4371844d76b23a306e22972fcdfa3b01cff0.css" integrity="sha256-ARb9qj1/0eIIZJr1FDxDcYRNdrI6MG4ily/N&#43;jsBz/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -131,6 +131,58 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
+</script>
 
 </head>
 <body id="top">
@@ -163,8 +215,8 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
                 </a>
             </li>
             <li>
@@ -175,7 +227,20 @@ document.addEventListener("DOMContentLoaded", function() {
         </ul>
     </nav>
 </header>
-<main class="main">
+
+    <div class="search-container-center">
+    <div class="search-bar">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input id="inline-search-input" type="text" placeholder="Search across all projects..." autocomplete="off">
+    </div>
+    <ul id="inline-search-results"></ul>
+</div>
+
+
+    <main class="main">
 
 <article class="post-single">
   <header class="post-header">

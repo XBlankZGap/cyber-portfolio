@@ -5,9 +5,15 @@ theme = 'PaperMod'
 defaultTheme = 'dark'
 
 [[menu.main]]
+    name = "About Me"
+    url = "about/"
+    weight = 40
+
+[[menu.main]]
     name = "Contact"
     url = "contact/"
     weight = 60
+
 
 [markup.goldmark.renderer]
     unsafe = true
@@ -20,7 +26,3 @@ defaultTheme = 'dark'
 [outputs]
     home = ["HTML", "RSS", "JSON"]
 
-[[menu.main]]
-    name = "Search"
-    url = "search/"
-    weight = 50

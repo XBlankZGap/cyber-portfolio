@@ -29,11 +29,11 @@
     <loc>http://localhost:1313/cyber-portfolio/posts/project-1-defensive-lab/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/about/</loc>
+  </url><url>
     <loc>http://localhost:1313/cyber-portfolio/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/contact/</loc>
-  </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/search/</loc>
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/tags/</loc>
   </url>
