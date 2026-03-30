@@ -1,6 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
 #lightbox {
     position: fixed;
@@ -8,7 +9,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(19, 19, 24, 0.95);
     display: none;
     align-items: center;
     justify-content: center;
@@ -18,8 +19,8 @@
 #lightbox img {
     max-width: 90vw;
     max-height: 90vh;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
     object-fit: contain;
 }
 </style>
@@ -30,7 +31,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".post-content img");
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.addEventListener("click", function(event) {
+        if (!searchInput) return;
         if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
             searchResults.style.display = "none";
         }

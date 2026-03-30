@@ -1,0 +1,81 @@
+{{- define "main" }}
+
+<article class="post-single main-editorial-grid">
+  <header class="post-header-editorial">
+    {{ partial "breadcrumbs.html" . }}
+    
+    <div class="editorial-top-section">
+      <div class="editorial-title-container">
+        {{- if .Params.case_id }}
+        <div class="intel-badge">
+          <span class="label-metadata" style="color: var(--primary);">CASE_ID: {{ .Params.case_id }}</span>
+        </div>
+        {{- end }}
+        <h1 class="post-title-editorial">
+          {{ .Title }}
+          {{- if .Draft }}
+          <span class="entry-hint" title="Draft" style="color: var(--error); vertical-align: middle; margin-left: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" fill="currentColor">
+              <path d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+            </svg>
+          </span>
+          {{- end }}
+        </h1>
+        {{- if .Description }}
+        <p class="editorial-description">{{ .Description }}</p>
+        {{- end }}
+      </div>
+
+      <div class="editorial-side-metadata">
+        {{- if .Params.tools }}
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
+          <div class="tools-grid">
+            {{- range .Params.tools }}
+            <span class="tool-tag">{{ . }}</span>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+
+        {{- if .Params.vulnerability_class }}
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Vulnerability_Class</h3>
+          <p class="intel-text">{{ .Params.vulnerability_class }}</p>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </header>
+
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+  <div class="post-content-container">
+    {{- if (.Param "ShowToc") }}
+    <aside class="editorial-toc">
+       {{- partial "toc.html" . }}
+    </aside>
+    {{- end }}
+
+    <div class="post-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+  </footer>
+</article>
+
+{{- end }}{{/* end main */}}

@@ -2,6 +2,9 @@
 date = '2026-03-20T10:00:00+01:00'
 draft = false
 title = 'Project 1: Defensive Lab Environment & Network Configuration'
+case_id = "LAB-NET-2026-01"
+vulnerability_class = "Network Segregation & Infrastructure Hardening"
+tools = ["VirtualBox", "Kali Linux", "Host-Only Networking"]
 
 [cover]
 image = "images/feature-1-vbox-machine.png"
