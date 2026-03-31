@@ -816,6 +816,8 @@ button.btn-terminal-submit,
 
 /* ── Reset PaperMod main container for about page ── */
 .about-page {
+    /* Scoped theme variables to override PaperMod's default text --primary */
+    --primary: #dfff00;
     --surface-lowest: #0d0e12;
     width: 100%;
     max-width: var(--uniform-width);
@@ -825,6 +827,11 @@ button.btn-terminal-submit,
     flex-direction: column;
     gap: 100px;
 }
+
+[data-theme="light"] .about-page {
+    --primary: #8fcc00;
+}
+
 
 /* ── HERO ───────────────────────────────────────── */
 .about-hero {
@@ -878,7 +885,7 @@ button.btn-terminal-submit,
 
 /* Override global h1:hover for the name — it now pops with accent color without glow */
 .about-page .about-name:hover {
-    color: #83dc5d !important;
+    color: var(--primary) !important;
 }
 
 .about-page .about-name:hover .about-name-accent {
@@ -886,7 +893,7 @@ button.btn-terminal-submit,
 }
 
 .about-name-accent {
-    color: #83dc5d;
+    color: var(--primary);
     transition: color 0.3s ease;
 }
 
@@ -915,7 +922,7 @@ button.btn-terminal-submit,
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #83dc5d;
+    background: var(--primary);
     color: #131318;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
@@ -1083,7 +1090,7 @@ button.btn-terminal-submit,
 }
 
 .about-skill-card:hover .about-skill-icon {
-    color: #83dc5d !important;
+    color: var(--primary) !important;
 }
 
 .about-skill-icon {
@@ -1191,7 +1198,7 @@ button.btn-terminal-submit,
 }
 
 .about-thm-panel {
-    background: #83dc5d !important;
+    background: var(--primary) !important;
     padding: 36px 28px;
     display: flex;
     flex-direction: column;
@@ -1544,7 +1551,7 @@ button.btn-terminal-submit,
 
 .about-lang-bar {
     height: 100%;
-    background: #83dc5d !important;
+    background: var(--primary) !important;
     border-radius: 99px;
 }
 
