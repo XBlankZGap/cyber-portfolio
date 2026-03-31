@@ -1,2 +1,24 @@
-{{ $dest := strings.TrimPrefix "/" .Destination }}
-<img src="{{ $dest | relURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} />
+<div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">
+            {{- if .Title -}}
+                {{ .Title | upper }}
+            {{- else -}}
+                RESOURCES_NODE_01
+            {{- end -}}
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        {{- $dest := .Destination -}}
+        {{- if hasPrefix $dest "/" -}}
+            {{- $dest = strings.TrimPrefix "/" $dest -}}
+        {{- end -}}
+        <img src="{{ $dest | absURL }}" 
+             alt="{{ .Text }}" 
+             {{ with .Title }} title="{{ . }}" {{ end }} 
+             loading="lazy">
+    </div>
+</div>
