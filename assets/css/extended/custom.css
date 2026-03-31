@@ -858,7 +858,7 @@ button.btn-terminal-submit,
 
 .about-badge-label {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -876,21 +876,26 @@ button.btn-terminal-submit,
     margin: 0 !important;
 }
 
-/* Override global h1:hover for the name — keep white, only accent glows */
+/* Override global h1:hover for the name — it now pops with accent color without glow */
 .about-page .about-name:hover {
-    color: var(--on-surface) !important;
+    color: #83dc5d !important;
+}
+
+.about-page .about-name:hover .about-name-accent {
+    color: var(--on-surface);
 }
 
 .about-name-accent {
-    color: var(--primary);
+    color: #83dc5d;
+    transition: color 0.3s ease;
 }
 
 .about-tagline {
     font-family: 'Inter', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.75;
     color: var(--on-surface-variant);
-    max-width: 480px;
+    max-width: 580px;
     font-weight: 300;
     margin: 0;
 }
@@ -910,16 +915,15 @@ button.btn-terminal-submit,
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--primary);
-    color: var(--on-primary);
+    background: #83dc5d;
+    color: #131318;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     padding: 16px 28px;
     border-radius: 2px;
-    box-shadow: 0 0 20px rgba(223, 255, 0, 0.2);
     transition: all 0.3s ease;
     text-decoration: none !important;
 }
@@ -927,8 +931,7 @@ button.btn-terminal-submit,
 .about-btn-primary:hover {
     opacity: 0.85;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(223, 255, 0, 0.3);
-    color: var(--on-primary) !important;
+    color: #131318 !important;
 }
 
 .about-btn-ghost {
@@ -939,7 +942,7 @@ button.btn-terminal-submit,
     color: var(--on-surface);
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     padding: 16px 28px;
@@ -960,17 +963,11 @@ button.btn-terminal-submit,
 }
 
 .about-hero-glow {
-    position: absolute;
-    inset: -8px;
-    background: rgba(223, 255, 0, 0.08);
-    filter: blur(40px);
-    border-radius: 50%;
-    transition: background 0.4s ease;
-    pointer-events: none;
+    display: none;
 }
 
 .about-hero-media:hover .about-hero-glow {
-    background: rgba(223, 255, 0, 0.14);
+    display: none;
 }
 
 .about-hero-img-wrap {
@@ -1010,7 +1007,7 @@ button.btn-terminal-submit,
 
 .about-status-label {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -1020,7 +1017,7 @@ button.btn-terminal-submit,
 
 .about-status-coords {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 14px;
     color: var(--secondary);
     margin: 0;
 }
@@ -1052,7 +1049,7 @@ button.btn-terminal-submit,
 }
 
 .about-page .about-section-title:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-section-index {
@@ -1082,16 +1079,22 @@ button.btn-terminal-submit,
 
 .about-skill-card:hover {
     transform: translateY(-4px);
+    background: var(--surface-high);
+}
+
+.about-skill-card:hover .about-skill-icon {
+    color: #83dc5d !important;
 }
 
 .about-skill-icon {
     font-size: 36px !important;
-    color: var(--primary);
+    color: var(--on-surface-variant);
+    transition: color 0.3s ease;
 }
 
 .about-skill-title {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 11px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
     letter-spacing: 0.2em !important;
     text-transform: uppercase;
@@ -1100,13 +1103,14 @@ button.btn-terminal-submit,
     line-height: 1.4 !important;
 }
 
+.about-skill-card:hover .about-skill-title,
 .about-page .about-skill-title:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-skill-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
     color: var(--on-surface-variant);
     margin: 0;
@@ -1130,7 +1134,7 @@ button.btn-terminal-submit,
 
 .about-tool-panel-title {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 15px !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
     letter-spacing: 0.1em !important;
     text-transform: none;
@@ -1143,7 +1147,7 @@ button.btn-terminal-submit,
 }
 
 .about-page .about-tool-panel-title:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-tool-grid {
@@ -1179,7 +1183,7 @@ button.btn-terminal-submit,
 
 .about-tool-label {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1187,7 +1191,7 @@ button.btn-terminal-submit,
 }
 
 .about-thm-panel {
-    background: var(--primary);
+    background: #83dc5d !important;
     padding: 36px 28px;
     display: flex;
     flex-direction: column;
@@ -1197,7 +1201,7 @@ button.btn-terminal-submit,
 
 .about-thm-title {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-weight: 900 !important;
     letter-spacing: 0.2em !important;
     text-transform: uppercase;
@@ -1229,7 +1233,7 @@ button.btn-terminal-submit,
 
 .about-thm-badge-sub {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1239,7 +1243,7 @@ button.btn-terminal-submit,
 
 .about-thm-badge-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1260,7 +1264,7 @@ button.btn-terminal-submit,
     justify-content: space-between;
     align-items: center;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1276,7 +1280,7 @@ button.btn-terminal-submit,
 
 .about-col-title {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-weight: 700 !important;
     letter-spacing: -0.01em !important;
     text-transform: uppercase;
@@ -1289,11 +1293,11 @@ button.btn-terminal-submit,
 }
 
 .about-page .about-col-title:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-col-title--sm {
-    font-size: 16px !important;
+    font-size: 20px !important;
     letter-spacing: 0.05em !important;
 }
 
@@ -1335,7 +1339,7 @@ button.btn-terminal-submit,
 
 .about-timeline-degree {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 17px !important;
+    font-size: 21px !important;
     font-weight: 600 !important;
     color: var(--on-surface) !important;
     margin: 0 0 8px 0 !important;
@@ -1343,12 +1347,12 @@ button.btn-terminal-submit,
 }
 
 .about-page .about-timeline-degree:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-timeline-meta {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1358,7 +1362,7 @@ button.btn-terminal-submit,
 
 .about-timeline-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.65;
     color: var(--on-surface-variant);
     font-weight: 300;
@@ -1382,9 +1386,19 @@ button.btn-terminal-submit,
     border-left: 4px solid var(--primary);
 }
 
+.about-field-card:hover {
+    background: var(--surface-high);
+    transform: translateX(4px);
+    transition: all 0.3s ease;
+}
+
+.about-field-card:hover .about-field-org {
+    color: var(--primary) !important;
+}
+
 .about-field-date {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -1398,7 +1412,7 @@ button.btn-terminal-submit,
 
 .about-field-org {
     font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 17px !important;
+    font-size: 21px !important;
     font-weight: 700 !important;
     color: var(--on-surface) !important;
     margin: 0 0 10px 0 !important;
@@ -1406,12 +1420,12 @@ button.btn-terminal-submit,
 }
 
 .about-page .about-field-org:hover {
-    color: var(--on-surface) !important;
+    color: var(--primary) !important;
 }
 
 .about-field-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.65;
     color: var(--on-surface-variant);
     margin: 0;
@@ -1444,6 +1458,12 @@ button.btn-terminal-submit,
 
 .about-cert-card:hover {
     background: var(--surface-high);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.about-cert-card:hover .about-cert-name {
+    color: var(--primary) !important;
 }
 
 .about-cert-icon {
@@ -1454,7 +1474,7 @@ button.btn-terminal-submit,
 
 .about-cert-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1465,7 +1485,7 @@ button.btn-terminal-submit,
 
 .about-cert-issuer {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--secondary);
@@ -1499,7 +1519,7 @@ button.btn-terminal-submit,
 
 .about-lang-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1508,7 +1528,7 @@ button.btn-terminal-submit,
 
 .about-lang-level {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1524,7 +1544,7 @@ button.btn-terminal-submit,
 
 .about-lang-bar {
     height: 100%;
-    background: var(--primary);
+    background: #83dc5d !important;
     border-radius: 99px;
 }
 
