@@ -319,6 +319,14 @@ h1 {
     transform: scale(1.02);
 }
 
+.entry-header,
+.entry-content,
+.entry-footer-design,
+.post-meta-under-image {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
 .entry-header h2 {
     font-family: 'Space Grotesk', sans-serif !important;
     font-size: 38px !important;
