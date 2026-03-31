@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sophy Chisom Abraham | Cybersecurity Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#c8c5cc",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "outline-variant": "#404a3a",
+                        "primary-fixed-dim": "#83dc5d",
+                        "inverse-surface": "#e4e1e8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "background": "#131318",
+                        "on-primary-fixed": "#062100",
+                        "inverse-on-surface": "#303035",
+                        "tertiary-fixed": "#e4e1e8",
+                        "surface-container-high": "#292a2e",
+                        "outline": "#8a9481",
+                        "on-background": "#e4e1e8",
+                        "on-error": "#690005",
+                        "surface-dim": "#131318",
+                        "on-primary-fixed-variant": "#195200",
+                        "surface-tint": "#83dc5d",
+                        "on-primary-container": "#0c3100",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#464748",
+                        "secondary-container": "#48494a",
+                        "primary": "#83dc5d",
+                        "on-primary": "#0f3900",
+                        "surface-container-lowest": "#0d0e12",
+                        "primary-container": "#4fa32b",
+                        "on-secondary-container": "#b8b8b9",
+                        "surface-container": "#1f1f24",
+                        "primary-fixed": "#9ef976",
+                        "on-surface-variant": "#bfcab5",
+                        "tertiary-container": "#919096",
+                        "surface-variant": "#343439",
+                        "surface-container-low": "#1b1b20",
+                        "surface": "#131318",
+                        "on-tertiary-fixed": "#1b1b20",
+                        "surface-bright": "#39393e",
+                        "on-tertiary": "#303035",
+                        "secondary-fixed": "#e3e2e3",
+                        "inverse-primary": "#236d00",
+                        "tertiary": "#c8c5cc",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#343439",
+                        "on-tertiary-container": "#29292e",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#46464c",
+                        "on-surface": "#e4e1e8",
+                        "on-secondary": "#2f3132",
+                        "secondary": "#c6c6c7"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(19, 19, 24, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131318; }
+        ::-webkit-scrollbar-thumb { background: #83dc5d; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131318]/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#83dc5d]">terminal</span>
+<span class="text-lg font-bold text-[#83dc5d] tracking-tighter font-headline uppercase">SOPHY_CHISOM_ABRAHAM</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#83dc5d] font-bold font-headline tracking-widest uppercase text-xs transition-colors duration-300" href="#">OVERVIEW</a>
+<a class="text-slate-400 font-headline tracking-widest uppercase text-xs hover:text-[#83dc5d] transition-colors duration-300" href="#skills">SKILLS</a>
+<a class="text-slate-400 font-headline tracking-widest uppercase text-xs hover:text-[#83dc5d] transition-colors duration-300" href="#education">EDUCATION</a>
+<a class="text-slate-400 font-headline tracking-widest uppercase text-xs hover:text-[#83dc5d] transition-colors duration-300" href="#certifications">CERTIFICATIONS</a>
+</nav>
+<button class="text-[#83dc5d] transition-transform active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="pt-24 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-32">
+<!-- Hero Section -->
+<section class="grid lg:grid-cols-2 gap-12 items-center min-h-[618px]" id="overview">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border-l-2 border-primary">
+<span class="text-[10px] font-headline tracking-[0.3em] text-primary uppercase">Identity Verified: LEVEL_99_SENTINEL</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter leading-none">
+                    S. C. <span class="text-primary">ABRAHAM</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-xl font-light">
+                    Cybersecurity enthusiast dedicated to <span class="text-on-surface font-semibold">uncovering, mitigating, and monitoring</span> infrastructure and web application vulnerabilities. Architecting resilience in a zero-trust world.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-headline font-bold text-sm tracking-widest uppercase rounded shadow-[0_0_20px_rgba(131,220,93,0.3)] hover:opacity-90 transition-all">
+                        INITIATE_CONTACT
+                    </button>
+<button class="border border-outline-variant text-on-surface px-8 py-4 font-headline font-bold text-sm tracking-widest uppercase rounded hover:bg-surface-variant transition-all">
+                        VIEW_REPOSITORY
+                    </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-primary/20 blur-2xl rounded-full group-hover:bg-primary/30 transition-all"></div>
+<div class="relative bg-surface-container-low p-2 rounded-xl">
+<img alt="Cybersecurity terminal concept" class="rounded-lg grayscale hover:grayscale-0 transition-all duration-700 w-full h-[400px] object-cover" data-alt="abstract close-up of a high-tech computer server rack with glowing green data lights and digital matrix overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFELfkO4dISqkDZMThOBSw-6ur96oay-zP-DzZC9xfFmhalmL_G3Obl-LMaXX1Obc8eDIw_3pP8JodKXg8YhEiIeDzF9n6hVnQ8c2GJQeppKiNRBF9AHVryJmQZQ74_dP3JTH7Rr-TpDiixTsbJkmXhESaBKQCwWdzqPRwf4D6-v9WuApjYuOMFlYyAhZl8e93G4aG3iHMK3MVLLyBgZ3pBOlUhJtmZiAApJJw0m47rLWZ_6Ukel1oZHm0rQs900jQwPHBLNjBVg"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border-l-2 border-primary">
+<p class="font-headline text-[10px] tracking-widest text-primary uppercase mb-1">Status: Active</p>
+<p class="text-xs text-slate-400 font-mono">Location: 6.4542° N, 7.5086° E</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Skills Section -->
+<section class="space-y-12" id="skills">
+<div class="flex items-end justify-between border-b border-outline-variant/30 pb-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">Core_Competencies</h2>
+<span class="text-[10px] font-headline tracking-widest opacity-40">0x01 // SKILLS</span>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Skill Card -->
+<div class="bg-surface-container-low p-8 space-y-4 hover:translate-y-[-4px] transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">security</span>
+<h3 class="font-headline font-bold tracking-widest uppercase text-sm">Security Operations</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Continuous monitoring, threat detection, and incident response via SOC methodologies.</p>
+</div>
+<div class="bg-surface-container-low p-8 space-y-4 hover:translate-y-[-4px] transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">terminal</span>
+<h3 class="font-headline font-bold tracking-widest uppercase text-sm">Offensive Security</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Penetration testing, exploit development, and vulnerability assessment across diverse vectors.</p>
+</div>
+<div class="bg-surface-container-low p-8 space-y-4 hover:translate-y-[-4px] transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">developer_mode_tv</span>
+<h3 class="font-headline font-bold tracking-widest uppercase text-sm">AppSec &amp; DevSecOps</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Securing the CI/CD pipeline and performing deep web application security audits.</p>
+</div>
+<div class="bg-surface-container-low p-8 space-y-4 hover:translate-y-[-4px] transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+<h3 class="font-headline font-bold tracking-widest uppercase text-sm">Compliance &amp; GRC</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Governance, risk management, and regulatory compliance standards implementation.</p>
+</div>
+</div>
+</section>
+<!-- Tools & Tech Grid (Bento Style) -->
+<section class="grid md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-8 border border-outline-variant/10">
+<h3 class="font-headline text-lg font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">construction</span>
+                    TECHNICAL_ARSENAL
+                </h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">monitoring</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Splunk</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">shield</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Sentinel</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">data_object</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">ELK Stack</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">bug_report</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Burp Suite</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">lan</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Nmap</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">skull</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Kali Linux</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">code</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Metasploit</span>
+</div>
+<div class="text-center group">
+<div class="w-12 h-12 mx-auto mb-3 bg-surface-container-high flex items-center justify-center rounded group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">terminal</span>
+</div>
+<span class="text-[10px] font-headline tracking-widest uppercase">Bash</span>
+</div>
+</div>
+</div>
+<div class="bg-primary p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-on-primary text-xl font-black tracking-widest mb-4">THM_RANKING</h3>
+<div class="flex items-center gap-4 mb-6">
+<div class="bg-on-primary p-2 rounded">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">military_tech</span>
+</div>
+<div>
+<p class="text-on-primary/60 text-[10px] tracking-widest font-headline uppercase">Specialty Badge</p>
+<p class="text-on-primary font-bold text-lg uppercase">Mr Robot Badge</p>
+</div>
+</div>
+</div>
+<div class="space-y-2 border-t border-on-primary/20 pt-4">
+<div class="flex justify-between items-center text-[10px] font-headline tracking-widest text-on-primary">
+<span>ROOM: BLUE</span>
+<span>[PWNED]</span>
+</div>
+<div class="flex justify-between items-center text-[10px] font-headline tracking-widest text-on-primary">
+<span>ROOM: KENOBI</span>
+<span>[PWNED]</span>
+</div>
+<div class="flex justify-between items-center text-[10px] font-headline tracking-widest text-on-primary">
+<span>ROOM: FOWSNIFF</span>
+<span>[PWNED]</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Internships -->
+<section class="grid lg:grid-cols-2 gap-12">
+<div class="space-y-8" id="education">
+<h2 class="font-headline text-2xl font-bold tracking-tight uppercase flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">school</span> ACADEMIC_RECORD
+                </h2>
+<div class="space-y-6">
+<div class="relative pl-8 border-l border-outline-variant/30 py-2">
+<div class="absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_#83dc5d]"></div>
+<h4 class="font-headline text-lg font-semibold">M.Sc. Political Economy</h4>
+<p class="text-primary text-xs font-headline tracking-widest mb-2">GPA 4.46 // UNIVERSITY OF NIGERIA</p>
+<p class="text-sm text-on-surface-variant font-light">Deep analysis of systemic structures and power dynamics within global technological infrastructures.</p>
+</div>
+<div class="relative pl-8 border-l border-outline-variant/30 py-2">
+<div class="absolute -left-1.5 top-0 w-3 h-3 bg-surface-container-highest rounded-full border border-primary"></div>
+<h4 class="font-headline text-lg font-semibold">B.Sc. Political Science</h4>
+<p class="text-primary text-xs font-headline tracking-widest mb-2">GPA 4.12 // UNIVERSITY OF NIGERIA</p>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight uppercase flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">work</span> FIELD_OPERATIONS
+                </h2>
+<div class="space-y-6">
+<div class="bg-surface-container-high p-6 border-l-4 border-primary">
+<p class="text-[10px] font-headline tracking-[0.2em] text-primary mb-1 uppercase">2025 // INTERNSHIP</p>
+<h4 class="font-headline text-lg font-bold mb-2">Redynox</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Securing enterprise architectures and conducting vulnerability management cycles.</p>
+</div>
+<div class="bg-surface-container-low p-6">
+<p class="text-[10px] font-headline tracking-[0.2em] text-slate-500 mb-1 uppercase">2024 // HACKATHON</p>
+<h4 class="font-headline text-lg font-bold mb-2">LM Tech Hub - TaskMate</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Lead security strategist for the TaskMate project during the Cohort 6 Group Hackathon.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications & Languages (Asymmetric layout) -->
+<section class="grid lg:grid-cols-3 gap-12 items-start" id="certifications">
+<div class="lg:col-span-2 space-y-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight uppercase flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span> VALIDATED_CREDENTIALS
+                </h2>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">lock_open</span>
+<div>
+<h5 class="text-xs font-headline font-bold uppercase tracking-widest">Cybersecurity</h5>
+<p class="text-[10px] text-on-surface-variant uppercase">LM TECH HUB // 2025</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">data_array</span>
+<div>
+<h5 class="text-xs font-headline font-bold uppercase tracking-widest">Software Dev</h5>
+<p class="text-[10px] text-on-surface-variant uppercase">LM TECH HUB // 2025</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">search</span>
+<div>
+<h5 class="text-xs font-headline font-bold uppercase tracking-widest">SEO Certification</h5>
+<p class="text-[10px] text-on-surface-variant uppercase">HUBSPOT ACADEMY</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">language</span>
+<div>
+<h5 class="text-xs font-headline font-bold uppercase tracking-widest">German A1</h5>
+<p class="text-[10px] text-on-surface-variant uppercase">GOETHE-INSTITUT</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 border-t-2 border-primary space-y-6">
+<h2 class="font-headline text-lg font-bold tracking-tight uppercase">LINGUISTIC_MODULES</h2>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-headline tracking-widest uppercase">
+<span>English</span>
+<span class="text-primary">C2 Native</span>
+</div>
+<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-headline tracking-widest uppercase">
+<span>Igbo</span>
+<span class="text-primary">C1 Native</span>
+</div>
+<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[90%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-headline tracking-widest uppercase">
+<span>German</span>
+<span class="text-primary">A2 Inter</span>
+</div>
+<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-headline tracking-widest uppercase">
+<span>Pidgin</span>
+<span class="text-primary">A2 Fluent</span>
+</div>
+<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131318] w-full py-12 mt-24 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-400">© 2024 SYSTEM_SOPHY // ENCRYPTED_CONNECTION</p>
+<div class="flex gap-4">
+<a class="text-[10px] font-headline tracking-widest uppercase text-slate-600 hover:text-[#83dc5d] transition-opacity" href="#">GITHUB</a>
+<a class="text-[10px] font-headline tracking-widest uppercase text-slate-600 hover:text-[#83dc5d] transition-opacity" href="#">LINKEDIN</a>
+<a class="text-[10px] font-headline tracking-widest uppercase text-slate-600 hover:text-[#83dc5d] transition-opacity" href="#">TRYHACKME</a>
+</div>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-primary opacity-20 text-4xl">fingerprint</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Drawer (Floating logic) -->
+<aside class="hidden fixed right-0 top-0 h-full w-72 bg-[#131318] z-50 shadow-2xl shadow-black/50 flex flex-col p-6 space-y-4">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<h4 class="text-[#83dc5d] font-black font-headline uppercase text-xs">S. C. ABRAHAM</h4>
+<p class="text-slate-500 font-headline text-[8px] tracking-widest uppercase">LEVEL_99_SENTINEL</p>
+</div>
+</div>
+<nav class="flex flex-col space-y-2">
+<a class="text-[#83dc5d] bg-[#83dc5d]/10 border-l-4 border-[#83dc5d] px-4 py-3 font-headline uppercase text-xs tracking-widest" href="#">OVERVIEW</a>
+<a class="text-slate-500 hover:text-white hover:bg-white/5 px-4 py-3 font-headline uppercase text-xs tracking-widest transition-all" href="#">SKILLS</a>
+<a class="text-slate-500 hover:text-white hover:bg-white/5 px-4 py-3 font-headline uppercase text-xs tracking-widest transition-all" href="#">EDUCATION</a>
+<a class="text-slate-500 hover:text-white hover:bg-white/5 px-4 py-3 font-headline uppercase text-xs tracking-widest transition-all" href="#">CERTIFICATIONS</a>
+<a class="text-slate-500 hover:text-white hover:bg-white/5 px-4 py-3 font-headline uppercase text-xs tracking-widest transition-all" href="#">CTF_ROOMS</a>
+</nav>
+</aside>
+</body></html>
