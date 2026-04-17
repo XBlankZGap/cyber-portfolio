@@ -2,60 +2,246 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:43285/cyber-portfolio/posts/</link>
+    <link>http://localhost:1313/cyber-portfolio/posts/</link>
     <description>Recent content in Posts on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Mar 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:43285/cyber-portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Apr 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/cyber-portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project 7: Database Breach &amp; Administrative Data Exfiltration</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-7-database-breach/</link>
-      <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-7-database-breach/</guid>
+      <title>Hybrid SIEM Architecture for SEO &amp; Security Intelligence</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</link>
+      <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure Session Architecture &amp; Defensive Flag Implementation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</link>
+      <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement a &amp;ldquo;Secure-by-Design&amp;rdquo; framework for web applications to neutralize cookie-based attack vectors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Session Hijacking via Automated Cookie Exfiltration</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
+      <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cryptographic Wallet Engineering &amp; BIP39 Implementation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical process of generating cryptographic identities and managing multi-coin wallet backups using mnemonic phrases.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To analyze high-scale cryptocurrency heists and identify the critical security failures in private key management that lead to multi-billion dollar losses.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mr. Robot — Web Exploitation &amp; System Compromise</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</link>
+      <pubDate>Thu, 05 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fowsniff — Credential Harvesting &amp; Password Cracking</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</link>
+      <pubDate>Sun, 01 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
+      <pubDate>Tue, 10 Feb 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blue (Windows Exploitation – EternalBlue)</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
+      <pubDate>Thu, 05 Feb 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit critical vulnerabilities in legacy Windows systems using remote buffer overflows and credential harvesting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mandatory Access Control (MAC) using SELinux</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</link>
+      <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To enforce strict security policies at the kernel level, preventing unauthorized resource access by compromised services.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Integrity Verification via Cryptographic Hashing</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</link>
+      <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize one-way hashing algorithms to verify data authenticity and secure credential storage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cryptographic Infrastructure &amp; Secure Communication</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
+      <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
+      <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vulnerability Analysis and Remediation Planning</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
+      <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To systematically document discovered web vulnerabilities and provide actionable, code-level remediation strategies for development teams.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Web Application Vulnerability Discovery</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</link>
+      <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize automated scanning tools to perform comprehensive reconnaissance and identify high-risk web vulnerabilities within an authenticated session.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Network Traffic Baselining and Anomaly Detection</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</link>
+      <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Centralized Network Security via Router-Level Filtering</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</link>
+      <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement non-device-specific security controls by enforcing domain blocking at the network gateway.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Domain Blocking via Batch Scripting</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</link>
+      <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To develop a reusable and scalable automation tool for neutralizing network threats at the system level.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Database Breach &amp; Administrative Data Exfiltration</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</link>
+      <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 6: Web-to-System Pivot via Command Injection</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-6-web-to-system-pivot/</link>
-      <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-6-web-to-system-pivot/</guid>
+      <title>Web-to-System Pivot via Command Injection</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
+      <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 5: Offline Cryptanalysis &amp; Password Recovery</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-5-cryptanalysis/</link>
-      <pubDate>Tue, 24 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-5-cryptanalysis/</guid>
+      <title>Offline Cryptanalysis &amp; Password Recovery</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
+      <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 4: Post-Exploitation &amp; Sensitive Data Exfiltration</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-4-post-exploitation/</link>
-      <pubDate>Mon, 23 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-4-post-exploitation/</guid>
+      <title>Post-Exploitation &amp; Sensitive Data Exfiltration</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</link>
+      <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage administrative access to extract the system&amp;rsquo;s &amp;ldquo;Shadow&amp;rdquo; file, demonstrating the ability to harvest encrypted credentials for offline analysis.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 3: Exploiting Infrastructure Vulnerabilities (Backdoor Access)</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-3-exploiting-infrastructure/</link>
-      <pubDate>Sun, 22 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-3-exploiting-infrastructure/</guid>
+      <title>Exploiting Infrastructure Vulnerabilities (Backdoor Access)</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</link>
+      <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To execute a remote command execution (RCE) exploit against a backdoored FTP service to gain unauthorized administrative access to the target host.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 2: Service Enumeration &amp; Vulnerability Research</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-2-service-enumeration/</link>
-      <pubDate>Sat, 21 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-2-service-enumeration/</guid>
+      <title>Cross-Site Request Forgery (CSRF) via Forged Reviews</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</link>
+      <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DOM-Based Cross-Site Scripting (XSS) Analysis</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</link>
+      <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit an unsafe JavaScript &amp;ldquo;sink&amp;rdquo; to execute arbitrary code in the victim&amp;rsquo;s browser context.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exploiting &amp; Mitigating String-Based SQL Injection</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate how unsanitized user input allows attackers to bypass authentication and exfiltrate sensitive database records.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Service Enumeration &amp; Vulnerability Research</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</link>
+      <pubDate>Tue, 05 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Project 1: Defensive Lab Environment &amp; Network Configuration</title>
-      <link>http://localhost:43285/cyber-portfolio/posts/project-1-defensive-lab/</link>
-      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:43285/cyber-portfolio/posts/project-1-defensive-lab/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
+      <title>Network Traffic Analysis &amp; Automated Threat Mitigation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</link>
+      <pubDate>Tue, 15 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Professional Career Development and Industry Engagement</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</link>
+      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Engineered Security Lab Deployment &amp; Troubleshooting</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</link>
+      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Network Security Fundamentals and Threat Assessment</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</link>
+      <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To conduct a comprehensive study of network threat vectors and security controls to establish a foundational defense strategy for organizational environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</guid>
+      <description>&lt;p&gt;date = &amp;lsquo;2025-07-10T10:00:00+01:00&amp;rsquo;
+draft = false
+title = &amp;lsquo;Defensive Lab Environment &amp;amp; Network Configuration&amp;rsquo;
+categories = [&amp;ldquo;Network Security &amp;amp; Infrastructure&amp;rdquo;]
+case_id = &amp;ldquo;LAB-NET-2026-01&amp;rdquo;
+vulnerability_class = &amp;ldquo;Network Segregation &amp;amp; Infrastructure Hardening&amp;rdquo;
+tools = [&amp;ldquo;VirtualBox&amp;rdquo;, &amp;ldquo;Kali Linux&amp;rdquo;, &amp;ldquo;Host-Only Networking&amp;rdquo;]&lt;/p&gt;
+&lt;p&gt;[cover]
+image = &amp;ldquo;images/feature-1-vbox-machine.png&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;tags = [&amp;ldquo;VirtualBox&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Isolation&amp;rdquo;, &amp;ldquo;Lab Setup&amp;rdquo;]
++++&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Cross-Site Request Forgery (CSRF) via Forged Reviews | SOPHY&#39;S CYBERLAB</title>
+<meta name="keywords" content="">
+<meta name="description" content="Objective: To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.6bbcea201939e71843d38e53776460ffae2971bacdbd46d7fa318f06b201a929.css" integrity="sha256-a7zqIBk55xhD045Td2Rg/64pcbrNvUbX&#43;jGPBrIBqSk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 19, 24, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
+    object-fit: contain;
+}
+</style>
+
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Popup image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+    });
+});
+</script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput) return;
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
+</script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="main">
+
+<article class="post-single main-editorial-grid">
+  <header class="post-header-editorial">
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+</div>
+    
+    <div class="editorial-top-section">
+      <div class="editorial-title-container">
+        <div class="intel-badge">
+          <span class="label-metadata" style="color: var(--primary);">CASE_ID: CSRF-WEB-2025</span>
+        </div>
+        <h1 class="post-title-editorial">
+          Cross-Site Request Forgery (CSRF) via Forged Reviews
+        </h1>
+      </div>
+
+      <div class="editorial-side-metadata">
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
+          <div class="tools-grid">
+            <span class="tool-tag">OWASP ZAP</span>
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">HTML/JS</span>
+            <span class="tool-tag">WebGoat</span>
+          </div>
+        </div>
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Vulnerability_Class</h3>
+          <p class="intel-text">Missing Anti-Forgery Tokens (CWE-352)</p>
+        </div>
+      </div>
+    </div>
+  </header> 
+<div class="terminal-window terminal-glow mb-8">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Project_Detail
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        <figure class="entry-cover" style="margin: 0;">
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-csrf-forged-reviews.png" alt=""></figure>
+    </div>
+</div>
+    
+
+  <div class="post-content-container">
+
+    <div class="post-content"><p><strong>Objective:</strong> To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.</p>
+<h2 id="1-the-vulnerability-missing-anti-forgery-tokens-cwe-352">1. The Vulnerability: Missing Anti-Forgery Tokens (CWE-352)<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-missing-anti-forgery-tokens-cwe-352">#</a></h2>
+<p>A Cross-Site Request Forgery (CSRF) vulnerability was discovered on the review submission endpoint of the WebGoat application. This flaw exists because the application fails to properly validate the origin of incoming requests, allowing an attacker to trick a victim&rsquo;s browser into submitting a state-changing request (such as posting a review) without the user&rsquo;s knowledge or consent. Although a <code>validateReq</code> token was present, it did not expire quickly enough to prevent reuse in a cross-site context.</p>
+<h2 id="2-technical-execution-request-forgery">2. Technical Execution: Request Forgery<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-request-forgery">#</a></h2>
+<p>I used OWASP ZAP to intercept a legitimate POST request to identify the required parameters and target endpoint. I then developed a malicious HTML landing page containing a hidden form designed to auto-submit the captured parameters. By hosting this page on a local Python server, I successfully simulated an external attack where the forged request was executed as soon as the authenticated victim visited the malicious URL.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Value</th>
+          <th style="text-align: left">Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Endpoint</strong></td>
+          <td style="text-align: left">/WebGoat/csrf/review</td>
+          <td style="text-align: left">The vulnerable review submission target.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Analysis Tool</strong></td>
+          <td style="text-align: left">OWASP ZAP</td>
+          <td style="text-align: left">Used for traffic interception and parameter analysis.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Exploit Tool</strong></td>
+          <td style="text-align: left">VS Code / Python</td>
+          <td style="text-align: left">Used to craft the HTML payload and host the attack.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Auth Bypass</strong></td>
+          <td style="text-align: left">validateReq token</td>
+          <td style="text-align: left">Reused the captured token to validate the forged request.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
+<ol>
+<li><strong>Discovery:</strong> Logged into the application and intercepted a legitimate form submission using OWASP ZAP to analyze the HTTP POST request structure.</li>
+<li><strong>Vulnerability Analysis:</strong> Examined the <code>validateReq</code> token and determined it was susceptible to reuse since it remained valid across the short session.</li>
+<li><strong>Exploit Logic:</strong> Crafted an external HTML page with a hidden form and a JavaScript <code>submit()</code> function to trigger the attack automatically.</li>
+<li><strong>Post-Exploitation:</strong> Hosted the malicious file using <code>python -m http.server</code> and confirmed that visiting the page successfully posted a &ldquo;Hacked by CSRF!&rdquo; review in the application on behalf of the user.</li>
+</ol>
+<h2 id="4-key-commands">4. Key Commands<a hidden class="anchor" aria-hidden="true" href="#4-key-commands">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Malicious CSRF Payload --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;csrfForm&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:8080/WebGoat/csrf/review&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reviewText&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hacked by CSRF!&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stars&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;validateReq&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(captured_token_here)&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;csrfForm&#39;</span>).<span style="color:#a6e22e">submit</span>();&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Hosting the exploit locally</span>
+</span></span><span style="display:flex;"><span>python -m http.server <span style="color:#ae81ff">9000</span>
+</span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project4_zap_alerts.png" 
+             alt="Discovery" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: OWASP ZAP flagging the absence of robust anti-CSRF tokens for the application session.</em></p>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project4_forged_review.png" 
+             alt="Results" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Successful submission of the forged review (&ldquo;Hacked by CSRF!&rdquo;) without any manual user interaction.</em></p>
+<h2 id="6-professional-impact">6. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#6-professional-impact">#</a></h2>
+<p>This project demonstrates a significant risk to System Integrity and user trust, as attackers can perform unintended actions like deleting data or posting unauthorized content. To remediate this, I recommended implementing unique, per-session CSRF tokens for all state-changing operations and enforcing the SameSite cookie attribute to ensure requests only originate from the legitimate domain.</p>
+
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Exploiting Infrastructure Vulnerabilities (Backdoor Access)</span>
+  </a>
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/">
+    <span class="title">Next »</span>
+    <br>
+    <span>DOM-Based Cross-Site Scripting (XSS) Analysis</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

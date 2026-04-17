@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Hybrid SIEM Architecture for SEO &amp; Security Intelligence | SOPHY&#39;S CYBERLAB</title>
+<meta name="keywords" content="">
+<meta name="description" content="Objective: To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.6bbcea201939e71843d38e53776460ffae2971bacdbd46d7fa318f06b201a929.css" integrity="sha256-a7zqIBk55xhD045Td2Rg/64pcbrNvUbX&#43;jGPBrIBqSk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 19, 24, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
+    object-fit: contain;
+}
+</style>
+
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Popup image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+    });
+});
+</script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput) return;
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
+</script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="main">
+
+<article class="post-single main-editorial-grid">
+  <header class="post-header-editorial">
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+</div>
+    
+    <div class="editorial-top-section">
+      <div class="editorial-title-container">
+        <div class="intel-badge">
+          <span class="label-metadata" style="color: var(--primary);">CASE_ID: SIEM-SEO-2026</span>
+        </div>
+        <h1 class="post-title-editorial">
+          Hybrid SIEM Architecture for SEO &amp; Security Intelligence
+        </h1>
+      </div>
+
+      <div class="editorial-side-metadata">
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
+          <div class="tools-grid">
+            <span class="tool-tag">Splunk</span>
+            <span class="tool-tag">Microsoft Sentinel</span>
+            <span class="tool-tag">SOAR</span>
+            <span class="tool-tag">AI Detection</span>
+          </div>
+        </div>
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Vulnerability_Class</h3>
+          <p class="intel-text">SEO-Security Blind Spots</p>
+        </div>
+      </div>
+    </div>
+  </header> 
+<div class="terminal-window terminal-glow mb-8">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Project_Detail
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        <figure class="entry-cover" style="margin: 0;">
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt=""></figure>
+    </div>
+</div>
+    
+
+  <div class="post-content-container">
+
+    <div class="post-content"><p><strong>Objective:</strong> To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.</p>
+<h2 id="1-the-vulnerability-seo-security-blind-spots">1. The Vulnerability: SEO-Security Blind Spots<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-seo-security-blind-spots">#</a></h2>
+<p>Traditional security monitoring often ignores SEO-specific signals, leaving platforms vulnerable to Negative SEO attacks, ranking manipulation, and aggressive scrapers that bypass standard WAF rules. This represents a critical risk to Availability and System Integrity, where malicious crawl patterns can de-index legitimate pages or exhaust server resources.</p>
+<h2 id="2-technical-execution-unified-log-orchestration">2. Technical Execution: Unified Log Orchestration<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-unified-log-orchestration">#</a></h2>
+<p>I designed a multi-layered ingestion architecture that normalizes disparate data sources—including web server logs (Nginx/Apache), CDN logs, and application events—into a unified &ldquo;SEO + Security Hybrid Schema.&rdquo; This allows for the simultaneous correlation of security events (e.g., brute force) with SEO impact (e.g., crawl anomalies).</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Value</th>
+          <th style="text-align: left">Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>SIEM Integration</strong></td>
+          <td style="text-align: left">Splunk / Microsoft Sentinel</td>
+          <td style="text-align: left">Centralized log ingestion and advanced correlation.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Ingestion Layer</strong></td>
+          <td style="text-align: left">API-based Connectors</td>
+          <td style="text-align: left">Auto-configuration of SEO and security signal feeds.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Detection Engine</strong></td>
+          <td style="text-align: left">AI-Driven Behavioral Analysis</td>
+          <td style="text-align: left">Distinguishing legitimate SEO bots from malicious scrapers.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Response Vector</strong></td>
+          <td style="text-align: left">SOAR / Webhook Automation</td>
+          <td style="text-align: left">&ldquo;One-click&rdquo; mitigation via Cloudflare or AWS WAF.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
+<ol>
+<li><strong>Normalization &amp; Enrichment:</strong> Standardized incoming logs by unifying timestamps, geolocating IPs, and tagging traffic as <code>SEO_BOT</code>, <code>MALICIOUS_BOT</code>, or <code>USER_BEHAVIOR</code>.</li>
+<li><strong>Detection Logic:</strong> Established predefined rules for sudden crawl spikes and unauthorized file access, enhanced by AI to detect ranking manipulation attempts.</li>
+<li><strong>Alerting &amp; Severity:</strong> Configured a tiered alerting system (Critical to Low) delivered via Revolus UI, Slack, and native SIEM dashboards.</li>
+<li><strong>Automated Mitigation:</strong> Implemented a SOAR-like response layer to automatically block IPs or rate-limit suspicious traffic based on real-time threat scores.</li>
+</ol>
+<h2 id="4-key-structure">4. Key Structure<a hidden class="anchor" aria-hidden="true" href="#4-key-structure">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example: Normalizing a log entry into the SEO+Security Hybrid Schema
+</span></span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;timestamp&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2025-07-25T10:00:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;source_ip&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;192.168.1.1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;user_agent&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Googlebot/2.1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;traffic_tag&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;SEO_BOT&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;risk_score&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.05</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;action&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ALLOW&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project21_siem_workflow.png" 
+             alt="Discovery" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Discovery phase showing the end-to-end data flow from web servers to the visualization dashboard.</em></p>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project21_siem_dashboard.png" 
+             alt="Results" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Results/Impact phase demonstrating the visualization of bot activity maps and incident timelines within the SIEM environment.</em></p>
+<h2 id="6-professional-impact">6. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#6-professional-impact">#</a></h2>
+<p>This project creates a unique market differentiator by positioning security as a core product feature. I demonstrated how a Security-First SEO Architecture protects rankings and data integrity. By integrating with major cloud-native SIEMs, I ensured the platform meets enterprise-grade Compliance Readiness, protecting both organizational reputation and digital assets.</p>
+
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Secure Session Architecture &amp; Defensive Flag Implementation</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

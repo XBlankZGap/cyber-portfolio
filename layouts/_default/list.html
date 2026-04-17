@@ -18,11 +18,9 @@
     <div class="category-tabs-container">
         <div class="category-tabs">
             <a href="{{ "" | absLangURL }}" class="tab active">All Projects</a>
-            <a href="/tags/exploitation/" class="tab">Exploitation</a>
-            <a href="/tags/app-security/" class="tab">App Security</a>
-            <a href="/tags/soc-analysis/" class="tab">SOC Analysis</a>
-            <a href="/tags/compliance/" class="tab">Compliance</a>
-            <a href="/tags/pen-testing/" class="tab">Pen Testing</a>
+            {{- range (slice "Network Security & Infrastructure" "Web Application Pentesting" "Binary & System Exploitation" "Cryptography & Data Integrity" "Security Operations & Engineering") }}
+            <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}/" class="tab">{{ . }}</a>
+            {{- end }}
         </div>
     </div>
 </header>
@@ -45,65 +43,86 @@
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+    {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+    
+    {{- $categories := slice "Network Security & Infrastructure" "Web Application Pentesting" "Binary & System Exploitation" "Cryptography & Data Integrity" "Security Operations & Engineering" }}
+    
+    {{- range $categories }}
+        {{- $category := . }}
+        {{- $category_pages := where $pages "Params.categories" "intersect" (slice $category) }}
+        {{- if gt (len $category_pages) 0 }}
+            <div class="category-section-wrapper" style="margin-bottom: 80px;">
+                <h2 class="category-header-title" style="font-size: 32px; font-weight: 800; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 40px; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">{{ $category }}</h2>
+                <div class="posts-group" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px;">
+                {{- range $category_pages }}
+                    <article class="post-entry" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+                      {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+                      {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+                      
+                      <div class="post-meta-under-image" style="padding: 20px 20px 0 20px;">
+                        {{- if .Params.tags }}
+                        <span class="intel-badge-small">{{ index .Params.tags 0 }}</span>
+                        {{- end }}
+                        <span class="meta-item">{{ .Date.Format "Jan 2006" }}</span>
+                      </div>
+
+                      <header class="entry-header" style="padding: 0 20px 10px 20px;">
+                        <h2 class="entry-hint-parent" style="font-size: 20px; line-height: 1.3; margin: 10px 0;">
+                          <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">
+                            {{- .Title }}
+                          </a>
+                        </h2>
+                      </header>
+                      
+                      {{- if (ne (.Param "hideSummary") true) }}
+                      <div class="entry-content" style="padding: 0 20px 20px 20px; flex-grow: 1; opacity: 0.8; font-size: 14px;">
+                        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                      </div>
+                      {{- end }}
+
+                      <div class="entry-footer-design" style="padding: 0 20px 20px 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+                        <a href="{{ .Permalink }}" class="view-case-study" style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--primary); display: flex; align-items: center; margin-top: 15px;">
+                            CASE STUDY 
+                            <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 8px;">arrow_forward</span>
+                        </a>
+                      </div>
+                    </article>
+                {{- end }}
+                </div>
+            </div>
+        {{- end }}
+    {{- end }}
+
+{{- else }}
+    {{- $paginator := .Paginate $pages }}
+    {{- range $index, $page := $paginator.Pages }}
+        {{- $class := "post-entry" }}
+        {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not (or site.Params.disableSpecial1stPost site.Params.homeInfoParams))) }}
+            {{- $class = "first-entry" }}
+        {{- end }}
+        <article class="{{ $class }}">
+          {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+          {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+          <div class="post-meta-under-image">
+            {{- if .Params.tags }}
+            <span class="intel-badge-small">{{ index .Params.tags 0 }}</span>
+            {{- end }}
+            <span class="meta-item">{{ .Date.Format "January 2, 2006" }}</span>
+          </div>
+          <header class="entry-header">
+            <h2 class="entry-hint-parent"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          </header>
+          {{- if (ne (.Param "hideSummary") true) }}
+          <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p></div>
+          {{- end }}
+          <div class="entry-footer-design"><a href="{{ .Permalink }}" class="view-case-study">READ MORE</a></div>
+        </article>
+    {{- end }}
 {{- end }}
 
+{{- if not .IsHome }}
 {{- $paginator := .Paginate $pages }}
-
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
-{{- $term := .Data.Term }}
-{{- range $index, $page := $paginator.Pages }}
-
-{{- $class := "post-entry" }}
-
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
-{{- end }}
-
-<article class="{{ $class }}">
-  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
-  
-  <div class="post-meta-under-image">
-    {{- if .Params.tags }}
-    <span class="intel-badge-small">{{ index .Params.tags 0 }}</span>
-    {{- end }}
-    <span class="meta-item">{{ .Date.Format "January 2, 2006" }}</span>
-    {{- if not (.Param "hideMeta") }}
-    <span class="meta-item">• {{ .ReadingTime }} MIN READ</span>
-    {{- end }}
-  </div>
-
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-      <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">
-        {{- .Title }}
-      </a>
-    </h2>
-  </header>
-  
-  {{- if (ne (.Param "hideSummary") true) }}
-  <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </div>
-  {{- end }}
-
-  <div class="entry-footer-design">
-    <a href="{{ .Permalink }}" class="view-case-study" aria-label="post link to {{ .Title | plainify }}">
-        READ MORE 
-        <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 8px;">arrow_forward</span>
-    </a>
-  </div>
-</article>
-{{- end }}
-
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination">
@@ -125,6 +144,7 @@
     {{- end }}
   </nav>
 </footer>
+{{- end }}
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}

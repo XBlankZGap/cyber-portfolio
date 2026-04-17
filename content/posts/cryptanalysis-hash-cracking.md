@@ -1,7 +1,8 @@
 +++
-date = '2026-03-24T10:00:00+01:00'
+date = '2025-09-25T10:00:00+01:00'
 draft = false
-title = 'Project 5: Offline Cryptanalysis & Password Recovery'
+title = 'Offline Cryptanalysis & Password Recovery'
+categories = ["Cryptography & Data Integrity"]
 
 [cover]
 image = "images/project5_jtr_cracking.png"

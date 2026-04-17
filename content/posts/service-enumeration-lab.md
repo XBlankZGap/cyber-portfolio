@@ -1,7 +1,8 @@
 +++
-date = '2026-03-21T10:00:00+01:00'
+date = '2025-08-05T10:00:00+01:00'
 draft = false
-title = 'Project 2: Service Enumeration & Vulnerability Research'
+title = 'Service Enumeration & Vulnerability Research'
+categories = ["Binary & System Exploitation"]
 
 [cover]
 image = "images/feature-3-shell-privilege-escalation.png"
