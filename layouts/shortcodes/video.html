@@ -1,6 +1,6 @@
 <div class="video-container" style="margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); background: var(--surface-low); border: 1px solid var(--outline);">
-    <video width="100%" height="auto" controls preload="metadata" playsinline poster="{{ .Get "poster" | absURL }}">
-        <source src="{{ .Get "src" | absURL }}" type="video/mp4">
+    <video width="100%" height="auto" controls preload="metadata" playsinline poster="{{ .Get "poster" | relURL }}">
+        <source src="{{ .Get "src" | relURL }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     {{ with .Get "caption" }}

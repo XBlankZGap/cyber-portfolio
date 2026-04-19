@@ -49,10 +49,10 @@ I performed a demonstration of the "cloning" process using a browser-based cooki
 
 ## 5. Evidence of Work
 
-![Discovery](/images/feature-session-hijacking-cookie-exfiltration.png)
+![Discovery](images/feature-session-hijacking-cookie-exfiltration.png)
 *Caption: Initial identification of session cookie attributes and the setup of the exfiltration environment.*
 
-{{< video src="/videos/session-hijacking-demo.mp4" poster="/images/session-hijacking-thumb.png" caption="VIDEO EVIDENCE: End-to-end demonstration of session token exfiltration and identity bypass." >}}
+{{< video src="videos/session-hijacking-demo.mp4" poster="images/session-hijacking-thumb.png" caption="VIDEO EVIDENCE: End-to-end demonstration of session token exfiltration and identity bypass." >}}
 
 ## 6. Professional Impact
 

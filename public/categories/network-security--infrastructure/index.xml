@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Network Security &amp; Infrastructure on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</link>
+    <link>http://localhost:1313/cyber-portfolio/categories/network-security--infrastructure/</link>
     <description>Recent content in Network Security &amp; Infrastructure on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Apr 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/categories/network-security--infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hybrid SIEM Architecture for SEO &amp; Security Intelligence</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Traffic Baselining and Anomaly Detection</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Centralized Network Security via Router-Level Filtering</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement non-device-specific security controls by enforcing domain blocking at the network gateway.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automated Domain Blocking via Batch Scripting</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To develop a reusable and scalable automation tool for neutralizing network threats at the system level.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Traffic Analysis &amp; Automated Threat Mitigation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</link>
       <pubDate>Tue, 15 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Security Fundamentals and Threat Assessment</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</link>
       <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To conduct a comprehensive study of network threat vectors and security controls to establish a foundational defense strategy for organizational environments.&lt;/p&gt;</description>
     </item>
   </channel>

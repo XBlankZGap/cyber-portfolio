@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/categories/</link>
+    <link>http://localhost:1313/cyber-portfolio/categories/</link>
     <description>Recent content in Categories on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Apr 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Network Security &amp; Infrastructure</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</link>
+      <link>http://localhost:1313/cyber-portfolio/categories/network-security--infrastructure/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/categories/network-security--infrastructure/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Application Pentesting</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</link>
+      <link>http://localhost:1313/cyber-portfolio/categories/web-application-pentesting/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/categories/web-application-pentesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Cryptography &amp; Data Integrity</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</link>
+      <link>http://localhost:1313/cyber-portfolio/categories/cryptography--data-integrity/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/categories/cryptography--data-integrity/</guid>
       <description></description>
     </item>
     <item>
       <title>Binary &amp; System Exploitation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/binary--system-exploitation/</link>
+      <link>http://localhost:1313/cyber-portfolio/categories/binary--system-exploitation/</link>
       <pubDate>Thu, 05 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/binary--system-exploitation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/categories/binary--system-exploitation/</guid>
       <description></description>
     </item>
     <item>
       <title>Security Operations &amp; Engineering</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</link>
+      <link>http://localhost:1313/cyber-portfolio/categories/security-operations--engineering/</link>
       <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/categories/security-operations--engineering/</guid>
       <description></description>
     </item>
   </channel>

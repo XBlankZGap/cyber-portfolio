@@ -51,13 +51,10 @@ Set-Cookie: sessionID=xyz789;
 
 ## 5. Evidence of Work
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0;">
-    {{< terminal_img src="/images/vouched-code-1.png" alt="Secure Cookie Logic 1" >}}
-    {{< terminal_img src="/images/vouched-code-2.png" alt="Secure Cookie Logic 2" >}}
-</div>
+{{< terminal_img src="images/vouched-code-merged.png" alt="Merged Secure Cookie Logic" >}}
 *Caption: Technical implementation of device-bound session tokens and HttpOnly/SameSite cookie flags in the Vouched application.*
 
-{{< video src="/videos/vouched-cookie-security.mp4" poster="/images/feature-secure-session-architecture.png" caption="VIDEO EVIDENCE: Demonstration of cookie security preventing session cloning between different browsers (Chrome vs Opera)." >}}
+{{< video src="videos/vouched-cookie-security.mp4" poster="images/feature-secure-session-architecture.png" caption="VIDEO EVIDENCE: Demonstration of cookie security preventing session cloning between different browsers (Chrome vs Opera)." >}}
 
 ## 6. Professional Impact
 

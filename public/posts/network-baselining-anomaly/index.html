@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Network Traffic Baselining and Anomaly Detection | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.">
 <meta name="author" content="">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,77 +173,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/">
-  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
-  <meta property="og:title" content="Network Traffic Baselining and Anomaly Detection">
-  <meta property="og:description" content="Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-11-15T10:00:00+01:00">
-    <meta property="article:modified_time" content="2025-11-15T10:00:00+01:00">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg">
-  <meta name="twitter:title" content="Network Traffic Baselining and Anomaly Detection">
-  <meta name="twitter:description" content="Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Network Traffic Baselining and Anomaly Detection",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Network Traffic Baselining and Anomaly Detection",
-  "name": "Network Traffic Baselining and Anomaly Detection",
-  "description": "Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.\n1. The Vulnerability: Obfuscated Network Activity (CWE-1021) A significant vulnerability in modern networks is the inability to distinguish between legitimate background services and malicious traffic. Attackers often use Domain Spoofing and typosquatting (e.g., googleagmanger.com instead of googlemanager.com) to hide their presence. Without a documented baseline of normal traffic, these subtle anomalies often go unnoticed, allowing malware to maintain persistence and communicate with external servers.\n2. Technical Execution: Protocol Interrogation I conducted a deep-packet analysis using Wireshark to categorize traffic by protocol and destination. By filtering for DNS and HTTPS traffic, I was able to verify the legitimacy of routine queries to known services like Google and Firebase while flagging high-frequency queries to unfamiliar domains.\nComponent Value Purpose Analysis Tool Wireshark Real-time packet capture and deep-packet inspection. Baseline Protocol TLSv1.2 / QUIC Verified encrypted web communication for trusted services. Anomaly Vector DNS CNAME Chaining Identified rotating IP patterns used to evade detection. Environment Personal/Home Network Testing site for live monitoring and traffic differentiation. 3. Execution Workflow Traffic Capture: Initiated a live capture session in Wireshark to monitor all inbound and outbound system traffic. Behavioral Baselining: Identified and documented safe traffic patterns from reputable services like Grammarly and Google. Anomaly Identification: Filtered for DNS queries and identified a cluster of domains (e.g., trasre.com) that exhibited suspicious behavior, such as resolving through multiple IP addresses via Cloudfront and Aliyun CDNs. Impact Verification: Determined that the identified domains were typical of rotating Command-and-Control (C2) infrastructure used for malware distribution. 4. Key Commands # Filter Wireshark traffic to show only DNS queries dns # Filter to identify specific suspicious domain resolutions dns.qry.name contains \"aoneroom\" # Analyze TLS handshakes for version verification tls.handshake.version == 0x0303 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the identification of suspicious DNS queries for domains like h5-static.aoneroom.com.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the verification of legitimate encrypted traffic (TLS/QUIC) as part of the baselining process.\n6. Professional Impact This project directly addresses System Integrity by establishing the “Known Good” state of a network. By developing the ability to recognize abnormal DNS patterns and C2 communication, I provided a proactive defense that identifies compromises before data exfiltration occurs. This work demonstrates the practical value of traffic monitoring in detecting early indicators of compromise and informing a multi-layered remediation strategy.\n",
-  "wordCount" : "398",
-  "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg","datePublished": "2025-11-15T10:00:00+01:00",
-  "dateModified": "2025-11-15T10:00:00+01:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SOPHY'S CYBERLAB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -272,12 +208,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -290,8 +226,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -331,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt=""></figure>
     </div>
 </div>
     
@@ -398,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -413,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-results.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-results.jpeg" 
              alt="Results" 
               
              loading="lazy">
@@ -431,12 +367,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/">
     <span class="title">« Prev</span>
     <br>
     <span>Automated Web Application Vulnerability Discovery</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/">
     <span class="title">Next »</span>
     <br>
     <span>Centralized Network Security via Router-Level Filtering</span>
@@ -448,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>DOM-Based Cross-Site Scripting (XSS) Analysis | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To identify and exploit an unsafe JavaScript &ldquo;sink&rdquo; to execute arbitrary code in the victim&rsquo;s browser context.">
 <meta name="author" content="">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,77 +173,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/">
-  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
-  <meta property="og:title" content="DOM-Based Cross-Site Scripting (XSS) Analysis">
-  <meta property="og:description" content="Objective: To identify and exploit an unsafe JavaScript “sink” to execute arbitrary code in the victim’s browser context.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-15T10:00:00+01:00">
-    <meta property="article:modified_time" content="2025-08-15T10:00:00+01:00">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-dom-xss-analysis.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-dom-xss-analysis.jpg">
-  <meta name="twitter:title" content="DOM-Based Cross-Site Scripting (XSS) Analysis">
-  <meta name="twitter:description" content="Objective: To identify and exploit an unsafe JavaScript “sink” to execute arbitrary code in the victim’s browser context.">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "DOM-Based Cross-Site Scripting (XSS) Analysis",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "DOM-Based Cross-Site Scripting (XSS) Analysis",
-  "name": "DOM-Based Cross-Site Scripting (XSS) Analysis",
-  "description": "Objective: To identify and exploit an unsafe JavaScript \u0026ldquo;sink\u0026rdquo; to execute arbitrary code in the victim\u0026rsquo;s browser context.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Objective: To identify and exploit an unsafe JavaScript “sink” to execute arbitrary code in the victim’s browser context.\n1. The Vulnerability: Unsafe DOM Manipulation (CWE-79) The application is vulnerable to DOM-based Cross-Site Scripting (XSS) because it renders user-controlled input directly into the Document Object Model (DOM) without prior sanitization. Specifically, the application uses an unsafe “sink” (the .html() method), which allows a browser to interpret and execute any script tags or malicious event handlers passed through the URL.\n2. Technical Execution: Client-Side Scripting By performing a manual code review of the frontend JavaScript files, I identified a function that directly handles URL parameters for rendering page content. By crafting a URL with a malicious image-based payload, I triggered an execution event entirely within the client’s browser, bypassing the need for server-side interaction.\nComponent Value Purpose Vulnerable Script LessonContentView.js Responsible for rendering lesson parameters. Unsafe Method .html(param) The JQuery “sink” that executes HTML/JS. Attack Vector Fragment Identifier (#) Used to pass the payload without a server request. Payload Triggers a script when the image fails to load. 3. Execution Workflow Source Code Discovery: Audited the LessonContentView.js file and located the showTestParam function. Sink Identification: Confirmed that this.$el.find('.lesson-content').html('test:' + param); was being used to render input. Exploit Logic: Hypothesized that replacing the param with a script-bearing HTML tag would force the browser to execute it. Verification: Navigated to the crafted URL to confirm the successful execution of an alert box. 4. Key Commands // The identified vulnerable code snippet: this.$el.find('.lesson-content').html('test:' + param); // The payload used in the URL: http://localhost:8080/WebGoat/start.mvc#test/ 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase identifying the existence of Cross-Site Scripting weaknesses within the application.\nRESOURCES_NODE_01 Caption: Results phase confirming the execution of arbitrary JavaScript via the DOM-based XSS vulnerability.\n6. Professional Impact This vulnerability poses a significant risk to Data Confidentiality and User Session Integrity, as an attacker could use this flaw to steal session cookies, hijack accounts, or redirect users to phishing sites. To remediate this, I recommended replacing the unsafe .html() method with .text(), which ensures all user input is treated as plain text rather than executable code. Additionally, implementing a robust Content Security Policy (CSP) would provide a secondary layer of defense to block unauthorized script execution.\n",
-  "wordCount" : "377",
-  "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-dom-xss-analysis.jpg","datePublished": "2025-08-15T10:00:00+01:00",
-  "dateModified": "2025-08-15T10:00:00+01:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SOPHY'S CYBERLAB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -272,12 +208,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -290,8 +226,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -331,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-dom-xss-analysis.jpg" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-dom-xss-analysis.jpg" alt=""></figure>
     </div>
 </div>
     
@@ -395,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/dom-xss-analysis-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/dom-xss-analysis-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -410,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/dom-xss-analysis-results.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/dom-xss-analysis-results.jpeg" 
              alt="Results" 
               
              loading="lazy">
@@ -428,12 +364,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/">
     <span class="title">« Prev</span>
     <br>
     <span>Cross-Site Request Forgery (CSRF) via Forged Reviews</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/">
     <span class="title">Next »</span>
     <br>
     <span>Exploiting &amp; Mitigating String-Based SQL Injection</span>
@@ -445,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

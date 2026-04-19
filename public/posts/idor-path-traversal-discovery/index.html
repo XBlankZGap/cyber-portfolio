@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.">
 <meta name="author" content="">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,77 +173,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/">
-  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
-  <meta property="og:title" content="Insecure Direct Object Reference (IDOR) & Path Traversal Discovery">
-  <meta property="og:description" content="Objective: To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-15T10:00:00+01:00">
-    <meta property="article:modified_time" content="2025-12-15T10:00:00+01:00">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg">
-  <meta name="twitter:title" content="Insecure Direct Object Reference (IDOR) & Path Traversal Discovery">
-  <meta name="twitter:description" content="Objective: To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Insecure Direct Object Reference (IDOR) \u0026 Path Traversal Discovery",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Insecure Direct Object Reference (IDOR) \u0026 Path Traversal Discovery",
-  "name": "Insecure Direct Object Reference (IDOR) \u0026 Path Traversal Discovery",
-  "description": "Objective: To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Objective: To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.\n1. The Vulnerability: Path Traversal (CWE-22) The web application was found to be vulnerable to Path Traversal (also known as Directory Traversal) because it failed to properly sanitize user-supplied input used to reference files on the server. This flaw allows an attacker to use special characters, such as ../, to break out of the intended web root directory and access restricted files or directories elsewhere on the file system.\n2. Technical Execution: Resource Interrogation I utilized OWASP ZAP to identify parameters susceptible to path manipulation. By injecting traversal sequences into the column parameter of the target URL, I observed the application’s response to determine if it would disclose file paths or system-level error messages.\nComponent Value Purpose Vulnerable Parameter column The input vector used for path manipulation. Risk Level High Potential for full system file disclosure. Detection Method Active Scanning Automated probing of parameters for traversal flaws. Tool OWASP ZAP Facilitates the identification of insecure file referencing. 3. Execution Workflow Automated Reconnaissance: Initiated an Active Scan within OWASP ZAP to systematically test the application’s URL parameters for traversal vulnerabilities. Alert Analysis: Flagged a “Path Traversal” alert which indicated that the application was improperly handling input in the column parameter. Payload Verification: Analyzed the attack vector to confirm that the technique could potentially reach directories residing outside the web primary folder. Context Evaluation: Noted the request URLs and parameters where the vulnerabilities were flagged to determine the scope of the exposure. 4. Key Commands # Example of a traversal payload identified during the scan # This attempts to move up the directory tree to reach system files ../../../../etc/passwd # The targeted URL identified by ZAP http://localhost:8080/WebGoat/SqlInjectionMitigations/servers?column=..%2F..%2F 5. Evidence of Work RESOURCES_NODE_01 Caption: Identification of the Path Traversal alert and the vulnerable parameter in OWASP ZAP.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the technical description of the attack and the input vector (URL Query String) identified by the tool.\n6. Professional Impact This project highlights a critical risk to Data Confidentiality and System Integrity, as an attacker could potentially read sensitive configuration files or credentials stored on the server. To remediate this, I recommended that the application validate user input against a known “allow-list” of expected values rather than relying on sanitizing malicious sequences. Furthermore, I advised ensuring that the application process runs with the least privilege necessary to prevent access to sensitive operating system files.\n",
-  "wordCount" : "409",
-  "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg","datePublished": "2025-12-15T10:00:00+01:00",
-  "dateModified": "2025-12-15T10:00:00+01:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SOPHY'S CYBERLAB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -272,12 +208,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -290,8 +226,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -330,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg" alt=""></figure>
     </div>
 </div>
     
@@ -395,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/idor-path-traversal-discovery-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -410,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/idor-path-traversal-discovery-results.jpeg" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/idor-path-traversal-discovery-results.jpeg" 
              alt="Results" 
               
              loading="lazy">
@@ -428,12 +364,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/">
     <span class="title">« Prev</span>
     <br>
     <span>Cryptographic Infrastructure &amp; Secure Communication</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/">
     <span class="title">Next »</span>
     <br>
     <span>Vulnerability Analysis and Remediation Planning</span>
@@ -445,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
