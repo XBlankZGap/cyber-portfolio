@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Session Hijacking via Automated Cookie Exfiltration | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,13 +173,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Session Hijacking via Automated Cookie Exfiltration">
+  <meta property="og:description" content="Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-05T10:00:00+01:00">
+    <meta property="article:modified_time" content="2026-04-05T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png">
+  <meta name="twitter:title" content="Session Hijacking via Automated Cookie Exfiltration">
+  <meta name="twitter:description" content="Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Session Hijacking via Automated Cookie Exfiltration",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Session Hijacking via Automated Cookie Exfiltration",
+  "name": "Session Hijacking via Automated Cookie Exfiltration",
+  "description": "Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.\n1. The Vulnerability: Insecure Session Management (CWE-693) Cookie theft, or session hijacking, occurs when a malicious actor acquires a user’s session tokens to gain unauthorized access to their authenticated state. This project highlights a critical breakdown in Data Confidentiality, where a lack of secure cookie flags or the presence of XSS allows attackers to “clone” a legitimate session without ever needing the user’s password.\n2. Technical Execution: Identity Impersonation I performed a demonstration of the “cloning” process using a browser-based cookie editor to exfiltrate and reuse session tokens. By manually manipulating session cookies, I proved that an attacker can maintain persistence even across browser reloads, effectively bypassing the primary authentication layer.\nComponent Value Purpose Attack Vector Cookie Sniffing / XSS Methods used to acquire session data. Primary Tool Cookie Editor Extension Facilitates viewing, copying, and injecting cookies. Risk Level High Direct path to account takeover and data breach. End Result Identity Theft Successful impersonation of the target user. 3. Execution Workflow Tool Setup: Integrated a professional cookie editor into the testing browser and enabled incognito and file URL access. Reconnaissance: Visited a target web application and utilized the editor to identify session-specific cookies. Exfiltration \u0026 Injection: Extracted valid cookie values and injected them into a separate, clean browser instance to simulate an attacker’s environment. Validation: Reloaded the target application in the attacker’s browser to confirm successful authentication bypass and account access. 4. Logical Attack Flow # Logical Attack Flow: 1. Target: authenticated_session_cookie = \"session_id=abc123...\" 2. Action: Inject \"session_id=abc123...\" into Attacker_Browser 3. Result: Access granted to victim_profile without password prompt 5. Evidence of Work RESOURCES_NODE_01 Caption: Initial identification of session cookie attributes and the setup of the exfiltration environment.\nYour browser does not support the video tag. VIDEO EVIDENCE: End-to-end demonstration of session token exfiltration and identity bypass.\n6. Professional Impact This project illustrates a catastrophic loss of Authentication integrity. I proved that a single stolen session token can lead to total account takeover, exposing sensitive financial and personal data. To remediate this, I documented the critical need for monitoring Unusual Login Patterns and Suspicious Session Activity, such as logins from new devices or unexpected geographical locations.\n",
+  "wordCount" : "373",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png","datePublished": "2026-04-05T10:00:00+01:00",
+  "dateModified": "2026-04-05T10:00:00+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -208,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -266,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt=""></figure>
     </div>
 </div>
     
@@ -322,9 +386,24 @@ document.addEventListener("DOMContentLoaded", function() {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> Action: Inject &#34;session_id=abc123...&#34; into Attacker_Browser
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> Result: Access granted to victim_profile without password prompt
 </span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
+<p><div class="terminal-window" style="margin: 40px 0;">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+    </div>
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" 
+             alt="Discovery" 
+              
+             loading="lazy">
+    </div>
+</div>
+
+<em>Caption: Initial identification of session cookie attributes and the setup of the exfiltration environment.</em></p>
 <div class="video-container" style="margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); background: var(--surface-low); border: 1px solid var(--outline);">
-    <video width="100%" height="auto" controls preload="metadata" playsinline poster="/images/session-hijacking-thumb.png">
-        <source src="/videos/session-hijacking-demo.mp4" type="video/mp4">
+    <video width="100%" height="auto" controls preload="metadata" playsinline poster="https://XBlankZGap.github.io/images/session-hijacking-thumb.png">
+        <source src="https://XBlankZGap.github.io/videos/session-hijacking-demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     
@@ -342,12 +421,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/">
     <span class="title">« Prev</span>
     <br>
     <span>Secure Session Architecture &amp; Defensive Flag Implementation</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/">
     <span class="title">Next »</span>
     <br>
     <span>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</span>
@@ -359,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

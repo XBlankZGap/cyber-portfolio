@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Engineered Security Lab Deployment &amp; Troubleshooting | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,13 +173,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Engineered Security Lab Deployment & Troubleshooting">
+  <meta property="og:description" content="Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-02T10:00:00+01:00">
+    <meta property="article:modified_time" content="2025-07-02T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg">
+  <meta name="twitter:title" content="Engineered Security Lab Deployment & Troubleshooting">
+  <meta name="twitter:description" content="Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Engineered Security Lab Deployment \u0026 Troubleshooting",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Engineered Security Lab Deployment \u0026 Troubleshooting",
+  "name": "Engineered Security Lab Deployment \u0026 Troubleshooting",
+  "description": "Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.\n1. The Vulnerability: Environment Misconfiguration An insecure or improperly configured testing environment can lead to “false negatives” during scans or unintended exposure of the host system. During the deployment of the WebGoat and OWASP ZAP lab, I encountered several configuration flaws—including Proxy Interception Failures and Container Port Conflicts—that mirrored the real-world challenges a security professional faces when setting up enterprise monitoring tools.\n2. Technical Execution: Lab Orchestration I engineered a local security lab using a Windows 11 host, deploying the WebGoat microservices-based application and the OWASP ZAP proxy. I implemented a manual proxy configuration to ensure all browser-based traffic was successfully intercepted for deep-packet analysis.\nComponent Value Purpose Virtualization Docker / Java Runtime Used to containerize the vulnerable application. Proxy Gateway OWASP ZAP (8080) Man-in-the-middle node for traffic inspection. Host System Windows 11 The primary OS for security testing and documentation. Certificate Mgmt ZAP CA Certificate Installed to facilitate HTTPS traffic interception. 3. Execution Workflow System Initialization: Verified Java and Docker prerequisites and launched the WebGoat server via the Command Line Interface (CLI). Network Bridge Configuration: Manually routed browser traffic through localhost:8080 to bridge the gap between the application and the security analyzer. Advanced Troubleshooting: Resolved port 8080 conflicts by reviewing Docker logs and ensuring no other services were competing for the gateway. Certificate Trust Establishment: Imported the ZAP Root CA certificate into the browser’s trusted store to bypass SSL/TLS certificate warnings. 4. Key Commands # Launching the secure lab environment java -jar webgoat-2025.3.jar # Troubleshooting port conflicts and inspecting container status docker logs [container_id] netstat -ano | findstr :8080 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the successful initialization of the lab environment and identification of port mapping.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the successful interception of traffic, with the browser confirming it is being controlled by automated software.\n6. Professional Impact This project demonstrates Operational Excellence and the ability to build a secure testing infrastructure from the ground up. By resolving complex browser-proxy interception issues and port conflicts, I proved my technical competency in the “Post-Mortem” phase of lab setup. These skills are essential for maintaining System Integrity within a Security Operations Center (SOC) or a Red Team environment, where the reliability of tools is as critical as the analysis they provide.\n",
+  "wordCount" : "391",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg","datePublished": "2025-07-02T10:00:00+01:00",
+  "dateModified": "2025-07-02T10:00:00+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -208,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -272,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg" alt=""></figure>
     </div>
 </div>
     
@@ -337,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -352,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/engineered-lab-deployment-results.jpeg" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/engineered-lab-deployment-results.jpeg" 
              alt="Results" 
               
              loading="lazy">
@@ -370,12 +434,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/professional-career-development/">
     <span class="title">« Prev</span>
     <br>
     <span>Professional Career Development and Industry Engagement</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/">
     <span class="title">Next »</span>
     <br>
     <span>Network Security Fundamentals and Threat Assessment</span>
@@ -387,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

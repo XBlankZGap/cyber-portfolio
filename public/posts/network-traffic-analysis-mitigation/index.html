@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Network Traffic Analysis &amp; Automated Threat Mitigation | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,13 +173,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Network Traffic Analysis & Automated Threat Mitigation">
+  <meta property="og:description" content="Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-15T10:00:00+01:00">
+    <meta property="article:modified_time" content="2025-07-15T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-network-traffic-analysis.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-network-traffic-analysis.jpg">
+  <meta name="twitter:title" content="Network Traffic Analysis & Automated Threat Mitigation">
+  <meta name="twitter:description" content="Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Network Traffic Analysis \u0026 Automated Threat Mitigation",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Network Traffic Analysis \u0026 Automated Threat Mitigation",
+  "name": "Network Traffic Analysis \u0026 Automated Threat Mitigation",
+  "description": "Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.\n1. The Vulnerability: Malicious External Communication During live monitoring of network traffic, I identified several suspicious domains, such as googleagmanger.com and aoneroom.com, which exhibited characteristics of Command-and-Control (C2) infrastructure. These domains utilized CDN IP rotation to evade traditional security controls and performed frequent DNS resolution attempts, suggesting the presence of adware, tracking scripts, or persistent backdoors.\n2. Technical Execution: Protocol Interrogation I utilized Wireshark to perform granular packet inspection, isolating abnormal DNS queries and tracking the CNAME chaining used by attackers to obscure their true server locations.\nComponent Value Purpose Analysis Tool Wireshark Real-time packet capture and DNS log inspection. Mitigation 1 Windows Hosts File System-level redirection of malicious domains to 127.0.0.1. Mitigation 2 Batch Scripting Automation of the blocking process for speed and scalability. Mitigation 3 Router Filtering Network-wide protection via URL keyword filtering. 3. Execution Workflow Traffic Baselining: Monitored legitimate traffic (e.g., Google, Firebase) to establish a behavioral baseline for routine, secure communications. Threat Identification: Flagged domains mimicking legitimate services (typosquatting) and those showing repeated queries to unknown subdomains. Local Nullification: Manually updated the Windows hosts file to redirect traffic from identified malicious domains to the local loopback address. Automation \u0026 Scalability: Developed a reusable batch script to automate the host file updates, reducing manual error and deployment time. Network-Wide Enforcement: Configured the MTN 4G Router firewall to block these keywords at the gateway, protecting non-Windows devices like mobile phones and IoT hardware. 4. Key Commands :: Automated domain blocking script snippet @echo off set hostspath=%SystemRoot%\\System32\\drivers\\etc\\hosts echo 127.0.0.1 googleagmanger.com\u003e\u003e %hostspath% echo 127.0.0.1 aoneroom.com\u003e\u003e %hostspath% 5. Evidence of Work RESOURCES_NODE_01 Caption: Identification of suspicious DNS queries and rotating CDN IPs in Wireshark logs.\nRESOURCES_NODE_01 Caption: Centralized network-wide blocking of malicious domains at the router boundary to secure all connected devices.\n6. Professional Impact This project demonstrates a Defense-in-Depth mindset. By combining local system-level modifications with centralized network-wide filtering, I ensured that no single point of failure would compromise the environment. I successfully neutralized communication channels for potential data exfiltration and confirmed the effectiveness of the remediation through continuous monitoring.\n",
+  "wordCount" : "359",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-network-traffic-analysis.jpg","datePublished": "2025-07-15T10:00:00+01:00",
+  "dateModified": "2025-07-15T10:00:00+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -208,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -267,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-network-traffic-analysis.jpg" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-network-traffic-analysis.jpg" alt=""></figure>
     </div>
 </div>
     
@@ -332,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/network-traffic-analysis-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/network-traffic-analysis-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -347,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/network-traffic-analysis-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/network-traffic-analysis-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -365,12 +429,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/">
     <span class="title">« Prev</span>
     <br>
     <span>Service Enumeration &amp; Vulnerability Research</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/professional-career-development/">
     <span class="title">Next »</span>
     <br>
     <span>Professional Career Development and Industry Engagement</span>
@@ -382,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by

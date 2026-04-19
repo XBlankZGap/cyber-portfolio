@@ -2,129 +2,129 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/network-security--infrastructure/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</loc>
     <lastmod>2026-04-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/web-application-pentesting/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</loc>
     <lastmod>2026-04-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</loc>
     <lastmod>2026-04-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/cryptography--data-integrity/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</loc>
     <lastmod>2026-03-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/binary--system-exploitation/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/binary--system-exploitation/</loc>
     <lastmod>2026-03-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/</loc>
     <lastmod>2026-03-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</loc>
     <lastmod>2026-03-01T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</loc>
     <lastmod>2026-02-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/eternalblue-windows-exploitation/</loc>
     <lastmod>2026-02-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</loc>
     <lastmod>2026-01-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</loc>
     <lastmod>2026-01-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</loc>
     <lastmod>2026-01-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</loc>
     <lastmod>2025-12-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</loc>
     <lastmod>2025-12-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</loc>
     <lastmod>2025-12-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</loc>
     <lastmod>2025-11-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</loc>
     <lastmod>2025-11-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</loc>
     <lastmod>2025-11-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</loc>
     <lastmod>2025-10-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/categories/security-operations--engineering/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</loc>
     <lastmod>2025-09-30T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</loc>
     <lastmod>2025-09-30T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</loc>
     <lastmod>2025-09-25T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/post-exploitation-data-exfiltration/</loc>
     <lastmod>2025-09-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</loc>
     <lastmod>2025-09-12T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</loc>
     <lastmod>2025-08-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</loc>
     <lastmod>2025-08-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</loc>
     <lastmod>2025-08-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/</loc>
     <lastmod>2025-08-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</loc>
     <lastmod>2025-07-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/professional-career-development/</loc>
     <lastmod>2025-07-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/engineered-lab-deployment/</loc>
     <lastmod>2025-07-02T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</loc>
     <lastmod>2025-07-01T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/about/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/contact/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/tags/</loc>
+    <loc>https://XBlankZGap.github.io/cyber-portfolio/tags/</loc>
   </url>
 </urlset>

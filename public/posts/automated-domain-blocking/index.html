@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Automated Domain Blocking via Batch Scripting | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/">
 <noscript>
     <style>
         #theme-toggle,
@@ -173,13 +173,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Automated Domain Blocking via Batch Scripting">
+  <meta property="og:description" content="Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-05T10:00:00+01:00">
+    <meta property="article:modified_time" content="2025-11-05T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg">
+  <meta name="twitter:title" content="Automated Domain Blocking via Batch Scripting">
+  <meta name="twitter:description" content="Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Automated Domain Blocking via Batch Scripting",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Automated Domain Blocking via Batch Scripting",
+  "name": "Automated Domain Blocking via Batch Scripting",
+  "description": "Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.\n1. The Vulnerability: Manual Mitigation Inefficiency Relying on manual entries to the Windows hosts file for domain blocking is a slow and error-prone process. In an active threat scenario where multiple malicious domains (e.g., trasre.com, shallspark.com) are identified, the delay in manual configuration increases the window of opportunity for malware to establish a Command-and-Control (C2) connection or exfiltrate data.\n2. Technical Execution: Scripted Host Redirection I developed a batch script using the VS Code IDE to automate the redirection of suspicious traffic. The script programmatically appends the local loopback address (127.0.0.1) to the Windows hosts file for every identified malicious domain. This ensures that any application attempting to reach these external servers is immediately redirected back to the local machine, effectively “cutting off” the communication.\nComponent Value Purpose Language Batch (.bat) Native Windows execution for system-level changes. Target File %SystemRoot%\\System32\\drivers\\etc\\hosts The system file that maps hostnames to IP addresses. Logic Append (») Ensures existing host mappings are preserved while adding new blocks. Loopback IP 127.0.0.1 The address used to nullify malicious outbound requests. 3. Execution Workflow Requirement Analysis: Identified the need for a scalable way to deploy domain blocks across multiple machines after discovering a cluster of suspicious domains in Wireshark. Script Development: Authored the @echo off script to target the system’s drivers directory and map the identified domains to localhost. Redundancy Check: Included both root domains and “www” subdomains in the script to ensure comprehensive coverage. Verification \u0026 Unblocking: Developed a secondary “unblock” script to restore original host settings for testing and maintenance purposes. 4. Key Commands :: Snippet of the block-suspicious-domains.bat script @echo off set hostspath=%SystemRoot%\\System32\\drivers\\etc\\hosts echo 127.0.0.1 sparkle0.com\u003e\u003e %hostspath% echo 127.0.0.1 trasre.com\u003e\u003e %hostspath% echo Done! The domains have been blocked. pause 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the logic and domain list within the IDE before execution.\nRESOURCES_NODE_01 Caption: Results phase showing the successful system-level mapping of malicious domains to the loopback address after script execution.\n6. Professional Impact This project significantly improves System Integrity by reducing the time-to-remediate for known network threats. By moving from manual entry to automation, I ensured consistent protection across the environment and reduced human error. This demonstrates an ability to translate threat intelligence into actionable, scalable security infrastructure.\n",
+  "wordCount" : "387",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg","datePublished": "2025-11-05T10:00:00+01:00",
+  "dateModified": "2025-11-05T10:00:00+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -208,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -266,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" alt=""></figure>
     </div>
 </div>
     
@@ -332,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" 
              alt="Discovery" 
               
              loading="lazy">
@@ -347,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-results.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-results.png" 
              alt="Results" 
               
              loading="lazy">
@@ -365,12 +429,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/">
     <span class="title">« Prev</span>
     <br>
     <span>Centralized Network Security via Router-Level Filtering</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/">
     <span class="title">Next »</span>
     <br>
     <span>Database Breach &amp; Administrative Data Exfiltration</span>
@@ -382,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
