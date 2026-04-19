@@ -30,11 +30,11 @@
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cryptographic Wallet Engineering &amp; BIP39 Implementation</title>
+      <title>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</title>
       <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical process of generating cryptographic identities and managing multi-coin wallet backups using mnemonic phrases.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>

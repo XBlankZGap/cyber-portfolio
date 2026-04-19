@@ -8,7 +8,7 @@ vulnerability_class = "Data Exposure in Transit"
 tools = ["OpenSSL", "AES", "RSA", "TLS", "VPN"]
 
 [cover]
-image = "images/feature-cryptographic-infrastructure-pki.png"
+image = "images/cryptographic-infrastructure-pki-discovery.png"
 
 tags = ["Cryptography", "PKI", "Encryption", "Identity Verification"]
 +++
@@ -50,10 +50,10 @@ openssl enc -aes-256-cbc -salt -in data.txt -out data.txt.enc
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project14_cryptography_action.png)
+![Discovery](/images/cryptographic-infrastructure-pki-discovery.png)
 *Caption: Discovery phase showing the architectural mapping of TLS, VPNs, and disk encryption across the infrastructure.*
 
-![Results](/images/project14_encryption_paradigms.png)
+![Results](/images/cryptographic-infrastructure-pki-results.png)
 *Caption: Results/Impact phase demonstrating the technical logic behind key management and computational complexity differences.*
 
 ## 6. Professional Impact

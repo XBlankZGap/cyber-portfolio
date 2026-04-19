@@ -8,7 +8,7 @@ vulnerability_class = "Insecure Service Configuration (NFS/ProFTPd)"
 tools = ["Nmap", "Netcat", "Samba", "SUID"]
 
 [cover]
-image = "images/feature-kenobi-nfs-misconfig-priv-esc.png"
+image = "images/feature-kenobi.png"
 
 tags = ["Linux Security", "Privilege Escalation", "NFS", "ProFTPd"]
 +++
@@ -51,10 +51,10 @@ SITE CPTO /var/tmp/id_rsa
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project24_nfs_shares.png)
+![Discovery](/images/kenobi-nfs.png)
 *Caption: Identification of unauthenticated NFS shares and vulnerable Samba services.*
 
-![Results](/images/project24_root_access.png)
+![Results](/images/kenobi-root.png)
 *Caption: Successful privilege escalation showing root access gained through SUID binary exploitation.*
 
 ## 6. Professional Impact

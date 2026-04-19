@@ -8,7 +8,7 @@ vulnerability_class = "Path Traversal (CWE-22)"
 tools = ["OWASP ZAP", "WebGoat", "Active Scanning"]
 
 [cover]
-image = "images/feature-idor-path-traversal-discovery.png"
+image = "images/idor-path-traversal-discovery-discovery.jpeg"
 
 tags = ["IDOR", "Path Traversal", "Vulnerability Discovery", "Web Security"]
 +++
@@ -51,10 +51,10 @@ http://localhost:8080/WebGoat/SqlInjectionMitigations/servers?column=..%2F..%2F
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project12_zap_alert.png)
+![Discovery](/images/idor-path-traversal-discovery-discovery.jpeg)
 *Caption: Identification of the Path Traversal alert and the vulnerable parameter in OWASP ZAP.*
 
-![Results](/images/project12_alert_details.png)
+![Results](/images/idor-path-traversal-discovery-results.jpeg)
 *Caption: Results/Impact phase showing the technical description of the attack and the input vector (URL Query String) identified by the tool.*
 
 ## 6. Professional Impact

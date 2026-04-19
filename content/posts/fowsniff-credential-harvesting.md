@@ -8,7 +8,7 @@ vulnerability_class = "Information Disclosure (Credential Leak)"
 tools = ["Nmap", "Metasploit", "John the Ripper", "Hydra"]
 
 [cover]
-image = "images/feature-fowsniff-credential-harvesting.png"
+image = "images/feature-fowsniff.png"
 
 tags = ["Password Cracking", "Credential Harvesting", "Information Disclosure", "John the Ripper"]
 +++
@@ -50,10 +50,10 @@ hydra -L users.txt -P cracked_passes.txt 10.10.x.x pop3
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project25_email_logs.png)
+![Discovery](/images/fowsniff-pop3.png)
 *Caption: Discovery phase showing the unauthenticated access to sensitive internal email logs.*
 
-![Results](/images/project25_cracked_passwords.png)
+![Results](/images/fowsniff-cracking.png)
 *Caption: Results/Impact phase showing the successful recovery of multiple plaintext passwords via John the Ripper.*
 
 ## 6. Professional Impact

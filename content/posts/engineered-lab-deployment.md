@@ -8,7 +8,7 @@ vulnerability_class = "Environment Misconfiguration"
 tools = ["Docker", "Java Runtime", "OWASP ZAP", "Windows 11"]
 
 [cover]
-image = "images/feature-engineered-lab-deployment.png"
+image = "images/engineered-lab-deployment-discovery.jpeg"
 
 tags = ["Lab Setup", "Troubleshooting", "Docker", "Security Engineering"]
 +++
@@ -51,10 +51,10 @@ netstat -ano | findstr :8080
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project13_cli_init.png)
+![Discovery](/images/engineered-lab-deployment-discovery.jpeg)
 *Caption: Discovery phase showing the successful initialization of the lab environment and identification of port mapping.*
 
-![Results](/images/project13_browser_interception.png)
+![Results](/images/engineered-lab-deployment-results.jpeg)
 *Caption: Results/Impact phase showing the successful interception of traffic, with the browser confirming it is being controlled by automated software.*
 
 ## 6. Professional Impact

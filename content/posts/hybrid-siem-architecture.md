@@ -54,10 +54,10 @@ I designed a multi-layered ingestion architecture that normalizes disparate data
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project21_siem_workflow.png)
+![Discovery](/images/hybrid-siem-architecture-discovery.py)
 *Caption: Discovery phase showing the end-to-end data flow from web servers to the visualization dashboard.*
 
-![Results](/images/project21_siem_dashboard.png)
+![Results](/images/hybrid-siem-architecture-misc.png)
 *Caption: Results/Impact phase demonstrating the visualization of bot activity maps and incident timelines within the SIEM environment.*
 
 ## 6. Professional Impact

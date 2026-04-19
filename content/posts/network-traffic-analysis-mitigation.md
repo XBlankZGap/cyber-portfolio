@@ -8,7 +8,7 @@ vulnerability_class = "Malicious External Communication"
 tools = ["Wireshark", "Windows Hosts File", "Batch Scripting", "Router Filtering"]
 
 [cover]
-image = "images/feature-network-traffic-mitigation.png"
+image = "images/feature-network-traffic-analysis.jpg"
 
 tags = ["Wireshark", "DNS", "C2", "Defense-in-Depth"]
 +++
@@ -51,10 +51,10 @@ echo 127.0.0.1 aoneroom.com>> %hostspath%
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project1_wireshark_analysis.png)
+![Discovery](/images/network-traffic-analysis-discovery.jpeg)
 *Caption: Identification of suspicious DNS queries and rotating CDN IPs in Wireshark logs.*
 
-![Results](/images/project1_router_filtering.png)
+![Discovery](/images/network-traffic-analysis-discovery.jpeg)
 *Caption: Centralized network-wide blocking of malicious domains at the router boundary to secure all connected devices.*
 
 ## 6. Professional Impact

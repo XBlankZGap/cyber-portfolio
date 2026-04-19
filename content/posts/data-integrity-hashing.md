@@ -8,7 +8,7 @@ vulnerability_class = "Data Tampering & Plaintext Credentials"
 tools = ["SHA-256", "MD5", "sha256sum", "Integrity Check"]
 
 [cover]
-image = "images/feature-data-integrity-hashing.png"
+image = "images/data-integrity-hashing-discovery.png"
 
 tags = ["Hashing", "Data Integrity", "SHA-256", "Password Security"]
 +++
@@ -49,10 +49,10 @@ sha256sum -c integrity_manifest.txt
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project15_hashing_concepts.png)
+![Discovery](/images/data-integrity-hashing-discovery.png)
 *Caption: Discovery phase showing the functional difference between reversible encryption and one-way hashing.*
 
-![Results](/images/project15_hash_verification.png)
+![Discovery](/images/data-integrity-hashing-discovery.png)
 *Caption: Results/Impact phase showing the verification process where altered data is detected through hash mismatches.*
 
 ## 6. Professional Impact

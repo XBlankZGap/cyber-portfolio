@@ -48,10 +48,10 @@ python3 wallet_forensics.py --mnemonic "12_word_phrase_here" --coin BTC
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project17_bitfinex_timeline.png)
+![Discovery](/images/blockchain-forensics-bitfinex-discovery.png)
 *Caption: Discovery phase showing the timeline of the 2016 heist and the recovery of funds via forensic private key access.*
 
-![Results](/images/project17_mnemonic_risks.png)
+![Discovery](/images/blockchain-forensics-bitfinex-discovery.png)
 *Caption: Results/Impact phase demonstrating the irreversible nature of stolen funds and impersonation risks in dApps.*
 
 ## 6. Professional Impact

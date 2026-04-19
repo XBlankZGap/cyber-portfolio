@@ -8,7 +8,7 @@ vulnerability_class = "Manual Mitigation Inefficiency"
 tools = ["Batch Scripting", "VS Code", "Windows Hosts File"]
 
 [cover]
-image = "images/feature-automated-domain-blocking.png"
+image = "images/automated-domain-blocking-discovery.jpeg"
 
 tags = ["Automation", "Security Engineering", "C2 Mitigation", "Endpoint Security"]
 +++
@@ -52,10 +52,10 @@ pause
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project5_script_ide.png)
+![Discovery](/images/automated-domain-blocking-discovery.jpeg)
 *Caption: Discovery phase showing the logic and domain list within the IDE before execution.*
 
-![Results](/images/project5_hosts_verification.png)
+![Results](/images/automated-domain-blocking-results.png)
 *Caption: Results phase showing the successful system-level mapping of malicious domains to the loopback address after script execution.*
 
 ## 6. Professional Impact

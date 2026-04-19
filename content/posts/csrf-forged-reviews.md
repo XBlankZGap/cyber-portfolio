@@ -8,7 +8,7 @@ vulnerability_class = "Missing Anti-Forgery Tokens (CWE-352)"
 tools = ["OWASP ZAP", "Python", "HTML/JS", "WebGoat"]
 
 [cover]
-image = "images/feature-csrf-forged-reviews.png"
+image = "images/csrf-forged-reviews-discovery.jpg"
 
 tags = ["CSRF", "Session Management", "OWASP", "Auth Bypass"]
 +++
@@ -56,10 +56,10 @@ python -m http.server 9000
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project4_zap_alerts.png)
+![Discovery](/images/csrf-forged-reviews-discovery.jpg)
 *Caption: OWASP ZAP flagging the absence of robust anti-CSRF tokens for the application session.*
 
-![Results](/images/project4_forged_review.png)
+![Results](/images/csrf-forged-reviews-results.jpeg)
 *Caption: Successful submission of the forged review ("Hacked by CSRF!") without any manual user interaction.*
 
 ## 6. Professional Impact

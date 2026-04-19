@@ -8,7 +8,7 @@ vulnerability_class = "Excessive Privilege & Service Exploitation"
 tools = ["SELinux", "audit2allow", "getenforce", "audit log"]
 
 [cover]
-image = "images/feature-selinux-mandatory-access-control.png"
+image = "images/selinux-mandatory-access-control-discovery.jpeg"
 
 tags = ["SELinux", "MAC", "Kernel Security", "Least Privilege"]
 +++
@@ -49,10 +49,10 @@ grep "denied" /var/log/audit/audit.log | audit2allow -M my_service_fix
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project16_selinux_architecture.png)
+![Discovery](/images/selinux-mandatory-access-control-discovery.jpeg)
 *Caption: Discovery phase showing the mandatory access control architecture and mode descriptions.*
 
-![Results](/images/project16_selinux_logs.png)
+![Results](/images/selinux-mandatory-access-control-results.jpeg)
 *Caption: Results/Impact phase demonstrating the analysis of logs and the resolution of policy violations for critical services.*
 
 ## 6. Professional Impact

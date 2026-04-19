@@ -51,11 +51,19 @@ Set-Cookie: sessionID=xyz789;
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project20_developer_best_practices.png)
-*Caption: Discovery phase showing the technical breakdown of the secure protocols and input validation requirements.*
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0;">
+    <div class="terminal-window">
+        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+        <div class="terminal-img-container"><img src="/images/vouched-code-1.png" alt="Secure Cookie Logic 1"></div>
+    </div>
+    <div class="terminal-window">
+        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+        <div class="terminal-img-container"><img src="/images/vouched-code-2.png" alt="Secure Cookie Logic 2"></div>
+    </div>
+</div>
+*Caption: Technical implementation of device-bound session tokens and HttpOnly/SameSite cookie flags in the Vouched application.*
 
-![Results](/images/project20_preventive_measures.png)
-*Caption: Results/Impact phase showing the implementation of WAFs, cookie rotation, and software updates to maintain session health.*
+{{< video src="/videos/vouched-cookie-security.mp4" poster="/images/feature-secure-session-architecture.png" caption="VIDEO EVIDENCE: Demonstration of cookie security preventing session cloning between different browsers (Chrome vs Opera)." >}}
 
 ## 6. Professional Impact
 

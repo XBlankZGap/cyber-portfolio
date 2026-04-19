@@ -8,7 +8,7 @@ vulnerability_class = "Unsafe DOM Manipulation (CWE-79)"
 tools = ["JavaScript", "jQuery", "OWASP ZAP", "WebGoat"]
 
 [cover]
-image = "images/feature-dom-xss-analysis.png"
+image = "images/feature-dom-xss-analysis.jpg"
 
 tags = ["XSS", "JavaScript", "Security Engineering", "Remediation"]
 +++
@@ -50,10 +50,10 @@ http://localhost:8080/WebGoat/start.mvc#test/<img src=x onerror=alert(1)>
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project3_zap_results.png)
+![Discovery](/images/dom-xss-analysis-discovery.jpeg)
 *Caption: Discovery phase identifying the existence of Cross-Site Scripting weaknesses within the application.*
 
-![Results](/images/project3_alert_confirmation.png)
+![Results](/images/dom-xss-analysis-results.jpeg)
 *Caption: Results phase confirming the execution of arbitrary JavaScript via the DOM-based XSS vulnerability.*
 
 ## 6. Professional Impact

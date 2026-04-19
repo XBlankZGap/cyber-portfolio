@@ -8,7 +8,7 @@ vulnerability_class = "Device-Level Mitigation Gaps"
 tools = ["MTN 4G Router", "URL Filtering", "IPv4", "Firewall"]
 
 [cover]
-image = "images/feature-router-level-filtering.png"
+image = "images/router-level-filtering-discovery.jpeg"
 
 tags = ["Network Security", "Firewall", "Gateway", "IoT Security"]
 +++
@@ -47,10 +47,10 @@ IF (HTTP_REQUEST_URL CONTAINS "malicious_domain.com") THEN (ACTION = BLOCK/DROP)
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project6_router_interface.png)
+![Discovery](/images/router-level-filtering-discovery.jpeg)
 *Caption: Discovery phase showing the MTN router firewall interface and the initial empty filtering rules before configuration.*
 
-![Results](/images/project6_filtering_active.png)
+![Results](/images/router-level-filtering-results.jpeg)
 *Caption: Results phase showing the active URL Filtering List with ten suspicious domains successfully blocked at the network level.*
 
 ## 6. Professional Impact

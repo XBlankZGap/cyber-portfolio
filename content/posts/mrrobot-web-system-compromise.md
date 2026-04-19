@@ -8,7 +8,7 @@ vulnerability_class = "Improper Input Validation & Privilege Escalation"
 tools = ["WPScan", "Nmap", "John the Ripper", "Nmap Privilege Escalation"]
 
 [cover]
-image = "images/feature-mrrobot-web-system-compromise.png"
+image = "images/feature-mrrobot.png"
 
 tags = ["WordPress Security", "CTF", "Privilege Escalation", "Reconnaissance"]
 +++
@@ -51,10 +51,10 @@ nmap --interactive
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project26_wpscan_results.png)
+![Discovery](/images/mrrobot-wpscan.png)
 *Caption: Discovery phase identifying the WordPress administrative login and user enumeration.*
 
-![Results](/images/project26_nmap_root.png)
+![Results](/images/feature-mrrobot.png)
 *Caption: Results/Impact phase showing the successful use of Nmap's interactive mode to gain a root shell.*
 
 ## 6. Professional Impact

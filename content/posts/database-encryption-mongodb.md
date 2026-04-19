@@ -8,7 +8,7 @@ vulnerability_class = "Plaintext Data Exposure in NoSQL Databases"
 tools = ["MongoDB", "AES-256", "Field-Level Encryption", "Key Management"]
 
 [cover]
-image = "images/feature-database-encryption-mongodb.png"
+image = "images/database-encryption-mongodb-discovery.png"
 
 tags = ["Database Security", "Encryption", "MongoDB", "Data Privacy"]
 +++
@@ -59,10 +59,10 @@ const schemaMap = {
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project27_plaintext_risk.png)
+![Discovery](/images/database-encryption-mongodb-discovery.png)
 *Caption: Discovery phase showing the initial vulnerability where sensitive fields were stored in plaintext.*
 
-![Results](/images/project27_encrypted_fields.png)
+![Results](/images/database-encryption-mongodb-results.png)
 *Caption: Results/Impact phase showing the successful implementation of field-level encryption, with the database console displaying only encrypted values.*
 
 ## 6. Professional Impact

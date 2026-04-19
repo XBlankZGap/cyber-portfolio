@@ -1602,3 +1602,33 @@ button.btn-terminal-submit,
     .about-hero-img { height: 240px; }
 }
 
+/* ── MOBILE NAV OVERLAP FIX ── */
+@media (max-width: 768px) {
+    .header {
+        position: fixed !important;
+        background: rgba(19, 19, 24, 0.95) !important;
+    }
+    
+    .nav {
+        padding: 15px 24px !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-section {
+        margin-top: 200px !important; /* Push content down to clear the taller mobile header */
+    }
+
+    .main-editorial-grid {
+        margin-top: 140px !important;
+    }
+    
+    #menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+}
+

@@ -8,7 +8,7 @@ vulnerability_class = "Diverse Attack Surface"
 tools = ["Firewalls", "VPNs", "Encryption", "SIEM"]
 
 [cover]
-image = "images/feature-network-fundamentals-assessment.png"
+image = "images/network-fundamentals-assessment-discovery.jpeg"
 
 tags = ["Network Security", "Risk Management", "CIA Triad", "Defense-in-Depth"]
 +++
@@ -51,10 +51,10 @@ netstat -ab
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project9_threat_summary.png)
+![Discovery](/images/network-fundamentals-assessment-discovery.jpeg)
 *Caption: Discovery phase showing the comprehensive classification and description of modern network attack vectors.*
 
-![Results](/images/project9_security_framework.png)
+![Results](/images/network-fundamentals-assessment-results.jpeg)
 *Caption: Results/Impact phase showing the structured framework of defensive tools and concepts required to secure a network.*
 
 ## 6. Professional Impact

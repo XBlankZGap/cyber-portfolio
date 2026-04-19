@@ -8,7 +8,7 @@ vulnerability_class = "Obfuscated Network Activity (CWE-1021)"
 tools = ["Wireshark", "DNS", "TLS", "Anomaly Detection"]
 
 [cover]
-image = "images/feature-network-baselining-anomaly.png"
+image = "images/network-baselining-anomaly-discovery.jpeg"
 
 tags = ["Wireshark", "Network Monitoring", "Indicators of Compromise", "Traffic Analysis"]
 +++
@@ -53,10 +53,10 @@ tls.handshake.version == 0x0303
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project11_dns_analysis.png)
+![Discovery](/images/network-baselining-anomaly-discovery.jpeg)
 *Caption: Discovery phase showing the identification of suspicious DNS queries for domains like h5-static.aoneroom.com.*
 
-![Results](/images/project11_encrypted_traffic.png)
+![Results](/images/network-baselining-anomaly-results.jpeg)
 *Caption: Results/Impact phase showing the verification of legitimate encrypted traffic (TLS/QUIC) as part of the baselining process.*
 
 ## 6. Professional Impact

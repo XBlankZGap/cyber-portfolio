@@ -8,7 +8,7 @@ vulnerability_class = "Regulatory & Infrastructure Gaps"
 tools = ["ISO 27001", "NIST CSF", "RBAC", "VPC", "WAF"]
 
 [cover]
-image = "images/feature-regulatory-compliance-nist-iso.png"
+image = "images/regulatory-compliance-nist-iso-discovery.png"
 
 tags = ["Compliance", "NIST", "ISO 27001", "Secure Architecture"]
 +++
@@ -49,10 +49,10 @@ ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384';
 
 ## 5. Evidence of Work
 
-![Discovery](/images/project22_compliance_mapping.png)
+![Discovery](/images/regulatory-compliance-nist-iso-discovery.png)
 *Caption: Discovery phase showing the strategic mapping of access control, cryptography, and monitoring to global standards.*
 
-![Results](/images/project22_incident_playbook.png)
+![Discovery](/images/regulatory-compliance-nist-iso-discovery.png)
 *Caption: Results/Impact phase demonstrating the structured automation of mitigation triggers and post-incident review cycles.*
 
 ## 6. Professional Impact
