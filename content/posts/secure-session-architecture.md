@@ -52,14 +52,8 @@ Set-Cookie: sessionID=xyz789;
 ## 5. Evidence of Work
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0;">
-    <div class="terminal-window">
-        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
-        <div class="terminal-img-container"><img src="/images/vouched-code-1.png" alt="Secure Cookie Logic 1"></div>
-    </div>
-    <div class="terminal-window">
-        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
-        <div class="terminal-img-container"><img src="/images/vouched-code-2.png" alt="Secure Cookie Logic 2"></div>
-    </div>
+    {{< terminal_img src="/images/vouched-code-1.png" alt="Secure Cookie Logic 1" >}}
+    {{< terminal_img src="/images/vouched-code-2.png" alt="Secure Cookie Logic 2" >}}
 </div>
 *Caption: Technical implementation of device-bound session tokens and HttpOnly/SameSite cookie flags in the Vouched application.*
 
