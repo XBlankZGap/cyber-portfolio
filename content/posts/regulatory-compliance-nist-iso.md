@@ -1,5 +1,5 @@
 +++
-date = '2026-04-20T10:00:00+01:00'
+date = '2026-04-20T00:00:00+01:00'
 draft = false
 title = 'Regulatory Compliance & Secure System Architecture (NIST/ISO 27001)'
 categories = ["Security Operations & Engineering"]

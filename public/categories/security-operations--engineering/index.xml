@@ -6,8 +6,15 @@
     <description>Recent content in Security Operations &amp; Engineering on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Sep 2025 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/regulatory-compliance-nist-iso/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/regulatory-compliance-nist-iso/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To architect a secure, compliant SaaS environment aligned with ISO 27001 and the NIST Cybersecurity Framework.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Web-to-System Pivot via Command Injection</title>
       <link>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>

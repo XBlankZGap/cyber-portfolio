@@ -6,8 +6,22 @@
     <description>Recent content in Categories on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Apr 2026 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Security &amp; Infrastructure</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Operations &amp; Engineering</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Web Application Pentesting</title>
       <link>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</link>
@@ -23,24 +37,10 @@
       <description></description>
     </item>
     <item>
-      <title>Network Security &amp; Infrastructure</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</link>
-      <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Cryptography &amp; Data Integrity</title>
       <link>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
       <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security Operations &amp; Engineering</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</link>
-      <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</guid>
       <description></description>
     </item>
   </channel>
