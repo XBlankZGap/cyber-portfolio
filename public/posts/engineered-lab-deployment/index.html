@@ -10,7 +10,7 @@
 <meta name="description" content="Objective: To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -162,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 projectCards.forEach(card => {
                     
-                    
                     const cardTagsAttr = card.getAttribute('data-tags');
                     if (!cardTagsAttr) {
                         card.style.display = 'none';
@@ -180,6 +179,23 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             }
+
+            
+            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+            categoryWrappers.forEach(wrapper => {
+                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+                let hasVisibleCard = false;
+                cardsInWrapper.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCard = true;
+                    }
+                });
+                if (hasVisibleCard) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
         });
     });
 });
@@ -299,6 +315,8 @@ document.addEventListener("DOMContentLoaded", function() {
         </ul>
     </nav>
 </header>
+
+    
 
 
     <main class="main">

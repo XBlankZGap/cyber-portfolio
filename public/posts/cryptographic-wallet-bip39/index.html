@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">
 <noscript>
     <style>
         #theme-toggle,
@@ -162,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 projectCards.forEach(card => {
                     
-                    
                     const cardTagsAttr = card.getAttribute('data-tags');
                     if (!cardTagsAttr) {
                         card.style.display = 'none';
@@ -180,11 +179,28 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             }
+
+            
+            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+            categoryWrappers.forEach(wrapper => {
+                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+                let hasVisibleCard = false;
+                cardsInWrapper.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCard = true;
+                    }
+                });
+                if (hasVisibleCard) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
         });
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Blockchain Forensics: Private Key Retrieval & Transaction Hijacking">
   <meta property="og:description" content="Objective: To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.">
@@ -193,9 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-03-20T10:00:00+01:00">
     <meta property="article:modified_time" content="2026-03-20T10:00:00+01:00">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-blockchain-forensics.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/feature-blockchain-forensics.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-blockchain-forensics.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/feature-blockchain-forensics.png">
   <meta name="twitter:title" content="Blockchain Forensics: Private Key Retrieval & Transaction Hijacking">
   <meta name="twitter:description" content="Objective: To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.">
 
@@ -209,13 +225,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Blockchain Forensics: Private Key Retrieval \u0026 Transaction Hijacking",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/"
     }
   ]
 }
@@ -230,10 +246,10 @@ document.addEventListener("DOMContentLoaded", function() {
   "keywords": [
     
   ],
-  "articleBody": "Objective: To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.\n1. The Vulnerability: Private Key Exposure (CWE-522) In the blockchain ecosystem, a private key is the ultimate authority. Unlike traditional accounts with “forgot password” features, exposure of a private key or mnemonic phrase leads to a total and irreversible loss of asset control. This project demonstrates how an attacker can use a single stolen key to compromise an entire hierarchical deterministic (HD) wallet structure, identifying all historical addresses tied to a seed.\n2. Technical Execution: Automated Address Harvesting I developed a suite of forensic tools in Python to simulate an attack on exposed cryptographic identities. Using btckeygen.py and btctransact.py (available in the Tools section above), I automated the process of deriving thousands of potential public addresses from a single stolen seed, subsequently querying the blockchain to identify active balances.\nComponent Value Purpose Attack Vector Seed/Private Key Theft The primary entry point for the breach. Automation btckeygen.py Generates a list of all derived wallet addresses. Exploitation btctransact.py Triggers balance checks and unauthorized withdrawals. Network Mainnet/Testnet API Used to verify live asset values on-chain. 3. Execution Workflow Key Ingestion: Input a compromised 12-word mnemonic or raw private key into the forensic environment. Address Derivation: Utilized the BIP44 hierarchy to generate all possible BTC/ETH addresses associated with the stolen root key via btckeygen.py. Automated Auditing: Ran a balance check script to identify which derived addresses contained active funds. Transaction Triggering: Simulated the withdrawal process with btctransact.py, demonstrating how an attacker can sign and broadcast transactions from all retrieved addresses simultaneously. 4. Evidence of Work: Terminal Execution The following terminal output captures the live execution of btckeygen.py, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.\n$ python3 btckeygen.py --mnemonic \"[REDACTED_COMPROMISED_SEED_PHRASE]\" Deriving keys using BIP44 standard... Derived 5 BITCOIN addresses and private keys (segwit): -------------------------------------------------------------------------------- 1: Address: bc1q09lkdlvyy6k8xz7z0lefs0udr5ksdadav0waj7 PrivateKey: L16rLcpmZy5KgrHbm42UUGj9QNznjPtshDu8HNftCParPKmTekGp 2: Address: bc1q00hcwwccvsggscgwnzyy2vmn0eusl6jls4hkza PrivateKey: L1YxArJoxzfAxWz5CbxPfxR1GiL3n6NGTYabykRxNHFbHRC5u6Cz 3: Address: bc1q0xsv64y9c9ccquw0l47zm74vde3tj8c0kagpx2 PrivateKey: Ky9HRSNKjNj57CUGvPmYpP4bKaFnRbY9u545iheq8Caq8HKgQgGw 4: Address: bc1qh6gy4w5enfxmzvmgxntws3v7yjl60cqwyu6h0u PrivateKey: L4qH6hHDav1q7jfRhdeWiuVFRWcjJNwsNcjNBnZDHeuNdpRCB2Gb 5: Address: bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M Derived 5 BITCOIN addresses and private keys (legacy): -------------------------------------------------------------------------------- 1: Address: 19q3KWPespyU2iNgg1n7THrksKJ3nongLJ PrivateKey: L3jNw6asfDRvmrq5z9djw4APqjjcHctQi8jgrxyYYZSTyTPeprEn 2: Address: 126bbdDewNwJQaScKfy519dbTHoeKGG7GY PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56 5. Professional Impact This project demonstrates a deep understanding of cryptographic key management and blockchain forensic investigation. By writing custom Python tooling to automate BIP39/BIP44 derivation paths, I proved the catastrophic impact of seed phrase exposure. To remediate this, I advocate for strict hardware wallet isolation, the use of multi-signature (multisig) architectures, and the implementation of passphrase-protected (25th word) seeds to create a robust defense-in-depth model for digital assets.\n",
-  "wordCount" : "443",
+  "articleBody": "Objective: To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.\n1. The Vulnerability: Private Key Exposure (CWE-522) In the blockchain ecosystem, a private key is the ultimate authority. Unlike traditional accounts with “forgot password” features, exposure of a private key or mnemonic phrase leads to a total and irreversible loss of asset control. This project demonstrates how an attacker can use a single stolen key to compromise an entire hierarchical deterministic (HD) wallet structure, identifying all historical addresses tied to a seed.\n2. Technical Execution: Automated Address Harvesting I developed a suite of forensic tools in Python to simulate an attack on exposed cryptographic identities. Using btckeygen.py and btctransact.py (available in the Tools section above), I automated the process of deriving thousands of potential public addresses from a single stolen seed, subsequently querying the blockchain to identify active balances.\nComponent Value Purpose Attack Vector Seed/Private Key Theft The primary entry point for the breach. Automation btckeygen.py Generates a list of all derived wallet addresses. Exploitation btctransact.py Triggers balance checks and unauthorized withdrawals. Network Mainnet/Testnet API Used to verify live asset values on-chain. 3. Execution Workflow Key Ingestion: Input a compromised 12-word mnemonic or raw private key into the forensic environment. Address Derivation: Utilized the BIP44 hierarchy to generate all possible BTC/ETH addresses associated with the stolen root key via btckeygen.py. Automated Auditing: Ran a balance check script to identify which derived addresses contained active funds. Transaction Triggering: Simulated the withdrawal process with btctransact.py, demonstrating how an attacker can sign and broadcast transactions from all retrieved addresses simultaneously. 4. Evidence of Work: Terminal Execution The following terminal output captures the live execution of btckeygen.py, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.\nwallet-addresses.txt (Terminal Output) $ python3 btckeygen.py --mnemonic \"[REDACTED_COMPROMISED_SEED_PHRASE]\" Deriving keys using BIP44 standard... Derived 5 BITCOIN addresses and private keys (segwit): 1: Address: bc1q09lkdlvyy6k8xz7z0lefs0udr5ksdadav0waj7 PrivateKey: L16rLcpmZy5KgrHbm42UUGj9QNznjPtshDu8HNftCParPKmTekGp\n2: Address: bc1q00hcwwccvsggscgwnzyy2vmn0eusl6jls4hkza PrivateKey: L1YxArJoxzfAxWz5CbxPfxR1GiL3n6NGTYabykRxNHFbHRC5u6Cz\n3: Address: bc1q0xsv64y9c9ccquw0l47zm74vde3tj8c0kagpx2 PrivateKey: Ky9HRSNKjNj57CUGvPmYpP4bKaFnRbY9u545iheq8Caq8HKgQgGw\n4: Address: bc1qh6gy4w5enfxmzvmgxntws3v7yjl60cqwyu6h0u PrivateKey: L4qH6hHDav1q7jfRhdeWiuVFRWcjJNwsNcjNBnZDHeuNdpRCB2Gb\n5: Address: bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M\nDerived 5 BITCOIN addresses and private keys (legacy): 1: Address: 19q3KWPespyU2iNgg1n7THrksKJ3nongLJ PrivateKey: L3jNw6asfDRvmrq5z9djw4APqjjcHctQi8jgrxyYYZSTyTPeprEn\n2: Address: 126bbdDewNwJQaScKfy519dbTHoeKGG7GY PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56\n5. Professional Impact This project demonstrates a deep understanding of cryptographic key management and blockchain forensic investigation. By writing custom Python tooling to automate BIP39/BIP44 derivation paths, I proved the catastrophic impact of seed phrase exposure. To remediate this, I advocate for strict hardware wallet isolation, the use of multi-signature (multisig) architectures, and the implementation of passphrase-protected (25th word) seeds to create a robust defense-in-depth model for digital assets.\n",
+  "wordCount" : "444",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-blockchain-forensics.png","datePublished": "2026-03-20T10:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/feature-blockchain-forensics.png","datePublished": "2026-03-20T10:00:00+01:00",
   "dateModified": "2026-03-20T10:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -241,14 +257,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -258,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -287,18 +303,20 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
+
+    
 
 
     <main class="main">
@@ -366,8 +384,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -384,8 +402,8 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="intel-box">
           <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
           <div class="tools-grid">
-              <a href="/downloads/btckeygen.py" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">btckeygen.py (View Script)</a>
-              <a href="/downloads/btctransact.py" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">btctransact.py (View Script)</a>
+              <a href="/cyber-portfolio/downloads/btckeygen.py" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">btckeygen.py (View Script)</a>
+              <a href="/cyber-portfolio/downloads/btctransact.py" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">btctransact.py (View Script)</a>
               <span class="tool-tag">BIP39</span>
               <span class="tool-tag">HD Wallets</span>
           </div>
@@ -407,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-blockchain-forensics.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-blockchain-forensics.png" alt=""></figure>
     </div>
 </div>
     
@@ -428,6 +446,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     <a href="#3-execution-workflow" aria-label="3. Execution Workflow">3. Execution Workflow</a></li>
                 <li>
                     <a href="#4-evidence-of-work-terminal-execution" aria-label="4. Evidence of Work: Terminal Execution">4. Evidence of Work: Terminal Execution</a></li>
+                <li>
+                    <a href="#derived-5-bitcoin-addresses-and-private-keys-segwit" aria-label="Derived 5 BITCOIN addresses and private keys (segwit):">Derived 5 BITCOIN addresses and private keys (segwit):</a></li>
+                <li>
+                    <a href="#derived-5-bitcoin-addresses-and-private-keys-legacy" aria-label="Derived 5 BITCOIN addresses and private keys (legacy):">Derived 5 BITCOIN addresses and private keys (legacy):</a></li>
                 <li>
                     <a href="#5-professional-impact" aria-label="5. Professional Impact">5. Professional Impact</a>
                 </li>
@@ -483,41 +505,40 @@ document.addEventListener("DOMContentLoaded", function() {
 </ol>
 <h2 id="4-evidence-of-work-terminal-execution">4. Evidence of Work: Terminal Execution<a hidden class="anchor" aria-hidden="true" href="#4-evidence-of-work-terminal-execution">#</a></h2>
 <p>The following terminal output captures the live execution of <code>btckeygen.py</code>, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 btckeygen.py --mnemonic <span style="color:#e6db74">&#34;[REDACTED_COMPROMISED_SEED_PHRASE]&#34;</span>
-</span></span><span style="display:flex;"><span>Deriving keys using BIP44 standard...
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Derived <span style="color:#ae81ff">5</span> BITCOIN addresses and private keys <span style="color:#f92672">(</span>segwit<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>1:
-</span></span><span style="display:flex;"><span>  Address:    bc1q09lkdlvyy6k8xz7z0lefs0udr5ksdadav0waj7
-</span></span><span style="display:flex;"><span>  PrivateKey: L16rLcpmZy5KgrHbm42UUGj9QNznjPtshDu8HNftCParPKmTekGp
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>2:
-</span></span><span style="display:flex;"><span>  Address:    bc1q00hcwwccvsggscgwnzyy2vmn0eusl6jls4hkza
-</span></span><span style="display:flex;"><span>  PrivateKey: L1YxArJoxzfAxWz5CbxPfxR1GiL3n6NGTYabykRxNHFbHRC5u6Cz
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>3:
-</span></span><span style="display:flex;"><span>  Address:    bc1q0xsv64y9c9ccquw0l47zm74vde3tj8c0kagpx2
-</span></span><span style="display:flex;"><span>  PrivateKey: Ky9HRSNKjNj57CUGvPmYpP4bKaFnRbY9u545iheq8Caq8HKgQgGw
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>4:
-</span></span><span style="display:flex;"><span>  Address:    bc1qh6gy4w5enfxmzvmgxntws3v7yjl60cqwyu6h0u
-</span></span><span style="display:flex;"><span>  PrivateKey: L4qH6hHDav1q7jfRhdeWiuVFRWcjJNwsNcjNBnZDHeuNdpRCB2Gb
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>5:
-</span></span><span style="display:flex;"><span>  Address:    bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw
-</span></span><span style="display:flex;"><span>  PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>Derived <span style="color:#ae81ff">5</span> BITCOIN addresses and private keys <span style="color:#f92672">(</span>legacy<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------
-</span></span><span style="display:flex;"><span>1:
-</span></span><span style="display:flex;"><span>  Address:    19q3KWPespyU2iNgg1n7THrksKJ3nongLJ
-</span></span><span style="display:flex;"><span>  PrivateKey: L3jNw6asfDRvmrq5z9djw4APqjjcHctQi8jgrxyYYZSTyTPeprEn
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>2:
-</span></span><span style="display:flex;"><span>  Address:    126bbdDewNwJQaScKfy519dbTHoeKGG7GY
-</span></span><span style="display:flex;"><span>  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56
-</span></span></code></pre></div><h2 id="5-professional-impact">5. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#5-professional-impact">#</a></h2>
+<div class="terminal-window terminal-glow mb-8" style="background: #0a0a0a; border-radius: 8px; border: 1px solid var(--outline); overflow: hidden; margin-top: 20px;">
+    <div class="terminal-header" style="background: #1a1a1a; padding: 10px; border-bottom: 1px solid #333; display: flex; align-items: center;">
+        <div class="dot red" style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; margin-right: 6px;"></div>
+        <div class="dot yellow" style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; margin-right: 6px;"></div>
+        <div class="dot green" style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; color: #fff;">wallet-addresses.txt (Terminal Output)</span>
+    </div>
+    <div class="terminal-body" style="padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #00ff00; line-height: 1.5; white-space: pre-wrap; overflow-x: auto;">$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
+Deriving keys using BIP44 standard...
+<h2 id="derived-5-bitcoin-addresses-and-private-keys-segwit">Derived 5 BITCOIN addresses and private keys (segwit):<a hidden class="anchor" aria-hidden="true" href="#derived-5-bitcoin-addresses-and-private-keys-segwit">#</a></h2>
+<p>1:
+Address:    bc1q09lkdlvyy6k8xz7z0lefs0udr5ksdadav0waj7
+PrivateKey: L16rLcpmZy5KgrHbm42UUGj9QNznjPtshDu8HNftCParPKmTekGp</p>
+<p>2:
+Address:    bc1q00hcwwccvsggscgwnzyy2vmn0eusl6jls4hkza
+PrivateKey: L1YxArJoxzfAxWz5CbxPfxR1GiL3n6NGTYabykRxNHFbHRC5u6Cz</p>
+<p>3:
+Address:    bc1q0xsv64y9c9ccquw0l47zm74vde3tj8c0kagpx2
+PrivateKey: Ky9HRSNKjNj57CUGvPmYpP4bKaFnRbY9u545iheq8Caq8HKgQgGw</p>
+<p>4:
+Address:    bc1qh6gy4w5enfxmzvmgxntws3v7yjl60cqwyu6h0u
+PrivateKey: L4qH6hHDav1q7jfRhdeWiuVFRWcjJNwsNcjNBnZDHeuNdpRCB2Gb</p>
+<p>5:
+Address:    bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw
+PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M</p>
+<h2 id="derived-5-bitcoin-addresses-and-private-keys-legacy">Derived 5 BITCOIN addresses and private keys (legacy):<a hidden class="anchor" aria-hidden="true" href="#derived-5-bitcoin-addresses-and-private-keys-legacy">#</a></h2>
+<p>1:
+Address:    19q3KWPespyU2iNgg1n7THrksKJ3nongLJ
+PrivateKey: L3jNw6asfDRvmrq5z9djw4APqjjcHctQi8jgrxyYYZSTyTPeprEn</p>
+<p>2:
+Address:    126bbdDewNwJQaScKfy519dbTHoeKGG7GY
+PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56</div></p>
+</div>
+<h2 id="5-professional-impact">5. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#5-professional-impact">#</a></h2>
 <p>This project demonstrates a deep understanding of cryptographic key management and blockchain forensic investigation. By writing custom Python tooling to automate BIP39/BIP44 derivation paths, I proved the catastrophic impact of seed phrase exposure. To remediate this, I advocate for strict hardware wallet isolation, the use of multi-signature (multisig) architectures, and the implementation of passphrase-protected (25th word) seeds to create a robust defense-in-depth model for digital assets.</p>
 
     </div>
@@ -543,12 +564,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/">
     <span class="title">« Prev</span>
     <br>
     <span>Exploiting &amp; Mitigating String-Based SQL Injection</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/">
     <span class="title">Next »</span>
     <br>
     <span>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</span>

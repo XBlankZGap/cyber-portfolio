@@ -10,7 +10,7 @@
 <meta name="description" content="Objective: To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -162,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 projectCards.forEach(card => {
                     
-                    
                     const cardTagsAttr = card.getAttribute('data-tags');
                     if (!cardTagsAttr) {
                         card.style.display = 'none';
@@ -180,6 +179,23 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             }
+
+            
+            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+            categoryWrappers.forEach(wrapper => {
+                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+                let hasVisibleCard = false;
+                cardsInWrapper.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCard = true;
+                    }
+                });
+                if (hasVisibleCard) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
         });
     });
 });
@@ -299,6 +315,8 @@ document.addEventListener("DOMContentLoaded", function() {
         </ul>
     </nav>
 </header>
+
+    
 
 
     <main class="main">
@@ -520,6 +538,22 @@ document.addEventListener("DOMContentLoaded", function() {
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
+
+    
+    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+        <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
+      </div>
+      <div class="bio-content">
+        <h3 style="margin: 0 0 10px 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px;">Sophy Chisom Abraham</h3>
+        <p style="margin: 0 0 15px 0; font-size: 15px; color: var(--on-surface-variant); line-height: 1.5;">Cybersecurity Specialist focused on Security Operations, Vulnerability Assessment, and Infrastructure Defense. Documenting methodologies and advanced technical research.</p>
+        <a href="/cyber-portfolio/about/" style="display: inline-flex; align-items: center; font-size: 13px; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-transform: uppercase; text-decoration: none;">
+          Learn More About Me <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 5px;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/">
     <span class="title">« Prev</span>
@@ -536,129 +570,22 @@ document.addEventListener("DOMContentLoaded", function() {
   </footer>
 </article>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <footer class="footer" style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--outline); margin-top: 80px; background: var(--surface);">
+    <div class="footer-content" style="max-width: var(--uniform-width); margin: 0 auto;">
+        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--primary); margin-bottom: 15px; display: inline-block;">terminal</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin: 0 0 10px 0;">Sophy's CyberLab</h3>
+        <p style="color: var(--on-surface-variant); font-size: 14px; margin: 0 0 20px 0; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            A documented record of cybersecurity research, engineering, and vulnerability analysis.
+        </p>
+        <div class="footer-contact" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary);">mail</span>
+            <a href="mailto:chisomsophyabraham@gmail.com" style="color: var(--on-surface); font-weight: 600; text-decoration: none; font-size: 15px; transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary)';" onmouseout="this.style.color='var(--on-surface)';">chisomsophyabraham@gmail.com</a>
+        </div>
+        <div class="footer-copyright" style="margin-top: 40px; font-size: 12px; color: var(--on-surface-variant); opacity: 0.7;">
+            &copy; 2026 Sophy Chisom Abraham. All rights reserved.
+        </div>
+    </div>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
 </body>
 
 </html>

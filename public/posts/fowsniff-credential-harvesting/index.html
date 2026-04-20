@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
 <noscript>
     <style>
         #theme-toggle,
@@ -162,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 projectCards.forEach(card => {
                     
-                    
                     const cardTagsAttr = card.getAttribute('data-tags');
                     if (!cardTagsAttr) {
                         card.style.display = 'none';
@@ -180,11 +179,28 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             }
+
+            
+            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+            categoryWrappers.forEach(wrapper => {
+                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+                let hasVisibleCard = false;
+                cardsInWrapper.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCard = true;
+                    }
+                });
+                if (hasVisibleCard) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
         });
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Fowsniff — Credential Harvesting & Password Cracking">
   <meta property="og:description" content="Objective: To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.">
@@ -193,9 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-04-17T10:00:00+01:00">
     <meta property="article:modified_time" content="2026-04-17T10:00:00+01:00">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-fowsniff.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/feature-fowsniff.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-fowsniff.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/feature-fowsniff.png">
   <meta name="twitter:title" content="Fowsniff — Credential Harvesting & Password Cracking">
   <meta name="twitter:description" content="Objective: To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.">
 
@@ -209,13 +225,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Fowsniff — Credential Harvesting \u0026 Password Cracking",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/"
     }
   ]
 }
@@ -233,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "articleBody": "Objective: To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.\n1. The Vulnerability: Information Disclosure (Credential Leak) The target was found to have a critical information disclosure vulnerability where internal communication logs (emails) were accessible via unauthenticated network shares. These logs contained a dump of MD5-hashed credentials. This represents a fatal breakdown of Confidentiality, as any network participant could harvest the identity store without direct exploitation of a service flaw.\n2. Technical Execution: Brute Force \u0026 Cryptanalysis I utilized John the Ripper (JtR) to perform an offline dictionary attack against the exfiltrated MD5 hashes. Once recovered, these plaintext credentials were used as the primary authentication vector for secondary services (POP3/IMAP), demonstrating the cascading impact of a single data leak on organizational security.\nComponent Value Purpose Data Source SMB Share (Unauthenticated) The source of the leaked credential dump. Hash Type MD5 The insecure algorithm used for initial password storage. Cracking Tool John the Ripper Used for offline password recovery. Attack Pivot Hydra (POP3 Brute Force) Utilizing recovered passwords for service access. 3. Execution Workflow Information Gathering: Scanned for Samba shares using Nmap and exfiltrated email logs from the public directory. Credential Extraction: Cleaned the exfiltrated data to isolate user-hash pairs for systematic cracking. Cryptanalysis: Used John the Ripper to successfully recover plaintext passwords from the MD5 hashes. Service Hijacking: Utilized the recovered credentials in conjunction with Hydra to gain administrative access to the target’s email infrastructure (POP3). 4. Key Commands # Using John the Ripper to crack the exfiltrated MD5 hashes john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt # Using Hydra to verify recovered credentials against the POP3 service hydra -L users.txt -P cracked_passes.txt 10.10.x.x pop3 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the unauthenticated access to sensitive internal email logs.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the successful recovery of multiple plaintext passwords via John the Ripper.\n6. Professional Impact This project demonstrates the “Identity Lifecycle” of an attack. I proved that a simple configuration error (open SMB share) leads directly to a total account takeover across separate services (email). To remediate this, I recommended that the organization decommission unencrypted shares and transition to bcrypt or Argon2 for password hashing, ensuring that even if data is leaked, it cannot be readily decrypted by an adversary.\n",
   "wordCount" : "379",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-fowsniff.png","datePublished": "2026-04-17T10:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/feature-fowsniff.png","datePublished": "2026-04-17T10:00:00+01:00",
   "dateModified": "2026-04-17T10:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -241,14 +257,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -258,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -287,18 +303,20 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
+
+    
 
 
     <main class="main">
@@ -366,8 +384,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -407,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-fowsniff.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-fowsniff.png" alt=""></figure>
     </div>
 </div>
     
@@ -497,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/fowsniff-pop3.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/fowsniff-pop3.png" 
              alt="Discovery" 
               
              loading="lazy">
@@ -512,7 +530,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/fowsniff-cracking.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/fowsniff-cracking.png" 
              alt="Results" 
               
              loading="lazy">
@@ -546,12 +564,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/post-exploitation-data-exfiltration/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/">
     <span class="title">« Prev</span>
     <br>
     <span>Post-Exploitation &amp; Sensitive Data Exfiltration</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
     <span class="title">Next »</span>
     <br>
     <span>Mr. Robot — Web Exploitation &amp; System Compromise</span>

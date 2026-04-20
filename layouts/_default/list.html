@@ -49,7 +49,7 @@
     {{ partial "search_bar.html" . }}
     {{ partial "tag_filter.html" . }}
     
-    {{- $categories := slice "Security Operations (SOC) & Incident Response" "Penetration Testing & Vulnerability Assessment" "Network & Infrastructure Security" "Application Security (AppSec)" "DevSecOps & Strategy" }}
+    {{- $categories := slice "Security Operations (SOC) & Incident Response" "Penetration Testing & Vulnerability Assessment" "Network & Infrastructure Security" "Application Security (AppSec)" "DevSecOps & Cryptography" }}
     
     {{- range $categories }}
         {{- $category := . }}
@@ -78,11 +78,15 @@
                         </h2>
                       </header>
                       
-                      {{- if (ne (.Param "hideSummary") true) }}
-                      <div class="entry-content" style="padding: 0 20px 20px 20px; flex-grow: 1; opacity: 0.8; font-size: 14px;">
-                        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                      <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+                        {{- $tools := default slice .Params.tools }}
+                        {{- range first 3 $tools }}
+                        <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">{{ . }}</span>
+                        {{- end }}
+                        {{- if gt (len $tools) 3 }}
+                        <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+{{ sub (len $tools) 3 }}</span>
+                        {{- end }}
                       </div>
-                      {{- end }}
 
                       <div class="entry-footer-design" style="padding: 0 20px 20px 20px; border-top: 1px solid rgba(255,255,255,0.05);">
                         <a href="{{ .Permalink }}" class="view-case-study" style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--primary); display: flex; align-items: center; margin-top: 15px;">
@@ -116,9 +120,15 @@
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           </header>
-          {{- if (ne (.Param "hideSummary") true) }}
-          <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p></div>
-          {{- end }}
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            {{- $tools := default slice .Params.tools }}
+            {{- range first 3 $tools }}
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">{{ . }}</span>
+            {{- end }}
+            {{- if gt (len $tools) 3 }}
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+{{ sub (len $tools) 3 }}</span>
+            {{- end }}
+          </div>
           <div class="entry-footer-design"><a href="{{ .Permalink }}" class="view-case-study">READ MORE</a></div>
         </article>
     {{- end }}
@@ -151,5 +161,4 @@
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
-{{ partial "footer.html" . }}
 {{- end }}{{- /* end main */ -}}

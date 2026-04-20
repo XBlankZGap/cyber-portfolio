@@ -3,7 +3,7 @@ date = '2026-03-20T10:00:00+01:00'
 draft = false
 weight = 500
 title = 'Blockchain Forensics: Private Key Retrieval & Transaction Hijacking'
-categories = ["DevSecOps & Strategy"]
+categories = ["DevSecOps & Cryptography"]
 case_id = "BLOCKCHAIN-HIJACK-2026"
 vulnerability_class = "Private Key Exposure (CWE-522)"
 tools = ["btckeygen.py", "btctransact.py", "BIP39", "HD Wallets"]
@@ -44,8 +44,14 @@ I developed a suite of forensic tools in Python to simulate an attack on exposed
 
 The following terminal output captures the live execution of `btckeygen.py`, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.
 
-```bash
-$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
+<div class="terminal-window terminal-glow mb-8" style="background: #0a0a0a; border-radius: 8px; border: 1px solid var(--outline); overflow: hidden; margin-top: 20px;">
+    <div class="terminal-header" style="background: #1a1a1a; padding: 10px; border-bottom: 1px solid #333; display: flex; align-items: center;">
+        <div class="dot red" style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; margin-right: 6px;"></div>
+        <div class="dot yellow" style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; margin-right: 6px;"></div>
+        <div class="dot green" style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; color: #fff;">wallet-addresses.txt (Terminal Output)</span>
+    </div>
+    <div class="terminal-body" style="padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #00ff00; line-height: 1.5; white-space: pre-wrap; overflow-x: auto;">$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
 Deriving keys using BIP44 standard...
 
 Derived 5 BITCOIN addresses and private keys (segwit):
@@ -78,8 +84,8 @@ Derived 5 BITCOIN addresses and private keys (legacy):
 
 2:
   Address:    126bbdDewNwJQaScKfy519dbTHoeKGG7GY
-  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56
-```
+  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56</div>
+</div>
 
 ## 5. Professional Impact
 

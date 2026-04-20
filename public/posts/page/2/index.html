@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,17 +9,17 @@
 <meta name="keywords" content="">
 <meta name="description" content="Posts - SOPHY&#39;S CYBERLAB">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://XBlankZGap.github.io/cyber-portfolio/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/cyber-portfolio/posts/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/">
 <noscript>
     <style>
         #theme-toggle,
@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 projectCards.forEach(card => {
                     
-                    
                     const cardTagsAttr = card.getAttribute('data-tags');
                     if (!cardTagsAttr) {
                         card.style.display = 'none';
@@ -181,11 +180,28 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             }
+
+            
+            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+            categoryWrappers.forEach(wrapper => {
+                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+                let hasVisibleCard = false;
+                cardsInWrapper.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCard = true;
+                    }
+                });
+                if (hasVisibleCard) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
         });
     });
 });
 </script>
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Posts">
   <meta property="og:description" content="Offensive Security &amp; Digital Forensics Portfolio">
@@ -206,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }
   ]
 }
@@ -216,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -245,12 +261,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -258,9 +274,11 @@ document.addEventListener("DOMContentLoaded", function() {
     </nav>
 </header>
 
+    
+
 
     <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
 </div>
   <h1 style="font-size: 64px; text-transform: uppercase;">Posts</h1>
 </header>
@@ -275,18 +293,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">April 15, 2026</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/">Hybrid SIEM Architecture for SEO &amp; Security Intelligence</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">Hybrid SIEM Architecture for SEO &amp; Security Intelligence</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Splunk</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Microsoft Sentinel</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">SOAR</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -299,18 +321,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">November 15, 2025</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/">Network Traffic Baselining and Anomaly Detection</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/">Network Traffic Baselining and Anomaly Detection</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Wireshark</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">DNS</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">TLS</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -323,18 +349,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/router-level-filtering-discovery.jpeg" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/router-level-filtering-discovery.jpeg" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">November 10, 2025</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/">Centralized Network Security via Router-Level Filtering</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/">Centralized Network Security via Router-Level Filtering</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To implement non-device-specific security controls by enforcing domain blocking at the network gateway.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">MTN 4G Router</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">URL Filtering</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">IPv4</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -347,18 +377,21 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">November 5, 2025</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/">Automated Domain Blocking via Batch Scripting</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/">Automated Domain Blocking via Batch Scripting</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Batch Scripting</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">VS Code</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Windows Hosts File</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -371,18 +404,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-network-traffic-analysis.jpg" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/feature-network-traffic-analysis.jpg" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">July 15, 2025</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/">Network Traffic Analysis &amp; Automated Threat Mitigation</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/">Network Traffic Analysis &amp; Automated Threat Mitigation</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Wireshark</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Windows Hosts File</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Batch Scripting</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -395,18 +432,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/network-fundamentals-assessment-discovery.jpeg" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/network-fundamentals-assessment-discovery.jpeg" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">July 1, 2025</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/">Network Security Fundamentals and Threat Assessment</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/">Network Security Fundamentals and Threat Assessment</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To conduct a comprehensive study of network threat vectors and security controls to establish a foundational defense strategy for organizational environments.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Firewalls</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">VPNs</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Encryption</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -419,18 +460,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">April 19, 2026</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">Database Encryption &amp; Sensitive Data Protection (MongoDB)</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">Database Encryption &amp; Sensitive Data Protection (MongoDB)</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">MongoDB</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">AES-256</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Field-Level Encryption</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -443,18 +488,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">April 18, 2026</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">NoSQL Injection &amp; Database Poisoning (Vouched Application)</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">NoSQL Injection &amp; Database Poisoning (Vouched Application)</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Postman</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">MongoDB</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Express.js</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -467,18 +516,22 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-secure-session-architecture.png" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/feature-secure-session-architecture.png" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">April 10, 2026</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/">Secure Session Architecture &amp; Defensive Flag Implementation</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">Secure Session Architecture &amp; Defensive Flag Implementation</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To implement a “Secure-by-Design” framework for web applications to neutralize cookie-based attack vectors.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">HSTS</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">HTTPS</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">HttpOnly</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+2</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/" class="view-case-study">READ MORE</a></div>
         </article>
         <article class="post-entry" data-tags=""> 
 <div class="terminal-window terminal-glow mb-8">
@@ -491,45 +544,31 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="lazy" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt=""></figure>
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt=""></figure>
     </div>
 </div>
           <div class="post-meta-under-image">
             <span class="meta-item">April 5, 2026</span>
           </div>
           <header class="entry-header">
-            <h2 class="entry-hint-parent"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">Session Hijacking via Automated Cookie Exfiltration</a></h2>
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">Session Hijacking via Automated Cookie Exfiltration</a></h2>
           </header>
-          <div class="entry-content"><p>Objective: To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.
-...</p></div>
-          <div class="entry-footer-design"><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" class="view-case-study">READ MORE</a></div>
+          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Cookie Editor Extension</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Browser Debugging</span>
+            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">XSS</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" class="view-case-study">READ MORE</a></div>
         </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/">
+    <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/">
       «&nbsp;Prev&nbsp;
     </a>
-    <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/page/3/">Next&nbsp;&nbsp;»
+    <a class="next" href="http://localhost:1313/cyber-portfolio/posts/page/3/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
-<footer class="footer" style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--outline); margin-top: 80px; background: var(--surface);">
-    <div class="footer-content" style="max-width: var(--uniform-width); margin: 0 auto;">
-        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--primary); margin-bottom: 15px; display: inline-block;">terminal</span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin: 0 0 10px 0;">Sophy's CyberLab</h3>
-        <p style="color: var(--on-surface-variant); font-size: 14px; margin: 0 0 20px 0; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-            A documented record of cybersecurity research, engineering, and vulnerability analysis.
-        </p>
-        <div class="footer-contact" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-            <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary);">mail</span>
-            <a href="mailto:chisomsophyabraham@gmail.com" style="color: var(--on-surface); font-weight: 600; text-decoration: none; font-size: 15px; transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary)';" onmouseout="this.style.color='var(--on-surface)';">chisomsophyabraham@gmail.com</a>
-        </div>
-        <div class="footer-copyright" style="margin-top: 40px; font-size: 12px; color: var(--on-surface-variant); opacity: 0.7;">
-            &copy; 2026 Sophy Chisom Abraham. All rights reserved.
-        </div>
-    </div>
-</footer>
-
     </main>
     <footer class="footer" style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--outline); margin-top: 80px; background: var(--surface);">
     <div class="footer-content" style="max-width: var(--uniform-width); margin: 0 auto;">

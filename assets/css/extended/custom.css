@@ -1698,7 +1698,8 @@ button.btn-terminal-submit,
    ────────────────────────────────────────────────────── */
 .grid-projects {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(3, 330px) !important;
+    justify-content: center !important;
     gap: 30px !important;
 }
 

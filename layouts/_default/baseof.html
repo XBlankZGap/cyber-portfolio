@@ -33,11 +33,7 @@
     </section>
     {{- end }}
     
-    {{- if .IsHome }}
-    <div class="search-container-center">
-        {{ partial "search_bar.html" . }}
-    </div>
-    {{- end }}
+
 
     <main class="main">
         {{- block "main" . }}{{ end }}

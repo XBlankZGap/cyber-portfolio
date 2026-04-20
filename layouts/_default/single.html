@@ -36,7 +36,7 @@
           <div class="tools-grid">
             {{- range .Params.tools }}
               {{- if strings.HasSuffix . ".py" }}
-              <a href="/downloads/{{ . }}" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">{{ . }} (View Script)</a>
+              <a href="{{ printf "downloads/%s" . | relURL }}" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">{{ . }} (View Script)</a>
               {{- else }}
               <span class="tool-tag">{{ . }}</span>
               {{- end }}

@@ -2,137 +2,143 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/regulatory-compliance-nist-iso/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</loc>
     <lastmod>2025-09-30T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/post-exploitation-data-exfiltration/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</loc>
     <lastmod>2025-09-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</loc>
     <lastmod>2026-04-17T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</loc>
     <lastmod>2026-03-26T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</loc>
     <lastmod>2026-03-25T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/eternalblue-windows-exploitation/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</loc>
     <lastmod>2025-09-12T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</loc>
     <lastmod>2025-08-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</loc>
     <lastmod>2026-04-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</loc>
     <lastmod>2025-11-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</loc>
     <lastmod>2025-11-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</loc>
     <lastmod>2025-11-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</loc>
     <lastmod>2025-07-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</loc>
     <lastmod>2025-07-01T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/</loc>
     <lastmod>2026-04-19T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/</loc>
     <lastmod>2026-04-18T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</loc>
     <lastmod>2026-04-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</loc>
     <lastmod>2026-04-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</loc>
     <lastmod>2025-12-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</loc>
     <lastmod>2025-12-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</loc>
     <lastmod>2025-12-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</loc>
     <lastmod>2025-10-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</loc>
     <lastmod>2025-08-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</loc>
     <lastmod>2025-08-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</loc>
     <lastmod>2025-08-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</loc>
     <lastmod>2026-03-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</loc>
     <lastmod>2026-01-15T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</loc>
     <lastmod>2026-01-10T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</loc>
     <lastmod>2026-01-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</loc>
     <lastmod>2025-09-25T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/network--infrastructure-security/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/network--infrastructure-security/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations-soc--incident-response/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/security-operations-soc--incident-response/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/</loc>
     <lastmod>2026-04-20T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/application-security-appsec/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/application-security-appsec/</loc>
     <lastmod>2026-04-19T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/penetration-testing--vulnerability-assessment/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/penetration-testing--vulnerability-assessment/</loc>
     <lastmod>2026-04-17T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/categories/devsecops--strategy/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/categories/devsecops--cryptography/</loc>
     <lastmod>2026-03-20T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</loc>
+    <lastmod>2025-07-05T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/about/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</loc>
+    <lastmod>2025-07-02T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/contact/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</loc>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/search/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/about/</loc>
   </url><url>
-    <loc>https://XBlankZGap.github.io/cyber-portfolio/tags/</loc>
+    <loc>http://localhost:1313/cyber-portfolio/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/tags/</loc>
   </url>
 </urlset>

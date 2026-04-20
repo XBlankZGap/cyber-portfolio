@@ -3,7 +3,7 @@ date = '2025-09-25T10:00:00+01:00'
 draft = false
 weight = 500
 title = 'Offline Cryptanalysis & Password Recovery'
-categories = ["DevSecOps & Strategy"]
+categories = ["DevSecOps & Cryptography"]
 
 [cover]
 image = "images/project5_jtr_cracking.png"
