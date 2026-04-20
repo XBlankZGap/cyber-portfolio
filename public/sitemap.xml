@@ -47,6 +47,9 @@
     <loc>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</loc>
     <lastmod>2025-07-15T10:00:00+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</loc>
+    <lastmod>2025-07-10T10:00:00+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</loc>
     <lastmod>2025-07-01T10:00:00+01:00</lastmod>
   </url><url>
@@ -449,13 +452,22 @@
     <loc>http://localhost:1313/cyber-portfolio/tags/dns/</loc>
     <lastmod>2025-07-15T10:00:00+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/tags/isolation/</loc>
+    <lastmod>2025-07-10T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/tags/lab-setup/</loc>
+    <lastmod>2025-07-10T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/tags/networking/</loc>
+    <lastmod>2025-07-10T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-portfolio/tags/virtualbox/</loc>
+    <lastmod>2025-07-10T10:00:00+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/cyber-portfolio/tags/career-development/</loc>
     <lastmod>2025-07-05T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/tags/industry-engagement/</loc>
-    <lastmod>2025-07-05T10:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/tags/networking/</loc>
     <lastmod>2025-07-05T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</loc>
@@ -470,9 +482,6 @@
     <loc>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</loc>
     <lastmod>2025-07-02T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/tags/lab-setup/</loc>
-    <lastmod>2025-07-02T10:00:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/cyber-portfolio/tags/troubleshooting/</loc>
     <lastmod>2025-07-02T10:00:00+01:00</lastmod>
   </url><url>
@@ -481,8 +490,6 @@
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/tags/risk-management/</loc>
     <lastmod>2025-07-01T10:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</loc>
   </url><url>
     <loc>http://localhost:1313/cyber-portfolio/about/</loc>
   </url><url>

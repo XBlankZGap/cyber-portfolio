@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Lab Setup on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/lab-setup/</link>
-    <description>Recent content in Lab Setup on SOPHY&#39;S CYBERLAB</description>
+    <title>Isolation on SOPHY&#39;S CYBERLAB</title>
+    <link>http://localhost:1313/cyber-portfolio/tags/isolation/</link>
+    <description>Recent content in Isolation on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Jul 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/lab-setup/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/isolation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Defensive Lab Environment &amp; Network Configuration</title>
       <link>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</link>
       <pubDate>Thu, 10 Jul 2025 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Engineered Security Lab Deployment &amp; Troubleshooting</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</link>
-      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

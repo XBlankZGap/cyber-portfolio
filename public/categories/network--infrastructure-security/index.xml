@@ -51,6 +51,13 @@
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Defensive Lab Environment &amp; Network Configuration</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</link>
+      <pubDate>Thu, 10 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Network Security Fundamentals and Threat Assessment</title>
       <link>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</link>
       <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
