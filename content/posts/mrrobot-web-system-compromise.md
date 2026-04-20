@@ -1,5 +1,5 @@
 +++
-date = '2026-03-05T10:00:00+01:00'
+date = '2026-03-26T10:00:00+01:00'
 draft = false
 title = 'Mr. Robot — Web Exploitation & System Compromise'
 categories = ["Binary & System Exploitation"]

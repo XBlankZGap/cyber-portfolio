@@ -1,5 +1,5 @@
 +++
-date = '2026-04-25T10:00:00+01:00'
+date = '2026-04-19T10:00:00+01:00'
 draft = false
 title = 'Database Encryption & Sensitive Data Protection (MongoDB)'
 categories = ["Web Application Pentesting"]

@@ -1,5 +1,5 @@
 +++
-date = '2026-02-10T10:00:00+01:00'
+date = '2026-03-25T10:00:00+01:00'
 draft = false
 title = 'Kenobi — Exploiting NFS Misconfigurations & Privilege Escalation'
 categories = ["Binary & System Exploitation"]
