@@ -2,7 +2,22 @@ baseURL = 'https://XBlankZGap.github.io/cyber-portfolio/'
 languageCode = 'en-us'
 title = "SOPHY'S CYBERLAB"
 theme = 'PaperMod'
-defaultTheme = 'dark'
+
+[params]
+    env = "production" # to enable google analytics, etc.
+    title = "SOPHY'S CYBERLAB"
+    description = "Offensive Security & Digital Forensics Portfolio"
+    author = "Sophy"
+    defaultTheme = 'dark'
+    ShowReadingTime = true
+    ShowBreadCrumbs = true
+    ShowPostNavLinks = true
+    ShowCodeCopyButtons = true
+    ShowShareButtons = true
+    ShowToc = true
+    
+    # Search configuration
+    fuseOpts = { isCaseSensitive = false, shouldSort = true, location = 0, distance = 100, threshold = 0.4, minMatchCharLength = 1, keys = ["title", "permalink", "summary", "content", "tags", "categories", "tools"] }
 
 [[menu.main]]
     name = "About Me"
@@ -14,15 +29,8 @@ defaultTheme = 'dark'
     url = "contact/"
     weight = 60
 
-
 [markup.goldmark.renderer]
     unsafe = true
 
-[params]
-    ShowReadingTime = true
-    ShowBreadCrumbs = true
-    ShowPostNavLinks = true
-
 [outputs]
     home = ["HTML", "RSS", "JSON"]
-

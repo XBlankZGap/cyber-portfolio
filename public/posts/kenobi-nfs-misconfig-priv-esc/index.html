@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="author" content="Sophy">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.758378919b2a8aed8dabd3375e40cf5c66ce7ef12d3adf4860af9b12e4b65a65.css" integrity="sha256-dYN4kZsqiu2Nq9M3XkDPXGbOfvEtOt9IYK&#43;bEuS2WmU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
 <noscript>
     <style>
         #theme-toggle,
@@ -27,46 +27,9 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
@@ -173,17 +136,91 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Kenobi — Exploiting NFS Misconfigurations & Privilege Escalation">
+  <meta property="og:description" content="Objective: To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-25T10:00:00+01:00">
+    <meta property="article:modified_time" content="2026-03-25T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-kenobi.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-kenobi.png">
+  <meta name="twitter:title" content="Kenobi — Exploiting NFS Misconfigurations & Privilege Escalation">
+  <meta name="twitter:description" content="Objective: To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Kenobi — Exploiting NFS Misconfigurations \u0026 Privilege Escalation",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kenobi — Exploiting NFS Misconfigurations \u0026 Privilege Escalation",
+  "name": "Kenobi — Exploiting NFS Misconfigurations \u0026 Privilege Escalation",
+  "description": "Objective: To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.\n1. The Vulnerability: Insecure Service Configuration This target exhibited multiple critical misconfigurations, including an insecure Network File System (NFS) share and a vulnerable ProFTPd service (v1.3.5) susceptible to arbitrary file copy vulnerabilities. This allows an attacker to manipulate server-side files via unauthenticated protocol requests, bypassing standard Access Control mechanisms.\n2. Technical Execution: Service Chaining I executed a multi-step attack chain, leveraging Samba for initial information gathering, ProFTPd to exfiltrate private SSH keys to an accessible NFS share, and finally identifying a misconfigured SUID bit on the /usr/bin/menu binary to escalate privileges to root.\nComponent Value Purpose Initial Recon Nmap –script nfs-showmount Identifying accessible network file shares. Exploit Vector ProFTPd SITE CPFR/CPTO Copying sensitive files (id_rsa) to the NFS share. Auth Vector SSH (Private Key) Gaining initial shell access as a regular user. Privilege Esc SUID (Path Hijacking) Exploiting misconfigured binaries to gain root. 3. Execution Workflow Enumeration: Scanned for Samba shares using Nmap and listed NFS mount points to identify the exploitable infrastructure. File Manipulation: Exploited the ProFTPd SITE CPFR and SITE CPTO commands to copy the user’s private SSH key to the mounted NFS directory. Initial Access: Mounted the NFS share locally, retrieved the SSH key, and established a shell session via SSH. Root Escalation: Identified an SUID binary that executed a system command (curl) without a full path, allowing for Path Hijacking to spawn a root shell. 4. Key Commands # Mounting the insecure NFS share locally mount 10.10.x.x:/var/tmp /mnt/kenobi_nfs # Exploiting the ProFTPd file copy vulnerability SITE CPFR /home/kenobi/.ssh/id_rsa SITE CPTO /var/tmp/id_rsa 5. Evidence of Work RESOURCES_NODE_01 Caption: Identification of unauthenticated NFS shares and vulnerable Samba services.\nRESOURCES_NODE_01 Caption: Successful privilege escalation showing root access gained through SUID binary exploitation.\n6. Professional Impact This project highlights the risk of “Service Chaining,” where multiple minor misconfigurations lead to a total system compromise. By successfully escalating to root, I proved that System Integrity is only as strong as its weakest service. I recommended that the organization enforce strict protocol-specific access controls and regularly audit system binaries for insecure SUID bit configurations.\n",
+  "wordCount" : "362",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-kenobi.png","datePublished": "2026-03-25T10:00:00+01:00",
+  "dateModified": "2026-03-25T10:00:00+01:00",
+  "author":{
+    "@type": "Person",
+    "name": "Sophy"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
             <div class="logo-switches">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/search" title="Search (Alt + /)" accesskey="/" style="margin: 0 10px; display: flex; align-items: center; color: var(--on-surface);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -208,12 +245,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +263,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -267,12 +304,38 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-kenobi.png" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-kenobi.png" alt=""></figure>
     </div>
 </div>
     
 
   <div class="post-content-container">
+    <aside class="editorial-toc"><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-the-vulnerability-insecure-service-configuration" aria-label="1. The Vulnerability: Insecure Service Configuration">1. The Vulnerability: Insecure Service Configuration</a></li>
+                <li>
+                    <a href="#2-technical-execution-service-chaining" aria-label="2. Technical Execution: Service Chaining">2. Technical Execution: Service Chaining</a></li>
+                <li>
+                    <a href="#3-execution-workflow" aria-label="3. Execution Workflow">3. Execution Workflow</a></li>
+                <li>
+                    <a href="#4-key-commands" aria-label="4. Key Commands">4. Key Commands</a></li>
+                <li>
+                    <a href="#5-evidence-of-work" aria-label="5. Evidence of Work">5. Evidence of Work</a></li>
+                <li>
+                    <a href="#6-professional-impact" aria-label="6. Professional Impact">6. Professional Impact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    </aside>
 
     <div class="post-content"><p><strong>Objective:</strong> To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.</p>
 <h2 id="1-the-vulnerability-insecure-service-configuration">1. The Vulnerability: Insecure Service Configuration<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-insecure-service-configuration">#</a></h2>
@@ -332,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/kenobi-nfs.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/kenobi-nfs.png" 
              alt="Discovery" 
               
              loading="lazy">
@@ -347,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/kenobi-root.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/kenobi-root.png" 
              alt="Results" 
               
              loading="lazy">
@@ -365,12 +428,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
     <span class="title">« Prev</span>
     <br>
     <span>Mr. Robot — Web Exploitation &amp; System Compromise</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/">
     <span class="title">Next »</span>
     <br>
     <span>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</span>
@@ -382,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
@@ -455,6 +518,53 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

@@ -1632,3 +1632,82 @@ button.btn-terminal-submit,
     }
 }
 
+
+/* ──────────────────────────────────────────────────────── 
+   GRID LAYOUT FOR PROJECTS 
+   ────────────────────────────────────────────────────── */
+@media (min-width: 900px) {
+    .list:not(.search-page):not(.about-page):not(.contact-page) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: var(--uniform-width);
+        margin: 0 auto;
+        padding: 0 60px 100px 60px;
+    }
+    
+    .list:not(.search-page) .post-entry {
+        margin-bottom: 0 !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list:not(.search-page) .entry-header h2 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .list:not(.search-page) .entry-content {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        flex-grow: 1;
+    }
+}
+
+/* Ensure search page stays full width */
+.search-page {
+    display: block !important;
+}
+
+/* SEARCH ICON IN NAV */
+.nav-search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 10px;
+    color: var(--secondary);
+    transition: color 0.3s;
+}
+
+.nav-search-icon:hover {
+    color: var(--primary);
+}
+
+
+/* ──────────────────────────────────────────────────────── 
+   GRID PROJECTS - 2 COLUMNS 
+   ────────────────────────────────────────────────────── */
+.grid-projects {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px !important;
+}
+
+@media (max-width: 900px) {
+    .grid-projects {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Ensure the header icon stays visible and neon */
+.header .logo-switches a svg {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header .logo-switches a:hover svg {
+    color: var(--primary) !important;
+    transform: scale(1.1);
+}
+

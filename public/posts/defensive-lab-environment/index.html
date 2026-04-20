@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="date = &lsquo;2025-07-10T10:00:00&#43;01:00&rsquo;
@@ -19,17 +19,17 @@ image = &ldquo;images/feature-1-vbox-machine.png&rdquo;
 tags = [&ldquo;VirtualBox&rdquo;, &ldquo;Networking&rdquo;, &ldquo;Isolation&rdquo;, &ldquo;Lab Setup&rdquo;]
 &#43;&#43;&#43;
 Objective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="author" content="Sophy">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.758378919b2a8aed8dabd3375e40cf5c66ce7ef12d3adf4860af9b12e4b65a65.css" integrity="sha256-dYN4kZsqiu2Nq9M3XkDPXGbOfvEtOt9IYK&#43;bEuS2WmU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/">
 <noscript>
     <style>
         #theme-toggle,
@@ -38,46 +38,9 @@ Objective: To design and deploy a secure, isolated virtualization environment fo
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
@@ -184,17 +147,94 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:description" content="date = ‘2025-07-10T10:00:00&#43;01:00’ draft = false title = ‘Defensive Lab Environment &amp; Network Configuration’ categories = [“Network Security &amp; Infrastructure”] case_id = “LAB-NET-2026-01” vulnerability_class = “Network Segregation &amp; Infrastructure Hardening” tools = [“VirtualBox”, “Kali Linux”, “Host-Only Networking”]
+[cover] image = “images/feature-1-vbox-machine.png”
+tags = [“VirtualBox”, “Networking”, “Isolation”, “Lab Setup”] &#43;&#43;&#43;
+Objective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SOPHY&#39;S CYBERLAB">
+  <meta name="twitter:description" content="date = ‘2025-07-10T10:00:00&#43;01:00’ draft = false title = ‘Defensive Lab Environment &amp; Network Configuration’ categories = [“Network Security &amp; Infrastructure”] case_id = “LAB-NET-2026-01” vulnerability_class = “Network Segregation &amp; Infrastructure Hardening” tools = [“VirtualBox”, “Kali Linux”, “Host-Only Networking”]
+[cover] image = “images/feature-1-vbox-machine.png”
+tags = [“VirtualBox”, “Networking”, “Isolation”, “Lab Setup”] &#43;&#43;&#43;
+Objective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "date = \u0026lsquo;2025-07-10T10:00:00+01:00\u0026rsquo; draft = false title = \u0026lsquo;Defensive Lab Environment \u0026amp; Network Configuration\u0026rsquo; categories = [\u0026ldquo;Network Security \u0026amp; Infrastructure\u0026rdquo;] case_id = \u0026ldquo;LAB-NET-2026-01\u0026rdquo; vulnerability_class = \u0026ldquo;Network Segregation \u0026amp; Infrastructure Hardening\u0026rdquo; tools = [\u0026ldquo;VirtualBox\u0026rdquo;, \u0026ldquo;Kali Linux\u0026rdquo;, \u0026ldquo;Host-Only Networking\u0026rdquo;]\n[cover] image = \u0026ldquo;images/feature-1-vbox-machine.png\u0026rdquo;\ntags = [\u0026ldquo;VirtualBox\u0026rdquo;, \u0026ldquo;Networking\u0026rdquo;, \u0026ldquo;Isolation\u0026rdquo;, \u0026ldquo;Lab Setup\u0026rdquo;] +++\nObjective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "date = ‘2025-07-10T10:00:00+01:00’ draft = false title = ‘Defensive Lab Environment \u0026 Network Configuration’ categories = [“Network Security \u0026 Infrastructure”] case_id = “LAB-NET-2026-01” vulnerability_class = “Network Segregation \u0026 Infrastructure Hardening” tools = [“VirtualBox”, “Kali Linux”, “Host-Only Networking”]\n[cover] image = “images/feature-1-vbox-machine.png”\ntags = [“VirtualBox”, “Networking”, “Isolation”, “Lab Setup”] +++\nObjective: To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.\n1. Technical Overview Before any testing occurs, a “sandbox” must be established. This ensures that exploits do not “leak” onto the public internet or the local home network. For this project, I utilized Oracle VirtualBox to create a private Host-Only Network.\n2. Architecture Components Attacker Machine: Kali Linux (Rolling Edition) Target Machine: Metasploitable 2 (Linux-based vulnerable sinkhole) Network Type: Host-Only (vboxnet0) Network Range: 192.168.56.0/24 3. Implementation Steps Interface Initialization: I identified and activated the virtual network adapter on the Kali host to ensure a communication path to the target. Kernel Module Troubleshooting: I resolved issues with the VirtualBox Guest Additions and networking modules using modprobe to ensure the virtual bridge was stable. Connectivity Verification: Performed a bilateral ping test to confirm that the machines could “see” each other without external interference. 4. Key Commands Used ip addr show vboxnet0: To verify the Attacker IP (192.168.56.1). sudo modprobe vboxnetflt: To manually load the VirtualBox net-filter driver during a service failure. ping -c 4 192.168.56.101: To confirm the route to the target. RESOURCES_NODE_01 Caption: Verification of the isolated Host-Only network interface and successful connectivity to the target environment.\n5. Security Reflection Setting up a Host-Only network is a core requirement for Ethical Hacking. It demonstrates a commitment to “Safety First”—ensuring that vulnerable services (like the ones on Metasploitable) are never exposed to the actual internet where they could be hijacked by real malicious actors.\n",
+  "wordCount" : "298",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sophy"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
             <div class="logo-switches">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/search" title="Search (Alt + /)" accesskey="/" style="margin: 0 10px; display: flex; align-items: center; color: var(--on-surface);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -219,12 +259,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -237,8 +277,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -254,6 +294,30 @@ document.addEventListener("DOMContentLoaded", function() {
   </header> 
 
   <div class="post-content-container">
+    <aside class="editorial-toc"><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-technical-overview" aria-label="1. Technical Overview">1. Technical Overview</a></li>
+                <li>
+                    <a href="#2-architecture-components" aria-label="2. Architecture Components">2. Architecture Components</a></li>
+                <li>
+                    <a href="#3-implementation-steps" aria-label="3. Implementation Steps">3. Implementation Steps</a></li>
+                <li>
+                    <a href="#4-key-commands-used" aria-label="4. Key Commands Used">4. Key Commands Used</a></li>
+                <li>
+                    <a href="#5-security-reflection" aria-label="5. Security Reflection">5. Security Reflection</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    </aside>
 
     <div class="post-content"><p>date = &lsquo;2025-07-10T10:00:00+01:00&rsquo;
 draft = false
@@ -295,7 +359,7 @@ image = &ldquo;images/feature-1-vbox-machine.png&rdquo;</p>
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/project1_network.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/project1_network.png" 
              alt="Screenshot" 
               
              loading="lazy">
@@ -313,7 +377,7 @@ image = &ldquo;images/feature-1-vbox-machine.png&rdquo;</p>
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/">
     <span class="title">« Prev</span>
     <br>
     <span>Network Security Fundamentals and Threat Assessment</span>
@@ -325,7 +389,7 @@ image = &ldquo;images/feature-1-vbox-machine.png&rdquo;</p>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
@@ -398,6 +462,53 @@ image = &ldquo;images/feature-1-vbox-machine.png&rdquo;</p>
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

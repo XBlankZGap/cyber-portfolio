@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>NoSQL Injection &amp; Database Poisoning (Vouched Application) | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the &ldquo;Vouched&rdquo; application to bypass authentication and extract sensitive user data.">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="author" content="Sophy">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.758378919b2a8aed8dabd3375e40cf5c66ce7ef12d3adf4860af9b12e4b65a65.css" integrity="sha256-dYN4kZsqiu2Nq9M3XkDPXGbOfvEtOt9IYK&#43;bEuS2WmU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
 <noscript>
     <style>
         #theme-toggle,
@@ -27,46 +27,9 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
@@ -173,17 +136,91 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="NoSQL Injection & Database Poisoning (Vouched Application)">
+  <meta property="og:description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-18T10:00:00+01:00">
+    <meta property="article:modified_time" content="2026-04-18T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png">
+  <meta name="twitter:title" content="NoSQL Injection & Database Poisoning (Vouched Application)">
+  <meta name="twitter:description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "NoSQL Injection \u0026 Database Poisoning (Vouched Application)",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NoSQL Injection \u0026 Database Poisoning (Vouched Application)",
+  "name": "NoSQL Injection \u0026 Database Poisoning (Vouched Application)",
+  "description": "Objective: To identify and exploit NoSQL injection vulnerabilities within the \u0026ldquo;Vouched\u0026rdquo; application to bypass authentication and extract sensitive user data.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.\n1. The Vulnerability: NoSQL Command Neutralization (CWE-943) NoSQL injection occurs when an application fails to properly sanitize user input before using it in a database query. In document-oriented databases like MongoDB, this allows an attacker to inject logical operators (e.g., $gt, $ne) to manipulate the query logic, leading to unauthorized data access or authentication bypass.\n2. Technical Execution: Logic Manipulation Using Postman, I crafted malicious JSON payloads targeting the authentication and search endpoints of the Vouched application. By replacing standard string inputs with MongoDB operator objects, I successfully manipulated the database logic to return records that should have been restricted, effectively bypassing Bcrypt-hashed password checks.\nComponent Value Purpose Attack Vector JSON Payload Injection Injecting MongoDB operators into API requests. Target Endpoint /api/v1/login Attempting to bypass password verification. Impact Authentication Bypass Gaining access to any user account without a password. Remediation Schema Validation Implementing strict typing for all incoming data. 3. Execution Workflow Endpoint Enumeration: Used Postman to identify API endpoints that accept JSON input for database queries. Operator Testing: Injected basic logical operators (e.g., {\"$ne\": null}) to test if the database would return unintended results. Authentication Bypass: Crafted a login request where the password field was replaced with a “not equal” operator, allowing login as any user whose username was known. Data Exfiltration: Leveraged the injection vulnerability on search endpoints to dump the entire user collection. 4. Exploit Payload (JSON) // Malicious Login Payload { \"username\": \"admin\", \"password\": { \"$ne\": \"wrong_password\" } } // This bypasses the Bcrypt check because the query returns the first user // where the password is NOT \"wrong_password\". 5. Evidence of Work RESOURCES_NODE_01 Caption: Initial discovery phase showing the identification of NoSQL-vulnerable endpoints in the Vouched application.\n*Caption: Successful authentication bypass via Postman (Left) and the subsequent database audit configuration analysis (Right).* 6. Professional Impact This project highlights a critical oversight in modern web development. While Bcrypt provides strong hashing, it cannot protect against logic-level vulnerabilities if the query itself is compromised. To remediate this, I recommended the implementation of strict Mongoose schemas and the use of query sanitizers to ensure that user input is never interpreted as a database operator.\n",
+  "wordCount" : "376",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png","datePublished": "2026-04-18T10:00:00+01:00",
+  "dateModified": "2026-04-18T10:00:00+01:00",
+  "author":{
+    "@type": "Person",
+    "name": "Sophy"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
             <div class="logo-switches">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/search" title="Search (Alt + /)" accesskey="/" style="margin: 0 10px; display: flex; align-items: center; color: var(--on-surface);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -208,12 +245,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +263,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -267,12 +304,38 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
     </div>
 </div>
     
 
   <div class="post-content-container">
+    <aside class="editorial-toc"><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-the-vulnerability-nosql-command-neutralization-cwe-943" aria-label="1. The Vulnerability: NoSQL Command Neutralization (CWE-943)">1. The Vulnerability: NoSQL Command Neutralization (CWE-943)</a></li>
+                <li>
+                    <a href="#2-technical-execution-logic-manipulation" aria-label="2. Technical Execution: Logic Manipulation">2. Technical Execution: Logic Manipulation</a></li>
+                <li>
+                    <a href="#3-execution-workflow" aria-label="3. Execution Workflow">3. Execution Workflow</a></li>
+                <li>
+                    <a href="#4-exploit-payload-json" aria-label="4. Exploit Payload (JSON)">4. Exploit Payload (JSON)</a></li>
+                <li>
+                    <a href="#5-evidence-of-work" aria-label="5. Evidence of Work">5. Evidence of Work</a></li>
+                <li>
+                    <a href="#6-professional-impact" aria-label="6. Professional Impact">6. Professional Impact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    </aside>
 
     <div class="post-content"><p><strong>Objective:</strong> To identify and exploit NoSQL injection vulnerabilities within the &ldquo;Vouched&rdquo; application to bypass authentication and extract sensitive user data.</p>
 <h2 id="1-the-vulnerability-nosql-command-neutralization-cwe-943">1. The Vulnerability: NoSQL Command Neutralization (CWE-943)<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-nosql-command-neutralization-cwe-943">#</a></h2>
@@ -333,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png" 
              alt="NoSQL Vulnerability" 
               
              loading="lazy">
@@ -362,12 +425,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">
     <span class="title">« Prev</span>
     <br>
     <span>Database Encryption &amp; Sensitive Data Protection (MongoDB)</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/">
     <span class="title">Next »</span>
     <br>
     <span>Fowsniff — Credential Harvesting &amp; Password Cracking</span>
@@ -379,7 +442,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
@@ -452,6 +515,53 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

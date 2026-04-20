@@ -54,7 +54,7 @@
         {{- if gt (len $category_pages) 0 }}
             <div class="category-section-wrapper" style="margin-bottom: 80px;">
                 <h2 class="category-header-title" style="font-size: 32px; font-weight: 800; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 40px; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">{{ $category }}</h2>
-                <div class="posts-group" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px;">
+                <div class="posts-group grid-projects">
                 {{- range $category_pages }}
                     <article class="post-entry" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
                       {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}

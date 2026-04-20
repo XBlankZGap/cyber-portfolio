@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Mr. Robot — Web Exploitation &amp; System Compromise | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
 <meta name="description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="author" content="Sophy">
+<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.758378919b2a8aed8dabd3375e40cf5c66ce7ef12d3adf4860af9b12e4b65a65.css" integrity="sha256-dYN4kZsqiu2Nq9M3XkDPXGbOfvEtOt9IYK&#43;bEuS2WmU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
 <noscript>
     <style>
         #theme-toggle,
@@ -27,46 +27,9 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
@@ -173,17 +136,91 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Mr. Robot — Web Exploitation & System Compromise">
+  <meta property="og:description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-26T10:00:00+01:00">
+    <meta property="article:modified_time" content="2026-03-26T10:00:00+01:00">
+    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png">
+  <meta name="twitter:title" content="Mr. Robot — Web Exploitation & System Compromise">
+  <meta name="twitter:description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mr. Robot — Web Exploitation \u0026 System Compromise",
+      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mr. Robot — Web Exploitation \u0026 System Compromise",
+  "name": "Mr. Robot — Web Exploitation \u0026 System Compromise",
+  "description": "Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.\n1. The Vulnerability: Web-to-System Access Chain The target platform was found to be running a vulnerable WordPress instance with an improperly configured administrative login. By exploiting a combination of Information Disclosure (exposed robots.txt and dictionary files) and brute force, I gained initial access to the web backend, providing a gateway for further system-level pivoting.\n2. Technical Execution: Multi-Layered Exploitation I conducted a tiered attack, beginning with aggressive web reconnaissance using gobuster and wpscan. After gaining a web shell, I exfiltrated password hashes for local users and utilized an insecure SUID bit on the nmap binary to escalate privileges to root.\nComponent Value Purpose Reconnaissance Gobuster / WPScan Identifying hidden directories and CMS vulnerabilities. Exploit Vector WordPress Brute Force Gaining initial administrative access to the web interface. Credential Theft MD5 Hash Cracking Recovering local user passwords from the system files. Privilege Esc Nmap SUID (Interactive) Bypassing local security to gain a root shell. 3. Execution Workflow Information Gathering: Identified critical system information and hideouts in the robots.txt file, including a hidden wordlist and a cryptographic key. Web Hijacking: Performed an automated brute force attack against the WordPress login using the exfiltrated wordlist to gain a web shell. Lateral Movement: Located an encrypted MD5 hash for the user robot and recovered the plaintext password via John the Ripper. Root Escalation: Identified that nmap was configured with the SUID bit, allowing for the execution of an interactive nmap session to spawn a root shell. 4. Key Commands # Brute forcing WordPress login with a customized wordlist wpscan --url http://10.10.x.x --passwords wordlist.txt --usernames Elliot # Escalating privileges via Nmap SUID bit nmap --interactive !sh 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase identifying the WordPress administrative login and user enumeration.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the successful use of Nmap’s interactive mode to gain a root shell.\n6. Professional Impact This project highlights the “Compromise Chain” where a single web-level failure (weak password) leads to total system takeover. By achieving root access via an insecure SUID binary, I proved that local configuration errors are as dangerous as external vulnerabilities. I recommended that the organization enforce strong password policies for CMS platforms and strictly adhere to the Principle of Least Privilege by removing unnecessary SUID bits from system binaries.\n",
+  "wordCount" : "394",
+  "inLanguage": "en",
+  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png","datePublished": "2026-03-26T10:00:00+01:00",
+  "dateModified": "2026-03-26T10:00:00+01:00",
+  "author":{
+    "@type": "Person",
+    "name": "Sophy"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SOPHY'S CYBERLAB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
             <div class="logo-switches">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/search" title="Search (Alt + /)" accesskey="/" style="margin: 0 10px; display: flex; align-items: center; color: var(--on-surface);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -208,12 +245,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -226,8 +263,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <article class="post-single main-editorial-grid">
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
-            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
+            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -267,12 +304,38 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png" alt=""></figure>
+                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png" alt=""></figure>
     </div>
 </div>
     
 
   <div class="post-content-container">
+    <aside class="editorial-toc"><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-the-vulnerability-web-to-system-access-chain" aria-label="1. The Vulnerability: Web-to-System Access Chain">1. The Vulnerability: Web-to-System Access Chain</a></li>
+                <li>
+                    <a href="#2-technical-execution-multi-layered-exploitation" aria-label="2. Technical Execution: Multi-Layered Exploitation">2. Technical Execution: Multi-Layered Exploitation</a></li>
+                <li>
+                    <a href="#3-execution-workflow" aria-label="3. Execution Workflow">3. Execution Workflow</a></li>
+                <li>
+                    <a href="#4-key-commands" aria-label="4. Key Commands">4. Key Commands</a></li>
+                <li>
+                    <a href="#5-evidence-of-work" aria-label="5. Evidence of Work">5. Evidence of Work</a></li>
+                <li>
+                    <a href="#6-professional-impact" aria-label="6. Professional Impact">6. Professional Impact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    </aside>
 
     <div class="post-content"><p><strong>Objective:</strong> To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.</p>
 <h2 id="1-the-vulnerability-web-to-system-access-chain">1. The Vulnerability: Web-to-System Access Chain<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-web-to-system-access-chain">#</a></h2>
@@ -332,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/mrrobot-wpscan.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/mrrobot-wpscan.png" 
              alt="Discovery" 
               
              loading="lazy">
@@ -347,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png" 
+    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png" 
              alt="Results" 
               
              loading="lazy">
@@ -365,12 +428,12 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
     <span class="title">« Prev</span>
     <br>
     <span>Session Hijacking via Automated Cookie Exfiltration</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
+  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
     <span class="title">Next »</span>
     <br>
     <span>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</span>
@@ -382,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
+        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
 
     <span>
         Powered by
@@ -455,6 +518,53 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
