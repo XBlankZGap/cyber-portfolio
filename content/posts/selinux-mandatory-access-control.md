@@ -8,10 +8,10 @@ case_id = "MAC-SELINUX-2026"
 vulnerability_class = "Excessive Privilege & Service Exploitation"
 tools = ["SELinux", "audit2allow", "getenforce", "audit log"]
 
+tags = ["SELinux", "MAC", "Kernel Security", "Least Privilege"]
 [cover]
 image = "images/selinux-mandatory-access-control-discovery.jpeg"
 
-tags = ["SELinux", "MAC", "Kernel Security", "Least Privilege"]
 +++
 
 **Objective:** To enforce strict security policies at the kernel level, preventing unauthorized resource access by compromised services.

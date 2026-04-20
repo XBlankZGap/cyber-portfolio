@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="dark">
+
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Web Architecture | SOPHY&#39;S CYBERLAB</title>
+<meta name="keywords" content="">
+<meta name="description" content="Offensive Security &amp; Digital Forensics Portfolio">
+<meta name="author" content="Sophy">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/tags/web-architecture/">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/cyber-portfolio/tags/web-architecture/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/tags/web-architecture/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 19, 24, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 50px rgba(131, 220, 93, 0.1);
+    border-radius: 8px;
+    object-fit: contain;
+}
+</style>
+
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="Popup image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".post-content img, .terminal-img-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    lightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+    });
+});
+</script>
+<script defer src="/cyber-portfolio/js/fuse.basic.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let searchInput = document.getElementById("inline-search-input");
+    let searchResults = document.getElementById("inline-search-results");
+    let fuse;
+    
+    if(!searchInput) return;
+
+    fetch("\/cyber-portfolio\/index.json")
+        .then(res => res.json())
+        .then(data => {
+            let options = {
+                keys: ["title", "content", "summary", "tags"],
+                ignoreLocation: true,
+                threshold: 0.3,
+                minMatchCharLength: 2
+            };
+            fuse = new Fuse(data, options);
+        })
+        .catch(err => console.error("Search index failed to load", err));
+
+    searchInput.addEventListener("input", function() {
+        if (!fuse) return;
+        let query = this.value;
+        if (query.trim().length === 0) {
+            searchResults.style.display = "none";
+            searchResults.innerHTML = "";
+            return;
+        }
+        
+        let results = fuse.search(query);
+        if (results.length > 0) {
+            let html = "";
+            results.slice(0, 8).forEach(res => {
+                html += `<li><a href="${res.item.permalink}">${res.item.title}</a></li>`;
+            });
+            searchResults.innerHTML = html;
+            searchResults.style.display = "block";
+        } else {
+            searchResults.innerHTML = "<li class='no-results'>No results found</li>";
+            searchResults.style.display = "block";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!searchInput) return;
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+
+     
+    const tagButtons = document.querySelectorAll('.filter-tag');
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
+
+    tagButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            
+            tagButtons.forEach(b => b.classList.remove('active'));
+            
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
+        });
+    });
+
+    
+    applyFilter();
+});
+</script>
+
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/tags/web-architecture/">
+  <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
+  <meta property="og:title" content="Web Architecture">
+  <meta property="og:description" content="Offensive Security &amp; Digital Forensics Portfolio">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Web Architecture">
+  <meta name="twitter:description" content="Offensive Security &amp; Digital Forensics Portfolio">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    
+
+
+    <main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/tags/">Tags</a>
+</div>
+  <h1 style="font-size: 64px; text-transform: uppercase;">Web Architecture</h1>
+</header>
+        <article class="post-entry" data-tags="Session Security,Defense-in-Depth,Cookie Flags,Web Architecture" data-categories="Application Security (AppSec)"> 
+<div class="terminal-window terminal-glow mb-8">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Source_Node_01
+        </span>
+    </div>
+    <div class="terminal-img-container">
+        <figure class="entry-cover" style="margin: 0;">
+                <img loading="lazy" src="http://localhost:1313/cyber-portfolio/images/feature-secure-session-architecture.png" alt=""></figure>
+    </div>
+</div>
+          <div class="post-meta-under-image">
+            <span class="intel-badge-small">Session Security</span>
+            <span class="meta-item">April 10, 2026</span>
+          </div>
+          <header class="entry-header">
+            <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">Secure Session Architecture &amp; Defensive Flag Implementation</a></h2>
+          </header>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To implement a “Secure-by-Design” framework for web applications to neutralize …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Session Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Defense-in-Depth</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Cookie Flags</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Web Architecture</span>
+          </div>
+          <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/" class="view-case-study">READ MORE</a></div>
+        </article>
+    </main>
+    <footer class="footer" style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--outline); margin-top: 80px; background: var(--surface);">
+    <div class="footer-content" style="max-width: var(--uniform-width); margin: 0 auto;">
+        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--primary); margin-bottom: 15px; display: inline-block;">terminal</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin: 0 0 10px 0;">Sophy's CyberLab</h3>
+        <p style="color: var(--on-surface-variant); font-size: 14px; margin: 0 0 20px 0; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            A documented record of cybersecurity research, engineering, and vulnerability analysis.
+        </p>
+        <div class="footer-contact" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary);">mail</span>
+            <a href="mailto:chisomsophyabraham@gmail.com" style="color: var(--on-surface); font-weight: 600; text-decoration: none; font-size: 15px; transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary)';" onmouseout="this.style.color='var(--on-surface)';">chisomsophyabraham@gmail.com</a>
+        </div>
+        <div class="footer-copyright" style="margin-top: 40px; font-size: 12px; color: var(--on-surface-variant); opacity: 0.7;">
+            &copy; 2026 Sophy Chisom Abraham. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

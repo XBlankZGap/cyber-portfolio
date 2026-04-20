@@ -1,32 +1,32 @@
-{{/* 
+{{/*
   Tag Filter Partial
-  Displays a set of tags used to filter posts via client-side JavaScript.
+  - Homepage: shows 4 curated broad-category buttons
+  - Single post: shows the specific post's tags
 */}}
 
 <div class="tag-filter-container">
-    <div class="tag-filter-list" id="tag-filter-list">
-        {{ if .IsHome }}
-            {{/* Hardcoded popular categories/tags for the homepage */}}
-            <button class="filter-tag" data-filter="SOC Analysis">SOC Analysis</button>
-            <button class="filter-tag" data-filter="Pentesting">Pentesting</button>
-            <button class="filter-tag" data-filter="Network Analysis">Network Analysis</button>
-            <button class="filter-tag" data-filter="AppSec">AppSec</button>
-            <button class="filter-tag" data-filter="DevSecOps">DevSecOps</button>
-            <button class="filter-tag" data-filter="Roadmap">Roadmap</button>
-        {{ else }}
-            {{/* Display tags specific to the post being viewed */}}
-            {{ if .Params.tags }}
-                {{ range .Params.tags }}
-                    <button class="filter-tag" data-filter="{{ . }}">{{ . }}</button>
-                {{ end }}
-            {{ end }}
+  <div class="tag-filter-list" id="tag-filter-list">
+    {{ if .IsHome }}
+      <button class="filter-tag active" data-filter="all">All Projects</button>
+      <button class="filter-tag" data-filter="cat:Security Operations (SOC) &amp; Incident Response">SOC &amp; Incident Response</button>
+      <button class="filter-tag" data-filter="cat:Penetration Testing &amp; Vulnerability Assessment">Pen Testing</button>
+      <button class="filter-tag" data-filter="cat:Application Security (AppSec)">AppSec</button>
+      <button class="filter-tag" data-filter="cat:Network &amp; Infrastructure Security">Network Security</button>
+      <button class="filter-tag" data-filter="cat:DevSecOps &amp; Cryptography">DevSecOps &amp; Crypto</button>
+    {{ else }}
+      {{/* Single post — show the post's own tags */}}
+      {{ if .Params.tags }}
+        {{ range .Params.tags }}
+          <button class="filter-tag" data-filter="{{ . }}">{{ . }}</button>
         {{ end }}
-    </div>
+      {{ end }}
+    {{ end }}
+  </div>
 </div>
 
 <style>
 .tag-filter-container {
-    max-width: var(--uniform-width);
+    max-width: var(--uniform-width, 1200px);
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
@@ -39,10 +39,10 @@
 }
 
 .filter-tag {
-    background: var(--surface-highest);
-    color: var(--secondary);
-    border: 1px solid var(--outline);
-    padding: 6px 14px;
+    background: var(--surface-highest, #1e1e1e);
+    color: var(--secondary, #aaa);
+    border: 1px solid var(--outline, #333);
+    padding: 6px 16px;
     border-radius: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
@@ -51,6 +51,7 @@
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .filter-tag:hover {
@@ -60,7 +61,7 @@
 
 .filter-tag.active {
     background: var(--primary);
-    color: var(--on-primary);
+    color: #000;
     border-color: var(--primary);
 }
 </style>

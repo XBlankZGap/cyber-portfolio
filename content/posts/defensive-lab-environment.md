@@ -7,10 +7,10 @@ case_id = "LAB-NET-2026-01"
 vulnerability_class = "Network Segregation & Infrastructure Hardening"
 tools = ["VirtualBox", "Kali Linux", "Host-Only Networking"]
 
+tags = ["VirtualBox", "Networking", "Isolation", "Lab Setup"]
 [cover]
 image = "images/feature-1-vbox-machine.png"
 
-tags = ["VirtualBox", "Networking", "Isolation", "Lab Setup"]
 +++
 
 **Objective:** To design and deploy a secure, isolated virtualization environment for controlled penetration testing and vulnerability analysis.

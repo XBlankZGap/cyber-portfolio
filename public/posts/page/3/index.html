@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - SOPHY&#39;S CYBERLAB">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -138,69 +138,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Posts">
@@ -282,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
   <h1 style="font-size: 64px; text-transform: uppercase;">Posts</h1>
 </header>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="IDOR,Path Traversal,Vulnerability Discovery,Web Security" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -297,19 +290,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">IDOR</span>
             <span class="meta-item">December 15, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/">Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">WebGoat</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Active Scanning</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To identify and verify directory traversal vulnerabilities that allow …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">IDOR</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Path Traversal</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Vulnerability Discovery</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Web Security</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Remediation,Secure Coding,Vulnerability Management,Defensive Strategy" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -324,20 +322,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Remediation</span>
             <span class="meta-item">December 10, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/">Vulnerability Analysis and Remediation Planning</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Spring Security</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">DOMPurify</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Prepared Statements</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To systematically document discovered web vulnerabilities and provide …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Remediation</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Secure Coding</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Vulnerability Management</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Defensive Strategy</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Vulnerability Scanning,OWASP ZAP,Reconnaissance,Security Assessment" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -352,20 +354,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Vulnerability Scanning</span>
             <span class="meta-item">December 5, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/">Automated Web Application Vulnerability Discovery</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">WebGoat</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Java</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To utilize automated scanning tools to perform comprehensive reconnaissance and …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Vulnerability Scanning</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">OWASP ZAP</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Reconnaissance</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Security Assessment</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="SQL,Database Security,Data Breach,Dump" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -380,16 +386,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">SQL</span>
             <span class="meta-item">October 15, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/">Database Breach &amp; Administrative Data Exfiltration</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To leverage a compromised web shell to gain unauthorized access to the backend …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">SQL</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Database Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Data Breach</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Dump</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="CSRF,Session Management,OWASP,Auth Bypass" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -404,20 +418,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">CSRF</span>
             <span class="meta-item">August 20, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/">Cross-Site Request Forgery (CSRF) via Forged Reviews</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Python</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">HTML/JS</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To exploit missing request verification to perform unauthorized actions on …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">CSRF</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Session Management</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">OWASP</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Auth Bypass</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="XSS,JavaScript,Security Engineering,Remediation" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -432,20 +450,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">XSS</span>
             <span class="meta-item">August 15, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/">DOM-Based Cross-Site Scripting (XSS) Analysis</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">JavaScript</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">jQuery</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To identify and exploit an unsafe JavaScript “sink” to execute arbitrary code …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">XSS</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">JavaScript</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Security Engineering</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Remediation</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="SQLi,WebGoat,Database Security,Parameterized Queries" data-categories="Application Security (AppSec)"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -460,19 +482,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">SQLi</span>
             <span class="meta-item">August 10, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/">Exploiting &amp; Mitigating String-Based SQL Injection</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">WebGoat</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Hypersonic SQL</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To demonstrate how unsanitized user input allows attackers to bypass …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">SQLi</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">WebGoat</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Database Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Parameterized Queries</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Blockchain Forensics,Private Key Theft,Wallet Security,BIP39" data-categories="DevSecOps &amp; Cryptography"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -487,20 +514,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Blockchain Forensics</span>
             <span class="meta-item">March 20, 2026</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/">Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">btckeygen.py</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">btctransact.py</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">BIP39</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To demonstrate the technical impact of private key exposure by automating the …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Blockchain Forensics</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Private Key Theft</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Wallet Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">BIP39</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Blockchain,Digital Forensics,Incident Response,Crypto Security" data-categories="DevSecOps &amp; Cryptography"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -515,19 +546,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Blockchain</span>
             <span class="meta-item">March 15, 2026</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/">Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Python</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Blockchain Explorer</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Forensic Investigation</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To analyze high-scale cryptocurrency heists and identify the critical security …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Blockchain</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Digital Forensics</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Incident Response</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Crypto Security</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="SELinux,MAC,Kernel Security,Least Privilege" data-categories="DevSecOps &amp; Cryptography"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -542,16 +578,20 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">SELinux</span>
             <span class="meta-item">January 15, 2026</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/">Mandatory Access Control (MAC) using SELinux</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">SELinux</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">audit2allow</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">getenforce</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To enforce strict security policies at the kernel level, preventing …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">SELinux</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">MAC</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Kernel Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Least Privilege</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/" class="view-case-study">READ MORE</a></div>
         </article>

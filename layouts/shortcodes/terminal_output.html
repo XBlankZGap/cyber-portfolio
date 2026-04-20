@@ -1,0 +1,30 @@
+<div class="terminal-window" style="margin: 20px 0; cursor: pointer;" onclick="document.getElementById('terminal-lightbox').style.display='flex';">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">{{ .Get "label" | default "Terminal Output" }} · click to expand</span>
+    </div>
+    <div style="background: #0a0a0a; padding: 20px; border-radius: 0 0 8px 8px; overflow: hidden; max-height: 280px; position: relative;">
+        <pre style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #00ff41; line-height: 1.6; white-space: pre-wrap; word-break: break-all;">{{ .Inner | safeHTML }}</pre>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to bottom, transparent, #0a0a0a);"></div>
+    </div>
+</div>
+
+<!-- Lightbox Overlay -->
+<div id="terminal-lightbox" style="display:none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 20px;" onclick="this.style.display='none'">
+    <div style="background: #0a0a0a; border: 1px solid #333; border-radius: 10px; max-width: 900px; width: 100%; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column;" onclick="event.stopPropagation()">
+        <div class="terminal-header" style="display: flex; justify-content: space-between; align-items: center; padding-right: 14px;">
+            <div style="display: flex; gap: 6px; align-items: center;">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">{{ .Get "label" | default "Terminal Output" }}</span>
+            </div>
+            <button onclick="document.getElementById('terminal-lightbox').style.display='none'" style="background: transparent; border: none; color: #fff; cursor: pointer; font-size: 20px; line-height: 1;">✕</button>
+        </div>
+        <div style="padding: 24px; overflow-y: auto; flex: 1;">
+            <pre style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #00ff41; line-height: 1.7; white-space: pre-wrap; word-break: break-all;">{{ .Inner | safeHTML }}</pre>
+        </div>
+    </div>
+</div>

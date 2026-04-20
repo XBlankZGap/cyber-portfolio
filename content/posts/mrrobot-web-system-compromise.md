@@ -8,10 +8,10 @@ case_id = "MRROBOT-WEB-2026"
 vulnerability_class = "Improper Input Validation & Privilege Escalation"
 tools = ["WPScan", "Nmap", "John the Ripper", "Nmap Privilege Escalation"]
 
+tags = ["WordPress Security", "CTF", "Privilege Escalation", "Reconnaissance"]
 [cover]
 image = "images/feature-mrrobot.png"
 
-tags = ["WordPress Security", "CTF", "Privilege Escalation", "Reconnaissance"]
 +++
 
 **Objective:** To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.

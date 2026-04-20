@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Network Traffic Baselining and Anomaly Detection | SOPHY&#39;S CYBERLAB</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Wireshark, Network Monitoring, Indicators of Compromise, Traffic Analysis">
 <meta name="description" content="Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -137,69 +137,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Network Traffic Baselining and Anomaly Detection">
@@ -209,6 +202,10 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-15T10:00:00+01:00">
     <meta property="article:modified_time" content="2025-11-15T10:00:00+01:00">
+    <meta property="article:tag" content="Wireshark">
+    <meta property="article:tag" content="Network Monitoring">
+    <meta property="article:tag" content="Indicators of Compromise">
+    <meta property="article:tag" content="Traffic Analysis">
     <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg">
@@ -244,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "name": "Network Traffic Baselining and Anomaly Detection",
   "description": "Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.\n",
   "keywords": [
-    
+    "Wireshark", "Network Monitoring", "Indicators of Compromise", "Traffic Analysis"
   ],
   "articleBody": "Objective: To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.\n1. The Vulnerability: Obfuscated Network Activity (CWE-1021) A significant vulnerability in modern networks is the inability to distinguish between legitimate background services and malicious traffic. Attackers often use Domain Spoofing and typosquatting (e.g., googleagmanger.com instead of googlemanager.com) to hide their presence. Without a documented baseline of normal traffic, these subtle anomalies often go unnoticed, allowing malware to maintain persistence and communicate with external servers.\n2. Technical Execution: Protocol Interrogation I conducted a deep-packet analysis using Wireshark to categorize traffic by protocol and destination. By filtering for DNS and HTTPS traffic, I was able to verify the legitimacy of routine queries to known services like Google and Firebase while flagging high-frequency queries to unfamiliar domains.\nComponent Value Purpose Analysis Tool Wireshark Real-time packet capture and deep-packet inspection. Baseline Protocol TLSv1.2 / QUIC Verified encrypted web communication for trusted services. Anomaly Vector DNS CNAME Chaining Identified rotating IP patterns used to evade detection. Environment Personal/Home Network Testing site for live monitoring and traffic differentiation. 3. Execution Workflow Traffic Capture: Initiated a live capture session in Wireshark to monitor all inbound and outbound system traffic. Behavioral Baselining: Identified and documented safe traffic patterns from reputable services like Grammarly and Google. Anomaly Identification: Filtered for DNS queries and identified a cluster of domains (e.g., trasre.com) that exhibited suspicious behavior, such as resolving through multiple IP addresses via Cloudfront and Aliyun CDNs. Impact Verification: Determined that the identified domains were typical of rotating Command-and-Control (C2) infrastructure used for malware distribution. 4. Key Commands # Filter Wireshark traffic to show only DNS queries dns # Filter to identify specific suspicious domain resolutions dns.qry.name contains \"aoneroom\" # Analyze TLS handshakes for version verification tls.handshake.version == 0x0303 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the identification of suspicious DNS queries for domains like h5-static.aoneroom.com.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the verification of legitimate encrypted traffic (TLS/QUIC) as part of the baselining process.\n6. Professional Impact This project directly addresses System Integrity by establishing the “Known Good” state of a network. By developing the ability to recognize abnormal DNS patterns and C2 communication, I provided a proactive defense that identifies compromises before data exfiltration occurs. This work demonstrates the practical value of traffic monitoring in detecting early indicators of compromise and informing a multi-layered remediation strategy.\n",
   "wordCount" : "398",
@@ -333,17 +330,27 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 <div class="tag-filter-container">
-    <div class="tag-filter-list" id="tag-filter-list">
+  <div class="tag-filter-list" id="tag-filter-list">
+    
+      
+      
         
-            
-            
+          <button class="filter-tag" data-filter="Wireshark">Wireshark</button>
         
-    </div>
+          <button class="filter-tag" data-filter="Network Monitoring">Network Monitoring</button>
+        
+          <button class="filter-tag" data-filter="Indicators of Compromise">Indicators of Compromise</button>
+        
+          <button class="filter-tag" data-filter="Traffic Analysis">Traffic Analysis</button>
+        
+      
+    
+  </div>
 </div>
 
 <style>
 .tag-filter-container {
-    max-width: var(--uniform-width);
+    max-width: var(--uniform-width, 1200px);
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
@@ -356,10 +363,10 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 .filter-tag {
-    background: var(--surface-highest);
-    color: var(--secondary);
-    border: 1px solid var(--outline);
-    padding: 6px 14px;
+    background: var(--surface-highest, #1e1e1e);
+    color: var(--secondary, #aaa);
+    border: 1px solid var(--outline, #333);
+    padding: 6px 16px;
     border-radius: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
@@ -368,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .filter-tag:hover {
@@ -377,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 .filter-tag.active {
     background: var(--primary);
-    color: var(--on-primary);
+    color: #000;
     border-color: var(--primary);
 }
 </style>
@@ -549,11 +557,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/wireshark/">Wireshark</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/network-monitoring/">Network Monitoring</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/indicators-of-compromise/">Indicators of Compromise</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/traffic-analysis/">Traffic Analysis</a></li>
     </ul>
 
     
-    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
-      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+    <div class="related-projects-section" style="margin: 50px 0 40px 0;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid var(--outline); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 22px;">hub</span>
+        Related Projects
+      </h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
+        <a href="http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/wazuh-dashboard.png" alt="Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt="Hybrid SIEM Architecture for SEO &amp; Security Intelligence" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Hybrid SIEM Architecture for SEO &amp; Security Intelligence</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/router-level-filtering-discovery.jpeg" alt="Centralized Network Security via Router-Level Filtering" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Centralized Network Security via Router-Level Filtering</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="author-bio-box" style="margin: 40px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
         <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
       </div>
       <div class="bio-content">
@@ -564,8 +613,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
       </div>
     </div>
-
-    
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
     <span class="title">« Prev</span>

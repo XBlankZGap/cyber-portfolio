@@ -8,10 +8,10 @@ case_id = "SESSION-HIJACK-2026"
 vulnerability_class = "Insecure Session Management (CWE-693)"
 tools = ["Cookie Editor Extension", "Browser Debugging", "XSS"]
 
+tags = ["Cookie Theft", "Session Hijacking", "Web Security", "Identity Theft"]
 [cover]
 image = "images/feature-session-hijacking-cookie-exfiltration.png"
 
-tags = ["Cookie Theft", "Session Hijacking", "Web Security", "Identity Theft"]
 +++
 
 **Objective:** To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.

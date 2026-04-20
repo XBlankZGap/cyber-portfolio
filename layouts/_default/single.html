@@ -80,9 +80,42 @@
       {{- end }}
     </ul>
 
+    {{/* --- RELATED PROJECTS --- */}}
+    {{- $category := index .Params.categories 0 }}
+    {{- $related := where .Site.RegularPages "Params.categories" "intersect" (slice $category) }}
+    {{- $related = where $related "Permalink" "ne" .Permalink }}
+    {{- $related = first 3 $related }}
+    {{- if not $related }}
+      {{- $related = .Site.RegularPages.Related . | first 3 }}
+    {{- end }}
+    {{- if $related }}
+    <div class="related-projects-section" style="margin: 50px 0 40px 0;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid var(--outline); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 22px;">hub</span>
+        Related Projects
+      </h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
+        {{- range $related }}
+        <a href="{{ .Permalink }}" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+          {{- if (and .Params.cover.image (not $isHidden)) }}
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          {{- end }}
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">{{ .Title }}</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+
     {{/* --- AUTHOR BIO BOX --- */}}
-    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
-      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+    <div class="author-bio-box" style="margin: 40px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
         <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
       </div>
       <div class="bio-content">
@@ -93,22 +126,6 @@
         </a>
       </div>
     </div>
-
-    {{/* --- RELATED PROJECTS --- */}}
-    {{- $related := .Site.RegularPages.Related . | first 3 }}
-    {{- if $related }}
-    <div class="related-projects-section" style="margin-bottom: 60px;">
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid var(--outline); padding-bottom: 15px;">Related Projects</h3>
-      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
-        {{- range $related }}
-        <a href="{{ .Permalink }}" style="display: block; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 8px; padding: 20px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
-          <h4 style="margin: 0 0 10px 0; font-size: 16px; color: var(--on-surface); line-height: 1.4;">{{ .Title }}</h4>
-          <span style="font-size: 12px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">View Case Study &rarr;</span>
-        </a>
-        {{- end }}
-      </div>
-    </div>
-    {{- end }}
 
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}

@@ -8,10 +8,10 @@ case_id = "ANOMALY-DETECT-2025"
 vulnerability_class = "Obfuscated Network Activity (CWE-1021)"
 tools = ["Wireshark", "DNS", "TLS", "Anomaly Detection"]
 
+tags = ["Wireshark", "Network Monitoring", "Indicators of Compromise", "Traffic Analysis"]
 [cover]
 image = "images/network-baselining-anomaly-discovery.jpeg"
 
-tags = ["Wireshark", "Network Monitoring", "Indicators of Compromise", "Traffic Analysis"]
 +++
 
 **Objective:** To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.

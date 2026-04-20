@@ -8,10 +8,10 @@ case_id = "BLOCKCHAIN-HIJACK-2026"
 vulnerability_class = "Private Key Exposure (CWE-522)"
 tools = ["btckeygen.py", "btctransact.py", "BIP39", "HD Wallets"]
 
+tags = ["Blockchain Forensics", "Private Key Theft", "Wallet Security", "BIP39"]
 [cover]
 image = "images/feature-blockchain-forensics.png"
 
-tags = ["Blockchain Forensics", "Private Key Theft", "Wallet Security", "BIP39"]
 +++
 
 **Objective:** To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.
@@ -44,14 +44,7 @@ I developed a suite of forensic tools in Python to simulate an attack on exposed
 
 The following terminal output captures the live execution of `btckeygen.py`, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.
 
-<div class="terminal-window terminal-glow mb-8" style="background: #0a0a0a; border-radius: 8px; border: 1px solid var(--outline); overflow: hidden; margin-top: 20px;">
-    <div class="terminal-header" style="background: #1a1a1a; padding: 10px; border-bottom: 1px solid #333; display: flex; align-items: center;">
-        <div class="dot red" style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; margin-right: 6px;"></div>
-        <div class="dot yellow" style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; margin-right: 6px;"></div>
-        <div class="dot green" style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></div>
-        <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; color: #fff;">wallet-addresses.txt (Terminal Output)</span>
-    </div>
-    <div class="terminal-body" style="padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #00ff00; line-height: 1.5; white-space: pre-wrap; overflow-x: auto;">$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
+{{< terminal_output label="wallet-addresses.txt" >}}$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
 Deriving keys using BIP44 standard...
 
 Derived 5 BITCOIN addresses and private keys (segwit):
@@ -75,7 +68,7 @@ Derived 5 BITCOIN addresses and private keys (segwit):
 5:
   Address:    bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw
   PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M
-  
+
 Derived 5 BITCOIN addresses and private keys (legacy):
 --------------------------------------------------------------------------------
 1:
@@ -84,8 +77,20 @@ Derived 5 BITCOIN addresses and private keys (legacy):
 
 2:
   Address:    126bbdDewNwJQaScKfy519dbTHoeKGG7GY
-  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56</div>
-</div>
+  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56
+
+3:
+  Address:    12KAAsFUDZxNLuFgnAWKzSQJPs4A63qeww
+  PrivateKey: L3wtLkjJzTyPAQs3hFiZ6UtQHr1245fFDSYAezstpBn4KJiQ33G5
+
+4:
+  Address:    1McxJ76ETmggz7FTCcithNaet8no9u59zG
+  PrivateKey: L5DDGRF8Gm7etmxvkpmLL3HodxsqKSqHZutKq2wGu6VsSCDvX9ht
+
+5:
+  Address:    1MZxS5FJKFKgNpDWXPCSo1yGCmax9HdgUc
+  PrivateKey: KxNpHwiBARgLB7eeKMf77kpnZKgP7GXp8AkqJSqBwCxRcdtFL8Jp
+{{< /terminal_output >}}
 
 ## 5. Professional Impact
 

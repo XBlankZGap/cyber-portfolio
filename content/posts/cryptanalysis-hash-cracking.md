@@ -5,10 +5,10 @@ weight = 500
 title = 'Offline Cryptanalysis & Password Recovery'
 categories = ["DevSecOps & Cryptography"]
 
+tags = ["Cryptography", "Password Cracking", "John the Ripper", "Hashes"]
 [cover]
 image = "images/project5_jtr_cracking.png"
 
-tags = ["Cryptography", "Password Cracking", "John the Ripper", "Hashes"]
 +++
 
 **Objective:** To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.

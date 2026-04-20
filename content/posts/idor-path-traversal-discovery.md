@@ -8,10 +8,10 @@ case_id = "PATH-TRAVERSAL-2025"
 vulnerability_class = "Path Traversal (CWE-22)"
 tools = ["OWASP ZAP", "WebGoat", "Active Scanning"]
 
+tags = ["IDOR", "Path Traversal", "Vulnerability Discovery", "Web Security"]
 [cover]
 image = "images/idor-path-traversal-discovery-discovery.jpeg"
 
-tags = ["IDOR", "Path Traversal", "Vulnerability Discovery", "Web Security"]
 +++
 
 **Objective:** To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.

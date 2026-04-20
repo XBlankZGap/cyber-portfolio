@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Automated Domain Blocking via Batch Scripting | SOPHY&#39;S CYBERLAB</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Automation, Security Engineering, C2 Mitigation, Endpoint Security">
 <meta name="description" content="Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -137,69 +137,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Automated Domain Blocking via Batch Scripting">
@@ -209,6 +202,10 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-05T10:00:00+01:00">
     <meta property="article:modified_time" content="2025-11-05T10:00:00+01:00">
+    <meta property="article:tag" content="Automation">
+    <meta property="article:tag" content="Security Engineering">
+    <meta property="article:tag" content="C2 Mitigation">
+    <meta property="article:tag" content="Endpoint Security">
     <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/automated-domain-blocking-discovery.jpeg">
@@ -244,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "name": "Automated Domain Blocking via Batch Scripting",
   "description": "Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.\n",
   "keywords": [
-    
+    "Automation", "Security Engineering", "C2 Mitigation", "Endpoint Security"
   ],
   "articleBody": "Objective: To develop a reusable and scalable automation tool for neutralizing network threats at the system level.\n1. The Vulnerability: Manual Mitigation Inefficiency Relying on manual entries to the Windows hosts file for domain blocking is a slow and error-prone process. In an active threat scenario where multiple malicious domains (e.g., trasre.com, shallspark.com) are identified, the delay in manual configuration increases the window of opportunity for malware to establish a Command-and-Control (C2) connection or exfiltrate data.\n2. Technical Execution: Scripted Host Redirection I developed a batch script using the VS Code IDE to automate the redirection of suspicious traffic. The script programmatically appends the local loopback address (127.0.0.1) to the Windows hosts file for every identified malicious domain. This ensures that any application attempting to reach these external servers is immediately redirected back to the local machine, effectively “cutting off” the communication.\nComponent Value Purpose Language Batch (.bat) Native Windows execution for system-level changes. Target File %SystemRoot%\\System32\\drivers\\etc\\hosts The system file that maps hostnames to IP addresses. Logic Append (») Ensures existing host mappings are preserved while adding new blocks. Loopback IP 127.0.0.1 The address used to nullify malicious outbound requests. 3. Execution Workflow Requirement Analysis: Identified the need for a scalable way to deploy domain blocks across multiple machines after discovering a cluster of suspicious domains in Wireshark. Script Development: Authored the @echo off script to target the system’s drivers directory and map the identified domains to localhost. Redundancy Check: Included both root domains and “www” subdomains in the script to ensure comprehensive coverage. Verification \u0026 Unblocking: Developed a secondary “unblock” script to restore original host settings for testing and maintenance purposes. 4. Key Commands :: Snippet of the block-suspicious-domains.bat script @echo off set hostspath=%SystemRoot%\\System32\\drivers\\etc\\hosts echo 127.0.0.1 sparkle0.com\u003e\u003e %hostspath% echo 127.0.0.1 trasre.com\u003e\u003e %hostspath% echo Done! The domains have been blocked. pause 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the logic and domain list within the IDE before execution.\nRESOURCES_NODE_01 Caption: Results phase showing the successful system-level mapping of malicious domains to the loopback address after script execution.\n6. Professional Impact This project significantly improves System Integrity by reducing the time-to-remediate for known network threats. By moving from manual entry to automation, I ensured consistent protection across the environment and reduced human error. This demonstrates an ability to translate threat intelligence into actionable, scalable security infrastructure.\n",
   "wordCount" : "387",
@@ -333,17 +330,27 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 <div class="tag-filter-container">
-    <div class="tag-filter-list" id="tag-filter-list">
+  <div class="tag-filter-list" id="tag-filter-list">
+    
+      
+      
         
-            
-            
+          <button class="filter-tag" data-filter="Automation">Automation</button>
         
-    </div>
+          <button class="filter-tag" data-filter="Security Engineering">Security Engineering</button>
+        
+          <button class="filter-tag" data-filter="C2 Mitigation">C2 Mitigation</button>
+        
+          <button class="filter-tag" data-filter="Endpoint Security">Endpoint Security</button>
+        
+      
+    
+  </div>
 </div>
 
 <style>
 .tag-filter-container {
-    max-width: var(--uniform-width);
+    max-width: var(--uniform-width, 1200px);
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
@@ -356,10 +363,10 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 .filter-tag {
-    background: var(--surface-highest);
-    color: var(--secondary);
-    border: 1px solid var(--outline);
-    padding: 6px 14px;
+    background: var(--surface-highest, #1e1e1e);
+    color: var(--secondary, #aaa);
+    border: 1px solid var(--outline, #333);
+    padding: 6px 16px;
     border-radius: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
@@ -368,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .filter-tag:hover {
@@ -377,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 .filter-tag.active {
     background: var(--primary);
-    color: var(--on-primary);
+    color: #000;
     border-color: var(--primary);
 }
 </style>
@@ -547,11 +555,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/security-engineering/">Security Engineering</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/c2-mitigation/">C2 Mitigation</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/endpoint-security/">Endpoint Security</a></li>
     </ul>
 
     
-    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
-      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+    <div class="related-projects-section" style="margin: 50px 0 40px 0;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid var(--outline); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 22px;">hub</span>
+        Related Projects
+      </h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
+        <a href="http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/wazuh-dashboard.png" alt="Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt="Hybrid SIEM Architecture for SEO &amp; Security Intelligence" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Hybrid SIEM Architecture for SEO &amp; Security Intelligence</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt="Network Traffic Baselining and Anomaly Detection" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Network Traffic Baselining and Anomaly Detection</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="author-bio-box" style="margin: 40px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
         <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
       </div>
       <div class="bio-content">
@@ -562,8 +611,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
       </div>
     </div>
-
-    
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/">
     <span class="title">« Prev</span>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Compliance on SOPHY&#39;S CYBERLAB</title>
+    <link>http://localhost:1313/cyber-portfolio/tags/compliance/</link>
+    <description>Recent content in Compliance on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/compliance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To architect a secure, compliant SaaS environment aligned with ISO 27001 and the NIST Cybersecurity Framework.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

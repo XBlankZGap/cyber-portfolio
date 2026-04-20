@@ -5,10 +5,10 @@ weight = 100
 title = 'Web-to-System Pivot via Command Injection'
 categories = ["Security Operations (SOC) & Incident Response"]
 
+tags = ["Command Injection", "Web Security", "Privilege Escalation"]
 [cover]
 image = "images/project6_reverse_shell.png"
 
-tags = ["Command Injection", "Web Security", "Privilege Escalation"]
 +++
 
 **Objective:** To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.

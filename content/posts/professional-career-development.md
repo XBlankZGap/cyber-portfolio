@@ -7,10 +7,10 @@ case_id = "CAREER-INTEGRITY-2025"
 vulnerability_class = "Information Siloing and Static Skillsets"
 tools = ["LinkedIn", "Industry Networking", "Technical Content Sharing"]
 
+tags = ["Career Development", "Networking", "Industry Engagement", "Soft Skills"]
 [cover]
 image = "images/feature-professional-career-development.png"
 
-tags = ["Career Development", "Networking", "Industry Engagement", "Soft Skills"]
 +++
 
 **Objective:** To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.

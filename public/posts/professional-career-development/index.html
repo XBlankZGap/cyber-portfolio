@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Professional Career Development and Industry Engagement | SOPHY&#39;S CYBERLAB</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Career Development, Networking, Industry Engagement, Soft Skills">
 <meta name="description" content="Objective: To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -137,69 +137,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Professional Career Development and Industry Engagement">
@@ -209,6 +202,10 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-07-05T10:00:00+01:00">
     <meta property="article:modified_time" content="2025-07-05T10:00:00+01:00">
+    <meta property="article:tag" content="Career Development">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Industry Engagement">
+    <meta property="article:tag" content="Soft Skills">
     <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/feature-professional-career-development.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/feature-professional-career-development.png">
@@ -244,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "name": "Professional Career Development and Industry Engagement",
   "description": "Objective: To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.\n",
   "keywords": [
-    
+    "Career Development", "Networking", "Industry Engagement", "Soft Skills"
   ],
   "articleBody": "Objective: To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.\n1. The Vulnerability: Information Siloing and Static Skillsets In the rapidly evolving field of cybersecurity, a lack of professional networking and continuous learning represents a significant career vulnerability. Relying solely on static training environments can lead to a “knowledge gap” where a practitioner is unaware of real-world attack trends, new regulatory requirements, or the latest defensive methodologies being discussed by industry thought leaders.\n1. Technical Proficiency: The Foundation A successful career in cybersecurity begins with a deep understanding of core computing principles. My roadmap prioritizes a “Security-First” mindset, where technical skills in networking, operating systems, and software development are viewed through a lens of defense and vulnerability research.\n2. Professional Strategy: The 4-Phase Roadmap I have established a tiered approach to career progression that ensures a balance between academic knowledge and practical, real-world application.\nPhase Focus Key Milestones Phase 1: Learning Core Fundamentals Python, C++, OS Architecture, Web Security. Phase 2: Certification Validating Skills CompTIA Security+, CySA+, GSSP. Phase 3: Experience Practical Application SOC Analysis, Incident Response, Pen Testing. Phase 4: Leadership Strategy \u0026 Management Security Architecture, CISO preparation, Cyber Strategy. 3. Execution Workflow: Continuous Evolution Skill Auditing: Regularly assessing my technical repertoire against emerging threat landscapes (e.g., AI-driven attacks, Cloud-Native security). Knowledge Acquisition: Utilizing platforms like TryHackMe and HackTheBox to maintain a sharp “Hacker’s Mindset” through competitive laboratory environments. Professional Contribution: Engaging with the broader security community via open-source projects, CTF participation, and technical documentation. Ethical Alignment: Adhering to the strict ethical codes of professional organizations like (ISC)² and GIAC. 4. Professional Reflection “Cybersecurity is not a destination, but a continuous journey of adaptation and defense.”\n5. Evidence of Professional Maturity RESOURCES_NODE_01 Caption: My comprehensive Cybersecurity Career Roadmap, outlining the path from foundational learning to strategic leadership.\n6. Professional Impact This project demonstrates a long-term commitment to Professional Excellence. By architecting a clear roadmap, I ensure that my technical growth remains aligned with the needs of the modern enterprise. My focus on ethical leadership and continuous learning prepares me to not only defend digital assets but to also lead the next generation of security professionals in building a more secure and resilient digital future.\n",
   "wordCount" : "378",
@@ -333,17 +330,27 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 <div class="tag-filter-container">
-    <div class="tag-filter-list" id="tag-filter-list">
+  <div class="tag-filter-list" id="tag-filter-list">
+    
+      
+      
         
-            
-            
+          <button class="filter-tag" data-filter="Career Development">Career Development</button>
         
-    </div>
+          <button class="filter-tag" data-filter="Networking">Networking</button>
+        
+          <button class="filter-tag" data-filter="Industry Engagement">Industry Engagement</button>
+        
+          <button class="filter-tag" data-filter="Soft Skills">Soft Skills</button>
+        
+      
+    
+  </div>
 </div>
 
 <style>
 .tag-filter-container {
-    max-width: var(--uniform-width);
+    max-width: var(--uniform-width, 1200px);
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
@@ -356,10 +363,10 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 .filter-tag {
-    background: var(--surface-highest);
-    color: var(--secondary);
-    border: 1px solid var(--outline);
-    padding: 6px 14px;
+    background: var(--surface-highest, #1e1e1e);
+    color: var(--secondary, #aaa);
+    border: 1px solid var(--outline, #333);
+    padding: 6px 16px;
     border-radius: 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
@@ -368,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .filter-tag:hover {
@@ -377,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 .filter-tag.active {
     background: var(--primary);
-    color: var(--on-primary);
+    color: #000;
     border-color: var(--primary);
 }
 </style>
@@ -537,11 +545,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/career-development/">Career Development</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/networking/">Networking</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/industry-engagement/">Industry Engagement</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/soft-skills/">Soft Skills</a></li>
     </ul>
 
     
-    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
-      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+    <div class="related-projects-section" style="margin: 50px 0 40px 0;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid var(--outline); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 22px;">hub</span>
+        Related Projects
+      </h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
+        <a href="http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/regulatory-compliance-nist-iso-discovery.png" alt="Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/project6_reverse_shell.png" alt="Web-to-System Pivot via Command Injection" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Web-to-System Pivot via Command Injection</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+        <a href="http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <div style="height: 120px; overflow: hidden; background: #111;">
+            <img src="/cyber-portfolio/images/project4_exfiltration.png" alt="Post-Exploitation &amp; Sensitive Data Exfiltration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
+          </div>
+          <div style="padding: 14px;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--on-surface); line-height: 1.4;">Post-Exploitation &amp; Sensitive Data Exfiltration</h4>
+            <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="author-bio-box" style="margin: 40px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
         <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
       </div>
       <div class="bio-content">
@@ -552,8 +601,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
       </div>
     </div>
-
-    
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/">
     <span class="title">« Prev</span>

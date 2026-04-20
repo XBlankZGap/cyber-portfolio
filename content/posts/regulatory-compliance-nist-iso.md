@@ -8,10 +8,10 @@ case_id = "COMPLIANCE-ARCH-2026"
 vulnerability_class = "Regulatory & Infrastructure Gaps"
 tools = ["ISO 27001", "NIST CSF", "RBAC", "VPC", "WAF"]
 
+tags = ["Compliance", "NIST", "ISO 27001", "Secure Architecture"]
 [cover]
 image = "images/regulatory-compliance-nist-iso-discovery.png"
 
-tags = ["Compliance", "NIST", "ISO 27001", "Secure Architecture"]
 +++
 
 **Objective:** To architect a secure, compliant SaaS environment aligned with ISO 27001 and the NIST Cybersecurity Framework.

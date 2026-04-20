@@ -8,10 +8,10 @@ case_id = "CSRF-WEB-2025"
 vulnerability_class = "Missing Anti-Forgery Tokens (CWE-352)"
 tools = ["OWASP ZAP", "Python", "HTML/JS", "WebGoat"]
 
+tags = ["CSRF", "Session Management", "OWASP", "Auth Bypass"]
 [cover]
 image = "images/csrf-forged-reviews-discovery.jpg"
 
-tags = ["CSRF", "Session Management", "OWASP", "Auth Bypass"]
 +++
 
 **Objective:** To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.

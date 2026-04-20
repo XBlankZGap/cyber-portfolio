@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Privilege Escalation on SOPHY&#39;S CYBERLAB</title>
+    <link>http://localhost:1313/cyber-portfolio/tags/privilege-escalation/</link>
+    <description>Recent content in Privilege Escalation on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Mar 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/privilege-escalation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web-to-System Pivot via Command Injection</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
+      <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mr. Robot — Web Exploitation &amp; System Compromise</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</link>
+      <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
+      <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blue: EternalBlue Exploitation &amp; Privilege Escalation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit the MS17-010 (EternalBlue) vulnerability on a legacy Windows target to achieve SYSTEM-level access and credential exfiltration.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

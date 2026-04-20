@@ -8,10 +8,10 @@ case_id = "SECURE-SESSION-2026"
 vulnerability_class = "Exposure of Unprotected Session Tokens"
 tools = ["HSTS", "HTTPS", "HttpOnly", "SameSite", "WAF"]
 
+tags = ["Session Security", "Defense-in-Depth", "Cookie Flags", "Web Architecture"]
 [cover]
 image = "images/feature-secure-session-architecture.png"
 
-tags = ["Session Security", "Defense-in-Depth", "Cookie Flags", "Web Architecture"]
 +++
 
 **Objective:** To implement a "Secure-by-Design" framework for web applications to neutralize cookie-based attack vectors.

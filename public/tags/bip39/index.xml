@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BIP39 on SOPHY&#39;S CYBERLAB</title>
+    <link>http://localhost:1313/cyber-portfolio/tags/bip39/</link>
+    <description>Recent content in BIP39 on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/bip39/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

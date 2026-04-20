@@ -8,10 +8,10 @@ case_id = "GATEWAY-NET-2025"
 vulnerability_class = "Device-Level Mitigation Gaps"
 tools = ["MTN 4G Router", "URL Filtering", "IPv4", "Firewall"]
 
+tags = ["Network Security", "Firewall", "Gateway", "IoT Security"]
 [cover]
 image = "images/router-level-filtering-discovery.jpeg"
 
-tags = ["Network Security", "Firewall", "Gateway", "IoT Security"]
 +++
 
 **Objective:** To implement non-device-specific security controls by enforcing domain blocking at the network gateway.

@@ -1654,8 +1654,8 @@ button.btn-terminal-submit,
     }
     
     .list:not(.search-page) .post-entry {
-        margin-bottom: 0 !important;
-        height: 100%;
+        margin-bottom: 32px !important;
+        height: auto;
         display: flex;
         flex-direction: column;
     }

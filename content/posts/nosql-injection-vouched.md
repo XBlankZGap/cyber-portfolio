@@ -8,10 +8,10 @@ case_id = "NOSQL-INJECT-2026"
 vulnerability_class = "Improper Neutralization of NoSQL Commands (CWE-943)"
 tools = ["Postman", "MongoDB", "Express.js", "Bcrypt"]
 
+tags = ["NoSQL Injection", "MongoDB", "API Security", "Vouched"]
 [cover]
 image = "images/nosql-vulnerability.png"
 
-tags = ["NoSQL Injection", "MongoDB", "API Security", "Vouched"]
 +++
 
 **Objective:** To identify and exploit NoSQL injection vulnerabilities within the "Vouched" application to bypass authentication and extract sensitive user data.

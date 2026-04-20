@@ -10,7 +10,7 @@
 <meta name="description" content="Offensive Security &amp; Digital Forensics Portfolio">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="http://localhost:1313/cyber-portfolio/categories/security-operations-soc--incident-response/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.8a669eb7b94e97f083bdeec683c36a9a69cd92337cda3fd420d96064b00b5fd5.css" integrity="sha256-imaet7lOl/CDve7Gg8NqmmnNkjN82j/UINlgZLALX9U=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
@@ -138,69 +138,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
      
     const tagButtons = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
-    let activeTags = new Set();
+    let activeTag = 'all';
+
+    function applyFilter() {
+        const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+
+        projectCards.forEach(card => {
+            if (activeTag === 'all') {
+                card.style.display = '';
+            } else if (activeTag.startsWith('cat:')) {
+                const targetCat = activeTag.replace('cat:', '').toLowerCase();
+                const cardCatsAttr = card.getAttribute('data-categories') || '';
+                const cardCats = cardCatsAttr.split(',').map(c => c.trim().toLowerCase());
+                if (cardCats.includes(targetCat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            } else {
+                const cardTagsAttr = card.getAttribute('data-tags') || '';
+                const cardTags = cardTagsAttr.split(',').map(t => t.trim().toLowerCase());
+                if (cardTags.includes(activeTag.toLowerCase())) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+
+        
+        const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
+        categoryWrappers.forEach(wrapper => {
+            const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
+            let hasVisible = false;
+            cardsInWrapper.forEach(card => {
+                if (card.style.display !== 'none') hasVisible = true;
+            });
+            wrapper.style.display = hasVisible ? '' : 'none';
+        });
+    }
 
     tagButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            const tag = this.getAttribute('data-filter');
             
+            tagButtons.forEach(b => b.classList.remove('active'));
             
-            if (activeTags.has(tag)) {
-                activeTags.delete(tag);
-                this.classList.remove('active');
-            } else {
-                activeTags.add(tag);
-                this.classList.add('active');
-            }
-
-            
-            if (activeTags.size === 0) {
-                
-                projectCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-            } else {
-                projectCards.forEach(card => {
-                    
-                    const cardTagsAttr = card.getAttribute('data-tags');
-                    if (!cardTagsAttr) {
-                        card.style.display = 'none';
-                        return;
-                    }
-                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
-                    
-                    
-                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
-                    
-                    if (hasTag) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            
-            const categoryWrappers = document.querySelectorAll('.category-section-wrapper');
-            categoryWrappers.forEach(wrapper => {
-                const cardsInWrapper = wrapper.querySelectorAll('.post-entry');
-                let hasVisibleCard = false;
-                cardsInWrapper.forEach(card => {
-                    if (card.style.display !== 'none') {
-                        hasVisibleCard = true;
-                    }
-                });
-                if (hasVisibleCard) {
-                    wrapper.style.display = 'block';
-                } else {
-                    wrapper.style.display = 'none';
-                }
-            });
+            this.classList.add('active');
+            activeTag = this.getAttribute('data-filter');
+            applyFilter();
         });
     });
+
+    
+    applyFilter();
 });
 </script>
+
 <meta property="og:url" content="http://localhost:1313/cyber-portfolio/categories/security-operations-soc--incident-response/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Security Operations (SOC) & Incident Response">
@@ -268,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
   <h1 style="font-size: 64px; text-transform: uppercase;">Security Operations (SOC) &amp; Incident Response</h1>
 </header>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Compliance,NIST,ISO 27001,Secure Architecture" data-categories="Security Operations (SOC) &amp; Incident Response"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -283,20 +276,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Compliance</span>
             <span class="meta-item">April 20, 2026</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/">Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">ISO 27001</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">NIST CSF</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">RBAC</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+2</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To architect a secure, compliant SaaS environment aligned with ISO 27001 and …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Compliance</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">NIST</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">ISO 27001</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Secure Architecture</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Command Injection,Web Security,Privilege Escalation" data-categories="Security Operations (SOC) &amp; Incident Response"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -311,16 +308,23 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Command Injection</span>
             <span class="meta-item">September 30, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/">Web-to-System Pivot via Command Injection</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To exploit a Command Injection vulnerability in a web application to bypass …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Command Injection</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Web Security</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Privilege Escalation</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Post-Exploitation,Lateral Movement,Linux,Exfiltration" data-categories="Security Operations (SOC) &amp; Incident Response"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -335,16 +339,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Post-Exploitation</span>
             <span class="meta-item">September 20, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/">Post-Exploitation &amp; Sensitive Data Exfiltration</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To leverage administrative access to extract the system’s “Shadow” file, …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Post-Exploitation</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Lateral Movement</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Linux</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Exfiltration</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Career Development,Networking,Industry Engagement,Soft Skills" data-categories="Security Operations (SOC) &amp; Incident Response"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -359,19 +371,24 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Career Development</span>
             <span class="meta-item">July 5, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/">Professional Career Development and Industry Engagement</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">LinkedIn</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Industry Networking</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Technical Content Sharing</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To establish a professional digital footprint and engage with the global …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Career Development</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Networking</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Industry Engagement</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Soft Skills</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/professional-career-development/" class="view-case-study">READ MORE</a></div>
         </article>
-        <article class="post-entry" data-tags=""> 
+        <article class="post-entry" data-tags="Lab Setup,Troubleshooting,Docker,Security Engineering" data-categories="Security Operations (SOC) &amp; Incident Response"> 
 <div class="terminal-window terminal-glow mb-8">
     <div class="terminal-header">
         <div class="dot red"></div>
@@ -386,16 +403,20 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 </div>
           <div class="post-meta-under-image">
+            <span class="intel-badge-small">Lab Setup</span>
             <span class="meta-item">July 2, 2025</span>
           </div>
           <header class="entry-header">
             <h2 class="entry-hint-parent"><a href="http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/">Engineered Security Lab Deployment &amp; Troubleshooting</a></h2>
           </header>
-          <div class="entry-tools" style="padding: 0 20px 20px 20px; flex-grow: 1; font-size: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;">
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Docker</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">Java Runtime</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">OWASP ZAP</span>
-            <span style="background: var(--surface-highest); color: var(--on-surface-variant); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--outline-variant); font-family: 'JetBrains Mono', monospace;">+1</span>
+          <div class="entry-summary" style="padding: 0 20px 10px 20px; font-size: 13px; opacity: 0.75; line-height: 1.5; flex-grow: 1;">
+            Objective: To design, configure, and maintain a virtualized security testing environment …
+          </div>
+          <div class="entry-tools" style="padding: 0 20px 15px 20px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Lab Setup</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Troubleshooting</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Docker</span>
+            <span style="background: rgba(0,255,140,0.08); color: var(--primary); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,255,140,0.25); font-family: 'JetBrains Mono', monospace; font-size: 10px;">Security Engineering</span>
           </div>
           <div class="entry-footer-design"><a href="http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/" class="view-case-study">READ MORE</a></div>
         </article>

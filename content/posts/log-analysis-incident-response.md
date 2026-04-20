@@ -8,10 +8,10 @@ case_id = "LOG-ANALYZE-2026"
 vulnerability_class = "Unauthorized Access Attempt & Reconnaissance"
 tools = ["Wazuh Cloud", "Wireshark", "PCAP Analysis", "Linux Logs"]
 
+tags = ["Blue Teaming", "Incident Response", "Log Analysis", "Wazuh"]
 [cover]
 image = "images/wazuh-dashboard.png"
 
-tags = ["Blue Teaming", "Incident Response", "Log Analysis", "Wazuh"]
 +++
 
 **Objective:** To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.

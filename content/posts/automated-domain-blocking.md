@@ -8,10 +8,10 @@ case_id = "AUTOMATION-NET-2025"
 vulnerability_class = "Manual Mitigation Inefficiency"
 tools = ["Batch Scripting", "VS Code", "Windows Hosts File"]
 
+tags = ["Automation", "Security Engineering", "C2 Mitigation", "Endpoint Security"]
 [cover]
 image = "images/automated-domain-blocking-discovery.jpeg"
 
-tags = ["Automation", "Security Engineering", "C2 Mitigation", "Endpoint Security"]
 +++
 
 **Objective:** To develop a reusable and scalable automation tool for neutralizing network threats at the system level.

@@ -8,10 +8,10 @@ case_id = "SIEM-SEO-2026"
 vulnerability_class = "SEO-Security Blind Spots"
 tools = ["Splunk", "Microsoft Sentinel", "SOAR", "AI Detection"]
 
+tags = ["SIEM", "SEO Security", "Threat Intelligence", "Automation"]
 [cover]
 image = "images/feature-hybrid-siem-architecture.png"
 
-tags = ["SIEM", "SEO Security", "Threat Intelligence", "Automation"]
 +++
 
 **Objective:** To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.

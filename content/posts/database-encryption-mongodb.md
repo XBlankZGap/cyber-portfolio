@@ -8,10 +8,10 @@ case_id = "DB-ENCRYPT-2026"
 vulnerability_class = "Plaintext Data Exposure in NoSQL Databases"
 tools = ["MongoDB", "AES-256", "Field-Level Encryption", "Key Management"]
 
+tags = ["Database Security", "Encryption", "MongoDB", "Data Privacy"]
 [cover]
 image = "images/database-encryption-mongodb-discovery.png"
 
-tags = ["Database Security", "Encryption", "MongoDB", "Data Privacy"]
 +++
 
 **Objective:** To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.

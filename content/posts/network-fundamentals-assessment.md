@@ -8,10 +8,10 @@ case_id = "THREAT-ASSESS-2025"
 vulnerability_class = "Diverse Attack Surface"
 tools = ["Firewalls", "VPNs", "Encryption", "SIEM"]
 
+tags = ["Network Security", "Risk Management", "CIA Triad", "Defense-in-Depth"]
 [cover]
 image = "images/network-fundamentals-assessment-discovery.jpeg"
 
-tags = ["Network Security", "Risk Management", "CIA Triad", "Defense-in-Depth"]
 +++
 
 **Objective:** To conduct a comprehensive study of network threat vectors and security controls to establish a foundational defense strategy for organizational environments.

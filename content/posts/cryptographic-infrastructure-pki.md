@@ -8,10 +8,10 @@ case_id = "PKI-SECURE-2026"
 vulnerability_class = "Data Exposure in Transit"
 tools = ["OpenSSL", "AES", "RSA", "TLS", "VPN"]
 
+tags = ["Cryptography", "PKI", "Encryption", "Identity Verification"]
 [cover]
 image = "images/cryptographic-infrastructure-pki-discovery.png"
 
-tags = ["Cryptography", "PKI", "Encryption", "Identity Verification"]
 +++
 
 **Objective:** To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.

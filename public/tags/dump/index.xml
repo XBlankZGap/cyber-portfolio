@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dump on SOPHY&#39;S CYBERLAB</title>
+    <link>http://localhost:1313/cyber-portfolio/tags/dump/</link>
+    <description>Recent content in Dump on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Oct 2025 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/dump/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Breach &amp; Administrative Data Exfiltration</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</link>
+      <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

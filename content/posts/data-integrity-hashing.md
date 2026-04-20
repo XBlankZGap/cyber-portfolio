@@ -8,10 +8,10 @@ case_id = "HASHING-INTEGRITY-2026"
 vulnerability_class = "Data Tampering & Plaintext Credentials"
 tools = ["SHA-256", "MD5", "sha256sum", "Integrity Check"]
 
+tags = ["Hashing", "Data Integrity", "SHA-256", "Password Security"]
 [cover]
 image = "images/data-integrity-hashing-discovery.png"
 
-tags = ["Hashing", "Data Integrity", "SHA-256", "Password Security"]
 +++
 
 **Objective:** To utilize one-way hashing algorithms to verify data authenticity and secure credential storage.

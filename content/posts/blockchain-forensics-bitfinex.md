@@ -8,10 +8,10 @@ case_id = "BLOCKCHAIN-FORENSICS-2026"
 vulnerability_class = "Insecure Credential Storage (CWE-312)"
 tools = ["Python", "Blockchain Explorer", "Forensic Investigation"]
 
+tags = ["Blockchain", "Digital Forensics", "Incident Response", "Crypto Security"]
 [cover]
 image = "images/feature-blockchain-forensics-bitfinex.png"
 
-tags = ["Blockchain", "Digital Forensics", "Incident Response", "Crypto Security"]
 +++
 
 **Objective:** To analyze high-scale cryptocurrency heists and identify the critical security failures in private key management that lead to multi-billion dollar losses.

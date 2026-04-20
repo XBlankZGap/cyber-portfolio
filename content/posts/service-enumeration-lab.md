@@ -5,10 +5,10 @@ weight = 200
 title = 'Service Enumeration & Vulnerability Research'
 categories = ["Penetration Testing & Vulnerability Assessment"]
 
+tags = ["Nmap", "Reconnaissance", "Enumeration", "Services"]
 [cover]
 image = "images/feature-3-shell-privilege-escalation.png"
 
-tags = ["Nmap", "Reconnaissance", "Enumeration", "Services"]
 +++
 
 **Objective:** To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.

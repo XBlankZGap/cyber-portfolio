@@ -8,10 +8,10 @@ case_id = "TRAFFIC-MITIGATION-2025"
 vulnerability_class = "Malicious External Communication"
 tools = ["Wireshark", "Windows Hosts File", "Batch Scripting", "Router Filtering"]
 
+tags = ["Wireshark", "DNS", "C2", "Defense-in-Depth"]
 [cover]
 image = "images/feature-network-traffic-analysis.jpg"
 
-tags = ["Wireshark", "DNS", "C2", "Defense-in-Depth"]
 +++
 
 **Objective:** To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.

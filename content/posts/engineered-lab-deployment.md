@@ -7,10 +7,10 @@ case_id = "LAB-DEPLOY-2025"
 vulnerability_class = "Environment Misconfiguration"
 tools = ["Docker", "Java Runtime", "OWASP ZAP", "Windows 11"]
 
+tags = ["Lab Setup", "Troubleshooting", "Docker", "Security Engineering"]
 [cover]
 image = "images/engineered-lab-deployment-discovery.jpeg"
 
-tags = ["Lab Setup", "Troubleshooting", "Docker", "Security Engineering"]
 +++
 
 **Objective:** To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.

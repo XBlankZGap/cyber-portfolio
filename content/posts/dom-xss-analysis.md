@@ -8,10 +8,10 @@ case_id = "XSS-DOM-2025"
 vulnerability_class = "Unsafe DOM Manipulation (CWE-79)"
 tools = ["JavaScript", "jQuery", "OWASP ZAP", "WebGoat"]
 
+tags = ["XSS", "JavaScript", "Security Engineering", "Remediation"]
 [cover]
 image = "images/feature-dom-xss-analysis.jpg"
 
-tags = ["XSS", "JavaScript", "Security Engineering", "Remediation"]
 +++
 
 **Objective:** To identify and exploit an unsafe JavaScript "sink" to execute arbitrary code in the victim's browser context.
