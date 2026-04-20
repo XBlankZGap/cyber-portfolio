@@ -2,262 +2,248 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/</link>
     <description>Recent content on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Regulatory Compliance &amp; Secure System Architecture (NIST/ISO 27001)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/regulatory-compliance-nist-iso/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/regulatory-compliance-nist-iso/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/regulatory-compliance-nist-iso/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To architect a secure, compliant SaaS environment aligned with ISO 27001 and the NIST Cybersecurity Framework.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Web-to-System Pivot via Command Injection</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
       <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post-Exploitation &amp; Sensitive Data Exfiltration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/post-exploitation-data-exfiltration/</link>
       <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/post-exploitation-data-exfiltration/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/post-exploitation-data-exfiltration/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage administrative access to extract the system&amp;rsquo;s &amp;ldquo;Shadow&amp;rdquo; file, demonstrating the ability to harvest encrypted credentials for offline analysis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fowsniff — Credential Harvesting &amp; Password Cracking</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mr. Robot — Web Exploitation &amp; System Compromise</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blue: EternalBlue Exploitation &amp; Privilege Escalation</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit the MS17-010 (EternalBlue) vulnerability on a legacy Windows target to achieve SYSTEM-level access and credential exfiltration.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Exploiting Infrastructure Vulnerabilities (Backdoor Access)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To execute a remote command execution (RCE) exploit against a backdoored FTP service to gain unauthorized administrative access to the target host.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Service Enumeration &amp; Vulnerability Research</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/</link>
       <pubDate>Tue, 05 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To perform deep-packet inspection and service fingerprinting on a target host to identify exploitable entry points within the infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hybrid SIEM Architecture for SEO &amp; Security Intelligence</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Traffic Baselining and Anomaly Detection</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To establish a behavioral baseline for legitimate network traffic and use protocol analysis to isolate potential security threats.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Centralized Network Security via Router-Level Filtering</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement non-device-specific security controls by enforcing domain blocking at the network gateway.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automated Domain Blocking via Batch Scripting</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To develop a reusable and scalable automation tool for neutralizing network threats at the system level.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Traffic Analysis &amp; Automated Threat Mitigation</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</link>
       <pubDate>Tue, 15 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/network-traffic-analysis-mitigation/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-traffic-analysis-mitigation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify suspicious network traffic using protocol analysis and implement multi-layered blocking mechanisms to secure a local environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network Security Fundamentals and Threat Assessment</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</link>
       <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To conduct a comprehensive study of network threat vectors and security controls to establish a foundational defense strategy for organizational environments.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Database Encryption &amp; Sensitive Data Protection (MongoDB)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NoSQL Injection &amp; Database Poisoning (Vouched Application)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/</link>
       <pubDate>Sat, 18 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit NoSQL injection vulnerabilities within the &amp;ldquo;Vouched&amp;rdquo; application to bypass authentication and extract sensitive user data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Secure Session Architecture &amp; Defensive Flag Implementation</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement a &amp;ldquo;Secure-by-Design&amp;rdquo; framework for web applications to neutralize cookie-based attack vectors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session Hijacking via Automated Cookie Exfiltration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vulnerability Analysis and Remediation Planning</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To systematically document discovered web vulnerabilities and provide actionable, code-level remediation strategies for development teams.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automated Web Application Vulnerability Discovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</link>
       <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/automated-web-vulnerability-discovery/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize automated scanning tools to perform comprehensive reconnaissance and identify high-risk web vulnerabilities within an authenticated session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Database Breach &amp; Administrative Data Exfiltration</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</link>
       <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/database-breach-vulnerability/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cross-Site Request Forgery (CSRF) via Forged Reviews</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</link>
       <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/csrf-forged-reviews/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DOM-Based Cross-Site Scripting (XSS) Analysis</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</link>
       <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit an unsafe JavaScript &amp;ldquo;sink&amp;rdquo; to execute arbitrary code in the victim&amp;rsquo;s browser context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Exploiting &amp; Mitigating String-Based SQL Injection</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</link>
       <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/sql-injection-exploitation/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate how unsanitized user input allows attackers to bypass authentication and exfiltrate sensitive database records.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To analyze high-scale cryptocurrency heists and identify the critical security failures in private key management that lead to multi-billion dollar losses.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mandatory Access Control (MAC) using SELinux</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</link>
       <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/selinux-mandatory-access-control/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To enforce strict security policies at the kernel level, preventing unauthorized resource access by compromised services.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data Integrity Verification via Cryptographic Hashing</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</link>
       <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/data-integrity-hashing/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize one-way hashing algorithms to verify data authenticity and secure credential storage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cryptographic Infrastructure &amp; Secure Communication</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
       <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Offline Cryptanalysis &amp; Password Recovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
       <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Professional Career Development and Industry Engagement</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</link>
-      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/professional-career-development/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To establish a professional digital footprint and engage with the global cybersecurity community to stay informed on emerging threats and industry standards.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Engineered Security Lab Deployment &amp; Troubleshooting</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</link>
-      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title></title>
-      <link>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/defensive-lab-environment/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/defensive-lab-environment/</guid>
       <description>&lt;p&gt;date = &amp;lsquo;2025-07-10T10:00:00+01:00&amp;rsquo;
 draft = false
 weight = 300
@@ -274,16 +260,16 @@ image = &amp;ldquo;images/feature-1-vbox-machine.png&amp;rdquo;&lt;/p&gt;
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/cyber-portfolio/about/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/about/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/about/</guid>
       <description>Cybersecurity enthusiast dedicated to uncovering, mitigating, and monitoring infrastructure and web application vulnerabilities.</description>
     </item>
     <item>
       <title>Contact Me</title>
-      <link>http://localhost:1313/cyber-portfolio/contact/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/contact/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/contact/</guid>
       <description>&lt;h3 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h3&gt;
 &lt;p&gt;If you have a professional project in mind, a specific technical inquiry, or an employment opportunity, please use the form below to get in touch.&lt;/p&gt;
 &lt;form action=&#34;https://formspree.io/f/mbdpdakd&#34; method=&#34;POST&#34; class=&#34;contact-terminal-form&#34;&gt;

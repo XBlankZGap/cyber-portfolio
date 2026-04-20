@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IoT Security on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/iot-security/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/iot-security/</link>
     <description>Recent content in IoT Security on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Nov 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/iot-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/iot-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Centralized Network Security via Router-Level Filtering</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/router-level-filtering/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement non-device-specific security controls by enforcing domain blocking at the network gateway.&lt;/p&gt;</description>
     </item>
   </channel>

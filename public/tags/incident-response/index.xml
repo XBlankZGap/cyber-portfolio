@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Incident Response on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/incident-response/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/incident-response/</link>
     <description>Recent content in Incident Response on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Network Traffic Analysis &amp; Incident Response (Wazuh &amp; PCAP)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To analyze high-scale cryptocurrency heists and identify the critical security failures in private key management that lead to multi-billion dollar losses.&lt;/p&gt;</description>
     </item>
   </channel>

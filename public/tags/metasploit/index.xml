@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Metasploit on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/metasploit/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/metasploit/</link>
     <description>Recent content in Metasploit on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Sep 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/metasploit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/metasploit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploiting Infrastructure Vulnerabilities (Backdoor Access)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/infrastructure-exploitation-metasploit/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To execute a remote command execution (RCE) exploit against a backdoored FTP service to gain unauthorized administrative access to the target host.&lt;/p&gt;</description>
     </item>
   </channel>

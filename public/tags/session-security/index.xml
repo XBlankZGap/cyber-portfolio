@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Session Security on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/session-security/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/session-security/</link>
     <description>Recent content in Session Security on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Apr 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/session-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/session-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Secure Session Architecture &amp; Defensive Flag Implementation</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement a &amp;ldquo;Secure-by-Design&amp;rdquo; framework for web applications to neutralize cookie-based attack vectors.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>John the Ripper on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/john-the-ripper/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/john-the-ripper/</link>
     <description>Recent content in John the Ripper on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Apr 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/john-the-ripper/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/john-the-ripper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fowsniff — Credential Harvesting &amp; Password Cracking</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exfiltrate and crack leaked credentials from unencrypted data sources to perform authenticated service attacks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Offline Cryptanalysis &amp; Password Recovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
       <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cryptography on SOPHY&#39;S CYBERLAB</title>
-    <link>http://localhost:1313/cyber-portfolio/tags/cryptography/</link>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cryptography/</link>
     <description>Recent content in Cryptography on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/cyber-portfolio/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cryptographic Infrastructure &amp; Secure Communication</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
       <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Offline Cryptanalysis &amp; Password Recovery</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
       <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
     </item>
   </channel>
