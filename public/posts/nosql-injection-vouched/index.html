@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Hybrid SIEM Architecture for SEO &amp; Security Intelligence | SOPHY&#39;S CYBERLAB</title>
+<title>NoSQL Injection &amp; Database Poisoning (Vouched Application) | SOPHY&#39;S CYBERLAB</title>
 <meta name="keywords" content="">
-<meta name="description" content="Objective: To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.">
+<meta name="description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the &ldquo;Vouched&rdquo; application to bypass authentication and extract sensitive user data.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.5db9130a1259ea72830b0840df92053e06b0593c4afbefc50d36b3bcebea9e50.css" integrity="sha256-XbkTChJZ6nKDCwhA35IFPgawWTxK&#43;&#43;/FDTazvOvqnlA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
 <noscript>
     <style>
         #theme-toggle,
@@ -233,10 +233,10 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="editorial-top-section">
       <div class="editorial-title-container">
         <div class="intel-badge">
-          <span class="label-metadata" style="color: var(--primary);">CASE_ID: SIEM-SEO-2026</span>
+          <span class="label-metadata" style="color: var(--primary);">CASE_ID: NOSQL-INJECT-2026</span>
         </div>
         <h1 class="post-title-editorial">
-          Hybrid SIEM Architecture for SEO &amp; Security Intelligence
+          NoSQL Injection &amp; Database Poisoning (Vouched Application)
         </h1>
       </div>
 
@@ -244,15 +244,15 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="intel-box">
           <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
           <div class="tools-grid">
-            <span class="tool-tag">Splunk</span>
-            <span class="tool-tag">Microsoft Sentinel</span>
-            <span class="tool-tag">SOAR</span>
-            <span class="tool-tag">AI Detection</span>
+            <span class="tool-tag">Postman</span>
+            <span class="tool-tag">MongoDB</span>
+            <span class="tool-tag">Express.js</span>
+            <span class="tool-tag">Bcrypt</span>
           </div>
         </div>
         <div class="intel-box">
           <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Vulnerability_Class</h3>
-          <p class="intel-text">SEO-Security Blind Spots</p>
+          <p class="intel-text">Improper Neutralization of NoSQL Commands (CWE-943)</p>
         </div>
       </div>
     </div>
@@ -267,18 +267,18 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
     </div>
 </div>
     
 
   <div class="post-content-container">
 
-    <div class="post-content"><p><strong>Objective:</strong> To design and implement a unified SIEM workflow that integrates Splunk and Microsoft Sentinel to detect SEO-specific threats and automated bot attacks.</p>
-<h2 id="1-the-vulnerability-seo-security-blind-spots">1. The Vulnerability: SEO-Security Blind Spots<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-seo-security-blind-spots">#</a></h2>
-<p>Traditional security monitoring often ignores SEO-specific signals, leaving platforms vulnerable to Negative SEO attacks, ranking manipulation, and aggressive scrapers that bypass standard WAF rules. This represents a critical risk to Availability and System Integrity, where malicious crawl patterns can de-index legitimate pages or exhaust server resources.</p>
-<h2 id="2-technical-execution-unified-log-orchestration">2. Technical Execution: Unified Log Orchestration<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-unified-log-orchestration">#</a></h2>
-<p>I designed a multi-layered ingestion architecture that normalizes disparate data sources—including web server logs (Nginx/Apache), CDN logs, and application events—into a unified &ldquo;SEO + Security Hybrid Schema.&rdquo; This allows for the simultaneous correlation of security events (e.g., brute force) with SEO impact (e.g., crawl anomalies).</p>
+    <div class="post-content"><p><strong>Objective:</strong> To identify and exploit NoSQL injection vulnerabilities within the &ldquo;Vouched&rdquo; application to bypass authentication and extract sensitive user data.</p>
+<h2 id="1-the-vulnerability-nosql-command-neutralization-cwe-943">1. The Vulnerability: NoSQL Command Neutralization (CWE-943)<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-nosql-command-neutralization-cwe-943">#</a></h2>
+<p>NoSQL injection occurs when an application fails to properly sanitize user input before using it in a database query. In document-oriented databases like MongoDB, this allows an attacker to inject logical operators (e.g., <code>$gt</code>, <code>$ne</code>) to manipulate the query logic, leading to unauthorized data access or authentication bypass.</p>
+<h2 id="2-technical-execution-logic-manipulation">2. Technical Execution: Logic Manipulation<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-logic-manipulation">#</a></h2>
+<p>Using Postman, I crafted malicious JSON payloads targeting the authentication and search endpoints of the Vouched application. By replacing standard string inputs with MongoDB operator objects, I successfully manipulated the database logic to return records that should have been restricted, effectively bypassing Bcrypt-hashed password checks.</p>
 <table>
   <thead>
       <tr>
@@ -289,45 +289,43 @@ document.addEventListener("DOMContentLoaded", function() {
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"><strong>SIEM Integration</strong></td>
-          <td style="text-align: left">Splunk / Microsoft Sentinel</td>
-          <td style="text-align: left">Centralized log ingestion and advanced correlation.</td>
+          <td style="text-align: left"><strong>Attack Vector</strong></td>
+          <td style="text-align: left">JSON Payload Injection</td>
+          <td style="text-align: left">Injecting MongoDB operators into API requests.</td>
       </tr>
       <tr>
-          <td style="text-align: left"><strong>Ingestion Layer</strong></td>
-          <td style="text-align: left">API-based Connectors</td>
-          <td style="text-align: left">Auto-configuration of SEO and security signal feeds.</td>
+          <td style="text-align: left"><strong>Target Endpoint</strong></td>
+          <td style="text-align: left"><code>/api/v1/login</code></td>
+          <td style="text-align: left">Attempting to bypass password verification.</td>
       </tr>
       <tr>
-          <td style="text-align: left"><strong>Detection Engine</strong></td>
-          <td style="text-align: left">AI-Driven Behavioral Analysis</td>
-          <td style="text-align: left">Distinguishing legitimate SEO bots from malicious scrapers.</td>
+          <td style="text-align: left"><strong>Impact</strong></td>
+          <td style="text-align: left">Authentication Bypass</td>
+          <td style="text-align: left">Gaining access to any user account without a password.</td>
       </tr>
       <tr>
-          <td style="text-align: left"><strong>Response Vector</strong></td>
-          <td style="text-align: left">SOAR / Webhook Automation</td>
-          <td style="text-align: left">&ldquo;One-click&rdquo; mitigation via Cloudflare or AWS WAF.</td>
+          <td style="text-align: left"><strong>Remediation</strong></td>
+          <td style="text-align: left">Schema Validation</td>
+          <td style="text-align: left">Implementing strict typing for all incoming data.</td>
       </tr>
   </tbody>
 </table>
 <h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
 <ol>
-<li><strong>Normalization &amp; Enrichment:</strong> Standardized incoming logs by unifying timestamps, geolocating IPs, and tagging traffic as <code>SEO_BOT</code>, <code>MALICIOUS_BOT</code>, or <code>USER_BEHAVIOR</code>.</li>
-<li><strong>Detection Logic:</strong> Established predefined rules for sudden crawl spikes and unauthorized file access, enhanced by AI to detect ranking manipulation attempts.</li>
-<li><strong>Alerting &amp; Severity:</strong> Configured a tiered alerting system (Critical to Low) delivered via Revolus UI, Slack, and native SIEM dashboards.</li>
-<li><strong>Automated Mitigation:</strong> Implemented a SOAR-like response layer to automatically block IPs or rate-limit suspicious traffic based on real-time threat scores.</li>
+<li><strong>Endpoint Enumeration:</strong> Used Postman to identify API endpoints that accept JSON input for database queries.</li>
+<li><strong>Operator Testing:</strong> Injected basic logical operators (e.g., <code>{&quot;$ne&quot;: null}</code>) to test if the database would return unintended results.</li>
+<li><strong>Authentication Bypass:</strong> Crafted a login request where the password field was replaced with a &ldquo;not equal&rdquo; operator, allowing login as any user whose username was known.</li>
+<li><strong>Data Exfiltration:</strong> Leveraged the injection vulnerability on search endpoints to dump the entire user collection.</li>
 </ol>
-<h2 id="4-key-structure">4. Key Structure<a hidden class="anchor" aria-hidden="true" href="#4-key-structure">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example: Normalizing a log entry into the SEO+Security Hybrid Schema
+<h2 id="4-exploit-payload-json">4. Exploit Payload (JSON)<a hidden class="anchor" aria-hidden="true" href="#4-exploit-payload-json">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// Malicious Login Payload
 </span></span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;timestamp&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2025-07-25T10:00:00Z&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;source_ip&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;192.168.1.1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;user_agent&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Googlebot/2.1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;traffic_tag&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;SEO_BOT&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;risk_score&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.05</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;action&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ALLOW&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;admin&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;password&#34;</span>: { <span style="color:#f92672">&#34;$ne&#34;</span>: <span style="color:#e6db74">&#34;wrong_password&#34;</span> }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// This bypasses the Bcrypt check because the query returns the first user 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// where the password is NOT &#34;wrong_password&#34;.
+</span></span></span></code></pre></div><h2 id="5-evidence-of-work">5. Evidence of Work<a hidden class="anchor" aria-hidden="true" href="#5-evidence-of-work">#</a></h2>
 <p><div class="terminal-window" style="margin: 40px 0;">
     <div class="terminal-header">
         <span class="dot red"></span>
@@ -335,31 +333,27 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/hybrid-siem-architecture-discovery.py" 
-             alt="Discovery" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" 
+             alt="NoSQL Vulnerability" 
               
              loading="lazy">
     </div>
 </div>
 
-<em>Caption: Discovery phase showing the end-to-end data flow from web servers to the visualization dashboard.</em></p>
-<p><div class="terminal-window" style="margin: 40px 0;">
-    <div class="terminal-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
+<em>Caption: Initial discovery phase showing the identification of NoSQL-vulnerable endpoints in the Vouched application.</em></p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0;">
+    <div class="terminal-window">
+        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+        <div class="terminal-img-container"><img src="/images/nosql-postman-exploit.png" alt="Postman Exploit"></div>
     </div>
-    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/hybrid-siem-architecture-misc.png" 
-             alt="Results" 
-              
-             loading="lazy">
+    <div class="terminal-window">
+        <div class="terminal-header"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+        <div class="terminal-img-container"><img src="/images/nosql-audit-config.png" alt="Audit Config"></div>
     </div>
 </div>
-
-<em>Caption: Results/Impact phase demonstrating the visualization of bot activity maps and incident timelines within the SIEM environment.</em></p>
+*Caption: Successful authentication bypass via Postman (Left) and the subsequent database audit configuration analysis (Right).*
 <h2 id="6-professional-impact">6. Professional Impact<a hidden class="anchor" aria-hidden="true" href="#6-professional-impact">#</a></h2>
-<p>This project creates a unique market differentiator by positioning security as a core product feature. I demonstrated how a Security-First SEO Architecture protects rankings and data integrity. By integrating with major cloud-native SIEMs, I ensured the platform meets enterprise-grade Compliance Readiness, protecting both organizational reputation and digital assets.</p>
+<p>This project highlights a critical oversight in modern web development. While Bcrypt provides strong hashing, it cannot protect against logic-level vulnerabilities if the query itself is compromised. To remediate this, I recommended the implementation of strict Mongoose schemas and the use of query sanitizers to ensure that user input is never interpreted as a database operator.</p>
 
     </div>
   </div>
@@ -368,15 +362,15 @@ document.addEventListener("DOMContentLoaded", function() {
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
     <span class="title">« Prev</span>
     <br>
-    <span>Fowsniff — Credential Harvesting &amp; Password Cracking</span>
+    <span>Database Encryption &amp; Sensitive Data Protection (MongoDB)</span>
   </a>
-  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
     <span class="title">Next »</span>
     <br>
-    <span>Secure Session Architecture &amp; Defensive Flag Implementation</span>
+    <span>Fowsniff — Credential Harvesting &amp; Password Cracking</span>
   </a>
 </nav>
 
