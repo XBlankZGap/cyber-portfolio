@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ProFTPd on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/proftpd/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/proftpd/</link>
     <description>Recent content in ProFTPd on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Mar 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/proftpd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/proftpd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.&lt;/p&gt;</description>
     </item>
   </channel>

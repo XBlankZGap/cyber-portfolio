@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="WordPress Security, CTF, Privilege Escalation, Reconnaissance">
 <meta name="description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
 <noscript>
     <style>
         #theme-toggle,
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Mr. Robot — Web Exploitation & System Compromise">
   <meta property="og:description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:tag" content="CTF">
     <meta property="article:tag" content="Privilege Escalation">
     <meta property="article:tag" content="Reconnaissance">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png">
   <meta name="twitter:title" content="Mr. Robot — Web Exploitation & System Compromise">
   <meta name="twitter:description" content="Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.">
 
@@ -222,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Mr. Robot — Web Exploitation \u0026 System Compromise",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/"
     }
   ]
 }
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "articleBody": "Objective: To demonstrate a full-stack compromise, from website reconnaissance and credential harvesting to gaining root-level access on a Linux server.\n1. The Vulnerability: Web-to-System Access Chain The target platform was found to be running a vulnerable WordPress instance with an improperly configured administrative login. By exploiting a combination of Information Disclosure (exposed robots.txt and dictionary files) and brute force, I gained initial access to the web backend, providing a gateway for further system-level pivoting.\n2. Technical Execution: Multi-Layered Exploitation I conducted a tiered attack, beginning with aggressive web reconnaissance using gobuster and wpscan. After gaining a web shell, I exfiltrated password hashes for local users and utilized an insecure SUID bit on the nmap binary to escalate privileges to root.\nComponent Value Purpose Reconnaissance Gobuster / WPScan Identifying hidden directories and CMS vulnerabilities. Exploit Vector WordPress Brute Force Gaining initial administrative access to the web interface. Credential Theft MD5 Hash Cracking Recovering local user passwords from the system files. Privilege Esc Nmap SUID (Interactive) Bypassing local security to gain a root shell. 3. Execution Workflow Information Gathering: Identified critical system information and hideouts in the robots.txt file, including a hidden wordlist and a cryptographic key. Web Hijacking: Performed an automated brute force attack against the WordPress login using the exfiltrated wordlist to gain a web shell. Lateral Movement: Located an encrypted MD5 hash for the user robot and recovered the plaintext password via John the Ripper. Root Escalation: Identified that nmap was configured with the SUID bit, allowing for the execution of an interactive nmap session to spawn a root shell. 4. Key Commands # Brute forcing WordPress login with a customized wordlist wpscan --url http://10.10.x.x --passwords wordlist.txt --usernames Elliot # Escalating privileges via Nmap SUID bit nmap --interactive !sh 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase identifying the WordPress administrative login and user enumeration.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the successful use of Nmap’s interactive mode to gain a root shell.\n6. Professional Impact This project highlights the “Compromise Chain” where a single web-level failure (weak password) leads to total system takeover. By achieving root access via an insecure SUID binary, I proved that local configuration errors are as dangerous as external vulnerabilities. I recommended that the organization enforce strong password policies for CMS platforms and strictly adhere to the Principle of Least Privilege by removing unnecessary SUID bits from system binaries.\n",
   "wordCount" : "394",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png","datePublished": "2026-03-26T10:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png","datePublished": "2026-03-26T10:00:00+01:00",
   "dateModified": "2026-03-26T10:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -254,14 +254,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/mrrobot-web-system-compromise/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/mrrobot-web-system-compromise/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -300,12 +300,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -392,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png" alt=""></figure>
     </div>
 </div>
     
@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/mrrobot-wpscan.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/mrrobot-wpscan.png" 
              alt="Discovery" 
               
              loading="lazy">
@@ -539,7 +539,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/feature-mrrobot.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/feature-mrrobot.png" 
              alt="Results" 
               
              loading="lazy">
@@ -555,10 +555,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/wordpress-security/">WordPress Security</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/ctf/">CTF</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/privilege-escalation/">Privilege Escalation</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/reconnaissance/">Reconnaissance</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/wordpress-security/">WordPress Security</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/ctf/">CTF</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/privilege-escalation/">Privilege Escalation</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/reconnaissance/">Reconnaissance</a></li>
     </ul>
 
     
@@ -568,7 +568,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Related Projects
       </h3>
       <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-fowsniff.png" alt="Fowsniff — Credential Harvesting &amp; Password Cracking" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -577,7 +577,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-kenobi.png" alt="Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/eternalblue-windows-exploitation/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-eternalblue-exploitation.png" alt="Blue: EternalBlue Exploitation &amp; Privilege Escalation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -612,12 +612,12 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     </div>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/fowsniff-credential-harvesting/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/fowsniff-credential-harvesting/">
     <span class="title">« Prev</span>
     <br>
     <span>Fowsniff — Credential Harvesting &amp; Password Cracking</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/">
     <span class="title">Next »</span>
     <br>
     <span>Kenobi — Exploiting NFS Misconfigurations &amp; Privilege Escalation</span>

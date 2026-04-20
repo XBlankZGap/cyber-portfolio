@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="Database Security, Encryption, MongoDB, Data Privacy">
 <meta name="description" content="Objective: To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
 <noscript>
     <style>
         #theme-toggle,
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Database Encryption & Sensitive Data Protection (MongoDB)">
   <meta property="og:description" content="Objective: To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.">
@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:tag" content="Encryption">
     <meta property="article:tag" content="MongoDB">
     <meta property="article:tag" content="Data Privacy">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png">
   <meta name="twitter:title" content="Database Encryption & Sensitive Data Protection (MongoDB)">
   <meta name="twitter:description" content="Objective: To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.">
 
@@ -222,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Database Encryption \u0026 Sensitive Data Protection (MongoDB)",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/"
     }
   ]
 }
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "articleBody": "Objective: To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.\n1. The Vulnerability: Plaintext Data Exposure in NoSQL Databases Storing personally identifiable information (PII) or financial data in plaintext within a NoSQL database (like MongoDB) represents a critical security risk. If an attacker gains unauthorized access to the database layer, they can exfiltrate the entire data store, leading to a massive loss of Data Confidentiality. Traditional disk-level encryption is insufficient to protect data from a compromised database process.\n2. Technical Execution: Client-Side Field-Level Encryption I implemented a “Never-Plaintext” architecture using MongoDB’s Field-Level Encryption (FLE). By encrypting specific sensitive fields (e.g., credit_card, social_security_number) at the application layer before they reach the database, I ensured that the data remains unreadable to anyone without the original encryption keys, including database administrators.\nComponent Value Purpose Encryption Type AES-256-GCM (Symmetric) Industry-standard algorithm for data protection. Key Strategy Master Key + Data Keys Hierarchical key management for scalability. Storage Engine MongoDB The NoSQL backend protected by the encryption layer. Process CSFLE (Client-Side) Encrypting data before it ever leaves the client app. 3. Execution Workflow Security Audit: Identified critical data fields within the MongoDB schema that required mandatory encryption according to compliance standards (e.g., PCI-DSS). Key Generation: Established a secure Key Vault to store “Data Encryption Keys” (DEK), managed by a central “Master Key.” Logic Implementation: Integrated the MongoDB driver with the encryption library, ensuring that the application automatically transparently encrypts and decrypts targeted fields. Validation: Confirmed that queries for sensitive data performed by unauthorized users or directly via the database console returned only ciphertext. 4. Key Configuration // Example: Configuring MongoDB Field-Level Encryption Schema const schemaMap = { \"medical_db.patients\": { \"bsonType\": \"object\", \"properties\": { \"ssn\": { \"encrypt\": { \"keyId\": [UUID], \"algorithm\": \"AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic\" } } } } }; 5. Evidence of Work RESOURCES_NODE_01 Caption: Discovery phase showing the initial vulnerability where sensitive fields were stored in plaintext.\nRESOURCES_NODE_01 Caption: Results/Impact phase showing the successful implementation of field-level encryption, with the database console displaying only encrypted values.\n6. Professional Impact This project highlights a “Zero-Trust” approach to database security. By ensuring that sensitive fields are never stored in plaintext, I protected the organization’s Data Confidentiality against both external hackers and internal threats. My implementation of Client-Side Field-Level Encryption ensures that the data remains secure throughout its entire lifecycle—during transit, in memory, and on disk.\n",
   "wordCount" : "401",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png","datePublished": "2026-04-19T10:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png","datePublished": "2026-04-19T10:00:00+01:00",
   "dateModified": "2026-04-19T10:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -254,14 +254,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -300,12 +300,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -392,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png" alt=""></figure>
     </div>
 </div>
     
@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-discovery.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-discovery.png" 
              alt="Discovery" 
               
              loading="lazy">
@@ -547,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/database-encryption-mongodb-results.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/database-encryption-mongodb-results.png" 
              alt="Results" 
               
              loading="lazy">
@@ -563,10 +563,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/database-security/">Database Security</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/encryption/">Encryption</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/mongodb/">MongoDB</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/data-privacy/">Data Privacy</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/database-security/">Database Security</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/encryption/">Encryption</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/mongodb/">MongoDB</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/data-privacy/">Data Privacy</a></li>
     </ul>
 
     
@@ -576,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Related Projects
       </h3>
       <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/nosql-vulnerability.png" alt="NoSQL Injection &amp; Database Poisoning (Vouched Application)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-secure-session-architecture.png" alt="Secure Session Architecture &amp; Defensive Flag Implementation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -594,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt="Session Hijacking via Automated Cookie Exfiltration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -620,12 +620,12 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     </div>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-fundamentals-assessment/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/network-fundamentals-assessment/">
     <span class="title">« Prev</span>
     <br>
     <span>Network Security Fundamentals and Threat Assessment</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
     <span class="title">Next »</span>
     <br>
     <span>NoSQL Injection &amp; Database Poisoning (Vouched Application)</span>

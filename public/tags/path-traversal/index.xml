@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Path Traversal on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/path-traversal/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/path-traversal/</link>
     <description>Recent content in Path Traversal on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Dec 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/path-traversal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/path-traversal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.&lt;/p&gt;</description>
     </item>
   </channel>

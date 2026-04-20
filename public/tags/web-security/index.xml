@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web Security on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/web-security/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/web-security/</link>
     <description>Recent content in Web Security on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Apr 2026 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web-to-System Pivot via Command Injection</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</link>
       <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/web-to-system-pivot-reverse-shell/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit a Command Injection vulnerability in a web application to bypass input filters and establish a persistent Remote Shell.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session Hijacking via Automated Cookie Exfiltration</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.&lt;/p&gt;</description>
     </item>
   </channel>

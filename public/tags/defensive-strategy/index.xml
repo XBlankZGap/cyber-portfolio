@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Defensive Strategy on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/defensive-strategy/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/defensive-strategy/</link>
     <description>Recent content in Defensive Strategy on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Dec 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/defensive-strategy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/defensive-strategy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vulnerability Analysis and Remediation Planning</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To systematically document discovered web vulnerabilities and provide actionable, code-level remediation strategies for development teams.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="Blue Teaming, Incident Response, Log Analysis, Wazuh">
 <meta name="description" content="Objective: To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/">
 <noscript>
     <style>
         #theme-toggle,
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="Network Traffic Analysis & Incident Response (Wazuh & PCAP)">
   <meta property="og:description" content="Objective: To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.">
@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:tag" content="Incident Response">
     <meta property="article:tag" content="Log Analysis">
     <meta property="article:tag" content="Wazuh">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/wazuh-dashboard.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/wazuh-dashboard.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/wazuh-dashboard.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/wazuh-dashboard.png">
   <meta name="twitter:title" content="Network Traffic Analysis & Incident Response (Wazuh & PCAP)">
   <meta name="twitter:description" content="Objective: To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.">
 
@@ -222,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Network Traffic Analysis \u0026 Incident Response (Wazuh \u0026 PCAP)",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/"
     }
   ]
 }
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "articleBody": "Objective: To perform a technical post-mortem analysis of a network intrusion attempt using centralized log management and deep packet inspection.\n1. The Vulnerability: Unauthorized Reconnaissance Network visibility is the cornerstone of defensive security. Without centralized logging, attackers can perform stealthy reconnaissance and lateral movement unnoticed. This project demonstrates the integration of Wazuh (SIEM/XDR) and Wireshark to identify, track, and analyze malicious traffic patterns.\n2. Technical Execution: Forensic Triage I utilized a combination of cloud-based SIEM monitoring and local traffic capture to analyze an active incident. By correlating Wazuh alerts with specific TCP/HTTP streams in a PCAP file, I was able to reconstruct the attacker’s methodology, from initial port scanning to attempted directory traversal.\nComponent Value Purpose SIEM Wazuh Cloud Centralized dashboard for real-time alert correlation. Traffic Capture PCAP (Wireshark) Raw data for deep packet inspection and stream follow. Log Source /var/log/auth.log Analyzing SSH brute-force and privilege escalation. Outcome Incident Report Documented findings and remediation steps. 3. Execution Workflow Dashboard Monitoring: Identified a spike in “High” severity alerts on the Wazuh Cloud dashboard originating from a single external IP. PCAP Extraction: Captured raw network traffic (capture.pcap) during the window of the alert to perform granular analysis. Stream Reconstruction: Followed HTTP and TCP streams in Wireshark to identify the specific payloads used in the attack. Hardening: Updated host-based firewall rules and implemented Fail2Ban based on the forensic evidence gathered. 4. Forensic Evidence (Log Snippet) # Wazuh Alert: Multiple Failed SSH Logins Rule: 5712 (SSHD Brute Force Attempt) Source IP: 192.168.1.150 User: root, admin, support Action: Firewalled via active-response 5. Evidence of Work RESOURCES_NODE_01 Caption: Real-time monitoring in Wazuh Cloud showing the correlation of multiple security events and agent health.\n*Caption: Deep packet inspection (Left) and log correlation (Right) used to identify the specific TTPs of the adversary.* 6. Professional Impact This project demonstrates a mature Incident Response capability. By successfully bridging the gap between high-level SIEM alerts and low-level packet data, I reduced the “Mean Time to Detection” (MTTD) for network threats. My remediation plan included the deployment of hardened security configurations and automated active-response scripts to neutralize future threats in real-time.\n",
   "wordCount" : "350",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/wazuh-dashboard.png","datePublished": "2026-04-20T00:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/wazuh-dashboard.png","datePublished": "2026-04-20T00:00:00+01:00",
   "dateModified": "2026-04-20T00:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -254,14 +254,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/log-analysis-incident-response/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/log-analysis-incident-response/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -300,12 +300,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -392,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/wazuh-dashboard.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/wazuh-dashboard.png" alt=""></figure>
     </div>
 </div>
     
@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/wazuh-dashboard.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/wazuh-dashboard.png" 
              alt="Wazuh Dashboard" 
               
              loading="lazy">
@@ -550,10 +550,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/blue-teaming/">Blue Teaming</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/incident-response/">Incident Response</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/log-analysis/">Log Analysis</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/wazuh/">Wazuh</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/blue-teaming/">Blue Teaming</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/incident-response/">Incident Response</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/log-analysis/">Log Analysis</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/wazuh/">Wazuh</a></li>
     </ul>
 
     
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Related Projects
       </h3>
       <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-hybrid-siem-architecture.png" alt="Hybrid SIEM Architecture for SEO &amp; Security Intelligence" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/network-baselining-anomaly/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/network-baselining-anomaly/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/network-baselining-anomaly-discovery.jpeg" alt="Network Traffic Baselining and Anomaly Detection" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/router-level-filtering/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/router-level-filtering/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/router-level-filtering-discovery.jpeg" alt="Centralized Network Security via Router-Level Filtering" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -607,12 +607,12 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     </div>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/service-enumeration-lab/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/service-enumeration-lab/">
     <span class="title">« Prev</span>
     <br>
     <span>Service Enumeration &amp; Vulnerability Research</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/hybrid-siem-architecture/">
     <span class="title">Next »</span>
     <br>
     <span>Hybrid SIEM Architecture for SEO &amp; Security Intelligence</span>

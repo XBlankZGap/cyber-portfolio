@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>XSS on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/xss/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/xss/</link>
     <description>Recent content in XSS on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Aug 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/xss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DOM-Based Cross-Site Scripting (XSS) Analysis</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</link>
       <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit an unsafe JavaScript &amp;ldquo;sink&amp;rdquo; to execute arbitrary code in the victim&amp;rsquo;s browser context.&lt;/p&gt;</description>
     </item>
   </channel>

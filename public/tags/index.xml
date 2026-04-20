@@ -2,773 +2,822 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/</link>
     <description>Recent content in Tags on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blue Teaming</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/blue-teaming/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/blue-teaming/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/blue-teaming/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/blue-teaming/</guid>
       <description></description>
     </item>
     <item>
       <title>Compliance</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/compliance/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/compliance/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/compliance/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/compliance/</guid>
       <description></description>
     </item>
     <item>
       <title>Incident Response</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/incident-response/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/incident-response/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/incident-response/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/incident-response/</guid>
       <description></description>
     </item>
     <item>
       <title>ISO 27001</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/iso-27001/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/iso-27001/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/iso-27001/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/iso-27001/</guid>
       <description></description>
     </item>
     <item>
       <title>Log Analysis</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/log-analysis/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/log-analysis/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/log-analysis/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/log-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>NIST</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/nist/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/nist/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/nist/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/nist/</guid>
       <description></description>
     </item>
     <item>
       <title>Secure Architecture</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/secure-architecture/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/secure-architecture/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/secure-architecture/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/secure-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Wazuh</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/wazuh/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/wazuh/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/wazuh/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/wazuh/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Privacy</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/data-privacy/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/data-privacy/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/data-privacy/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/data-privacy/</guid>
       <description></description>
     </item>
     <item>
       <title>Database Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/database-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/database-security/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/database-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/database-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Encryption</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/encryption/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/encryption/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/encryption/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/encryption/</guid>
       <description></description>
     </item>
     <item>
       <title>MongoDB</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/mongodb/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/mongodb/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/mongodb/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/mongodb/</guid>
       <description></description>
     </item>
     <item>
       <title>API Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/api-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/api-security/</link>
       <pubDate>Sat, 18 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/api-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/api-security/</guid>
       <description></description>
     </item>
     <item>
       <title>NoSQL Injection</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/nosql-injection/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/nosql-injection/</link>
       <pubDate>Sat, 18 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/nosql-injection/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/nosql-injection/</guid>
       <description></description>
     </item>
     <item>
       <title>Vouched</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/vouched/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/vouched/</link>
       <pubDate>Sat, 18 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/vouched/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/vouched/</guid>
       <description></description>
     </item>
     <item>
       <title>Credential Harvesting</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/credential-harvesting/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/credential-harvesting/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/credential-harvesting/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/credential-harvesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Information Disclosure</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/information-disclosure/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/information-disclosure/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/information-disclosure/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/information-disclosure/</guid>
       <description></description>
     </item>
     <item>
       <title>John the Ripper</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/john-the-ripper/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/john-the-ripper/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/john-the-ripper/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/john-the-ripper/</guid>
       <description></description>
     </item>
     <item>
       <title>Password Cracking</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/password-cracking/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/password-cracking/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/password-cracking/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/password-cracking/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/automation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/automation/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/automation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>SEO Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/seo-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/seo-security/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/seo-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/seo-security/</guid>
       <description></description>
     </item>
     <item>
       <title>SIEM</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/siem/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/siem/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/siem/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/siem/</guid>
       <description></description>
     </item>
     <item>
       <title>Threat Intelligence</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/threat-intelligence/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/threat-intelligence/</link>
       <pubDate>Wed, 15 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/threat-intelligence/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/threat-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Cookie Flags</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cookie-flags/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/cookie-flags/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/cookie-flags/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/cookie-flags/</guid>
       <description></description>
     </item>
     <item>
       <title>Defense-in-Depth</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/defense-in-depth/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/defense-in-depth/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/defense-in-depth/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/defense-in-depth/</guid>
       <description></description>
     </item>
     <item>
       <title>Session Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/session-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/session-security/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/session-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/session-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Architecture</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/web-architecture/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/web-architecture/</link>
       <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/web-architecture/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/web-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Cookie Theft</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cookie-theft/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/cookie-theft/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/cookie-theft/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/cookie-theft/</guid>
       <description></description>
     </item>
     <item>
       <title>Identity Theft</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/identity-theft/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/identity-theft/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/identity-theft/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/identity-theft/</guid>
       <description></description>
     </item>
     <item>
       <title>Session Hijacking</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/session-hijacking/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/session-hijacking/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/session-hijacking/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/session-hijacking/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/web-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/web-security/</link>
       <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/web-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/web-security/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/ctf/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/ctf/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/ctf/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Privilege Escalation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/privilege-escalation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/privilege-escalation/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/privilege-escalation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/privilege-escalation/</guid>
       <description></description>
     </item>
     <item>
       <title>Reconnaissance</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/reconnaissance/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/reconnaissance/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/reconnaissance/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/reconnaissance/</guid>
       <description></description>
     </item>
     <item>
       <title>WordPress Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/wordpress-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/wordpress-security/</link>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/wordpress-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/wordpress-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/linux-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/linux-security/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/linux-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/linux-security/</guid>
       <description></description>
     </item>
     <item>
       <title>NFS</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/nfs/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/nfs/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/nfs/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/nfs/</guid>
       <description></description>
     </item>
     <item>
       <title>ProFTPd</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/proftpd/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/proftpd/</link>
       <pubDate>Wed, 25 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/proftpd/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/proftpd/</guid>
       <description></description>
     </item>
     <item>
       <title>BIP39</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/bip39/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/bip39/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/bip39/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/bip39/</guid>
       <description></description>
     </item>
     <item>
       <title>Blockchain Forensics</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/blockchain-forensics/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/blockchain-forensics/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/blockchain-forensics/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/blockchain-forensics/</guid>
       <description></description>
     </item>
     <item>
       <title>MS17-010</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/ms17-010/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/ms17-010/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/ms17-010/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/ms17-010/</guid>
       <description></description>
     </item>
     <item>
       <title>Private Key Theft</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/private-key-theft/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/private-key-theft/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/private-key-theft/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/private-key-theft/</guid>
       <description></description>
     </item>
     <item>
       <title>RCE</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/rce/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/rce/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/rce/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/rce/</guid>
       <description></description>
     </item>
     <item>
       <title>Wallet Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/wallet-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/wallet-security/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/wallet-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/wallet-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/windows-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/windows-security/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/windows-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/windows-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Blockchain</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/blockchain/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/blockchain/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/blockchain/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/blockchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Crypto Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/crypto-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/crypto-security/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/crypto-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/crypto-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Digital Forensics</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/digital-forensics/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/digital-forensics/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/digital-forensics/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/digital-forensics/</guid>
       <description></description>
     </item>
     <item>
       <title>Kernel Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/kernel-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/kernel-security/</link>
       <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/kernel-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/kernel-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Least Privilege</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/least-privilege/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/least-privilege/</link>
       <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/least-privilege/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/least-privilege/</guid>
       <description></description>
     </item>
     <item>
       <title>MAC</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/mac/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/mac/</link>
       <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/mac/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/mac/</guid>
       <description></description>
     </item>
     <item>
       <title>SELinux</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/selinux/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/selinux/</link>
       <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/selinux/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/selinux/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Integrity</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/data-integrity/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/data-integrity/</link>
       <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/data-integrity/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/data-integrity/</guid>
       <description></description>
     </item>
     <item>
       <title>Hashing</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/hashing/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/hashing/</link>
       <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/hashing/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/hashing/</guid>
       <description></description>
     </item>
     <item>
       <title>Password Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/password-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/password-security/</link>
       <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/password-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/password-security/</guid>
       <description></description>
     </item>
     <item>
       <title>SHA-256</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/sha-256/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/sha-256/</link>
       <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/sha-256/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/sha-256/</guid>
       <description></description>
     </item>
     <item>
       <title>Cryptography</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cryptography/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/cryptography/</link>
       <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/cryptography/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/cryptography/</guid>
       <description></description>
     </item>
     <item>
       <title>Identity Verification</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/identity-verification/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/identity-verification/</link>
       <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/identity-verification/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/identity-verification/</guid>
       <description></description>
     </item>
     <item>
       <title>PKI</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/pki/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/pki/</link>
       <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/pki/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/pki/</guid>
       <description></description>
     </item>
     <item>
       <title>IDOR</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/idor/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/idor/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/idor/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/idor/</guid>
       <description></description>
     </item>
     <item>
       <title>Path Traversal</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/path-traversal/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/path-traversal/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/path-traversal/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/path-traversal/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulnerability Discovery</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-discovery/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/vulnerability-discovery/</link>
       <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-discovery/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/vulnerability-discovery/</guid>
       <description></description>
     </item>
     <item>
       <title>Defensive Strategy</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/defensive-strategy/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/defensive-strategy/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/defensive-strategy/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/defensive-strategy/</guid>
       <description></description>
     </item>
     <item>
       <title>Remediation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/remediation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/remediation/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/remediation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/remediation/</guid>
       <description></description>
     </item>
     <item>
       <title>Secure Coding</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/secure-coding/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/secure-coding/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/secure-coding/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/secure-coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulnerability Management</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-management/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/vulnerability-management/</link>
       <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-management/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/vulnerability-management/</guid>
       <description></description>
     </item>
     <item>
       <title>OWASP ZAP</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/owasp-zap/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/owasp-zap/</link>
       <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/owasp-zap/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/owasp-zap/</guid>
       <description></description>
     </item>
     <item>
       <title>Security Assessment</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/security-assessment/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/security-assessment/</link>
       <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/security-assessment/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/security-assessment/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulnerability Scanning</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-scanning/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/vulnerability-scanning/</link>
       <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability-scanning/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/vulnerability-scanning/</guid>
       <description></description>
     </item>
     <item>
       <title>Indicators of Compromise</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/indicators-of-compromise/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/indicators-of-compromise/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/indicators-of-compromise/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/indicators-of-compromise/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Monitoring</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/network-monitoring/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/network-monitoring/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/network-monitoring/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/network-monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Traffic Analysis</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/traffic-analysis/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/traffic-analysis/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/traffic-analysis/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/traffic-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>Wireshark</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/wireshark/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/wireshark/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/wireshark/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/wireshark/</guid>
       <description></description>
     </item>
     <item>
       <title>Firewall</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/firewall/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/firewall/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/firewall/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/firewall/</guid>
       <description></description>
     </item>
     <item>
       <title>Gateway</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/gateway/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/gateway/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/gateway/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/gateway/</guid>
       <description></description>
     </item>
     <item>
       <title>IoT Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/iot-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/iot-security/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/iot-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/iot-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/network-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/network-security/</link>
       <pubDate>Mon, 10 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/network-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/network-security/</guid>
       <description></description>
     </item>
     <item>
       <title>C2 Mitigation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/c2-mitigation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/c2-mitigation/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/c2-mitigation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/c2-mitigation/</guid>
       <description></description>
     </item>
     <item>
       <title>Endpoint Security</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/endpoint-security/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/endpoint-security/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/endpoint-security/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/endpoint-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Security Engineering</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/security-engineering/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/security-engineering/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/security-engineering/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/security-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Breach</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/data-breach/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/data-breach/</link>
       <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/data-breach/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/data-breach/</guid>
       <description></description>
     </item>
     <item>
       <title>Dump</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/dump/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/dump/</link>
       <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/dump/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/dump/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/sql/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/sql/</link>
       <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/sql/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Command Injection</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/command-injection/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/command-injection/</link>
       <pubDate>Tue, 30 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/command-injection/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/command-injection/</guid>
       <description></description>
     </item>
     <item>
       <title>Hashes</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/hashes/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/hashes/</link>
       <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/hashes/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/hashes/</guid>
       <description></description>
     </item>
     <item>
       <title>Exfiltration</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/exfiltration/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/exfiltration/</link>
       <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/exfiltration/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/exfiltration/</guid>
       <description></description>
     </item>
     <item>
       <title>Lateral Movement</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/lateral-movement/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/lateral-movement/</link>
       <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/lateral-movement/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/lateral-movement/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/linux/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/linux/</link>
       <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/linux/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Post-Exploitation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/post-exploitation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/post-exploitation/</link>
       <pubDate>Sat, 20 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/post-exploitation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/post-exploitation/</guid>
       <description></description>
     </item>
     <item>
       <title>CVE</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cve/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/cve/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/cve/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/cve/</guid>
       <description></description>
     </item>
     <item>
       <title>Exploitation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/exploitation/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/exploitation/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/exploitation/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/exploitation/</guid>
       <description></description>
     </item>
     <item>
       <title>Metasploit</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/metasploit/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/metasploit/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/metasploit/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/metasploit/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulnerability</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/vulnerability/</link>
       <pubDate>Fri, 12 Sep 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/vulnerability/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/vulnerability/</guid>
       <description></description>
     </item>
     <item>
       <title>Auth Bypass</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/auth-bypass/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/auth-bypass/</link>
       <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/auth-bypass/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/auth-bypass/</guid>
       <description></description>
     </item>
     <item>
       <title>CSRF</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/csrf/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/csrf/</link>
       <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/csrf/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/csrf/</guid>
       <description></description>
     </item>
     <item>
       <title>OWASP</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/owasp/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/owasp/</link>
       <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/owasp/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/owasp/</guid>
       <description></description>
     </item>
     <item>
       <title>Session Management</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/session-management/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/session-management/</link>
       <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/session-management/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/session-management/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/javascript/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/javascript/</link>
       <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/javascript/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>XSS</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/xss/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/xss/</link>
       <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/xss/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/xss/</guid>
       <description></description>
     </item>
     <item>
       <title>Parameterized Queries</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/parameterized-queries/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/parameterized-queries/</link>
       <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/parameterized-queries/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/parameterized-queries/</guid>
       <description></description>
     </item>
     <item>
       <title>SQLi</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/sqli/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/sqli/</link>
       <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/sqli/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/sqli/</guid>
       <description></description>
     </item>
     <item>
       <title>WebGoat</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/webgoat/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/webgoat/</link>
       <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/webgoat/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/webgoat/</guid>
       <description></description>
     </item>
     <item>
       <title>Enumeration</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/enumeration/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/enumeration/</link>
       <pubDate>Tue, 05 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/enumeration/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/enumeration/</guid>
       <description></description>
     </item>
     <item>
       <title>Nmap</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/nmap/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/nmap/</link>
       <pubDate>Tue, 05 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/nmap/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/nmap/</guid>
       <description></description>
     </item>
     <item>
       <title>Services</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/services/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/services/</link>
       <pubDate>Tue, 05 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/services/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/services/</guid>
       <description></description>
     </item>
     <item>
       <title>C2</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/c2/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/c2/</link>
       <pubDate>Tue, 15 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/c2/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/c2/</guid>
       <description></description>
     </item>
     <item>
       <title>DNS</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/dns/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/dns/</link>
       <pubDate>Tue, 15 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/dns/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career Development</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/career-development/</link>
+      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/career-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Industry Engagement</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/industry-engagement/</link>
+      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/industry-engagement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/networking/</link>
+      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soft Skills</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/soft-skills/</link>
+      <pubDate>Sat, 05 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/soft-skills/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/docker/</link>
+      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lab Setup</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/lab-setup/</link>
+      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/lab-setup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>http://localhost:1313/cyber-portfolio/tags/troubleshooting/</link>
+      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/tags/troubleshooting/</guid>
       <description></description>
     </item>
     <item>
       <title>CIA Triad</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/cia-triad/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/cia-triad/</link>
       <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/cia-triad/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/cia-triad/</guid>
       <description></description>
     </item>
     <item>
       <title>Risk Management</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/tags/risk-management/</link>
+      <link>http://localhost:1313/cyber-portfolio/tags/risk-management/</link>
       <pubDate>Tue, 01 Jul 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/tags/risk-management/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/tags/risk-management/</guid>
       <description></description>
     </item>
   </channel>

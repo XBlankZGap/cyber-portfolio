@@ -2,25 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Security Engineering on SOPHY&#39;S CYBERLAB</title>
-    <link>https://XBlankZGap.github.io/cyber-portfolio/tags/security-engineering/</link>
+    <link>http://localhost:1313/cyber-portfolio/tags/security-engineering/</link>
     <description>Recent content in Security Engineering on SOPHY&#39;S CYBERLAB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Nov 2025 10:00:00 +0100</lastBuildDate>
-    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/tags/security-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/cyber-portfolio/tags/security-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automated Domain Blocking via Batch Scripting</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-domain-blocking/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/automated-domain-blocking/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To develop a reusable and scalable automation tool for neutralizing network threats at the system level.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DOM-Based Cross-Site Scripting (XSS) Analysis</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</link>
+      <link>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</link>
       <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</guid>
+      <guid>http://localhost:1313/cyber-portfolio/posts/dom-xss-analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit an unsafe JavaScript &amp;ldquo;sink&amp;rdquo; to execute arbitrary code in the victim&amp;rsquo;s browser context.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Engineered Security Lab Deployment &amp; Troubleshooting</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</link>
+      <pubDate>Wed, 02 Jul 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/engineered-lab-deployment/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To design, configure, and maintain a virtualized security testing environment for controlled vulnerability assessment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

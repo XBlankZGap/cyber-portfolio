@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><meta charset="utf-8">
+<head><script src="/cyber-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cyber-portfolio/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="NoSQL Injection, MongoDB, API Security, Vouched">
 <meta name="description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the &ldquo;Vouched&rdquo; application to bypass authentication and extract sensitive user data.">
 <meta name="author" content="Sophy">
-<link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+<link rel="canonical" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
 <link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.306c5765fc9a99cd03cca82a8ece7cd18ee598b3ff380a58397bdc5a1f316312.css" integrity="sha256-MGxXZfyamc0DzKgqjs580Y7lmLP/OApYOXvcWh8xYxI=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://XBlankZGap.github.io/cyber-portfolio/apple-touch-icon.png">
-<link rel="mask-icon" href="https://XBlankZGap.github.io/cyber-portfolio/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/cyber-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/cyber-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/cyber-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/cyber-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/cyber-portfolio/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
 <noscript>
     <style>
         #theme-toggle,
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
+<meta property="og:url" content="http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/">
   <meta property="og:site_name" content="SOPHY&#39;S CYBERLAB">
   <meta property="og:title" content="NoSQL Injection & Database Poisoning (Vouched Application)">
   <meta property="og:description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.">
@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <meta property="article:tag" content="MongoDB">
     <meta property="article:tag" content="API Security">
     <meta property="article:tag" content="Vouched">
-    <meta property="og:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png">
+    <meta property="og:image" content="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png">
+<meta name="twitter:image" content="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png">
   <meta name="twitter:title" content="NoSQL Injection & Database Poisoning (Vouched Application)">
   <meta name="twitter:description" content="Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.">
 
@@ -222,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function() {
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "NoSQL Injection \u0026 Database Poisoning (Vouched Application)",
-      "item": "https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/"
+      "item": "http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/"
     }
   ]
 }
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
   "articleBody": "Objective: To identify and exploit NoSQL injection vulnerabilities within the “Vouched” application to bypass authentication and extract sensitive user data.\n1. The Vulnerability: NoSQL Command Neutralization (CWE-943) NoSQL injection occurs when an application fails to properly sanitize user input before using it in a database query. In document-oriented databases like MongoDB, this allows an attacker to inject logical operators (e.g., $gt, $ne) to manipulate the query logic, leading to unauthorized data access or authentication bypass.\n2. Technical Execution: Logic Manipulation Using Postman, I crafted malicious JSON payloads targeting the authentication and search endpoints of the Vouched application. By replacing standard string inputs with MongoDB operator objects, I successfully manipulated the database logic to return records that should have been restricted, effectively bypassing Bcrypt-hashed password checks.\nComponent Value Purpose Attack Vector JSON Payload Injection Injecting MongoDB operators into API requests. Target Endpoint /api/v1/login Attempting to bypass password verification. Impact Authentication Bypass Gaining access to any user account without a password. Remediation Schema Validation Implementing strict typing for all incoming data. 3. Execution Workflow Endpoint Enumeration: Used Postman to identify API endpoints that accept JSON input for database queries. Operator Testing: Injected basic logical operators (e.g., {\"$ne\": null}) to test if the database would return unintended results. Authentication Bypass: Crafted a login request where the password field was replaced with a “not equal” operator, allowing login as any user whose username was known. Data Exfiltration: Leveraged the injection vulnerability on search endpoints to dump the entire user collection. 4. Exploit Payload (JSON) // Malicious Login Payload { \"username\": \"admin\", \"password\": { \"$ne\": \"wrong_password\" } } // This bypasses the Bcrypt check because the query returns the first user // where the password is NOT \"wrong_password\". 5. Evidence of Work RESOURCES_NODE_01 Caption: Initial discovery phase showing the identification of NoSQL-vulnerable endpoints in the Vouched application.\n*Caption: Successful authentication bypass via Postman (Left) and the subsequent database audit configuration analysis (Right).* 6. Professional Impact This project highlights a critical oversight in modern web development. While Bcrypt provides strong hashing, it cannot protect against logic-level vulnerabilities if the query itself is compromised. To remediate this, I recommended the implementation of strict Mongoose schemas and the use of query sanitizers to ensure that user input is never interpreted as a database operator.\n",
   "wordCount" : "376",
   "inLanguage": "en",
-  "image":"https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png","datePublished": "2026-04-18T10:00:00+01:00",
+  "image":"http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png","datePublished": "2026-04-18T10:00:00+01:00",
   "dateModified": "2026-04-18T10:00:00+01:00",
   "author":{
     "@type": "Person",
@@ -254,14 +254,14 @@ document.addEventListener("DOMContentLoaded", function() {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/"
+    "@id": "http://localhost:1313/cyber-portfolio/posts/nosql-injection-vouched/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "SOPHY'S CYBERLAB",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://XBlankZGap.github.io/cyber-portfolio/favicon.ico"
+      "url": "http://localhost:1313/cyber-portfolio/favicon.ico"
     }
   }
 }
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://XBlankZGap.github.io/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
+            <a href="http://localhost:1313/cyber-portfolio/" accesskey="h" title="SOPHY'S CYBERLAB (Alt + H)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-size: 28px;">terminal</span>
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
@@ -300,12 +300,12 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/about/" title="About Me">
+                <a href="http://localhost:1313/cyber-portfolio/about/" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/contact/" title="Contact">
+                <a href="http://localhost:1313/cyber-portfolio/contact/" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -392,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
   <header class="post-header-editorial">
-    <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
-            <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cyber-portfolio/">Home</a>
+            <span>/</span><a href="http://localhost:1313/cyber-portfolio/posts/">Posts</a>
 </div>
     
     <div class="editorial-top-section">
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     <div class="terminal-img-container">
         <figure class="entry-cover" style="margin: 0;">
-                <img loading="eager" src="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
+                <img loading="eager" src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" alt=""></figure>
     </div>
 </div>
     
@@ -525,7 +525,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="dot green"></span>
         <span class="terminal-label" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.5; margin-left: 10px;">RESOURCES_NODE_01</span>
     </div>
-    <div class="terminal-img-container"><img src="https://XBlankZGap.github.io/cyber-portfolio/images/nosql-vulnerability.png" 
+    <div class="terminal-img-container"><img src="http://localhost:1313/cyber-portfolio/images/nosql-vulnerability.png" 
              alt="NoSQL Vulnerability" 
               
              loading="lazy">
@@ -552,10 +552,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/nosql-injection/">NoSQL Injection</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/mongodb/">MongoDB</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/api-security/">API Security</a></li>
-      <li><a href="https://XBlankZGap.github.io/cyber-portfolio/tags/vouched/">Vouched</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/nosql-injection/">NoSQL Injection</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/mongodb/">MongoDB</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/api-security/">API Security</a></li>
+      <li><a href="http://localhost:1313/cyber-portfolio/tags/vouched/">Vouched</a></li>
     </ul>
 
     
@@ -565,7 +565,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Related Projects
       </h3>
       <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;">
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/database-encryption-mongodb-discovery.png" alt="Database Encryption &amp; Sensitive Data Protection (MongoDB)" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -574,7 +574,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-secure-session-architecture.png" alt="Secure Session Architecture &amp; Defensive Flag Implementation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span style="font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">View Case Study &rarr;</span>
           </div>
         </a>
-        <a href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+        <a href="http://localhost:1313/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/" style="display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 10px; overflow: hidden; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
           <div style="height: 120px; overflow: hidden; background: #111;">
             <img src="/cyber-portfolio/images/feature-session-hijacking-cookie-exfiltration.png" alt="Session Hijacking via Automated Cookie Exfiltration" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: grayscale(60%);">
           </div>
@@ -609,12 +609,12 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     </div>
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/">
+  <a class="prev" href="http://localhost:1313/cyber-portfolio/posts/database-encryption-mongodb/">
     <span class="title">« Prev</span>
     <br>
     <span>Database Encryption &amp; Sensitive Data Protection (MongoDB)</span>
   </a>
-  <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/">
+  <a class="next" href="http://localhost:1313/cyber-portfolio/posts/secure-session-architecture/">
     <span class="title">Next »</span>
     <br>
     <span>Secure Session Architecture &amp; Defensive Flag Implementation</span>
