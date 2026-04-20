@@ -37,6 +37,13 @@
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Blue: EternalBlue Exploitation &amp; Privilege Escalation</title>
+      <link>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit the MS17-010 (EternalBlue) vulnerability on a legacy Windows target to achieve SYSTEM-level access and credential exfiltration.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>
       <link>http://localhost:1313/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
       <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
@@ -63,13 +70,6 @@
       <pubDate>Tue, 10 Feb 2026 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/cyber-portfolio/posts/kenobi-nfs-misconfig-priv-esc/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the use of insecure service configurations and SUID binaries to perform cross-protocol exploitation and gain root access.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Blue (Windows Exploitation – EternalBlue)</title>
-      <link>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</link>
-      <pubDate>Thu, 05 Feb 2026 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/cyber-portfolio/posts/eternalblue-windows-exploitation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit critical vulnerabilities in legacy Windows systems using remote buffer overflows and credential harvesting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mandatory Access Control (MAC) using SELinux</title>
