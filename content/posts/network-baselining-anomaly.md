@@ -1,8 +1,9 @@
 +++
 date = '2025-11-15T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Network Traffic Baselining and Anomaly Detection'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "ANOMALY-DETECT-2025"
 vulnerability_class = "Obfuscated Network Activity (CWE-1021)"
 tools = ["Wireshark", "DNS", "TLS", "Anomaly Detection"]

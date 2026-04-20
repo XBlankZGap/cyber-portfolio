@@ -1,8 +1,9 @@
 +++
 date = '2025-08-15T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'DOM-Based Cross-Site Scripting (XSS) Analysis'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "XSS-DOM-2025"
 vulnerability_class = "Unsafe DOM Manipulation (CWE-79)"
 tools = ["JavaScript", "jQuery", "OWASP ZAP", "WebGoat"]

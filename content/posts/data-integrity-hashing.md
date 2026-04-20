@@ -1,8 +1,9 @@
 +++
 date = '2026-01-10T10:00:00+01:00'
 draft = false
+weight = 500
 title = 'Data Integrity Verification via Cryptographic Hashing'
-categories = ["Cryptography & Data Integrity"]
+categories = ["DevSecOps & Strategy"]
 case_id = "HASHING-INTEGRITY-2026"
 vulnerability_class = "Data Tampering & Plaintext Credentials"
 tools = ["SHA-256", "MD5", "sha256sum", "Integrity Check"]

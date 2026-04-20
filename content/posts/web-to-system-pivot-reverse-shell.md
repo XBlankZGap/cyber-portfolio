@@ -1,8 +1,9 @@
 +++
 date = '2025-09-30T10:00:00+01:00'
 draft = false
+weight = 100
 title = 'Web-to-System Pivot via Command Injection'
-categories = ["Security Operations & Engineering"]
+categories = ["Security Operations (SOC) & Incident Response"]
 
 [cover]
 image = "images/project6_reverse_shell.png"

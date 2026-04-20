@@ -1,8 +1,9 @@
 +++
 date = '2025-07-15T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Network Traffic Analysis & Automated Threat Mitigation'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "TRAFFIC-MITIGATION-2025"
 vulnerability_class = "Malicious External Communication"
 tools = ["Wireshark", "Windows Hosts File", "Batch Scripting", "Router Filtering"]

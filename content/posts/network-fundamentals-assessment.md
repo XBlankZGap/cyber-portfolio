@@ -1,8 +1,9 @@
 +++
 date = '2025-07-01T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Network Security Fundamentals and Threat Assessment'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "THREAT-ASSESS-2025"
 vulnerability_class = "Diverse Attack Surface"
 tools = ["Firewalls", "VPNs", "Encryption", "SIEM"]

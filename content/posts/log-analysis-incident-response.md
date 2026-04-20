@@ -1,8 +1,9 @@
 +++
 date = '2026-04-20T00:00:00+01:00'
 draft = false
+weight = 300
 title = 'Network Traffic Analysis & Incident Response (Wazuh & PCAP)'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "LOG-ANALYZE-2026"
 vulnerability_class = "Unauthorized Access Attempt & Reconnaissance"
 tools = ["Wazuh Cloud", "Wireshark", "PCAP Analysis", "Linux Logs"]

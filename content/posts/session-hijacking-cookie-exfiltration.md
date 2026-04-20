@@ -1,8 +1,9 @@
 +++
 date = '2026-04-05T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'Session Hijacking via Automated Cookie Exfiltration'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "SESSION-HIJACK-2026"
 vulnerability_class = "Insecure Session Management (CWE-693)"
 tools = ["Cookie Editor Extension", "Browser Debugging", "XSS"]
@@ -21,9 +22,9 @@ tags = ["Cookie Theft", "Session Hijacking", "Web Security", "Identity Theft"]
 
 Cookie theft, or session hijacking, occurs when a malicious actor acquires a user’s session tokens to gain unauthorized access to their authenticated state. This project highlights a critical breakdown in Data Confidentiality, where a lack of secure cookie flags or the presence of XSS allows attackers to "clone" a legitimate session without ever needing the user's password.
 
-## 2. Technical Execution: Identity Impersonation
+## 2. Technical Execution: Identity Impersonation (Facebook Target)
 
-I performed a demonstration of the "cloning" process using a browser-based cookie editor to exfiltrate and reuse session tokens. By manually manipulating session cookies, I proved that an attacker can maintain persistence even across browser reloads, effectively bypassing the primary authentication layer.
+I performed a live demonstration of the "cloning" process targeting a Facebook account using a browser-based cookie editor to exfiltrate and reuse session tokens. By manually extracting the critical authentication cookies (`c_user` and `xs`) from an active session, I proved that an attacker can inject these into a completely different browser (e.g., moving from Chrome to Opera) and maintain persistence without ever needing the victim's password.
 
 | Component | Value | Purpose |
 | :--- | :--- | :--- |
@@ -34,17 +35,18 @@ I performed a demonstration of the "cloning" process using a browser-based cooki
 
 ## 3. Execution Workflow
 
-1. **Tool Setup:** Integrated a professional cookie editor into the testing browser and enabled incognito and file URL access.
-2. **Reconnaissance:** Visited a target web application and utilized the editor to identify session-specific cookies.
-3. **Exfiltration & Injection:** Extracted valid cookie values and injected them into a separate, clean browser instance to simulate an attacker's environment.
-4. **Validation:** Reloaded the target application in the attacker's browser to confirm successful authentication bypass and account access.
+1. **Tool Setup:** Integrated a professional cookie editor into my primary browser (Chrome) and a clean secondary browser (Opera).
+2. **Reconnaissance:** Logged into a target Facebook account and utilized the editor to identify session-critical cookies, specifically isolating the `c_user` (user ID) and `xs` (session secret) values.
+3. **Exfiltration & Injection:** Extracted these valid cookie values from Chrome and injected them manually into the Opera browser instance to simulate a remote attacker's environment.
+4. **Validation:** Navigated to `facebook.com` in the Opera browser. The platform immediately granted full authenticated access to the victim's profile without prompting for a password or 2FA.
 
 ## 4. Logical Attack Flow
 ```markdown
-# Logical Attack Flow:
-1. Target: authenticated_session_cookie = "session_id=abc123..."
-2. Action: Inject "session_id=abc123..." into Attacker_Browser
-3. Result: Access granted to victim_profile without password prompt
+# Logical Attack Flow (Facebook Token Cloning):
+1. Target: Authenticated Facebook Session
+2. Exfiltrate: Extract `c_user` = "10008..." and `xs` = "45%3A..."
+3. Action: Inject cookies into Attacker_Browser (Opera)
+4. Result: Navigate to facebook.com -> Immediate access granted.
 ```
 
 ## 5. Evidence of Work

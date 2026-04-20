@@ -1,8 +1,9 @@
 +++
 date = '2026-04-18T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'NoSQL Injection & Database Poisoning (Vouched Application)'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "NOSQL-INJECT-2026"
 vulnerability_class = "Improper Neutralization of NoSQL Commands (CWE-943)"
 tools = ["Postman", "MongoDB", "Express.js", "Bcrypt"]

@@ -10,7 +10,7 @@
 <meta name="description" content="Objective: To implement a &ldquo;Secure-by-Design&rdquo; framework for web applications to neutralize cookie-based attack vectors.">
 <meta name="author" content="Sophy">
 <link rel="canonical" href="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/">
-<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.758378919b2a8aed8dabd3375e40cf5c66ce7ef12d3adf4860af9b12e4b65a65.css" integrity="sha256-dYN4kZsqiu2Nq9M3XkDPXGbOfvEtOt9IYK&#43;bEuS2WmU=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cyber-portfolio/assets/css/stylesheet.77656d21ff9904131caedd8fd83f50a164aa01ea835b9e559c35c4d0c2f01c5b.css" integrity="sha256-d2VtIf&#43;ZBBMcrt2P2D9QoWSqAeqDW55VnDXE0MLwHFs=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://XBlankZGap.github.io/cyber-portfolio/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://XBlankZGap.github.io/cyber-portfolio/favicon-32x32.png">
@@ -134,6 +134,54 @@ document.addEventListener("DOMContentLoaded", function() {
             searchResults.style.display = "none";
         }
     });
+
+     
+    const tagButtons = document.querySelectorAll('.filter-tag');
+    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+    let activeTags = new Set();
+
+    tagButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tag = this.getAttribute('data-filter');
+            
+            
+            if (activeTags.has(tag)) {
+                activeTags.delete(tag);
+                this.classList.remove('active');
+            } else {
+                activeTags.add(tag);
+                this.classList.add('active');
+            }
+
+            
+            if (activeTags.size === 0) {
+                
+                projectCards.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            } else {
+                projectCards.forEach(card => {
+                    
+                    
+                    const cardTagsAttr = card.getAttribute('data-tags');
+                    if (!cardTagsAttr) {
+                        card.style.display = 'none';
+                        return;
+                    }
+                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
+                    
+                    
+                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
+                    
+                    if (hasTag) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });
 });
 </script>
 <meta property="og:url" content="https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/">
@@ -182,8 +230,8 @@ document.addEventListener("DOMContentLoaded", function() {
   "keywords": [
     
   ],
-  "articleBody": "Objective: To implement a “Secure-by-Design” framework for web applications to neutralize cookie-based attack vectors.\n1. The Vulnerability: Exposure of Unprotected Session Tokens Web applications that fail to use specific security flags leave their users vulnerable to both local and network-based cookie theft. This project addresses the Integrity and Confidentiality of the user session by architecting a defense that prevents tokens from being accessed by client-side scripts or intercepted over insecure channels.\n2. Technical Execution: Layered Cookie Defense I developed a remediation roadmap that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags—I effectively neutralized the primary methods attackers use to steal session data.\nComponent Value Purpose Transport Security HSTS / HTTPS Encrypts session data during transmission. Security Flag HttpOnly Prevents JavaScript from accessing the cookie. Security Flag SameSite=Strict Blocks cross-site request forgery (CSRF) access. Session Logic Cookie Rotation Limits the window of exposure for any single token. 3. Execution Workflow Threat Assessment: Analyzed real-world session breach scenarios, such as the 2018 British Airways data breach, to prioritize high-risk assets. Flag Deployment: Configured the application server to automatically set Secure and HttpOnly flags on all outgoing session cookies. Input Validation: Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate session data. Management Optimization: Established aggressive session timeouts and mandatory token rotation to ensure that compromised cookies have a limited lifespan. 4. Key Commands // Example of a Secure Session Cookie Configuration in a Web Application Set-Cookie: sessionID=xyz789; Secure; HttpOnly; SameSite=Strict; Max-Age=3600; 5. Evidence of Work Caption: Technical implementation of device-bound session tokens and HttpOnly/SameSite cookie flags in the Vouched application.\nYour browser does not support the video tag. VIDEO EVIDENCE: Demonstration of cookie security preventing session cloning between different browsers (Chrome vs Opera).\n6. Professional Impact This project demonstrates a proactive Security Operations mindset. By establishing these architectural safeguards, I protected the organization’s System Integrity and maintained customer trust. My remediation plan ensures that even in the event of an XSS vulnerability, the core session token remains inaccessible to attackers, significantly reducing the success rate of complex session hijacking attempts.\n",
-  "wordCount" : "362",
+  "articleBody": "Objective: To implement a “Secure-by-Design” framework for web applications to neutralize cookie-based attack vectors.\n1. The Vulnerability: Exposure of Unprotected Session Tokens Web applications that fail to use specific security flags leave their users vulnerable to both local and network-based cookie theft. This project addresses the Integrity and Confidentiality of the user session by architecting a defense that prevents tokens from being accessed by client-side scripts or intercepted over insecure channels.\n2. Technical Execution: Layered Cookie Defense (Vouched Platform) I developed a remediation roadmap specifically tailored for the Vouched identity platform (https://app.vouched.id) that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags on the Vouched portal—I effectively neutralized the primary methods attackers use to steal session data, ensuring session integrity during identity verification flows.\nComponent Value Purpose Transport Security HSTS / HTTPS Encrypts session data during transmission. Security Flag HttpOnly Prevents JavaScript from accessing the cookie. Security Flag SameSite=Strict Blocks cross-site request forgery (CSRF) access. Session Logic Cookie Rotation Limits the window of exposure for any single token. 3. Execution Workflow Threat Assessment: Analyzed real-world session breach scenarios to prioritize high-risk assets within the Vouched portal. Flag Deployment: Configured the application server to automatically set Secure and HttpOnly flags on all outgoing session cookies across https://app.vouched.id. Input Validation: Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate Vouched session data. Management Optimization: Established aggressive session timeouts and mandatory token rotation to ensure that compromised Vouched cookies have a limited lifespan. 4. Key Commands // Example of a Secure Session Cookie Configuration in a Web Application Set-Cookie: sessionID=xyz789; Secure; HttpOnly; SameSite=Strict; Max-Age=3600; 5. Evidence of Work Caption: Technical implementation of device-bound session tokens and HttpOnly/SameSite cookie flags in the Vouched application.\nYour browser does not support the video tag. VIDEO EVIDENCE: Demonstration of cookie security preventing session cloning between different browsers (Chrome vs Opera).\n6. Professional Impact This project demonstrates a proactive Security Operations mindset. By establishing these architectural safeguards, I protected the organization’s System Integrity and maintained customer trust. My remediation plan ensures that even in the event of an XSS vulnerability, the core session token remains inaccessible to attackers, significantly reducing the success rate of complex session hijacking attempts.\n",
+  "wordCount" : "383",
   "inLanguage": "en",
   "image":"https://XBlankZGap.github.io/cyber-portfolio/images/feature-secure-session-architecture.png","datePublished": "2026-04-10T10:00:00+01:00",
   "dateModified": "2026-04-10T10:00:00+01:00",
@@ -215,12 +263,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.05em;">SOPHY'S CYBERLAB</span>
             </a>
             <div class="logo-switches">
-                <a href="https://XBlankZGap.github.io/cyber-portfolio/search" title="Search (Alt + /)" accesskey="/" style="margin: 0 10px; display: flex; align-items: center; color: var(--on-surface);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </a>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -262,6 +304,67 @@ document.addEventListener("DOMContentLoaded", function() {
     <main class="main">
 
 <article class="post-single main-editorial-grid">
+  <div class="search-container-center">
+    <div class="search-bar terminal-glow">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input id="inline-search-input" type="text" placeholder="Search vulnerabilities, CVEs, or tools..." autocomplete="off">
+    </div>
+    <ul id="inline-search-results"></ul>
+</div>
+
+  
+
+<div class="tag-filter-container">
+    <div class="tag-filter-list" id="tag-filter-list">
+        
+            
+            
+        
+    </div>
+</div>
+
+<style>
+.tag-filter-container {
+    max-width: var(--uniform-width);
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+}
+
+.tag-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-tag {
+    background: var(--surface-highest);
+    color: var(--secondary);
+    border: 1px solid var(--outline);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filter-tag:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.filter-tag.active {
+    background: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+}
+</style>
+
+  
   <header class="post-header-editorial">
     <div class="breadcrumbs"><a href="https://XBlankZGap.github.io/cyber-portfolio/">Home</a>
             <span>/</span><a href="https://XBlankZGap.github.io/cyber-portfolio/posts/">Posts</a>
@@ -281,11 +384,11 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="intel-box">
           <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
           <div class="tools-grid">
-            <span class="tool-tag">HSTS</span>
-            <span class="tool-tag">HTTPS</span>
-            <span class="tool-tag">HttpOnly</span>
-            <span class="tool-tag">SameSite</span>
-            <span class="tool-tag">WAF</span>
+              <span class="tool-tag">HSTS</span>
+              <span class="tool-tag">HTTPS</span>
+              <span class="tool-tag">HttpOnly</span>
+              <span class="tool-tag">SameSite</span>
+              <span class="tool-tag">WAF</span>
           </div>
         </div>
         <div class="intel-box">
@@ -321,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li>
                     <a href="#1-the-vulnerability-exposure-of-unprotected-session-tokens" aria-label="1. The Vulnerability: Exposure of Unprotected Session Tokens">1. The Vulnerability: Exposure of Unprotected Session Tokens</a></li>
                 <li>
-                    <a href="#2-technical-execution-layered-cookie-defense" aria-label="2. Technical Execution: Layered Cookie Defense">2. Technical Execution: Layered Cookie Defense</a></li>
+                    <a href="#2-technical-execution-layered-cookie-defense-vouched-platform" aria-label="2. Technical Execution: Layered Cookie Defense (Vouched Platform)">2. Technical Execution: Layered Cookie Defense (Vouched Platform)</a></li>
                 <li>
                     <a href="#3-execution-workflow" aria-label="3. Execution Workflow">3. Execution Workflow</a></li>
                 <li>
@@ -341,8 +444,8 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="post-content"><p><strong>Objective:</strong> To implement a &ldquo;Secure-by-Design&rdquo; framework for web applications to neutralize cookie-based attack vectors.</p>
 <h2 id="1-the-vulnerability-exposure-of-unprotected-session-tokens">1. The Vulnerability: Exposure of Unprotected Session Tokens<a hidden class="anchor" aria-hidden="true" href="#1-the-vulnerability-exposure-of-unprotected-session-tokens">#</a></h2>
 <p>Web applications that fail to use specific security flags leave their users vulnerable to both local and network-based cookie theft. This project addresses the Integrity and Confidentiality of the user session by architecting a defense that prevents tokens from being accessed by client-side scripts or intercepted over insecure channels.</p>
-<h2 id="2-technical-execution-layered-cookie-defense">2. Technical Execution: Layered Cookie Defense<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-layered-cookie-defense">#</a></h2>
-<p>I developed a remediation roadmap that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags—I effectively neutralized the primary methods attackers use to steal session data.</p>
+<h2 id="2-technical-execution-layered-cookie-defense-vouched-platform">2. Technical Execution: Layered Cookie Defense (Vouched Platform)<a hidden class="anchor" aria-hidden="true" href="#2-technical-execution-layered-cookie-defense-vouched-platform">#</a></h2>
+<p>I developed a remediation roadmap specifically tailored for the Vouched identity platform (<code>https://app.vouched.id</code>) that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags on the Vouched portal—I effectively neutralized the primary methods attackers use to steal session data, ensuring session integrity during identity verification flows.</p>
 <table>
   <thead>
       <tr>
@@ -376,10 +479,10 @@ document.addEventListener("DOMContentLoaded", function() {
 </table>
 <h2 id="3-execution-workflow">3. Execution Workflow<a hidden class="anchor" aria-hidden="true" href="#3-execution-workflow">#</a></h2>
 <ol>
-<li><strong>Threat Assessment:</strong> Analyzed real-world session breach scenarios, such as the 2018 British Airways data breach, to prioritize high-risk assets.</li>
-<li><strong>Flag Deployment:</strong> Configured the application server to automatically set <code>Secure</code> and <code>HttpOnly</code> flags on all outgoing session cookies.</li>
-<li><strong>Input Validation:</strong> Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate session data.</li>
-<li><strong>Management Optimization:</strong> Established aggressive session timeouts and mandatory token rotation to ensure that compromised cookies have a limited lifespan.</li>
+<li><strong>Threat Assessment:</strong> Analyzed real-world session breach scenarios to prioritize high-risk assets within the Vouched portal.</li>
+<li><strong>Flag Deployment:</strong> Configured the application server to automatically set <code>Secure</code> and <code>HttpOnly</code> flags on all outgoing session cookies across <code>https://app.vouched.id</code>.</li>
+<li><strong>Input Validation:</strong> Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate Vouched session data.</li>
+<li><strong>Management Optimization:</strong> Established aggressive session timeouts and mandatory token rotation to ensure that compromised Vouched cookies have a limited lifespan.</li>
 </ol>
 <h2 id="4-key-commands">4. Key Commands<a hidden class="anchor" aria-hidden="true" href="#4-key-commands">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example of a Secure Session Cookie Configuration in a Web Application
@@ -416,11 +519,27 @@ document.addEventListener("DOMContentLoaded", function() {
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
+
+    
+    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+        <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
+      </div>
+      <div class="bio-content">
+        <h3 style="margin: 0 0 10px 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px;">Sophy Chisom Abraham</h3>
+        <p style="margin: 0 0 15px 0; font-size: 15px; color: var(--on-surface-variant); line-height: 1.5;">Cybersecurity Specialist focused on Security Operations, Vulnerability Assessment, and Infrastructure Defense. Documenting methodologies and advanced technical research.</p>
+        <a href="/cyber-portfolio/about/" style="display: inline-flex; align-items: center; font-size: 13px; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-transform: uppercase; text-decoration: none;">
+          Learn More About Me <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 5px;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    
 <nav class="paginav">
-  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/hybrid-siem-architecture/">
+  <a class="prev" href="https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/">
     <span class="title">« Prev</span>
     <br>
-    <span>Hybrid SIEM Architecture for SEO &amp; Security Intelligence</span>
+    <span>NoSQL Injection &amp; Database Poisoning (Vouched Application)</span>
   </a>
   <a class="next" href="https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/">
     <span class="title">Next »</span>
@@ -432,129 +551,22 @@ document.addEventListener("DOMContentLoaded", function() {
   </footer>
 </article>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://XBlankZGap.github.io/cyber-portfolio/">SOPHY&#39;S CYBERLAB</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <footer class="footer" style="padding: 60px 20px; text-align: center; border-top: 1px solid var(--outline); margin-top: 80px; background: var(--surface);">
+    <div class="footer-content" style="max-width: var(--uniform-width); margin: 0 auto;">
+        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--primary); margin-bottom: 15px; display: inline-block;">terminal</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin: 0 0 10px 0;">Sophy's CyberLab</h3>
+        <p style="color: var(--on-surface-variant); font-size: 14px; margin: 0 0 20px 0; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            A documented record of cybersecurity research, engineering, and vulnerability analysis.
+        </p>
+        <div class="footer-contact" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary);">mail</span>
+            <a href="mailto:chisomsophyabraham@gmail.com" style="color: var(--on-surface); font-weight: 600; text-decoration: none; font-size: 15px; transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary)';" onmouseout="this.style.color='var(--on-surface)';">chisomsophyabraham@gmail.com</a>
+        </div>
+        <div class="footer-copyright" style="margin-top: 40px; font-size: 12px; color: var(--on-surface-variant); opacity: 0.7;">
+            &copy; 2026 Sophy Chisom Abraham. All rights reserved.
+        </div>
+    </div>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
 </body>
 
 </html>

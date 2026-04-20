@@ -1,8 +1,9 @@
 +++
 date = '2025-08-05T10:00:00+01:00'
 draft = false
+weight = 200
 title = 'Service Enumeration & Vulnerability Research'
-categories = ["Binary & System Exploitation"]
+categories = ["Penetration Testing & Vulnerability Assessment"]
 
 [cover]
 image = "images/feature-3-shell-privilege-escalation.png"

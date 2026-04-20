@@ -1,8 +1,9 @@
 +++
 date = '2026-04-10T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'Secure Session Architecture & Defensive Flag Implementation'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "SECURE-SESSION-2026"
 vulnerability_class = "Exposure of Unprotected Session Tokens"
 tools = ["HSTS", "HTTPS", "HttpOnly", "SameSite", "WAF"]
@@ -21,9 +22,9 @@ tags = ["Session Security", "Defense-in-Depth", "Cookie Flags", "Web Architectur
 
 Web applications that fail to use specific security flags leave their users vulnerable to both local and network-based cookie theft. This project addresses the Integrity and Confidentiality of the user session by architecting a defense that prevents tokens from being accessed by client-side scripts or intercepted over insecure channels.
 
-## 2. Technical Execution: Layered Cookie Defense
+## 2. Technical Execution: Layered Cookie Defense (Vouched Platform)
 
-I developed a remediation roadmap that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags—I effectively neutralized the primary methods attackers use to steal session data.
+I developed a remediation roadmap specifically tailored for the Vouched identity platform (`https://app.vouched.id`) that utilizes advanced browser security features and server-side logic to protect session identities. By implementing a multi-layered defense strategy—including the use of the SameSite attribute and HttpOnly flags on the Vouched portal—I effectively neutralized the primary methods attackers use to steal session data, ensuring session integrity during identity verification flows.
 
 | Component | Value | Purpose |
 | :--- | :--- | :--- |
@@ -34,10 +35,10 @@ I developed a remediation roadmap that utilizes advanced browser security featur
 
 ## 3. Execution Workflow
 
-1. **Threat Assessment:** Analyzed real-world session breach scenarios, such as the 2018 British Airways data breach, to prioritize high-risk assets.
-2. **Flag Deployment:** Configured the application server to automatically set `Secure` and `HttpOnly` flags on all outgoing session cookies.
-3. **Input Validation:** Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate session data.
-4. **Management Optimization:** Established aggressive session timeouts and mandatory token rotation to ensure that compromised cookies have a limited lifespan.
+1. **Threat Assessment:** Analyzed real-world session breach scenarios to prioritize high-risk assets within the Vouched portal.
+2. **Flag Deployment:** Configured the application server to automatically set `Secure` and `HttpOnly` flags on all outgoing session cookies across `https://app.vouched.id`.
+3. **Input Validation:** Implemented strict server-side input sanitization to block XSS payloads that might attempt to exfiltrate Vouched session data.
+4. **Management Optimization:** Established aggressive session timeouts and mandatory token rotation to ensure that compromised Vouched cookies have a limited lifespan.
 
 ## 4. Key Commands
 ```javascript

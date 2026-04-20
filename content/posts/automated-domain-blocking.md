@@ -1,8 +1,9 @@
 +++
 date = '2025-11-05T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Automated Domain Blocking via Batch Scripting'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "AUTOMATION-NET-2025"
 vulnerability_class = "Manual Mitigation Inefficiency"
 tools = ["Batch Scripting", "VS Code", "Windows Hosts File"]

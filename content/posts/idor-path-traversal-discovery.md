@@ -1,8 +1,9 @@
 +++
 date = '2025-12-15T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'Insecure Direct Object Reference (IDOR) & Path Traversal Discovery'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "PATH-TRAVERSAL-2025"
 vulnerability_class = "Path Traversal (CWE-22)"
 tools = ["OWASP ZAP", "WebGoat", "Active Scanning"]

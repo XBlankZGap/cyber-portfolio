@@ -9,38 +9,38 @@
     <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Network Security &amp; Infrastructure</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</link>
+      <title>Network &amp; Infrastructure Security</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/network--infrastructure-security/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/network-security--infrastructure/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/network--infrastructure-security/</guid>
       <description></description>
     </item>
     <item>
-      <title>Security Operations &amp; Engineering</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</link>
+      <title>Security Operations (SOC) &amp; Incident Response</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations-soc--incident-response/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations--engineering/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/security-operations-soc--incident-response/</guid>
       <description></description>
     </item>
     <item>
-      <title>Web Application Pentesting</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</link>
+      <title>Application Security (AppSec)</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/application-security-appsec/</link>
       <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/web-application-pentesting/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/application-security-appsec/</guid>
       <description></description>
     </item>
     <item>
-      <title>Binary &amp; System Exploitation</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/binary--system-exploitation/</link>
+      <title>Penetration Testing &amp; Vulnerability Assessment</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/penetration-testing--vulnerability-assessment/</link>
       <pubDate>Fri, 17 Apr 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/binary--system-exploitation/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/penetration-testing--vulnerability-assessment/</guid>
       <description></description>
     </item>
     <item>
-      <title>Cryptography &amp; Data Integrity</title>
-      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</link>
+      <title>DevSecOps &amp; Strategy</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/categories/devsecops--strategy/</link>
       <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
-      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/cryptography--data-integrity/</guid>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/categories/devsecops--strategy/</guid>
       <description></description>
     </item>
   </channel>

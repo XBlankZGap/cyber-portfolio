@@ -584,7 +584,17 @@ h1 {
 .hero-section {
     margin: 160px auto 100px auto !important;
     max-width: var(--uniform-width);
-    padding: 0 60px !important;
+}
+
+@media (min-width: 900px) {
+    .hero-section {
+        padding: 0 20px !important;
+    }
+}
+@media (max-width: 899px) {
+    .hero-section {
+        padding: 0 40px !important;
+    }
 }
 
 .hero-section h1 {
@@ -1638,12 +1648,9 @@ button.btn-terminal-submit,
    ────────────────────────────────────────────────────── */
 @media (min-width: 900px) {
     .list:not(.search-page):not(.about-page):not(.contact-page) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
         max-width: var(--uniform-width);
         margin: 0 auto;
-        padding: 0 60px 100px 60px;
+        padding: 0 20px 100px 20px;
     }
     
     .list:not(.search-page) .post-entry {
@@ -1687,12 +1694,12 @@ button.btn-terminal-submit,
 
 
 /* ──────────────────────────────────────────────────────── 
-   GRID PROJECTS - 2 COLUMNS 
+   GRID PROJECTS - 3 COLUMNS 
    ────────────────────────────────────────────────────── */
 .grid-projects {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 40px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
 }
 
 @media (max-width: 900px) {

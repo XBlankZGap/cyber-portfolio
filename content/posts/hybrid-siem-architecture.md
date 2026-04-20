@@ -1,8 +1,9 @@
 +++
 date = '2026-04-15T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Hybrid SIEM Architecture for SEO & Security Intelligence'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "SIEM-SEO-2026"
 vulnerability_class = "SEO-Security Blind Spots"
 tools = ["Splunk", "Microsoft Sentinel", "SOAR", "AI Detection"]

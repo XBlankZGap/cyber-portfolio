@@ -1,8 +1,9 @@
 +++
 date = '2026-03-15T10:00:00+01:00'
 draft = false
+weight = 500
 title = 'Blockchain Forensics & Incident Post-Mortem (Bitfinex Case Study)'
-categories = ["Cryptography & Data Integrity"]
+categories = ["DevSecOps & Strategy"]
 case_id = "BLOCKCHAIN-FORENSICS-2026"
 vulnerability_class = "Insecure Credential Storage (CWE-312)"
 tools = ["Python", "Blockchain Explorer", "Forensic Investigation"]

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevSecOps &amp; Strategy on SOPHY&#39;S CYBERLAB</title>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/categories/devsecops--strategy/</link>
+    <description>Recent content in DevSecOps &amp; Strategy on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/devsecops--strategy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Forensics: Private Key Retrieval &amp; Transaction Hijacking</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-wallet-bip39/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the technical impact of private key exposure by automating the retrieval of all associated wallet addresses and triggering unauthorized balance checks and transactions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blockchain Forensics &amp; Incident Post-Mortem (Bitfinex Case Study)</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/blockchain-forensics-bitfinex/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To analyze high-scale cryptocurrency heists and identify the critical security failures in private key management that lead to multi-billion dollar losses.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mandatory Access Control (MAC) using SELinux</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</link>
+      <pubDate>Thu, 15 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/selinux-mandatory-access-control/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To enforce strict security policies at the kernel level, preventing unauthorized resource access by compromised services.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Integrity Verification via Cryptographic Hashing</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</link>
+      <pubDate>Sat, 10 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/data-integrity-hashing/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize one-way hashing algorithms to verify data authenticity and secure credential storage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cryptographic Infrastructure &amp; Secure Communication</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</link>
+      <pubDate>Mon, 05 Jan 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptographic-infrastructure-pki/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement and manage cryptographic systems that ensure end-to-end data confidentiality and authenticated communication.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Offline Cryptanalysis &amp; Password Recovery</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</link>
+      <pubDate>Thu, 25 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/cryptanalysis-hash-cracking/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize high-performance cracking tools to perform a dictionary attack against stolen MD5 hashes, successfully recovering plaintext credentials.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

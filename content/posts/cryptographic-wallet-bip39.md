@@ -1,11 +1,12 @@
 +++
 date = '2026-03-20T10:00:00+01:00'
 draft = false
+weight = 500
 title = 'Blockchain Forensics: Private Key Retrieval & Transaction Hijacking'
-categories = ["Cryptography & Data Integrity"]
+categories = ["DevSecOps & Strategy"]
 case_id = "BLOCKCHAIN-HIJACK-2026"
 vulnerability_class = "Private Key Exposure (CWE-522)"
-tools = ["Python (Web3.py)", "BIP39", "HD Wallets", "Blockchain API"]
+tools = ["btckeygen.py", "btctransact.py", "BIP39", "HD Wallets"]
 
 [cover]
 image = "images/feature-blockchain-forensics.png"
@@ -19,11 +20,11 @@ tags = ["Blockchain Forensics", "Private Key Theft", "Wallet Security", "BIP39"]
 
 ## 1. The Vulnerability: Private Key Exposure (CWE-522)
 
-In the blockchain ecosystem, a private key is the ultimate authority. Unlike traditional accounts with "forgot password" features, exposure of a private key or mnemonic phrase leads to a total and irreversible loss of asset control. This project demonstrates how an attacker can use a single stolen key to compromise an entire hierarchical deterministic (HD) wallet structure.
+In the blockchain ecosystem, a private key is the ultimate authority. Unlike traditional accounts with "forgot password" features, exposure of a private key or mnemonic phrase leads to a total and irreversible loss of asset control. This project demonstrates how an attacker can use a single stolen key to compromise an entire hierarchical deterministic (HD) wallet structure, identifying all historical addresses tied to a seed.
 
 ## 2. Technical Execution: Automated Address Harvesting
 
-I developed a suite of forensic tools in Python to simulate an attack on exposed cryptographic identities. Using `btckeygen.py` and `btctransact.py`, I automated the process of deriving thousands of potential public addresses from a single stolen seed, subsequently querying the blockchain to identify active balances.
+I developed a suite of forensic tools in Python to simulate an attack on exposed cryptographic identities. Using `btckeygen.py` and `btctransact.py` *(available in the Tools section above)*, I automated the process of deriving thousands of potential public addresses from a single stolen seed, subsequently querying the blockchain to identify active balances.
 
 | Component | Value | Purpose |
 | :--- | :--- | :--- |
@@ -35,36 +36,51 @@ I developed a suite of forensic tools in Python to simulate an attack on exposed
 ## 3. Execution Workflow
 
 1. **Key Ingestion:** Input a compromised 12-word mnemonic or raw private key into the forensic environment.
-2. **Address Derivation:** Utilized the BIP44 hierarchy to generate all possible BTC/ETH addresses associated with the stolen root key.
+2. **Address Derivation:** Utilized the BIP44 hierarchy to generate all possible BTC/ETH addresses associated with the stolen root key via `btckeygen.py`.
 3. **Automated Auditing:** Ran a balance check script to identify which derived addresses contained active funds.
-4. **Transaction Triggering:** Simulated the withdrawal process, demonstrating how an attacker can sign and broadcast transactions from all retrieved addresses simultaneously.
+4. **Transaction Triggering:** Simulated the withdrawal process with `btctransact.py`, demonstrating how an attacker can sign and broadcast transactions from all retrieved addresses simultaneously.
 
-## 4. Technical Evidence (Python Snippet)
-```python
-# Extract from btctransact.py: Automating withdrawals from all retrieved addresses
-for address in retrieved_addresses:
-    balance = get_balance(address)
-    if balance > 0:
-        trigger_withdrawal(private_key, destination_wallet, amount=balance)
-        print(f"Funds exfiltrated from {address}")
+## 4. Evidence of Work: Terminal Execution
+
+The following terminal output captures the live execution of `btckeygen.py`, demonstrating the instant derivation of multiple active Bitcoin SegWit and Legacy addresses, along with their corresponding WIF (Wallet Import Format) private keys.
+
+```bash
+$ python3 btckeygen.py --mnemonic "[REDACTED_COMPROMISED_SEED_PHRASE]"
+Deriving keys using BIP44 standard...
+
+Derived 5 BITCOIN addresses and private keys (segwit):
+--------------------------------------------------------------------------------
+1:
+  Address:    bc1q09lkdlvyy6k8xz7z0lefs0udr5ksdadav0waj7
+  PrivateKey: L16rLcpmZy5KgrHbm42UUGj9QNznjPtshDu8HNftCParPKmTekGp
+
+2:
+  Address:    bc1q00hcwwccvsggscgwnzyy2vmn0eusl6jls4hkza
+  PrivateKey: L1YxArJoxzfAxWz5CbxPfxR1GiL3n6NGTYabykRxNHFbHRC5u6Cz
+
+3:
+  Address:    bc1q0xsv64y9c9ccquw0l47zm74vde3tj8c0kagpx2
+  PrivateKey: Ky9HRSNKjNj57CUGvPmYpP4bKaFnRbY9u545iheq8Caq8HKgQgGw
+
+4:
+  Address:    bc1qh6gy4w5enfxmzvmgxntws3v7yjl60cqwyu6h0u
+  PrivateKey: L4qH6hHDav1q7jfRhdeWiuVFRWcjJNwsNcjNBnZDHeuNdpRCB2Gb
+
+5:
+  Address:    bc1qvunte3tmw0lquq96ghpf49drmkje4pme6gdhqw
+  PrivateKey: L2gPWWtfEwx1kF8iZiWZucCzy1niLVghtKcE2LWVx8jjhCkP669M
+  
+Derived 5 BITCOIN addresses and private keys (legacy):
+--------------------------------------------------------------------------------
+1:
+  Address:    19q3KWPespyU2iNgg1n7THrksKJ3nongLJ
+  PrivateKey: L3jNw6asfDRvmrq5z9djw4APqjjcHctQi8jgrxyYYZSTyTPeprEn
+
+2:
+  Address:    126bbdDewNwJQaScKfy519dbTHoeKGG7GY
+  PrivateKey: L2NMhCETs38MmhME9jFNQEVVvzz3fPK8LPqRAD5wt9VAXwrR2e56
 ```
 
-## 5. Evidence of Work
+## 5. Professional Impact
 
-![Blockchain Evidence](/images/feature-blockchain-forensics.png)
-*Caption: Technical log showing the successful generation of multiple wallet addresses and the subsequent balance verification across the blockchain.*
-
-<div style="display: flex; gap: 20px; margin: 40px 0;">
-    <div style="flex: 1; background: var(--surface-low); padding: 20px; border-radius: 8px; border: 1px solid var(--outline);">
-        <h4 style="color: var(--primary); font-size: 14px; margin-top: 0;">Address Export</h4>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--on-surface-variant);">Evidence of 500+ retrieved wallet addresses associated with a single stolen private key.</p>
-    </div>
-    <div style="flex: 1; background: var(--surface-low); padding: 20px; border-radius: 8px; border: 1px solid var(--outline);">
-        <h4 style="color: var(--primary); font-size: 14px; margin-top: 0;">Exploit Scripts</h4>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--on-surface-variant);">Custom Python tools used for mass address derivation and automated transaction signing.</p>
-    </div>
-</div>
-
-## 6. Professional Impact
-
-This project highlights the catastrophic scale of a private key breach. I successfully proved that an attacker does not just lose one "account," but their entire multi-coin identity. To remediate this, I documented the critical requirement for Hardware Security Modules (HSMs) and Multi-Sig architectures, which require multiple independent authorizations before any transaction can be signed and broadcast.
+This project demonstrates a deep understanding of cryptographic key management and blockchain forensic investigation. By writing custom Python tooling to automate BIP39/BIP44 derivation paths, I proved the catastrophic impact of seed phrase exposure. To remediate this, I advocate for strict hardware wallet isolation, the use of multi-signature (multisig) architectures, and the implementation of passphrase-protected (25th word) seeds to create a robust defense-in-depth model for digital assets.

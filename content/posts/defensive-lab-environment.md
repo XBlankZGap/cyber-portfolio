@@ -1,7 +1,8 @@
 date = '2025-07-10T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Defensive Lab Environment & Network Configuration'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "LAB-NET-2026-01"
 vulnerability_class = "Network Segregation & Infrastructure Hardening"
 tools = ["VirtualBox", "Kali Linux", "Host-Only Networking"]

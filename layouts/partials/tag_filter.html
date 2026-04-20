@@ -1,0 +1,66 @@
+{{/* 
+  Tag Filter Partial
+  Displays a set of tags used to filter posts via client-side JavaScript.
+*/}}
+
+<div class="tag-filter-container">
+    <div class="tag-filter-list" id="tag-filter-list">
+        {{ if .IsHome }}
+            {{/* Hardcoded popular categories/tags for the homepage */}}
+            <button class="filter-tag" data-filter="SOC Analysis">SOC Analysis</button>
+            <button class="filter-tag" data-filter="Pentesting">Pentesting</button>
+            <button class="filter-tag" data-filter="Network Analysis">Network Analysis</button>
+            <button class="filter-tag" data-filter="AppSec">AppSec</button>
+            <button class="filter-tag" data-filter="DevSecOps">DevSecOps</button>
+            <button class="filter-tag" data-filter="Roadmap">Roadmap</button>
+        {{ else }}
+            {{/* Display tags specific to the post being viewed */}}
+            {{ if .Params.tags }}
+                {{ range .Params.tags }}
+                    <button class="filter-tag" data-filter="{{ . }}">{{ . }}</button>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.tag-filter-container {
+    max-width: var(--uniform-width);
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+}
+
+.tag-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-tag {
+    background: var(--surface-highest);
+    color: var(--secondary);
+    border: 1px solid var(--outline);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filter-tag:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.filter-tag.active {
+    background: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+}
+</style>

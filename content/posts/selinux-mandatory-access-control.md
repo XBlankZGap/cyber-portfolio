@@ -1,8 +1,9 @@
 +++
 date = '2026-01-15T10:00:00+01:00'
 draft = false
+weight = 500
 title = 'Mandatory Access Control (MAC) using SELinux'
-categories = ["Cryptography & Data Integrity"]
+categories = ["DevSecOps & Strategy"]
 case_id = "MAC-SELINUX-2026"
 vulnerability_class = "Excessive Privilege & Service Exploitation"
 tools = ["SELinux", "audit2allow", "getenforce", "audit log"]

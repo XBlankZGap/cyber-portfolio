@@ -1,8 +1,9 @@
 +++
 date = '2025-08-20T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'Cross-Site Request Forgery (CSRF) via Forged Reviews'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "CSRF-WEB-2025"
 vulnerability_class = "Missing Anti-Forgery Tokens (CWE-352)"
 tools = ["OWASP ZAP", "Python", "HTML/JS", "WebGoat"]

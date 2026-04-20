@@ -1,8 +1,9 @@
 +++
 date = '2026-04-17T10:00:00+01:00'
 draft = false
+weight = 200
 title = 'Fowsniff — Credential Harvesting & Password Cracking'
-categories = ["Binary & System Exploitation"]
+categories = ["Penetration Testing & Vulnerability Assessment"]
 case_id = "FOWSNIFF-PASS-2026"
 vulnerability_class = "Information Disclosure (Credential Leak)"
 tools = ["Nmap", "Metasploit", "John the Ripper", "Hydra"]

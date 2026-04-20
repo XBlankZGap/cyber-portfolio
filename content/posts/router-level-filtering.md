@@ -1,8 +1,9 @@
 +++
 date = '2025-11-10T10:00:00+01:00'
 draft = false
+weight = 300
 title = 'Centralized Network Security via Router-Level Filtering'
-categories = ["Network Security & Infrastructure"]
+categories = ["Network & Infrastructure Security"]
 case_id = "GATEWAY-NET-2025"
 vulnerability_class = "Device-Level Mitigation Gaps"
 tools = ["MTN 4G Router", "URL Filtering", "IPv4", "Firewall"]

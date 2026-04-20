@@ -1,8 +1,9 @@
 +++
 date = '2026-04-19T10:00:00+01:00'
 draft = false
+weight = 400
 title = 'Database Encryption & Sensitive Data Protection (MongoDB)'
-categories = ["Web Application Pentesting"]
+categories = ["Application Security (AppSec)"]
 case_id = "DB-ENCRYPT-2026"
 vulnerability_class = "Plaintext Data Exposure in NoSQL Databases"
 tools = ["MongoDB", "AES-256", "Field-Level Encryption", "Key Management"]

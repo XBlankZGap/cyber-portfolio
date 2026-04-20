@@ -1,8 +1,9 @@
 +++
 date = '2026-01-05T10:00:00+01:00'
 draft = false
+weight = 500
 title = 'Cryptographic Infrastructure & Secure Communication'
-categories = ["Cryptography & Data Integrity"]
+categories = ["DevSecOps & Strategy"]
 case_id = "PKI-SECURE-2026"
 vulnerability_class = "Data Exposure in Transit"
 tools = ["OpenSSL", "AES", "RSA", "TLS", "VPN"]

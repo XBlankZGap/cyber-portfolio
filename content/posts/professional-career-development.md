@@ -2,7 +2,7 @@
 date = '2025-07-05T10:00:00+01:00'
 draft = true
 title = 'Professional Career Development and Industry Engagement'
-categories = ["Security Operations & Engineering"]
+categories = ["Security Operations (SOC) & Incident Response"]
 case_id = "CAREER-INTEGRITY-2025"
 vulnerability_class = "Information Siloing and Static Skillsets"
 tools = ["LinkedIn", "Industry Networking", "Technical Content Sharing"]

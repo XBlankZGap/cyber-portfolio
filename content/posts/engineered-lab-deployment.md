@@ -2,7 +2,7 @@
 date = '2025-07-02T10:00:00+01:00'
 draft = true
 title = 'Engineered Security Lab Deployment & Troubleshooting'
-categories = ["Security Operations & Engineering"]
+categories = ["Security Operations (SOC) & Incident Response"]
 case_id = "LAB-DEPLOY-2025"
 vulnerability_class = "Environment Misconfiguration"
 tools = ["Docker", "Java Runtime", "OWASP ZAP", "Windows 11"]

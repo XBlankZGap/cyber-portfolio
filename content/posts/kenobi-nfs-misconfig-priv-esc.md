@@ -1,8 +1,9 @@
 +++
 date = '2026-03-25T10:00:00+01:00'
 draft = false
+weight = 200
 title = 'Kenobi — Exploiting NFS Misconfigurations & Privilege Escalation'
-categories = ["Binary & System Exploitation"]
+categories = ["Penetration Testing & Vulnerability Assessment"]
 case_id = "KENOBI-LINUX-2026"
 vulnerability_class = "Insecure Service Configuration (NFS/ProFTPd)"
 tools = ["Nmap", "Netcat", "Samba", "SUID"]

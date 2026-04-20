@@ -1,8 +1,9 @@
 +++
 date = '2026-04-20T00:00:00+01:00'
 draft = false
+weight = 100
 title = 'Regulatory Compliance & Secure System Architecture (NIST/ISO 27001)'
-categories = ["Security Operations & Engineering"]
+categories = ["Security Operations (SOC) & Incident Response"]
 case_id = "COMPLIANCE-ARCH-2026"
 vulnerability_class = "Regulatory & Infrastructure Gaps"
 tools = ["ISO 27001", "NIST CSF", "RBAC", "VPC", "WAF"]

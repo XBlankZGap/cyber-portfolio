@@ -1,6 +1,9 @@
 {{- define "main" }}
 
 <article class="post-single main-editorial-grid">
+  {{ partial "search_bar.html" . }}
+  {{ partial "tag_filter.html" . }}
+  
   <header class="post-header-editorial">
     {{ partial "breadcrumbs.html" . }}
     
@@ -32,7 +35,11 @@
           <h3 class="label-metadata" style="margin-bottom: 15px; color: var(--primary);">Core_Tools</h3>
           <div class="tools-grid">
             {{- range .Params.tools }}
-            <span class="tool-tag">{{ . }}</span>
+              {{- if strings.HasSuffix . ".py" }}
+              <a href="/downloads/{{ . }}" target="_blank" class="tool-tag" style="text-decoration: none; color: var(--primary); border-color: var(--primary);">{{ . }} (View Script)</a>
+              {{- else }}
+              <span class="tool-tag">{{ . }}</span>
+              {{- end }}
             {{- end }}
           </div>
         </div>
@@ -72,6 +79,37 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
+
+    {{/* --- AUTHOR BIO BOX --- */}}
+    <div class="author-bio-box" style="margin: 60px 0 40px 0; padding: 30px; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 12px; display: flex; gap: 20px; align-items: center;">
+      <div class="bio-avatar" style="width: 80px; height: 80px; background: var(--surface-highest); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary); border: 2px solid var(--outline-variant); flex-shrink: 0;">
+        <span class="material-symbols-outlined" style="font-size: 40px;">terminal</span>
+      </div>
+      <div class="bio-content">
+        <h3 style="margin: 0 0 10px 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px;">Sophy Chisom Abraham</h3>
+        <p style="margin: 0 0 15px 0; font-size: 15px; color: var(--on-surface-variant); line-height: 1.5;">Cybersecurity Specialist focused on Security Operations, Vulnerability Assessment, and Infrastructure Defense. Documenting methodologies and advanced technical research.</p>
+        <a href="/cyber-portfolio/about/" style="display: inline-flex; align-items: center; font-size: 13px; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-transform: uppercase; text-decoration: none;">
+          Learn More About Me <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 5px;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    {{/* --- RELATED PROJECTS --- */}}
+    {{- $related := .Site.RegularPages.Related . | first 3 }}
+    {{- if $related }}
+    <div class="related-projects-section" style="margin-bottom: 60px;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid var(--outline); padding-bottom: 15px;">Related Projects</h3>
+      <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+        {{- range $related }}
+        <a href="{{ .Permalink }}" style="display: block; background: var(--surface-low); border: 1px solid var(--outline); border-radius: 8px; padding: 20px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--outline)'; this.style.transform='none';">
+          <h4 style="margin: 0 0 10px 0; font-size: 16px; color: var(--on-surface); line-height: 1.4;">{{ .Title }}</h4>
+          <span style="font-size: 12px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">View Case Study &rarr;</span>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}

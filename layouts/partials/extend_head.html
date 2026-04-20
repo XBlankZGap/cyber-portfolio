@@ -101,5 +101,53 @@ document.addEventListener("DOMContentLoaded", function() {
             searchResults.style.display = "none";
         }
     });
+
+    /* Tag Filtering Logic */
+    const tagButtons = document.querySelectorAll('.filter-tag');
+    const projectCards = document.querySelectorAll('.post-entry, .first-entry');
+    let activeTags = new Set();
+
+    tagButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tag = this.getAttribute('data-filter');
+            
+            // Toggle active state on UI
+            if (activeTags.has(tag)) {
+                activeTags.delete(tag);
+                this.classList.remove('active');
+            } else {
+                activeTags.add(tag);
+                this.classList.add('active');
+            }
+
+            // Filter logic
+            if (activeTags.size === 0) {
+                // Show all if no tags selected
+                projectCards.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            } else {
+                projectCards.forEach(card => {
+                    // We need to check if the card contains AT LEAST ONE of the active tags.
+                    // Cards need a data-tags attribute with comma separated tags.
+                    const cardTagsAttr = card.getAttribute('data-tags');
+                    if (!cardTagsAttr) {
+                        card.style.display = 'none';
+                        return;
+                    }
+                    const cardTags = cardTagsAttr.split(',').map(t => t.trim());
+                    
+                    // Check intersection
+                    const hasTag = [...activeTags].some(activeTag => cardTags.includes(activeTag));
+                    
+                    if (hasTag) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });
 });
 </script>

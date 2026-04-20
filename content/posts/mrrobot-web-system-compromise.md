@@ -1,8 +1,9 @@
 +++
 date = '2026-03-26T10:00:00+01:00'
 draft = false
+weight = 200
 title = 'Mr. Robot — Web Exploitation & System Compromise'
-categories = ["Binary & System Exploitation"]
+categories = ["Penetration Testing & Vulnerability Assessment"]
 case_id = "MRROBOT-WEB-2026"
 vulnerability_class = "Improper Input Validation & Privilege Escalation"
 tools = ["WPScan", "Nmap", "John the Ripper", "Nmap Privilege Escalation"]

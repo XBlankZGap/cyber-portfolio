@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Application Security (AppSec) on SOPHY&#39;S CYBERLAB</title>
+    <link>https://XBlankZGap.github.io/cyber-portfolio/categories/application-security-appsec/</link>
+    <description>Recent content in Application Security (AppSec) on SOPHY&#39;S CYBERLAB</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Apr 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="https://XBlankZGap.github.io/cyber-portfolio/categories/application-security-appsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Encryption &amp; Sensitive Data Protection (MongoDB)</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/</link>
+      <pubDate>Sun, 19 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/database-encryption-mongodb/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement Client-Side Field-Level Encryption (CSFLE) in a NoSQL environment to ensure that sensitive user data remains encrypted even if the database is compromised.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NoSQL Injection &amp; Database Poisoning (Vouched Application)</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/</link>
+      <pubDate>Sat, 18 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/nosql-injection-vouched/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit NoSQL injection vulnerabilities within the &amp;ldquo;Vouched&amp;rdquo; application to bypass authentication and extract sensitive user data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure Session Architecture &amp; Defensive Flag Implementation</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</link>
+      <pubDate>Fri, 10 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/secure-session-architecture/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To implement a &amp;ldquo;Secure-by-Design&amp;rdquo; framework for web applications to neutralize cookie-based attack vectors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Session Hijacking via Automated Cookie Exfiltration</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</link>
+      <pubDate>Sun, 05 Apr 2026 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/session-hijacking-cookie-exfiltration/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate the ease of unauthorized cookie acquisition and subsequent account compromise using browser-based exfiltration tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Insecure Direct Object Reference (IDOR) &amp; Path Traversal Discovery</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</link>
+      <pubDate>Mon, 15 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/idor-path-traversal-discovery/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and verify directory traversal vulnerabilities that allow unauthorized access to sensitive system files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vulnerability Analysis and Remediation Planning</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</link>
+      <pubDate>Wed, 10 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/vulnerability-remediation-planning/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To systematically document discovered web vulnerabilities and provide actionable, code-level remediation strategies for development teams.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Web Application Vulnerability Discovery</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</link>
+      <pubDate>Fri, 05 Dec 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/automated-web-vulnerability-discovery/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To utilize automated scanning tools to perform comprehensive reconnaissance and identify high-risk web vulnerabilities within an authenticated session.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Database Breach &amp; Administrative Data Exfiltration</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</link>
+      <pubDate>Wed, 15 Oct 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/database-breach-vulnerability/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To leverage a compromised web shell to gain unauthorized access to the backend MySQL database and exfiltrate the full user credential table.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cross-Site Request Forgery (CSRF) via Forged Reviews</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</link>
+      <pubDate>Wed, 20 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/csrf-forged-reviews/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To exploit missing request verification to perform unauthorized actions on behalf of a logged-in user.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DOM-Based Cross-Site Scripting (XSS) Analysis</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</link>
+      <pubDate>Fri, 15 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/dom-xss-analysis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To identify and exploit an unsafe JavaScript &amp;ldquo;sink&amp;rdquo; to execute arbitrary code in the victim&amp;rsquo;s browser context.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exploiting &amp; Mitigating String-Based SQL Injection</title>
+      <link>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0100</pubDate>
+      <guid>https://XBlankZGap.github.io/cyber-portfolio/posts/sql-injection-exploitation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; To demonstrate how unsanitized user input allows attackers to bypass authentication and exfiltrate sensitive database records.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

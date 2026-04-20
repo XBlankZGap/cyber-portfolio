@@ -46,7 +46,10 @@
     {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
     
-    {{- $categories := slice "Network Security & Infrastructure" "Web Application Pentesting" "Binary & System Exploitation" "Cryptography & Data Integrity" "Security Operations & Engineering" }}
+    {{ partial "search_bar.html" . }}
+    {{ partial "tag_filter.html" . }}
+    
+    {{- $categories := slice "Security Operations (SOC) & Incident Response" "Penetration Testing & Vulnerability Assessment" "Network & Infrastructure Security" "Application Security (AppSec)" "DevSecOps & Strategy" }}
     
     {{- range $categories }}
         {{- $category := . }}
@@ -56,7 +59,7 @@
                 <h2 class="category-header-title" style="font-size: 32px; font-weight: 800; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 40px; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">{{ $category }}</h2>
                 <div class="posts-group grid-projects">
                 {{- range $category_pages }}
-                    <article class="post-entry" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+                    <article class="post-entry" data-tags="{{ delimit (default slice .Params.tags) "," }}" style="background: var(--entry); border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
                       {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
                       {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
                       
@@ -101,7 +104,7 @@
         {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not (or site.Params.disableSpecial1stPost site.Params.homeInfoParams))) }}
             {{- $class = "first-entry" }}
         {{- end }}
-        <article class="{{ $class }}">
+        <article class="{{ $class }}" data-tags="{{ delimit (default slice .Params.tags) "," }}">
           {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
           {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
           <div class="post-meta-under-image">
@@ -148,5 +151,5 @@
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
-
+{{ partial "footer.html" . }}
 {{- end }}{{- /* end main */ -}}
